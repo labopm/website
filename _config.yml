@@ -1,0 +1,68 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: The Lab at OPM
+email: lap@opm.gov
+description: >- # this means to ignore newlines until "baseurl:"
+  The Lab helps government organizations transform their programs, processes, and people through human-centered design.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+repository: labopm/webiste
+
+github_url: https://github.com/labopm
+
+# Build settings
+markdown: kramdown
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-redirect-from
+
+# Jekyll SEO Tag
+# See https://github.com/jekyll/jekyll-seo-tag
+logo: /img/lab-logo.png
+
+collections:
+  hr-tasks:
+    output: true
+  sme-tasks:
+    output: true
+  rating-guide:
+    output: true
+  meetings:
+    output: true
+
+# Exclude from processing.
+exclude:
+  - ".ruby-version"
+  - ".sass-cache"
+  - CONTRIBUTING.md
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - README.md
+  - config
+  - js
+  - manifest.yml
+  - node_modules
+  - package.json
+  - gulpfile.js
+  - circle.yml
+  - css
+  - package-lock.json
