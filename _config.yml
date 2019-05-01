@@ -39,13 +39,7 @@ plugins:
 logo: /img/lab-logo.png
 
 collections:
-  hr-tasks:
-    output: true
-  sme-tasks:
-    output: true
-  rating-guide:
-    output: true
-  meetings:
+  people:
     output: true
 
 # Exclude from processing.

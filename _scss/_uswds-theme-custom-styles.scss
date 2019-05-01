@@ -19,3 +19,7 @@ i.e.
 @include u-padding-right('05');
 ----------------------------------------
 */
+
+.lab-content-well {
+  @include u-margin(4);
+}

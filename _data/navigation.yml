@@ -11,3 +11,19 @@ primary:
   - text: Contact us
     href: /contact/
     name: contact
+
+about:
+  - text: Lab cornerstones
+    href: /about/
+  - text: Our History
+    href: /about/history/
+  - text: Meet Us
+    href: /about/meet/
+  - text: Locations
+    href: /about/locations/
+  - text: Careers
+    href: /about/careers/
+  - text: In the news
+    href: /about/news/
+  - text: Awards
+    href: /about/awards/
