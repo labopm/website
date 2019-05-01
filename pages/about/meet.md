@@ -5,7 +5,7 @@ permalink: /about/meet/
 title: Meet Us
 ---
 
-The Lab Team is comprised of a group of design professionals with expertise across many disciplines including design, digital design and development, creative and art direction, business, education, architecture, journalism, content strategy, community organizing, urban design and public policy. Our team brings formidable skills, deep curiosity and a commitment to service to our work.
+The Lab Team is composed of a group of design professionals with expertise across many disciplines including design, digital design and development, creative and art direction, business, education, architecture, journalism, content strategy, community organizing, urban design and public policy. Our team brings formidable skills, deep curiosity and a commitment to service to our work.
 
 <h2>Who We Are</h2>
 
