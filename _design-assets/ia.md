@@ -20,6 +20,7 @@
     * Section: Intro
     * Section: Projects
         * Content TK
+    * Section: HCD Guides
 
 ## Primary Page: Take a Class
 * Section: Intro
