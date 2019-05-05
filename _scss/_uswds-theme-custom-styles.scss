@@ -23,3 +23,9 @@ i.e.
 .lab-content-well {
   @include u-margin(4);
 }
+
+.lab-dl {
+  dd {
+    margin: 0 0 units(2) 0;
+  }
+}
