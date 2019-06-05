@@ -141,4 +141,30 @@ i.e.
     display: flex;
     align-items: center;
   }
+
+  &__required-links-list {
+    display: block;
+    margin-top: units(2);
+
+    @include at-media('mobile-lg') {
+      margin-top: 0;
+    }
+  }
+
+  &__required-links-item {
+    display: inline-block;
+    @include u-font-size('body', '2xs');
+  }
+
+  &__required-links-link {
+    display: block;
+    padding: units(1) units(1) units(1) 0;
+  }
+}
+
+.lab-footer .lab-footer__connect {
+}
+
+.lab-footer .lab-footer__connect-item {
+  margin-left: 0;
 }
