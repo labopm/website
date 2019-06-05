@@ -6,7 +6,8 @@
   <a class="usa-skipnav" href="#main-content">Skip to main content</a>
   {% include _banner.html %}
   {% include _header.html %}
-  <main id="main-content" role="main" class="usa-layout-docs usa-section margin-bottom-9">
+  {% include _hero--about.html %}
+  <main id="main-content" role="main" class="usa-layout-docs usa-section {% if page.highlight %}has-highlight{% endif %}">
     <div class="grid-container">
       <div class="grid-row grid-gap">
         {% assign sidenav = site.data.navigation[page.sidenav] | default: page.sidenav %}
@@ -16,14 +17,19 @@
         </aside>
         {% endif %}
         <div class="usa-layout-docs__main desktop:grid-col-9 usa-prose">
-          {% if page.title %}
-          <h1>{{ page.title }}</h1>
-          {% endif %}
           {{ content }}
         </div>
       </div>
     </div>
   </main>
+  {% if page.highlight %}
+  <div class="lab-content-highlight">
+    <div class="lab-content-highlight__body">
+      {% capture highlight_include %}{% include {{ page.highlight }} %}{% endcapture %}
+      {{ highlight_include | markdownify }}
+    </div>
+  </div>
+  {% endif %}
   {% include _footer.html %}
 
   <script src="{{ site.baseurl }}/assets/js/uswds.min.js"></script>

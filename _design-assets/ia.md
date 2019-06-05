@@ -5,11 +5,10 @@
 * Section: “Let’s _ _ _ _ Together”
 
 ## Primary Page: What We Do
-* Section: List summarizing our offerings:
-    * Classes
-    * Partnerships/projects
-    * Events
-    * Resources
+* Section: List summarizing our offerings
+* Secondary page: Events
+* Secondary page: Resources
+    * Section: HCD Guides
 * Secondary Page: Partner with The Lab
     * Section: Partner list
 * Secondary Page: How We Work
@@ -20,7 +19,6 @@
     * Section: Intro
     * Section: Projects
         * Content TK
-    * Section: HCD Guides
 
 ## Primary Page: Take a Class
 * Section: Intro

@@ -39,6 +39,8 @@ plugins:
 logo: /img/lab-logo.png
 
 collections:
+  classes:
+    output: true
   people:
     output: true
 

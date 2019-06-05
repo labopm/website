@@ -12,8 +12,28 @@ primary:
     href: /contact/
     name: contact
 
+what-we-do:
+  - text: Overview
+    href: /what-we-do/
+  - text: Partner with The Lab
+    href: /what-we-do/partner/
+  - text: How we work
+    href: /what-we-do/how-we-work/
+  - text: Featured work / Case Studies
+    href: /what-we-do/featured-work/
+  - text: Events
+    href: /what-we-do/events/
+  - text: Resources
+    href: /what-we-do/resources/
+
+take-a-class:
+  - text: Introduction
+    href: /take-a-class/
+  - text: Our classes
+    href: /take-a-class/classes/
+
 about:
-  - text: Lab cornerstones
+  - text: Cornerstones
     href: /about/
   - text: Our History
     href: /about/history/

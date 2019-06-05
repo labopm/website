@@ -13,7 +13,7 @@ COLOR SETTINGS
 ----------------------------------------
 Read more about settings and
 USWDS color tokens in the documentation:
-https://v2.designsystem.digital.gov/style-tokens/color
+https://v2.designsystem.digital.gov/design-tokens/color
 ----------------------------------------
 */
 
@@ -27,9 +27,9 @@ Theme palette colors
 $theme-color-base-family:           'gray-cool';
 $theme-color-base-lightest:         'gray-5';
 $theme-color-base-lighter:          'gray-cool-10';
-$theme-color-base-light:            'gray-cool-30';
-$theme-color-base:                  'gray-cool-50';
-$theme-color-base-dark:             'gray-cool-60';
+$theme-color-base-light:            'gray-cool-10';
+$theme-color-base:                  'gray-cool-30';
+$theme-color-base-dark:             'gray-cool-70';
 $theme-color-base-darker:           'gray-cool-70';
 $theme-color-base-darkest:          'gray-90';
 $theme-color-base-ink:              'gray-90';
@@ -39,7 +39,7 @@ $theme-color-primary-family:        'blue';
 $theme-color-primary-lightest:      false;
 $theme-color-primary-lighter:       'blue-10';
 $theme-color-primary-light:         'blue-30';
-$theme-color-primary:               'blue-60v';
+$theme-color-primary:               'blue-50';
 $theme-color-primary-vivid:         'blue-warm-60v';
 $theme-color-primary-dark:          'blue-warm-70v';
 $theme-color-primary-darker:        'blue-warm-80v';
@@ -50,20 +50,20 @@ $theme-color-secondary-family:      'red';
 $theme-color-secondary-lightest:    false;
 $theme-color-secondary-lighter:     'red-cool-10';
 $theme-color-secondary-light:       'red-30';
-$theme-color-secondary:             'red-50';
-$theme-color-secondary-vivid:       'red-cool-50v';
-$theme-color-secondary-dark:        'red-60v';
+$theme-color-secondary:             'red-40v';
+$theme-color-secondary-vivid:       false;
+$theme-color-secondary-dark:        'red-cool-50v';
 $theme-color-secondary-darker:      'red-70v';
 $theme-color-secondary-darkest:     false;
 
 // Accent warm colors
-$theme-color-accent-warm-family:    'orange';
+$theme-color-accent-warm-family:    'gold';
 $theme-color-accent-warm-lightest:  false;
-$theme-color-accent-warm-lighter:   'orange-10';
-$theme-color-accent-warm-light:     'orange-20v';
-$theme-color-accent-warm:           'orange-30v';
-$theme-color-accent-warm-dark:      'orange-50v';
-$theme-color-accent-warm-darker:    'orange-60';
+$theme-color-accent-warm-lighter:   'gold-10';
+$theme-color-accent-warm-light:     'gold-20v';
+$theme-color-accent-warm:           'gold-20v';
+$theme-color-accent-warm-dark:      'gold-30v';
+$theme-color-accent-warm-darker:    'gold-60';
 $theme-color-accent-warm-darkest:   false;
 
 // Accent cool colors
@@ -131,3 +131,24 @@ $theme-link-color:             'primary';
 $theme-link-visited-color:     'violet-70v';
 $theme-link-hover-color:       'primary-darker';
 $theme-link-active-color:      'primary-darker';
+
+/*
+----------------------------------------
+Lab palette colors
+----------------------------------------
+*/
+
+$theme-color-lab-brand-teal:    'cyan-50';
+$theme-color-lab-brand-orange:  'gold-30v';
+$theme-color-lab-indigo:        'blue-70v';
+$theme-color-lab-crimson:       'red-cool-50v';
+$theme-color-lab-charcoal:      'gray-70';
+$theme-color-lab-sky:           'blue-50';
+$theme-color-lab-coral:         'red-40v';
+$theme-color-lab-pewter:        'gray-30';
+$theme-color-lab-aqua:          'cyan-20';
+$theme-color-lab-gold:          'gold-20v';
+$theme-color-lab-moon:          'gray-10';
+$theme-color-lab-glacier:       'blue-cool-5';
+$theme-color-lab-sand:          'gold-5';
+$theme-color-lab-mist:          'gray-5';

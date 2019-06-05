@@ -8,12 +8,11 @@ const gulp = require("gulp");
 const mqpacker = require("css-mqpacker");
 const notify = require("gulp-notify");
 const postcss = require("gulp-postcss");
-const runSequence = require("run-sequence");
 const sass = require("gulp-sass");
 const sourcemaps = require("gulp-sourcemaps");
 
-gulp.task("sass", function(done) {
-  var plugins = [
+function buildCSS() {
+  const processors = [
     // Autoprefix
     autoprefixer(autoprefixerOptions),
     // Pack media queries
@@ -27,14 +26,14 @@ gulp.task("sass", function(done) {
     .pipe(
       sass({
         includePaths: [
-          "_scss",
           "node_modules/uswds/dist/scss",
-          "node_modules/uswds/dist/scss/packages"
+          "node_modules/uswds/dist/scss/packages",
+          "_scss"
         ],
         outputStyle: "expanded"
       }).on("error", sass.logError)
     )
-    .pipe(postcss(plugins))
+    .pipe(postcss(processors))
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("assets/stylesheets"))
     .pipe(gulp.dest("_site/assets/stylesheets"))
@@ -43,8 +42,13 @@ gulp.task("sass", function(done) {
         sound: "Pop" // case sensitive
       })
     );
-});
+}
 
-gulp.task("sass-rebuild", function(callback) {
-  runSequence("sass", "browsersync:reload", callback);
-});
+gulp.task("buildCSS", gulp.series(buildCSS));
+
+gulp.task(
+  "sass-rebuild",
+  gulp.series("cssBuild", "browsersync:reload")
+);
+
+exports.buildCSS = buildCSS;

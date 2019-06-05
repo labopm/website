@@ -29,3 +29,116 @@ i.e.
     margin: 0 0 units(2) 0;
   }
 }
+
+.lab-caption {
+  @include u-font-size('body', '2xs');
+  font-style: italic;
+}
+
+// Components
+// ***************** HEADER ***************** //
+.lab-header {
+  &__logo {
+    @include at-media('desktop') {
+      margin: 0;
+    }
+  }
+
+  &__logo-link {
+    display: block;
+    padding: units(2) 0;
+  }
+
+  &__logo-img {
+    width: 8rem;
+  }
+
+  &.usa-header--basic .usa-current:after,
+  &.usa-header--basic .usa-nav__link:hover:after,
+  &.usa-header--basic [aria-expanded=true]:after {
+    background-color: color('base-dark');
+  }
+}
+
+// ***************** HERO ***************** //
+.lab-hero--about {
+  background-image: url('../img/lab/hero-image-gold.jpg');
+  background-repeat: no-repeat;
+
+  &__body {
+    @include grid-container;
+    padding: units(6) units(2) units(4);
+
+    @include at-media('tablet') {
+      padding: units(8) units(2) units(4);
+    }
+
+    @include at-media('desktop') {
+      padding: units(15) units(2) units(4);
+    }
+  }
+}
+
+// ***************** CONTENT ***************** //
+.lab-content-highlight {
+  background-color: color($theme-color-lab-sand);
+
+  &__body {
+    @include grid-container;
+    padding: units(6) units(2) units(4);
+
+    @include at-media('tablet') {
+      padding: units(8) units(2) units(4);
+    }
+  }
+}
+
+// ***************** FOOTER ***************** //
+.lab-footer {
+  &__primary-section {
+    background-color: color($theme-color-lab-mist);
+  }
+
+  &__sub-title {
+    padding: units(4) 0;
+    color: color($theme-color-lab-indigo);
+  }
+
+  .usa-footer__primary-section {
+    background-color: color($theme-color-lab-moon);
+  }
+
+  &.usa-footer--big .usa-footer__primary-content--collapsible.hidden .lab-footer__address {
+    display: none;
+  }
+
+  &__address {
+    display: block;
+    color: color('ink');
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-decoration: none;
+
+    @include at-media('mobile-lg') {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &:hover {
+      color: color('primary');
+    }
+
+    &:visited {
+      color: color('ink');
+    }
+  }
+
+  &__address-line {
+    display: block;
+  }
+
+  &__opm-logo {
+    display: flex;
+    align-items: center;
+  }
+}

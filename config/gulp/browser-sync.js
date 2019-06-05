@@ -1,14 +1,18 @@
-var config = require("./config").browsersync.development;
+/*jshint node:true, esversion: 6 */
+"use strict";
 
-var gulp = require("gulp");
-var browsersync = require("browser-sync");
+const config = require("./config").browsersync.development;
+
+const gulp = require("gulp");
+const browsersync = require("browser-sync");
 
 // Run build task and start a server with BrowserSync
-gulp.task("browsersync", ["build"], function() {
+gulp.task("browsersync", gulp.series('build', function() {
   browsersync(config);
-});
+}));
 
 // Reload task, that is used by jekyll-rebuild
-gulp.task("browsersync:reload", function() {
+function browserSyncReload(done) {
   browsersync.reload();
-});
+  done();
+}

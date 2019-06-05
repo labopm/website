@@ -1,7 +1,7 @@
-var gulp = require("gulp");
-var runSequence = require("run-sequence");
+const gulp = require("gulp");
 
 // Run all tasks needed for a build, in defined order
-gulp.task("build", function(callback) {
-  runSequence(["jekyll", "sass"], callback);
-});
+gulp.task(
+  "build",
+  gulp.series("buildJekyll", "cssBuild")
+);
