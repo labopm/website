@@ -29,8 +29,12 @@ what-we-do:
 take-a-class:
   - text: Introduction
     href: /take-a-class/
-  - text: Our classes
-    href: /take-a-class/classes/
+  - text: Custom Classes
+    href: /take-a-class/custom-classes/
+  - text: Open Enrollment Classes
+    href: /take-a-class/open-enrollment-classes/
+  - text: Coaching
+    href: /take-a-class/coaching/
 
 about:
   - text: Cornerstones

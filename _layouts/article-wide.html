@@ -6,10 +6,7 @@
   <a class="usa-skipnav" href="#main-content">Skip to main content</a>
   {% include _banner.html %}
   {% include _header.html %}
-  {% if page.hero %}
-    {% capture hero_include %}{% include {{ page.hero }} %}{% endcapture %}
-    {{ hero_include }}
-  {% endif %}
+  {% include _hero.html name=page.section %}
   <main id="main-content" role="main" class="usa-layout-docs usa-section margin-bottom-9">
     <div class="grid-container">
       {{ content }}

@@ -1,0 +1,34 @@
+---
+layout: article-wide
+section: take-a-class
+permalink: /take-a-class/open-enrollment-classes/
+title: Open Enrollment Classes
+---
+
+<p>
+  The Lab’s educational offerings in human-centered design provide individuals, teams, and agencies several options for growth and development. You can choose from a range of formats from a week-long total immersion Design School to shorter-form options. Classes typically occur at the Lab but we can customize them to meet the needs of your organization.
+</p>
+
+<p>
+  Fulfilling our mission to bring human-centered design to government at scale, our curriculum expanded in 2018 with eight new single-day topic-specific classes. These new classes bring key aspects of design practice, process, methods and theory to broad audiences. They cover a range of topics associated with problem-solving, creative thinking, and communication.
+</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DGDCd2ELpok" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p class="lab-caption">New programs at the Lab at OPM</p>
+
+<h2>Class Details and Schedule</h2>
+<h4>Multi-Day Sessions</h4>
+
+{% for klass in site.classes %}
+<h3>{{ klass.title }}</h3>
+{{ klass.content | markdownify }}
+<dl class="lab-dl">
+  <dt>Locations</dt>
+  <dd>{{ klass.locations }} </dd>
+  <dt>Offered</dt>
+  <dd>{{ klass.offered }} </dd>
+  <dt>Length</dt>
+  <dd>{{ klass.length }} </dd>
+</dl>
+{% endfor %}

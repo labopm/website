@@ -61,27 +61,7 @@ i.e.
 }
 
 // ***************** HERO ***************** //
-.lab-hero--about {
-  background-color: color($theme-color-lab-sky);
-
-  &__body {
-    background-image: url('../img/lab/hero-sky-detail.jpg');
-    background-position: right 50%;
-    background-repeat: no-repeat;
-  }
-
-  h1 {
-    color: color('white');
-  }
-}
-
-.lab-hero--class {
-  background-image: url('../img/lab/hero-image-gold.jpg');
-  background-repeat: no-repeat;
-}
-
-.lab-hero--about,
-.lab-hero--class {
+.lab-hero {
   &__body {
     @include grid-container;
     padding: units(6) units(2) units(4);
@@ -91,10 +71,43 @@ i.e.
     }
 
     @include at-media('desktop') {
-      padding: units(15) units(2) units(4);
+      padding: units(15) units(4) units(4);
+    }
+
+    h1 {
+      color: color('white');
     }
   }
 }
+
+.lab-hero--what-we-do {
+  background-color: color($theme-color-lab-coral);
+}
+
+.lab-hero--about {
+  background-color: color($theme-color-lab-sky);
+
+  &__body {
+    background-image: url('../img/lab/hero-sky-detail.jpg');
+    background-position: right 50%;
+    background-repeat: no-repeat;
+  }
+}
+
+.lab-hero--take-a-class {
+  background-color: color($theme-color-lab-gold);
+
+  &__body {
+    background-image: url('../img/lab/hero-gold-detail.jpg');
+    background-position: right 50%;
+    background-repeat: no-repeat;
+  }
+}
+
+.lab-hero--contact {
+  background-color: color($theme-color-lab-aqua);
+}
+
 
 // ***************** CONTENT ***************** //
 .lab-content-highlight {
