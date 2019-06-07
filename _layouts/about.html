@@ -7,7 +7,7 @@
   {% include _banner.html %}
   {% include _header.html %}
   {% include _hero.html name=page.section %}
-  <main id="main-content" role="main" class="usa-layout-docs usa-section {% if page.highlight %}has-highlight{% endif %}">
+  <main id="main-content" role="main" class="usa-layout-docs usa-section {% if page.highlight %}has-highlight{% endif %} lab-content">
     <div class="grid-container">
       <div class="grid-row grid-gap">
         {% assign sidenav = site.data.navigation[page.sidenav] | default: page.sidenav %}

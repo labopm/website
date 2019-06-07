@@ -20,6 +20,23 @@ title: Open Enrollment Classes
 <h2>Class Details and Schedule</h2>
 <h4>Multi-Day Sessions</h4>
 
+<!-- table class="usa-table usa-table--borderless">
+  <thead>
+    <tr>
+      <th scope="col">Document Title</th>
+      <th scope="col">Description</th>
+      <th scope="col">Year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Declaration of Independence</th>
+      <td>Statement adopted by the Continental Congress declaring independence from the British Empire.</td>
+      <td>1776</td>
+    </tr>
+  </tbody>
+</table -->
+
 {% for klass in site.classes %}
 <h3>{{ klass.title }}</h3>
 {{ klass.content | markdownify }}

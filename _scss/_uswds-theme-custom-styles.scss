@@ -20,8 +20,16 @@ i.e.
 ----------------------------------------
 */
 
-.lab-content-well {
-  @include u-margin(4);
+.lab-content {
+  // This keeps us from having super short content wells
+  // Might want to consider 80vh
+  min-height: 40vh;
+
+  &__lead {
+    @include u-font-size('body', 8);
+    line-height: line-height('heading', 3);
+    max-width: 60ex; // approximates Tim's odd decision to go with 7 columns
+  }
 }
 
 .lab-dl {
@@ -82,6 +90,12 @@ i.e.
 
 .lab-hero--what-we-do {
   background-color: color($theme-color-lab-coral);
+
+  &__body {
+    background-image: url('../img/lab/hero-coral-detail.jpg');
+    background-position: right 50%;
+    background-repeat: no-repeat;
+  }
 }
 
 .lab-hero--about {
@@ -101,15 +115,25 @@ i.e.
     background-image: url('../img/lab/hero-gold-detail.jpg');
     background-position: right 50%;
     background-repeat: no-repeat;
+
+    h1 {
+      color: color('ink');
+    }
   }
 }
 
 .lab-hero--contact {
   background-color: color($theme-color-lab-aqua);
+
+  &__body {
+    background-image: url('../img/lab/hero-aqua-detail.jpg');
+    background-position: right 75%;
+    background-repeat: no-repeat;
+  }
 }
 
 
-// ***************** CONTENT ***************** //
+// ***************** CONTENT HIGHLIGHT ***************** //
 .lab-content-highlight {
   background-color: color($theme-color-lab-sand);
 
@@ -120,6 +144,30 @@ i.e.
     @include at-media('tablet') {
       padding: units(8) units(2) units(4);
     }
+  }
+}
+
+// ***************** CTA ***************** //
+.lab-cta {
+  display: flex;
+  flex: 1;
+  padding: 1em 0 0 1em;
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: units(4) 0 units(4) -1em;
+  }
+
+  &__body {
+    width: 100%;
+    padding: units(4) units(2);
+    background-color: color($theme-color-lab-sand);
+    text-align: center;
+  }
+
+  &__button {
+    @include makeButton();
   }
 }
 
@@ -167,9 +215,6 @@ i.e.
   }
 }
 
-.lab-footer .lab-footer__connect {
-}
-
 .lab-footer .lab-footer__connect-item {
   margin-left: 0;
 }
@@ -200,4 +245,8 @@ i.e.
   &__address-line {
     display: block;
   }
+}
+
+// ***************** PAGE SPECIFIC LAYOUTS ***************** //
+.l-contact {
 }
