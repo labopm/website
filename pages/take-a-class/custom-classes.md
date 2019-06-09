@@ -6,8 +6,16 @@ title: Custom Classes
 ---
 
 <p class="lab-content__lead">
-  Our classes are attended by a diverse group of students from across the government. If you have a group that is interested in one of our classes and you are interested using your work as a vehicle for learning design, a custom class may be right for you.
+  If you are interested in using your team’s work as a vehicle for learning design as a group, we can discuss designing and delivering a custom educational offering.
 </p>
-<p>
-  Custom programming can simply be a class in our catalogue delivered at your organization or it can draw from the material in our existing classes, newly developed content and external contributors and disciplines. We use your challenges to contextualize the learning experience which can result in project output for your team. If you are interested in a custom offering, contact us directly.
-</p>
+
+What makes custom programming unique:
+
+* We work with you to contextualize design practice and theory
+* We bring a small team experienced in working within a federal agency
+* Custom programming is more affordable for groups
+* Learning and design outcomes are scalable and actionable
+* We can deliver on-site or in one of our spaces
+* You spend valuable time with your colleagues
+
+If you are interested in a custom offering, [contact us](../../contact/) directly and we will work with you to create a productive learning experience.

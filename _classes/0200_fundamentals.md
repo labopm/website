@@ -1,15 +1,23 @@
 ---
 layout: article
+section: take-a-class
 permalink: class/fundamentals/
 title: Fundamentals of Human-centered Design
 locations: Washington, DC
 offered: Monthly
-length: Three days
+length: 3 days
+cost: $1,900
+session: multi
+registration-id: 234
+next-offering: August 20-22, 2019; September 17-19, 2019
+next-offering-location: Washington, DC
 ---
+
+[Back to Open Enrollment Classes](../../take-a-class/open-enrollment-classes/)
 
 #### Format
 
-Workshop that includes classroom and field activities
+Activity-oriented learning, classroom and field exercises
 
 #### Description
 
@@ -21,3 +29,13 @@ Experience the value of design first hand in our interactive 3-day Fundamentals 
 *	Knowledge of human-centered design theory and ways to apply it to solve complex challenges;
 *	Experience in rapid prototyping to learn about and develop potential solutions;
 *	Enthusiasm to learn more and apply your knowledge. (Many alumni take in-depth design coaching that focuses on a particular area of interest or initiate their own human-centered design project at their agency.
+
+#### Length
+
+{{ page.length }}
+
+#### Cost
+
+{{ page.cost }}
+
+[Back to Open Enrollment Classes](../../take-a-class/open-enrollment-classes/)

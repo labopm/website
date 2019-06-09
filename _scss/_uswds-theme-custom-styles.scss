@@ -81,9 +81,12 @@ i.e.
     @include at-media('desktop') {
       padding: units(15) units(4) units(4);
     }
+  }
 
-    h1 {
-      color: color('white');
+  &__title {
+    color: color('white');
+    @include at-media('tablet') {
+      @include grid-col(6);
     }
   }
 }
@@ -92,9 +95,11 @@ i.e.
   background-color: color($theme-color-lab-coral);
 
   &__body {
-    background-image: url('../img/lab/hero-coral-detail.jpg');
-    background-position: right 50%;
-    background-repeat: no-repeat;
+    @include at-media('tablet') {
+      background-image: url('../img/lab/hero-coral-detail.jpg');
+      background-position: right 50%;
+      background-repeat: no-repeat;
+    }
   }
 }
 
@@ -102,9 +107,11 @@ i.e.
   background-color: color($theme-color-lab-sky);
 
   &__body {
-    background-image: url('../img/lab/hero-sky-detail.jpg');
-    background-position: right 50%;
-    background-repeat: no-repeat;
+    @include at-media('tablet') {
+      background-image: url('../img/lab/hero-sky-detail.jpg');
+      background-position: right 50%;
+      background-repeat: no-repeat;
+    }
   }
 }
 
@@ -112,13 +119,15 @@ i.e.
   background-color: color($theme-color-lab-gold);
 
   &__body {
-    background-image: url('../img/lab/hero-gold-detail.jpg');
-    background-position: right 50%;
-    background-repeat: no-repeat;
-
-    h1 {
-      color: color('ink');
+    @include at-media('tablet') {
+      background-image: url('../img/lab/hero-gold-detail.jpg');
+      background-position: right 50%;
+      background-repeat: no-repeat;
     }
+  }
+
+  &__title {
+    color: color('ink');
   }
 }
 
@@ -126,9 +135,11 @@ i.e.
   background-color: color($theme-color-lab-aqua);
 
   &__body {
-    background-image: url('../img/lab/hero-aqua-detail.jpg');
-    background-position: right 75%;
-    background-repeat: no-repeat;
+    @include at-media('tablet') {
+      background-image: url('../img/lab/hero-aqua-detail.jpg');
+      background-position: right 75%;
+      background-repeat: no-repeat;
+    }
   }
 }
 
@@ -169,6 +180,40 @@ i.e.
   &__button {
     @include makeButton();
   }
+}
+
+.lab-cta--registration {
+  padding: 0;
+
+  &__body {
+    padding: units(2);
+    text-align: left;
+  }
+
+  &__list {
+    margin: 0 0 units(2) 0;
+  }
+
+  &__title {
+    font-weight: bold;
+    margin: 0 0 units(1) 0;
+  }
+
+  &__item {
+    margin: 0 0 units(1) 0;
+  }
+
+  &__button {
+    @include makeButton(true);
+
+    @include at-media('desktop') {
+      width: 100%;
+    }
+  }
+}
+
+.lab-classes__table {
+  width: 100%;
 }
 
 // ***************** FOOTER ***************** //

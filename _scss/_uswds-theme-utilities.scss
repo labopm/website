@@ -851,7 +851,7 @@ $z-index-manual-values: ();
 
 
 
-@mixin makeButton($bg-color: #005ea2, $hover-color: #1a4480, $active-color: #162e51, $big: false, $color: #fff) {
+@mixin makeButton($big: false, $bg-color: #005ea2, $hover-color: #1a4480, $active-color: #162e51, $color: #fff) {
   display: inline-block;
   appearance: none;
   background-color: $bg-color;

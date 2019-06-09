@@ -21,10 +21,9 @@ module.exports = {
       "_config.yml",
       "_data/*.yml",
       "_includes/*.html",
-      "_hr-tasks/*.md",
-      "_sme-tasks/*.md",
-      "_rating-guide/*.md",
-      "_meetings/*.md",
+      "_classes/*.md",
+      "_people/*.md",
+      "assets/imgpng,jpg,svg,}",
       "_layouts/*.html",
       "pages/**/*.{html,markdown,md,yml,json,txt,xml}"
     ],

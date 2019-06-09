@@ -5,7 +5,7 @@ permalink: /take-a-class/open-enrollment-classes/
 title: Open Enrollment Classes
 ---
 
-<p>
+<p class="lab-content__lead">
   The Lab’s educational offerings in human-centered design provide individuals, teams, and agencies several options for growth and development. You can choose from a range of formats from a week-long total immersion Design School to shorter-form options. Classes typically occur at the Lab but we can customize them to meet the needs of your organization.
 </p>
 
@@ -13,39 +13,48 @@ title: Open Enrollment Classes
   Fulfilling our mission to bring human-centered design to government at scale, our curriculum expanded in 2018 with eight new single-day topic-specific classes. These new classes bring key aspects of design practice, process, methods and theory to broad audiences. They cover a range of topics associated with problem-solving, creative thinking, and communication.
 </p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DGDCd2ELpok" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<p class="lab-caption">New programs at the Lab at OPM</p>
-
-<h2>Class Details and Schedule</h2>
-<h4>Multi-Day Sessions</h4>
-
-<!-- table class="usa-table usa-table--borderless">
+<h3>Multi-Day Sessions</h3>
+<table class="usa-table usa-table--borderless lab-classes__table">
   <thead>
     <tr>
-      <th scope="col">Document Title</th>
-      <th scope="col">Description</th>
-      <th scope="col">Year</th>
+      <th scope="col">Course name</th>
+      <th scope="col">Length</th>
+      <th scope="col">Cost</th>
+      <th scope="col">&nbsp;</th>
     </tr>
   </thead>
   <tbody>
+{% assign multi = site.classes | where: "session","multi" %}
+{% for aclass in multi %}
     <tr>
-      <th scope="row">Declaration of Independence</th>
-      <td>Statement adopted by the Continental Congress declaring independence from the British Empire.</td>
-      <td>1776</td>
+      <th scope="row">{{ aclass.title }}</th>
+      <td>{{ aclass.length }}</td>
+      <td>{{ aclass.cost}}</td>
+      <td><a href="{{ site.baseurl }}/{{ aclass.permalink }}">Learn more</a></td>
     </tr>
-  </tbody>
-</table -->
-
-{% for klass in site.classes %}
-<h3>{{ klass.title }}</h3>
-{{ klass.content | markdownify }}
-<dl class="lab-dl">
-  <dt>Locations</dt>
-  <dd>{{ klass.locations }} </dd>
-  <dt>Offered</dt>
-  <dd>{{ klass.offered }} </dd>
-  <dt>Length</dt>
-  <dd>{{ klass.length }} </dd>
-</dl>
 {% endfor %}
+  </tbody>
+</table>
+
+<h3>Single-Day Sessions</h3>
+<table class="usa-table usa-table--borderless lab-classes__table">
+  <thead>
+    <tr>
+      <th scope="col">Course name</th>
+      <th scope="col">Length</th>
+      <th scope="col">Cost</th>
+      <th scope="col">&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+{% assign singles = site.classes | where: "session","single" %}
+{% for aclass in singles %}
+    <tr>
+      <th scope="row">{{ aclass.title }}</th>
+      <td>{{ aclass.length }}</td>
+      <td>{{ aclass.cost}}</td>
+      <td><a href="{{ site.baseurl }}/{{ aclass.permalink }}">Learn more</a></td>
+    </tr>
+{% endfor %}
+  </tbody>
+</table>

@@ -1,0 +1,15 @@
+<section class="lab-cta lab-cta--registration">
+  <div class="lab-cta__body lab-cta--registration__body">
+    {% if include.next-offering %}
+    <dl class="lab-cta--registration__list">
+      <dt class="lab-cta--registration__title">Next offering</dt>
+      <dd class="lab-cta--registration__item">{{ include.next-offering }}</dd>
+      <dd class="lab-cta--registration__item">{{ include.next-offering-location }}</dd>
+    </dl>
+    {% endif %}
+
+    <a href="https://leadership.opm.gov/programs.aspx?course={{ include.id }}" class="lab-cta__button lab-cta--registration__button" target="_blank">
+      Register
+    </a>
+  </div>
+</section>
