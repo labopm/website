@@ -17,16 +17,9 @@ We offer immersive experiences in managing human-centered design projects and ed
 
 At the Lab, we offer flexibility around the length of detail assignments. A typical detail ranges from three to six months. The Lab participates in several established programs offering details for current federal employees  – including Presidential Management Fellows, Executive Potential Program and the President's Management Council Interagency Rotation Program - the as well as hosting details that we scope directly with individual federal employees. For those employees not in a position to leave their permanent role for an extended period of time, we also offer part-time and short term details (sometimes listed on the Open Opportunities website) some require only few hours or days and provide exposure to our projects and programming.
 
-## Join Us
-If you are interested in joining us, <a href="https://www.airtable.com">complete this interest form to get started</a>.
+Interested in a detail? Please use the form below to contact us.
 
-#### [Airtable form will catpure the following:]
-
-* First Name
-* What agency did they come from?
-* What was their background before joining?
-* What did they work on with us?
-* How they applied their experience once their detail was done?
+<iframe class="airtable-embed" src="https://airtable.com/embed/shrClp00LFsPQOUm9" frameborder="0" onmousewheel="" width="100%" height="1350px"></iframe>
 
 ## Micro-details with The Lab through Open Opportunities
 
