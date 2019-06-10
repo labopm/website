@@ -1,7 +1,7 @@
 <div class="lab-team-person-image">
   {% assign image_name = include.image_name %}
   {% if image_name %}
-      <img src="{{ site.baseurl }}/images/{{ image_name }}" alt="Photo of {{ page.person.name }}" />
+      <img src="{{ site.baseurl }}/assets/img/lab/people/{{ image_name }}" alt="Photo of {{ page.person.name }}" />
   {% else %}
       <div class="lab-team-person-image__placholder-img">&nbsp;</div>
   {% endif %}
