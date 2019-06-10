@@ -21,8 +21,8 @@ what-we-do:
     href: /what-we-do/how-we-work/
   - text: Featured work / Case Studies
     href: /what-we-do/featured-work/
-  - text: Events
-    href: /what-we-do/events/
+#  - text: Events
+#    href: /what-we-do/events/
   - text: Resources
     href: /what-we-do/resources/
 
