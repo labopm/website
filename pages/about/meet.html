@@ -19,7 +19,7 @@ title: Meet Us
         <div class="lab-team-person__figure">
         {% assign image_name = person.image_name %}
         {% if image_name %}
-            <img src="{{ site.baseurl }}/images/{{ image_name }}" alt="Photo of {{ person.name }}" />
+            <img src="{{ site.baseurl }}/assets/img/lab/people/{{ image_name }}" alt="Photo of {{ person.person.name }}" />
         {% else %}
             <div class="lab-team-person__placholder-img">&nbsp;</div>
         {% endif %}

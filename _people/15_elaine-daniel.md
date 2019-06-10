@@ -4,6 +4,7 @@ people_page: true
 section: about
 permalink: /people/elaine-daniel/
 name: Elaine Daniel
+image_name: elaine-daniel.jpg
 pronouns: She/Her
 title: Our Team
 job-title: Learning Experience Designer

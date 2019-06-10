@@ -73,9 +73,15 @@ i.e.
   &__body {
     @include grid-container;
     padding: units(6) units(2) units(4);
+    background-repeat: no-repeat;
 
     @include at-media('tablet') {
       padding: units(8) units(2) units(4);
+      background-position: 480px 50%;
+    }
+
+    @include at-media('tablet-lg') {
+      background-position: right 50%;
     }
 
     @include at-media('desktop') {
@@ -85,8 +91,13 @@ i.e.
 
   &__title {
     color: color('white');
+    
     @include at-media('tablet') {
-      @include grid-col(6);
+      max-width: 460px;
+    }
+
+    @include at-media('desktop') {
+      max-width: 500px;
     }
   }
 }
@@ -97,8 +108,6 @@ i.e.
   &__body {
     @include at-media('tablet') {
       background-image: url('../img/lab/hero-coral-detail.jpg');
-      background-position: right 50%;
-      background-repeat: no-repeat;
     }
   }
 }
@@ -109,8 +118,6 @@ i.e.
   &__body {
     @include at-media('tablet') {
       background-image: url('../img/lab/hero-sky-detail.jpg');
-      background-position: right 50%;
-      background-repeat: no-repeat;
     }
   }
 }
@@ -121,8 +128,6 @@ i.e.
   &__body {
     @include at-media('tablet') {
       background-image: url('../img/lab/hero-gold-detail.jpg');
-      background-position: right 50%;
-      background-repeat: no-repeat;
     }
   }
 
@@ -138,7 +143,6 @@ i.e.
     @include at-media('tablet') {
       background-image: url('../img/lab/hero-aqua-detail.jpg');
       background-position: right 75%;
-      background-repeat: no-repeat;
     }
   }
 }
