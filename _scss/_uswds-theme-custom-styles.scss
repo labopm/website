@@ -260,10 +260,42 @@ i.e.
   &__placholder-img {
     width: 140px;
     height: 140px;
+  }
+
+  &__location {
+    display: inline-block;
+    position: relative;
+    font-weight: normal;
+    margin-left: units(1);
+    padding: 0 units(1);
+
+    &:before {
+      content: '|';
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  &__location-link {
+    text-decoration: none;
+    @include permaLink(color('ink'));
+  }
+}
+
+.lab-team-person,
+.lab-team-person-image {
+  &__placholder-img {
     background-color: color($theme-color-lab-pewter);
     border-radius: 100%;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+.lab-team-person-image {
+  &__placholder-img {
+    width: 100%;
+    min-height: 306px;
   }
 }
 

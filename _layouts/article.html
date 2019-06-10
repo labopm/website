@@ -7,16 +7,25 @@
   {% include _banner.html %}
   {% include _header.html %}
   {% include _hero.html name=page.section %}
+  {% assign people_page = page.people_page %}
   <main id="main-content" role="main" class="usa-layout-docs usa-section lab-content">
     <div class="grid-container">
       <div class="grid-row grid-gap">
         <div class="usa-layout-docs__main desktop:grid-col-8 usa-prose">
+          {% if people_page %}
+          {% include person-header.html %}
+          {% endif %}
           {{ content }}
         </div>
         {% assign registration_id = page.registration-id %}
         {% if registration_id %}
         <aside class="usa-layout-docs__sidenav desktop:grid-col-4">
           {% include registration.html id=registration_id next-offering=page.next-offering next-offering-location=page.next-offering-location %}
+        </aside>
+        {% endif %}
+        {% if people_page %}
+        <aside class="usa-layout-docs__sidenav desktop:grid-col-4">
+          {% include person-sidebar.html image_name=page.image_name %}
         </aside>
         {% endif %}
       </div>

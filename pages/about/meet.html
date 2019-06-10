@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: article-wide
 section: about
 permalink: /about/meet/
 title: Meet Us
@@ -15,7 +15,7 @@ title: Meet Us
   <div class="lab-team__body">
     {% for person in site.people %}
     <div class="lab-team-person">
-      <a class="lab-team-person__link" href="{{ site.baseurl }}/{{ person.permalink }}">
+      <a class="lab-team-person__link" href="{{ site.baseurl }}{{ person.permalink }}">
         <div class="lab-team-person__figure">
         {% assign image_name = person.image_name %}
         {% if image_name %}
@@ -26,7 +26,7 @@ title: Meet Us
         </div>
         <div class="lab-team-person__body">
           <div class="lab-team-person__name">{{ person.name }}</div>
-          <div class="lab-team-person__title">{{ person.title }}</div>
+          <div class="lab-team-person__title">{{ person.job-title }}</div>
         </div>
       </a>
     </div>

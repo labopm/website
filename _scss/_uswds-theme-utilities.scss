@@ -908,3 +908,12 @@ $z-index-manual-values: ();
     outline-offset: .25rem;
   }
 }
+
+
+@mixin permaLink($linkColor: color('primary')) {
+  color: $linkColor;
+
+  &:visited {
+    color: $linkColor;
+  }
+}

@@ -1,12 +1,13 @@
 ---
 layout: article
 people_page: true
-permalink: people/sean-baker
+section: about
+permalink: /people/sean-baker/
 name: Sean Baker
 pronouns: He/Him
-title: Director of Design Strategy and Operations
-location: DC
-desc: Sean Baker is a designer with 12 years of experience in a range of design disciplines including exhibition design, service design, communications design, design strategy and operations.
+title: Our Team
+job-title: Director of Design Strategy and Operations
+location: Lab DC
 ---
 
 Sean Baker is a designer with 12 years of experience in a range of design disciplines including exhibition design, service design, communications design, design strategy and operations.
@@ -16,3 +17,5 @@ His work is currently focused on improving the cultural and operational conditio
 While at the Lab, he has developed multiple internal design capabilities at federal agencies including the Department for Veterans Affairs, US Citizen and Immigration Services and General Services Administration. As co-manager of the Lab, Sean has enabled the organization's adaptability, impact and sustainable growth.
 
 Sean holds a master’s degree in Transdisciplinary Design from Parsons School of Design.
+
+[Back to Our Team](../../about/meet/)
