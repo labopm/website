@@ -216,6 +216,57 @@ i.e.
   width: 100%;
 }
 
+// ***************** TEAM ***************** //
+.lab-team {
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: units(4) 0 units(4) -1em;
+  }
+}
+
+.lab-team-person {
+  display: flex;
+  flex: 1;
+  padding: 1em 0 0 1em;
+
+  &__link {
+    display: block;
+    width: 100%;
+    padding: units(4) units(2);
+    text-decoration: none;
+    text-align: center;
+    color: color('ink');
+
+    &:visited,
+    &:hover,
+    &:active {
+      color: color('ink');
+    }
+  }
+
+  &__figure {
+    width: 100%;
+  }
+
+  &__body {
+    padding: units(2) 0;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__placholder-img {
+    width: 140px;
+    height: 140px;
+    background-color: color($theme-color-lab-pewter);
+    border-radius: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 // ***************** FOOTER ***************** //
 .lab-footer {
   &__primary-section {

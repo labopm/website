@@ -1,0 +1,35 @@
+---
+layout: article
+section: about
+permalink: /about/meet/
+title: Meet Us
+---
+
+<p class="lab-content__lead">
+  The Lab Team is composed of a group of design professionals with expertise across many disciplines including design, digital design and development, creative and art direction, business, education, architecture, journalism, content strategy, community organizing, urban design and public policy. Our team brings formidable skills, deep curiosity and a commitment to service to our work.
+</p>
+
+<h2>Who We Are</h2>
+
+<section class="lab-team">
+  <div class="lab-team__body">
+    {% for person in site.people %}
+    <div class="lab-team-person">
+      <a class="lab-team-person__link" href="{{ site.baseurl }}/{{ person.permalink }}">
+        <div class="lab-team-person__figure">
+        {% assign image_name = person.image_name %}
+        {% if image_name %}
+            <img src="{{ site.baseurl }}/images/{{ image_name }}" alt="Photo of {{ person.name }}" />
+        {% else %}
+            <div class="lab-team-person__placholder-img">&nbsp;</div>
+        {% endif %}
+        </div>
+        <div class="lab-team-person__body">
+          <div class="lab-team-person__name">{{ person.name }}</div>
+          <div class="lab-team-person__title">{{ person.title }}</div>
+        </div>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</section>

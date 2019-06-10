@@ -4,7 +4,6 @@ people_page: true
 permalink: people/sean-baker
 name: Sean Baker
 pronouns: He/Him
-image_name: sean-baker.jpg
 title: Director of Design Strategy and Operations
 location: DC
 desc: Sean Baker is a designer with 12 years of experience in a range of design disciplines including exhibition design, service design, communications design, design strategy and operations.

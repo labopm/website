@@ -4,7 +4,6 @@ people_page: true
 permalink: people/elaine-daniel
 name: Elaine Daniel
 pronouns: She/Her
-image_name: elaine-daniel.jpg
 title: Learning Experience Designer
 location: DC
 desc: Elaine is an avid learner and emerging practitioner of innovation and design both inside and outside government.
