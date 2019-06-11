@@ -9,5 +9,4 @@ title: Our Team
 job-title: Service Designer
 location: Lab DC
 ---
-
-As a designer and a social innovator, Mina applies her interdisciplinary knowledge of design, research and analysis to resolve, form and transform. A consultant and educator, Mina has worked with innovation labs, non-profits, schools and state governments. Mina has designed several initiatives for educators and small businesses. Her work has been featured in the Dubai Global Grad Show, an international exposition of inventions from the world’s largest design and technology schools. Mina has a master’s in industrial design from Rhode Island School of Design and holds a BS in physics.
+At the Lab, Mina applies and teaches HCD in various projects and classes. She also creates tools and processes to facilitate the design applications and education. Mina cherishes the way design clarifies complex issues, and enjoys developing strategies and advocates for design by connecting with new partners. Before the Lab and for 10 years, Mina solved for interdisciplinary opportunities:  taught design and entrepreneurship to youth, co-authored neuro-science research papers with Harvard and MIT, and led design projects for Zika virus and cancer. Mina’s small-businesses initiative (Twine) was showcased internationally in 2016. She also received the RISD-Brown Social Innovation award in 2015.
