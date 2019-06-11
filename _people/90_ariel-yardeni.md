@@ -6,7 +6,7 @@ permalink: /people/ariel-yardeni/
 name: Ariel Yardeni
 pronouns: She/Her
 title: Our Team
-job-title: Presidential Management Fellow
+job-title: Learning Experience Designer
 location: Lab DC
 ---
 
