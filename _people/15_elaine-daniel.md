@@ -10,4 +10,4 @@ job-title: Learning Experience Designer
 location: Lab DC
 ---
 
-Elaine is an avid learner and emerging practitioner of innovation and design both inside and outside government. She received her undergraduate degree in American studies and her master’s in teaching and instructional design from the University of Maryland, Baltimore County. Elaine currently manages a range of duties including communications, instruction, and human resources. Elaine’s first exposure to the Lab was as an intern. She is now a permanent staff member.
+Elaine is committed to providing engaging learning experiences both inside and outside the classroom. She has a strong background in content development, instructional design, and teaching that she applies to projects in the government space. Elaine has bounced around from public school teaching to government trainings. She is a graduate of the University of Maryland, Baltimore County (UMBC) and has a BA and MA in Teaching.
