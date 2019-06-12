@@ -3,6 +3,7 @@ layout: article
 people_page: true
 section: about
 permalink: /people/han-wang/
+image_name: han-wang.jpg
 name: Han Wang
 pronouns: He/Him
 title: Our Team
