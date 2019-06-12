@@ -10,4 +10,4 @@ job-title: Design Project Manager
 location: Lab SF
 ---
 
-Jen is a senior project manager with many years of experience in digital product development and management, organizational and technology systems development, and team management. Her work has been focused in the news and media industries with an emphasis on audience development and engagement, and additionally in recent years on strategy and execution for internal service-oriented business operations.
+As a design project manager, Jen leads design strategy, planning, and execution for projects with the Lab’s federal agency partners and strategic design operations and communications.  With two decades of experience in the news and public media industry, Jen brings considerable expertise in digital content production and management to the Lab, aligning team culture and resources with needs. Jen recently directed interactive projects for the Independent Television Service (ITVS), an award-winning independent documentary funder and presenter for public media. Additionally, Jen was responsible for digital infrastructure projects and contributing to organizational change and policy initiatives.
