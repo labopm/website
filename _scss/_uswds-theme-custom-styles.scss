@@ -220,6 +220,47 @@ i.e.
   width: 100%;
 }
 
+// ***************** LOCATIONS ***************** //
+.lab-locations-key {
+  margin-bottom: units(2);
+
+  &__item {
+    position: relative;
+    padding: units(3) units(1) units(1);
+    margin: units(1) 0;
+    font-weight: bold;
+  }
+
+  &__item::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '\2022';
+    font-size: 3rem;
+    line-height: 0;
+  }
+
+  &__item--lab-office::before {
+    color: color($theme-color-lab-brand-orange);
+  }
+
+  &__item--where-we-worked::before {
+    color: color($theme-color-lab-gold);
+  }
+
+  &__item--where-we-taught::before {
+    color: color($theme-color-lab-coral);
+  }
+
+  &__item--where-we-learned::before {
+    color: color($theme-color-lab-brand-teal);
+  }
+
+  &__item--where-we-collaborated::before {
+    color: color($theme-color-lab-indigo);
+  }
+}
+
 // ***************** TEAM ***************** //
 .lab-team {
   &__body {
@@ -382,5 +423,3 @@ i.e.
 }
 
 // ***************** PAGE SPECIFIC LAYOUTS ***************** //
-.l-contact {
-}
