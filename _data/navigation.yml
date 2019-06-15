@@ -25,6 +25,16 @@ what-we-do:
 #    href: /what-we-do/events/
   - text: Resources
     href: /what-we-do/resources/
+    - text: Human-Centered Design Guide Series
+      href: /what-we-do/resources/hcd-guide/
+      - text: Human-Centered Design Guide Series - Discovery
+        href: /what-we-do/resources/hcd-guide/discovery/
+      - text: Human-Centered Design Guide Series - Design
+        href: /what-we-do/resources/hcd-guide/design/
+        - text: Purpose of this Guide
+          href: /what-we-do/resources/hcd-guide/design/purpose/
+        - text: Human-Centered Design
+          href: /what-we-do/resources/hcd-guide/design/humancentereddesign/
 
 take-a-class:
   - text: Introduction

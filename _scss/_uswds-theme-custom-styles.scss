@@ -102,13 +102,34 @@ i.e.
   }
 }
 
-.lab-hero--what-we-do {
+.lab-hero--what-we-do,
+.lab-hero--hcd-guide {
   background-color: color($theme-color-lab-coral);
 
   &__body {
     @include at-media('tablet') {
       background-image: url('../img/lab/hero-coral-detail.jpg');
     }
+  }
+}
+
+.lab-hero--hcd-guide {
+  &__body {
+    @include at-media('tablet') {
+      background-position: 480px 0;
+    }
+
+    @include at-media('tablet-lg') {
+      background-position: right 0;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__sub-title {
+    color: color('white');
   }
 }
 
@@ -418,3 +439,191 @@ i.e.
 }
 
 // ***************** PAGE SPECIFIC LAYOUTS ***************** //
+.l-hcd-guide {
+  .guide-footnotes {
+    font-family: "public-sans", "Helvetica Neue", Helvetica, "Roboto", sans-serif;
+    font-size: 12px;
+    margin: 0em;
+  }
+
+  .guide-blockquote {
+    font-size: 1em;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    color: #212121;
+    padding: 1.2em 30px 1.2em 75px;
+    border-left: 8px solid #046b99;
+    line-height: 1.4;
+    position: relative;
+    background: #f1f1f1;
+    max-width: 66ch;
+    }
+
+  .guide-blockquote ::before {
+    content: '\201C';
+    color: #046b99;
+    font-size: 4em;
+    position: absolute;
+    left: 10px;
+    top: -10px; }
+
+  .guide-blockquote ::after {
+    content: ''; }
+
+  .guide-blockquote span {
+    display: block;
+    color: #212121;
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 1em;
+  }
+
+  .guide-blue-box {
+    width: 100%;
+    color: #212121;
+    margin: units(2) 0;
+    padding: 1.5rem;
+    background: #e1f3f8;
+    max-width: 66ch;
+  }
+
+  .guide-blue-box-illustration {
+    padding: 0 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background: #e1f3f8;
+    max-width: 66ch;
+  }
+
+  .guide-blue-box img {
+    margin-right: 1.5rem;
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .circle {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 50%;
+    background-color: #fee685;
+    text-align: center;
+  }
+
+  .print-button {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    padding-top: 20%;
+    align: center;
+  }
+
+  .border {
+    color: #adadad;
+  }
+
+  @media print {
+    aside,
+    footer,
+    form …,
+    header {
+      display: none;
+    }
+
+  .noprint {
+      display: none;
+    }
+  }
+
+  /////////////////////image styles//////////////////////////////////
+
+  .section-image {
+    grid-column: 3;
+    grid-row: 3;
+    padding: .5rem;
+  }
+
+  ///////////////////image and text interaction styles////////////////
+
+  .space {
+    padding: 2em;
+  }
+
+  .center_text {
+    align-self: center;
+  }
+
+  .square_center {
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+  }
+
+  .block {
+    width: 100%;
+  }
+
+  .square_right {
+    display: inline;
+    width: 50%;
+    float: right;
+    padding-left: 1.5%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+  }
+
+
+  .square_left {
+    display: inline;
+    width: 50%;
+    float: left;
+    padding-right: 1.5%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+  }
+
+  .couple_right {
+    display: inline;
+    width: 45%;
+    float: left;
+    padding-left: 1.5%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+  }
+
+  .couple_left {
+    display: inline;
+    width: 45%;
+    float: left;
+    padding-left: 1.5%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+  }
+
+  .bubbles_right {
+    display: inline;
+    width: 30%;
+    float: right;
+    padding-left: 2.5%;
+    margin: .5em;
+    min-width: 225px;
+  }
+
+  .bubbles_left {
+    display: inline;
+    width: 30%;
+    float: left;
+    padding-right: 2.5%;
+    margin: .5em;
+    min-width: 225px;
+  }
+
+  .right_text {
+    text-align: right;
+  }
+}
