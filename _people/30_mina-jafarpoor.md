@@ -3,6 +3,7 @@ layout: article
 people_page: true
 section: about
 permalink: /people/mina-jafarpoor/
+image_name: mina-jafarpoor.jpg
 name: Mina Jafarpoor
 pronouns: She/Her
 title: Our Team

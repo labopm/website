@@ -4,6 +4,7 @@ people_page: true
 section: about
 permalink: /people/ben-winter/
 name: Ben Winter
+image_name: ben-winter.jpg
 pronouns: He/Him
 title: Our Team
 job-title: Service Designer

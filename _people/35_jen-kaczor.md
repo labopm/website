@@ -3,6 +3,7 @@ layout: article
 people_page: true
 section: about
 permalink: /people/jen-kaczor/
+image_name: jen-kaczor.jpg
 name: Jen Kaczor
 pronouns: She/Her
 title: Our Team

@@ -32,6 +32,24 @@ i.e.
   }
 }
 
+.lab-content-caption-container {
+  margin: 0 0 units(4) 0;
+
+  .square-center {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin: units(1) 0 0 0;
+  }
+
+  a {
+    display: block;
+    @include u-font-size('body', '2xs');
+    font-style: italic;
+  }
+}
+
 .lab-dl {
   dd {
     margin: 0 0 units(2) 0;
@@ -73,9 +91,15 @@ i.e.
   &__body {
     @include grid-container;
     padding: units(6) units(2) units(4);
+    background-repeat: no-repeat;
 
     @include at-media('tablet') {
       padding: units(8) units(2) units(4);
+      background-position: 480px 50%;
+    }
+
+    @include at-media('tablet-lg') {
+      background-position: right 50%;
     }
 
     @include at-media('desktop') {
@@ -85,21 +109,50 @@ i.e.
 
   &__title {
     color: color('white');
+
     @include at-media('tablet') {
-      @include grid-col(6);
+      max-width: 460px;
+    }
+
+    @include at-media('desktop') {
+      max-width: 500px;
     }
   }
 }
 
-.lab-hero--what-we-do {
+.lab-hero--home {
+  background-image: url('../img/lab/home/design-school-blue.jpg');
+  background-position: center center;
+}
+
+.lab-hero--what-we-do,
+.lab-hero--hcd-guide {
   background-color: color($theme-color-lab-coral);
 
   &__body {
     @include at-media('tablet') {
       background-image: url('../img/lab/hero-coral-detail.jpg');
-      background-position: right 50%;
-      background-repeat: no-repeat;
     }
+  }
+}
+
+.lab-hero--hcd-guide {
+  &__body {
+    @include at-media('tablet') {
+      background-position: 480px 0;
+    }
+
+    @include at-media('tablet-lg') {
+      background-position: right 0;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__sub-title {
+    color: color('white');
   }
 }
 
@@ -109,8 +162,6 @@ i.e.
   &__body {
     @include at-media('tablet') {
       background-image: url('../img/lab/hero-sky-detail.jpg');
-      background-position: right 50%;
-      background-repeat: no-repeat;
     }
   }
 }
@@ -121,8 +172,6 @@ i.e.
   &__body {
     @include at-media('tablet') {
       background-image: url('../img/lab/hero-gold-detail.jpg');
-      background-position: right 50%;
-      background-repeat: no-repeat;
     }
   }
 
@@ -138,7 +187,6 @@ i.e.
     @include at-media('tablet') {
       background-image: url('../img/lab/hero-aqua-detail.jpg');
       background-position: right 75%;
-      background-repeat: no-repeat;
     }
   }
 }
@@ -216,6 +264,210 @@ i.e.
   width: 100%;
 }
 
+.lab-classes__table-link {
+  @include permaLink(color('primary'));
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// ***************** HOME ***************** //
+.lab-home-highlight,
+.lab-home-media-object {
+  &__container {
+    @include at-media('tablet') {
+      @include grid-container;
+      padding: units(7) units(2) units(3);
+    }
+  }
+
+  &__body {
+    @include at-media('tablet') {
+      @include grid-col(7);
+    }
+  }
+
+  &__title,
+  &__lead {
+    @include u-font-size('body', 11);
+    line-height: line-height('heading', 2);
+  }
+
+  &__lead-link {
+    @include permaLink(color('ink'));
+  }
+}
+
+.lab-home-highlight {
+  background-color: color($theme-color-lab-mist);
+
+  &__container {
+    padding: units(5) units(2) units(3);
+  }
+}
+
+.lab-home-highlight--white {
+  background-color: color('white');
+}
+
+.lab-home-media-object {
+  &__container {
+    padding: units(5) 0 units(3) 0;
+  }
+
+  &__body {
+    padding: 0 units(2);
+  }
+
+  &__lead {
+    margin: 0;
+  }
+
+  &__figure {
+    max-height: 150px;
+    overflow-y: hidden;
+    text-align: center;
+    width: 100%;
+    margin: units(4) 0 units(3) 0;
+
+    @include at-media('tablet') {
+      @include grid-col(4);
+      @include grid-offset(1);
+      text-align: right;
+      max-height: inherit;
+      overflow-y: auto;
+    }
+
+    img {
+      object-fit: none;
+      object-position: 65% 65%;
+
+      @include at-media('tablet') {
+        max-height: 304px;
+        object-fit: inherit;
+        object-position: inherit;
+      }
+    }
+  }
+
+  &__figure--sky {
+    background-color: color($theme-color-lab-sky);
+
+    @include at-media('tablet') {
+      background-color: inherit;
+    }
+  }
+
+  &__figure--coral {
+    background-color: color($theme-color-lab-coral);
+
+    @include at-media('tablet') {
+      background-color: inherit;
+    }
+  }
+
+  &__figure--gold {
+    background-color: color($theme-color-lab-gold);
+
+    @include at-media('tablet') {
+      background-color: inherit;
+    }
+  }
+
+  &__figure--aqua {
+    background-color: color($theme-color-lab-aqua);
+
+    @include at-media('tablet') {
+      background-color: inherit;
+    }
+  }
+
+  &__quote {
+    color: color($theme-color-lab-charcoal);
+    border-left: 1px solid color($theme-color-lab-pewter);
+    margin: units(4) 0 0 0;
+    padding-left: units(4);
+
+    p {
+      font-weight: bold;
+      @include u-font-size('body', 8);
+      line-height: line-height('heading', 3);
+    }
+  }
+}
+
+.lab-home-media-object--left-figure {
+  background-color: color($theme-color-lab-mist);
+
+  .lab-home-media-object__body {
+    @include at-media('tablet') {
+      @include grid-offset(1);
+    }
+  }
+
+  .lab-home-media-object__figure {
+    @include at-media('tablet') {
+      @include grid-offset('none');
+      text-align: left;
+    }
+  }
+}
+
+// ***************** LOCATIONS ***************** //
+.lab-locations-key {
+  margin-bottom: units(2);
+
+  &__item {
+    position: relative;
+    padding: units(3) units(1) units(1);
+    margin: units(1) 0;
+    font-weight: bold;
+  }
+
+  &__item::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '\2022';
+    font-size: 3rem;
+    line-height: 0;
+  }
+
+  &__item--lab-office::before {
+    color: color($theme-color-lab-brand-orange);
+  }
+
+  &__item--where-we-worked::before {
+    color: color($theme-color-lab-gold);
+  }
+
+  &__item--where-we-taught::before {
+    color: color($theme-color-lab-coral);
+  }
+
+  &__item--where-we-learned::before {
+    color: color($theme-color-lab-brand-teal);
+  }
+
+  &__item--where-we-collaborated::before {
+    color: color($theme-color-lab-indigo);
+  }
+}
+
+// ***************** SIDENAV ***************** //
+.lab-hcd-guide-nav {
+  &__title {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    @include u-font-size('body', 'lg');
+    @include permaLink(color('primary'));
+    margin-bottom: units(2);
+  }
+}
+
 // ***************** TEAM ***************** //
 .lab-team {
   &__body {
@@ -246,7 +498,9 @@ i.e.
   }
 
   &__figure {
-    width: 100%;
+    width: 140px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &__body {
@@ -318,11 +572,6 @@ i.e.
     display: none;
   }
 
-  &__opm-logo {
-    display: flex;
-    align-items: center;
-  }
-
   &__required-links-list {
     display: block;
     margin-top: units(2);
@@ -376,5 +625,195 @@ i.e.
 }
 
 // ***************** PAGE SPECIFIC LAYOUTS ***************** //
-.l-contact {
+.l-hcd-guide {
+  .guide-footnotes {
+    font-family: "public-sans", "Helvetica Neue", Helvetica, "Roboto", sans-serif;
+    font-size: 12px;
+    margin: 0em;
+  }
+
+  .guide-blockquote {
+    font-size: 1em;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    color: #212121;
+    padding: 1.2em 30px 1.2em 75px;
+    border-left: 8px solid #046b99;
+    line-height: 1.4;
+    position: relative;
+    background: #f1f1f1;
+    max-width: 66ch;
+    }
+
+  .guide-blockquote ::before {
+    content: '\201C';
+    color: #046b99;
+    font-size: 4em;
+    position: absolute;
+    left: 10px;
+    top: -10px; }
+
+  .guide-blockquote ::after {
+    content: ''; }
+
+  .guide-blockquote span {
+    display: block;
+    color: #212121;
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 1em;
+  }
+
+  .guide-blue-box {
+    width: 100%;
+    color: #212121;
+    margin: units(2) 0;
+    padding: 1.5rem;
+    background: #e1f3f8;
+    max-width: 66ch;
+  }
+
+  .guide-blue-box-illustration {
+    padding: 0 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    background: #e1f3f8;
+    max-width: 66ch;
+  }
+
+  .guide-blue-box img {
+    margin-right: 1.5rem;
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .circle {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 50%;
+    background-color: #fee685;
+    text-align: center;
+  }
+
+  .print-button {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    padding-top: 20%;
+    align: center;
+  }
+
+  .border {
+    color: #adadad;
+  }
+
+  @media print {
+    aside,
+    footer,
+    form …,
+    header {
+      display: none;
+    }
+
+  .noprint {
+      display: none;
+    }
+  }
+
+  /////////////////////image styles//////////////////////////////////
+
+  .section-image {
+    grid-column: 3;
+    grid-row: 3;
+    padding: .5rem;
+  }
+
+  ///////////////////image and text interaction styles////////////////
+
+  .space {
+    padding: 2em;
+  }
+
+  .center_text {
+    align-self: center;
+  }
+
+  .square_center {
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+  }
+
+  .lab-content-caption-container .square_center {
+    padding-bottom: 0;
+  }
+
+  .block {
+    width: 100%;
+  }
+
+  .square_right {
+    display: inline;
+    width: 50%;
+    float: right;
+    padding-left: 1.5%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+  }
+
+
+  .square_left {
+    display: inline;
+    width: 50%;
+    float: left;
+    padding-right: 1.5%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+  }
+
+  .couple_right {
+    display: inline;
+    width: 45%;
+    float: left;
+    padding-left: 1.5%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+  }
+
+  .couple_left {
+    display: inline;
+    width: 45%;
+    float: left;
+    padding-left: 1.5%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+  }
+
+  .bubbles_right {
+    display: inline;
+    width: 30%;
+    float: right;
+    padding-left: 2.5%;
+    margin: .5em;
+    min-width: 225px;
+  }
+
+  .bubbles_left {
+    display: inline;
+    width: 30%;
+    float: left;
+    padding-right: 2.5%;
+    margin: .5em;
+    min-width: 225px;
+  }
+
+  .right_text {
+    text-align: right;
+  }
 }

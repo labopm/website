@@ -3,6 +3,7 @@ layout: article
 people_page: true
 section: about
 permalink: /people/tim-vienckowski/
+image_name: tim-vienckowski.jpg
 name: Tim Vienckowski
 pronouns: He/Him
 title: Our Team

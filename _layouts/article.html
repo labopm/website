@@ -11,6 +11,12 @@
   <main id="main-content" role="main" class="usa-layout-docs usa-section lab-content">
     <div class="grid-container">
       <div class="grid-row grid-gap">
+        {% if page.section == 'hcd-guide' %}
+          {% assign sidenavigation = site.data.navigation['hcd-guide'] %}
+        <aside class="usa-layout-docs__sidenav desktop:grid-col-4">
+          {% include hcd-guide-sidenav.html links=sidenavigation %}
+        </aside>
+        {% endif %}
         <div class="usa-layout-docs__main desktop:grid-col-8 usa-prose">
           {% if people_page %}
           {% include person-header.html %}
