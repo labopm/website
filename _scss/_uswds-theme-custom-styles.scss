@@ -264,6 +264,157 @@ i.e.
   width: 100%;
 }
 
+.lab-classes__table-link {
+  @include permaLink(color('primary'));
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// ***************** HOME ***************** //
+.lab-home-highlight,
+.lab-home-media-object {
+  &__container {
+    @include at-media('tablet') {
+      @include grid-container;
+      padding: units(7) units(2) units(3);
+    }
+  }
+
+  &__body {
+    @include at-media('tablet') {
+      @include grid-col(7);
+    }
+  }
+
+  &__title,
+  &__lead {
+    @include u-font-size('body', 11);
+    line-height: line-height('heading', 2);
+  }
+
+  &__lead-link {
+    @include permaLink(color('ink'));
+  }
+}
+
+.lab-home-highlight {
+  background-color: color($theme-color-lab-mist);
+
+  &__container {
+    padding: units(5) units(2) units(3);
+  }
+}
+
+.lab-home-highlight--white {
+  background-color: color('white');
+}
+
+.lab-home-media-object {
+  &__container {
+    padding: units(5) 0 units(3) 0;
+  }
+
+  &__body {
+    padding: 0 units(2);
+  }
+
+  &__lead {
+    margin: 0;
+  }
+
+  &__figure {
+    max-height: 150px;
+    overflow-y: hidden;
+    text-align: center;
+    width: 100%;
+    margin: units(4) 0 units(3) 0;
+
+    @include at-media('tablet') {
+      @include grid-col(4);
+      @include grid-offset(1);
+      text-align: right;
+      max-height: inherit;
+      overflow-y: auto;
+    }
+
+    img {
+      object-fit: none;
+      object-position: 65% 65%;
+
+      @include at-media('tablet') {
+        max-height: 304px;
+        object-fit: inherit;
+        object-position: inherit;
+      }
+    }
+  }
+
+  &__figure--sky {
+    background-color: color($theme-color-lab-sky);
+
+    @include at-media('tablet') {
+      background-color: inherit;
+    }
+  }
+
+  &__figure--coral {
+    background-color: color($theme-color-lab-coral);
+
+    @include at-media('tablet') {
+      background-color: inherit;
+    }
+  }
+
+  &__figure--gold {
+    background-color: color($theme-color-lab-gold);
+
+    @include at-media('tablet') {
+      background-color: inherit;
+    }
+  }
+
+  &__figure--aqua {
+    background-color: color($theme-color-lab-aqua);
+
+    @include at-media('tablet') {
+      background-color: inherit;
+    }
+  }
+
+  &__quote {
+    color: color($theme-color-lab-charcoal);
+    border-left: 1px solid color($theme-color-lab-pewter);
+    margin: units(4) 0 0 0;
+    padding-left: units(4);
+
+    p {
+      font-weight: bold;
+      @include u-font-size('body', 8);
+      line-height: line-height('heading', 3);
+    }
+  }
+}
+
+.lab-home-media-object--left-figure {
+  background-color: color($theme-color-lab-mist);
+
+  .lab-home-media-object__body {
+    @include at-media('tablet') {
+      @include grid-offset(1);
+    }
+  }
+
+  .lab-home-media-object__figure {
+    @include at-media('tablet') {
+      @include grid-offset('none');
+      text-align: left;
+    }
+  }
+}
+
 // ***************** LOCATIONS ***************** //
 .lab-locations-key {
   margin-bottom: units(2);
