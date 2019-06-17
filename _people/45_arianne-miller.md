@@ -3,6 +3,7 @@ layout: article
 people_page: true
 section: about
 permalink: /people/arianne-miller/
+image_name: arianne-miller.jpg
 name: Arianne Miller
 pronouns: She/Her
 title: Our Team

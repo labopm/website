@@ -3,6 +3,7 @@ layout: article
 people_page: true
 section: about
 permalink: /people/patty-beirne/
+image_name: patty-beirne.jpg
 name: Patty Beirne
 pronouns: She/Her
 title: Our Team

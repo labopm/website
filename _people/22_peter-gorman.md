@@ -3,6 +3,7 @@ layout: article
 people_page: true
 section: about
 permalink: /people/peter-gorman/
+image_name: peter-gorman.jpg
 name: Peter Gorman
 pronouns: He/Him
 title: Our Team
