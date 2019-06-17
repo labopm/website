@@ -1,6 +1,7 @@
 ---
 layout: article
-section: what-we-do
+section: hcd-guide
+sub-section: Discovery
 permalink: /what-we-do/resources/hcd-guide/discovery/
 title: Discovery
 ---

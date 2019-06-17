@@ -32,6 +32,24 @@ i.e.
   }
 }
 
+.lab-content-caption-container {
+  margin: 0 0 units(4) 0;
+
+  .square-center {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin: units(1) 0 0 0;
+  }
+
+  a {
+    display: block;
+    @include u-font-size('body', '2xs');
+    font-style: italic;
+  }
+}
+
 .lab-dl {
   dd {
     margin: 0 0 units(2) 0;
@@ -562,6 +580,10 @@ i.e.
   .square_center {
     padding-top: 1.5%;
     padding-bottom: 1.5%;
+  }
+
+  .lab-content-caption-container .square_center {
+    padding-bottom: 0;
   }
 
   .block {
