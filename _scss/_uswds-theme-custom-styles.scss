@@ -300,6 +300,18 @@ i.e.
   }
 }
 
+// ***************** SIDENAV ***************** //
+.lab-hcd-guide-nav {
+  &__title {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    @include u-font-size('body', 'lg');
+    @include permaLink(color('primary'));
+    margin-bottom: units(2);
+  }
+}
+
 // ***************** TEAM ***************** //
 .lab-team {
   &__body {

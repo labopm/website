@@ -53,7 +53,7 @@ about:
     href: /about/awards/
 
 hcd-guide:
-  - text: Human-Centered Design Guide Series - Discovery
+  - text: HCD Guide Series - Discovery
     href: /what-we-do/resources/hcd-guide/discovery/
     sub-section: Discovery
     subnav:
@@ -61,7 +61,7 @@ hcd-guide:
       href: /assets/doc/hcd-guide/discovery/HCD-Guide-Interagency-v1.5_pages.pdf
     - text: Operations Guide
       href: /assets/doc/hcd-guide/discovery/HCD_Ops_Guide_v12_pages.pdf
-  - text: Human-Centered Design Guide Series - Design
+  - text: HCD Guide Series - Design
     href: /what-we-do/resources/hcd-guide/design/
     sub-section: Design
     subnav:
@@ -112,3 +112,9 @@ hcd-guide:
       href: /what-we-do/resources/hcd-guide/design/glossary/
     - text: Acknowledgements
       href: /what-we-do/resources/hcd-guide/design/acknowledgements/
+  - text: HCD Guide Series - Deliver
+    href: /what-we-do/resources/hcd-guide/deliver/
+    sub-section: Deliver
+  - text: HCD Guide Series - Measure
+    href: /what-we-do/resources/hcd-guide/measure/
+    sub-section: Measure
