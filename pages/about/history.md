@@ -11,6 +11,6 @@ In 2011, OPM leadership was encouraged to identify actionable ways to foster gre
 
 #### Graphic: Who we are infographic from Tim
 
-Over the past several years, The Lab’s team and portfolio of projects have grown in size and scope. More than 4,000 government employees have attended our classes and our network of alumni continues to expand.
+Over the past several years, the Lab’s team and portfolio of projects have grown in size and scope. More than 4,000 government employees have attended our classes and our network of alumni continues to expand.
 
 
