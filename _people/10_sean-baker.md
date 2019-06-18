@@ -12,4 +12,4 @@ location: Lab DC
 
 TK
 
-[Back to Our Team](../../about/meet/)
+[Meet more of our team](../../about/meet/)
