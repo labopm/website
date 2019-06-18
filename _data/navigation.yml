@@ -5,7 +5,7 @@ primary:
   - text: Take a class
     href: /take-a-class/
     name: take-a-class
-  - text: About The Lab
+  - text: About the Lab
     href: /about/
     name: about
   - text: Contact us
@@ -15,11 +15,11 @@ primary:
 what-we-do:
   - text: Overview
     href: /what-we-do/
-  - text: Partner with The Lab
+  - text: Partner with us
     href: /what-we-do/partner/
   - text: How we work
     href: /what-we-do/how-we-work/
-  - text: Featured work / Case Studies
+  - text: Case studies
     href: /what-we-do/featured-work/
 #  - text: Events
 #    href: /what-we-do/events/
@@ -27,30 +27,30 @@ what-we-do:
     href: /what-we-do/resources/
 
 take-a-class:
-  - text: Introduction
+  - text: Overview
     href: /take-a-class/
-  - text: Custom Classes
+  - text: Custom classes
     href: /take-a-class/custom-classes/
-  - text: Open Enrollment Classes
+  - text: Open enrollment classes
     href: /take-a-class/open-enrollment-classes/
   - text: Coaching
     href: /take-a-class/coaching/
 
 about:
-  - text: Cornerstones
+  - text: Overview
     href: /about/
-  - text: Our History
+  - text: Our history
     href: /about/history/
-  - text: Meet Us
+  - text: Our team
     href: /about/meet/
   - text: Locations
     href: /about/locations/
-  - text: Careers
+  - text: Join the Lab
     href: /about/careers/
   - text: In the news
     href: /about/news/
-  - text: Awards
-    href: /about/awards/
+#  - text: Awards
+#    href: /about/awards/
 
 hcd-guide:
   - text: HCD Guide Series - Discovery
