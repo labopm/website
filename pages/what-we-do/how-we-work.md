@@ -9,7 +9,7 @@ With a government-wide mission and as a revolving fund in the federal government
 
 We employ a flexible approach to helping you find new avenues for solving problems. Most of our partnerships start with an initial discussion of your concerns and expectations surrounding a potential project. [Please complete the contact us form or email us for more information.](../contact.html)
 
-## Our Ideal Partner
+## Our ideal partner
 
 *	Is faced with a complex public sector challenge in need of new solutions;
 *	Is interested in developing internal design-focused capabilities within their team or organization;
