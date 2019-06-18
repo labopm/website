@@ -1,0 +1,45 @@
+---
+layout: article
+section: take-a-class
+permalink: /take-a-class/custom-classes/
+title: Custom Classes
+---
+
+<p class="lab-content__lead">
+  If you are interested in using your team’s work as a vehicle for learning design as a group, we can discuss designing and delivering a custom educational offering.
+</p>
+
+<h4>What makes custom programming unique:</h4>
+<ul>
+  <li>We work with you to contextualize design practice and theory</li>
+  <li>We bring a small team experienced in working within a federal agency</li>
+  <li>Custom programming is more affordable for groups</li>
+  <li>Learning and design outcomes are scalable and actionable</li>
+  <li>We can deliver on-site or in one of our spaces</li>
+  <li>You spend valuable time with your colleagues</li>
+</ul>
+
+<p>
+  If you are interested in a custom offering, <a href="{{ site.baseurl }}/contact/">contact us</a> directly and we will work with you to create a productive learning experience.
+</p>
+
+<h3>Custom Offerings</h3>
+<table class="usa-table usa-table--borderless lab-classes__table">
+  <thead>
+    <tr>
+      <th scope="col">Course name</th>
+      <th scope="col">Length</th>
+    </tr>
+  </thead>
+  <tbody>
+{% assign custom = site.classes | where: "session","custom" %}
+{% for aclass in custom %}
+    <tr>
+      <th scope="row">
+        <a class="lab-classes__table-link" href="{{ site.baseurl }}/{{ aclass.permalink }}">{{ aclass.title }}</a>
+      </th>
+      <td>{{ aclass.length }}</td>
+    </tr>
+{% endfor %}
+  </tbody>
+</table>
