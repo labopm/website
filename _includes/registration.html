@@ -8,8 +8,14 @@
     </dl>
     {% endif %}
 
-    <a href="https://leadership.opm.gov/programs.aspx?course={{ include.id }}" class="lab-cta__button lab-cta--registration__button" target="_blank">
-      Register
-    </a>
+    {% if include.next-offering %}
+      <a href="https://leadership.opm.gov/programs.aspx?course={{ include.id }}" class="lab-cta__button lab-cta--registration__button" target="_blank">
+        Register
+      </a>
+    {% else %}
+      <p>
+        No dates are currently scheduled.
+      </p>
+    {% endif %}
   </div>
 </section>
