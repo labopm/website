@@ -31,4 +31,4 @@ Note: While these studios usually begin with a partner and a custom topic, it is
 
 {{ page.length }}
 
-[Back to Custom Classes](../../../take-a-class/custom-classes/)
+[More custom classes](../../../take-a-class/custom-classes/)

@@ -13,9 +13,9 @@ next-offering: Jul 15-19, 2019
 next-offering-location: Washington, DC
 ---
 
-[Back to Open Enrollment Classes](../../take-a-class/open-enrollment-classes/)
+[More open enrollment classes](../../take-a-class/open-enrollment-classes/)
 
-### Class Details
+### Class details
 
 #### Format
 
@@ -31,7 +31,7 @@ To get the most out of Design School, come prepared with your own challenge. Bri
 <p class="lab-caption">New programs at the Lab at OPM</p>
 
 
-#### Learning Outcomes
+#### Learning outcomes
 
 * Practical experience applying human-centered design to a complex challenge;
 * Exposure to the broader spectrum of design and how it can be applied to the public sector;
@@ -45,4 +45,4 @@ To get the most out of Design School, come prepared with your own challenge. Bri
 
 {{ page.cost }}
 
-[Back to Open Enrollment Classes](../../take-a-class/open-enrollment-classes/)
+[More open enrollment classes](../../take-a-class/open-enrollment-classes/)

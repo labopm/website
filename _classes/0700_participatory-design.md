@@ -9,9 +9,9 @@ session: single
 registration-id: 297
 ---
 
-[Back to Open Enrollment Classes](../../take-a-class/open-enrollment-classes/)
+[More open enrollment classes](../../take-a-class/open-enrollment-classes/)
 
-### Class Details
+### Class details
 
 #### Format
 
@@ -21,7 +21,7 @@ Activity-oriented learning in a classroom setting
 
 Creating products, services, and experiences for your intended audience can be even more successful when you invite that audience to participate in the design process. Participatory design is designing with the people most affected by the end result, and not just for them. Following this method provides a rich understanding of what people think, feel and believe. It is vital to creating something to meet the needs of those who will use what you design. In this interactive course, we explore the theory and methods of participatory design, as well as strategies for how and when to use them.
 
-#### Learning Outcomes
+#### Learning outcomes
 
 * Knowledge of participatory design concepts and methods for inviting user feedback;
 * Strategies for deploying participatory design in your own project work;
@@ -36,4 +36,4 @@ Creating products, services, and experiences for your intended audience can be e
 
 {{ page.cost }}
 
-[Back to Open Enrollment Classes](../../take-a-class/open-enrollment-classes/)
+[More open enrollment classes](../../take-a-class/open-enrollment-classes/)

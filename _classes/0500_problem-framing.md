@@ -9,9 +9,9 @@ session: single
 registration-id: 298
 ---
 
-[Back to Open Enrollment Classes](../../take-a-class/open-enrollment-classes/)
+[More open enrollment classes](../../take-a-class/open-enrollment-classes/)
 
-### Class Details
+### Class details
 
 #### Format
 
@@ -21,7 +21,7 @@ Activity-oriented learning in a classroom setting
 
 Design is often characterized as a process of creative problem solving. Beyond simply finding solutions, design methods and mindsets can lead us to unexplored possibilities, untapped potential, and entirely new ways of approaching a problem. Framing a problem is as much a design opportunity as finding its solution. Re-framing old problems in new ways is often the key to discovering truly innovative solutions. In this one-day class, we will explore problem framing in various fields including the arts, sciences, industry, diplomacy, and others. We also will experiment with various applications and approaches with this powerful practice in design.
 
-#### Learning Outcomes
+#### Learning outcomes
 
 * Cultivation of a critical awareness of different forms and features of problems;
 * Ability to see challenges in our lives and work as the opportunities they really are;
@@ -36,4 +36,4 @@ Design is often characterized as a process of creative problem solving. Beyond s
 
 {{ page.cost }}
 
-[Back to Open Enrollment Classes](../../take-a-class/open-enrollment-classes/)
+[More open enrollment classes](../../take-a-class/open-enrollment-classes/)

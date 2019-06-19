@@ -10,9 +10,9 @@ next-offering: June 20, 2019
 next-offering-location: Washington, DC
 ---
 
-[Back to Open Enrollment Classes](../../take-a-class/open-enrollment-classes/)
+[More open enrollment classes](../../take-a-class/open-enrollment-classes/)
 
-### Class Details
+### Class details
 
 #### Format
 
@@ -22,7 +22,7 @@ Activity-oriented learning in a classroom setting
 
 Whether consciously or not, we all communicate visually and make value judgments based on visual design every day. Through exercises and examples, we will explore the design principles that guide effective visual communication. With hands-on activities using the most accessible tools at hand, participants will learn to apply these principles in their own work.
 
-#### Learning Outcomes
+#### Learning outcomes
 
 * Ability to recognize basic visual design principles and apply them to create work that visually aligns with your intentions;
 * Shared language and insights to improve collaboration with designers;
@@ -36,4 +36,4 @@ Whether consciously or not, we all communicate visually and make value judgments
 
 {{ page.cost }}
 
-[Back to Open Enrollment Classes](../../take-a-class/open-enrollment-classes/)
+[More open enrollment classes](../../take-a-class/open-enrollment-classes/)

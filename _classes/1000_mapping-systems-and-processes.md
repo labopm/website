@@ -11,9 +11,9 @@ next-offering: June 19, 2019
 next-offering-location: Washington, DC
 ---
 
-[Back to Open Enrollment Classes](../../take-a-class/open-enrollment-classes/)
+[More open enrollment classes](../../take-a-class/open-enrollment-classes/)
 
-### Class Details
+### Class details
 
 #### Format
 
@@ -23,7 +23,7 @@ Activity-oriented learning in a classroom setting
 
 Often the best ways to explore a complex process or system is to sketch or map it. On the most fundamental level, maps can help find where you’re going and where you’ve been. They can also help depict both real-life and conceptual challenges. To help provide clarity into where problems exist and how to solve them, this class will explore approaches and techniques for mapping to demonstrate the value in using them to solve problems.
 
-#### Learning Outcomes
+#### Learning outcomes
 
 * Knowledge of mapping formats that are widely used in human-centered design and public sector innovation;
 * Exposure to different mapping strategies and techniques required to create a valuable tool to explore and solve complex problems;
@@ -37,4 +37,4 @@ Often the best ways to explore a complex process or system is to sketch or map i
 
 {{ page.cost }}
 
-[Back to Open Enrollment Classes](../../take-a-class/open-enrollment-classes/)
+[More open enrollment classes](../../take-a-class/open-enrollment-classes/)
