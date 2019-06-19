@@ -1,7 +1,7 @@
 ---
 layout: article
 section: about
-permalink: /about/careers/
+permalink: /about/join/
 title: Join the Lab
 ---
 

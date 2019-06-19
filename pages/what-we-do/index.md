@@ -7,7 +7,7 @@ title: What we do
 
 <p class="lab-content__lead">
   The Lab is a group of designers helping the federal government solve complex challenges. Across all of our services, we strive to build human-centered design capacity across the federal government. We:
-  </p>
+</p>
 
 *	Develop and offer design education classes informed by our experience practicing human-centered design in the federal space to help federal employees respond to and manage the complex challenges they face. To learn more about our educational offerings, visit the [Take a class](../take-a-class/) page.  
 *	Partner with federal agencies and other organizations to take on complex public sector challenges. Working with us can unleash new perspectives and fresh approaches to help solve pressing challenges. Learn more on the [Partner with us](partner/) page.
