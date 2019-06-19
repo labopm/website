@@ -2,7 +2,7 @@
 layout: article
 section: take-a-class
 permalink: class/custom/co-design-workshop/
-title: Co-Design Workshop
+title: Co-design workshop
 length: 2 to 3 days
 session: custom
 ---
@@ -17,7 +17,7 @@ In human-centered design, a key method is to convene a diverse group of stakehol
 
 Our co-design workshops are designed to introduce participants to the mindsets, methods, and tools of HCD in government. We design and plan the workshops closely with our partners, and often ask participants to do pre-work to ensure they’re prepared to bring key knowledge. Our team works with agencies to capture and frame the output of each workshop and produce design documents that clarify the results and future actions to take.
 
-#### Learning Outcomes
+#### Learning outcomes
 
 * Break down complex problems to understand their root causes
 * Identify how human behavior might inform potential solutions
@@ -28,4 +28,4 @@ Our co-design workshops are designed to introduce participants to the mindsets, 
 
 {{ page.length }}
 
-[Back to Custom Classes](../../../take-a-class/custom-classes/)
+[More custom classes](../../../take-a-class/custom-classes/)
