@@ -2,7 +2,7 @@
 layout: article
 section: take-a-class
 permalink: /take-a-class/custom-classes/
-title: Custom Classes
+title: Custom classes
 ---
 
 <p class="lab-content__lead">
