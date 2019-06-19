@@ -9,9 +9,9 @@ session: multi
 registration-id: 306
 ---
 
-[Back to Open Enrollment Classes](../../take-a-class/open-enrollment-classes/)
+[More open enrollment classes](../../take-a-class/open-enrollment-classes/)
 
-### Class Details
+### Class details
 
 #### Format
 
@@ -23,7 +23,7 @@ This multi-month series provides you with the opportunity to practice Human-cent
 
 This session will address [TK real-world issue]. We’ll focus on the societal, legislative, economic, and technological trends affecting [topic TK] and learn how the fundamentals of HCD can help delve deeper into the root causes and generate new insights on the topic.
 
-#### Learning Outcomes
+#### Learning outcomes
 
 This class will equip you with the following skills and tools:
 
@@ -41,4 +41,4 @@ This class will equip you with the following skills and tools:
 
 {{ page.cost }}
 
-[Back to Open Enrollment Classes](../../take-a-class/open-enrollment-classes/)
+[More open enrollment classes](../../take-a-class/open-enrollment-classes/)
