@@ -23,7 +23,7 @@ module.exports = {
       "_includes/*.html",
       "_classes/*.md",
       "_people/*.md",
-      "assets/img/png,jpg,svg,}",
+      "assets/img/*.{png,jpg,svg}",
       "_layouts/*.html",
       "pages/**/*.{html,markdown,md,yml,json,txt,xml}"
     ],
