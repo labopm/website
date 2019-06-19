@@ -1,7 +1,7 @@
 ---
 layout: article
 section: what-we-do
-permalink: /what-we-do/featured-work/
+permalink: /what-we-do/case-studies/
 title: Case studies
 ---
 
