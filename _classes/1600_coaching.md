@@ -26,4 +26,4 @@ If you are interested in coaching, please contact us directly and include any re
 
 {{ page.length }}
 
-[Back to Custom Classes](../../../take-a-class/custom-classes/)
+[More custom classes](../../../take-a-class/custom-classes/)
