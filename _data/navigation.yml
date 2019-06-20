@@ -17,8 +17,8 @@ what-we-do:
     href: /what-we-do/
   - text: Partner with us
     href: /what-we-do/partner/
-  - text: How we work
-    href: /what-we-do/how-we-work/
+ # - text: How we work
+ #  href: /what-we-do/how-we-work/
   - text: Case studies
     href: /what-we-do/case-studies/
 #  - text: Events
