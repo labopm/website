@@ -18,4 +18,4 @@ To create the conditions that enable a dynamic public sector to deliver effectiv
 
 ## Our approach
 
-Design methods can reveal new perspectives and help individuals better understand the challenges they face in their work. The Lab helps build the capacity for civil servants and Federal programs to leverage the discipline of Design to help uncover opportunities to improve programs and services that they are entrusted to deliver. Through collaboration, we build partnerships focused on creating cultural, intellectual and organizational shifts that will improve the way government works to support a more capable democracy.
+Design methods can reveal new perspectives and help individuals better understand the challenges they face in their work. The Lab helps build the capacity for civil servants and federal programs to leverage the discipline of design to help uncover opportunities to improve programs and services that they are entrusted to deliver. Through collaboration, we build partnerships focused on creating cultural, intellectual and organizational shifts that will improve the way government works to support a more capable democracy.
