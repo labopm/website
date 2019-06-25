@@ -1,5 +1,5 @@
 
-## About Human-centered Design (HCD)
+## About human-centered design (HCD)
 
 Human-centered design (HCD) is a creative and strategic approach to solving challenging problems. The method puts people at the center of the process. It takes into account behaviors, ways of thinking, and peoples’ needs and aspirations. HCD integrates academic disciplines including anthropology, psychology, economics, and other practical and theoretical design disciplines. It is a qualitative, participatory and iterative approach. This technique for creative problem-solving rapidly generates new ideas and innovative approaches to better understand and address people’s real needs.
 
