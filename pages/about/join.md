@@ -9,7 +9,7 @@ Are you looking to make a positive impact on some of the biggest challenges in g
 
 ## Open positions
 
-At the current time the Lab has no open positions. Follow us on Twitter (@LabOPM) or join our listserv to hear of job openings or opportunities for design careers in government.
+There are currently no open positions with the Lab. Follow us on Twitter <a href="https://twitter.com/labopm/">(@LabOPM)</a> or <a href="mailto:LabNetworks-subscribe-request@listserv.gsa.gov?subject=Listserv subscribe">join our listserv</a> to hear of job openings or opportunities for design careers in government.
 
 ## Details for government employees
 
