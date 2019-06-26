@@ -176,7 +176,7 @@ i.e.
   }
 
   &__title {
-    color: color('white');
+    color: color('ink');
   }
 }
 
@@ -187,10 +187,6 @@ i.e.
     @include at-media('tablet') {
       background-image: url('../img/lab/hero-aqua-detail.jpg');
       background-position: right 75%;
-    }
-
-    &__title {
-      color: color('ink');
     }
   }
 }
