@@ -3,6 +3,7 @@ layout: article
 people_page: true
 section: about
 permalink: /people/jane-newman/
+image_name: jane-newman.jpg
 name: Jane Newman
 pronouns: She/Her
 title: Our team

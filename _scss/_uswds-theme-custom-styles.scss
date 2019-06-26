@@ -186,7 +186,11 @@ i.e.
   &__body {
     @include at-media('tablet') {
       background-image: url('../img/lab/hero-aqua-detail.jpg');
-      background-position: right 75%;
+      // background-position: right 75%;
+    }
+
+    &__title {
+      color: color('ink');
     }
   }
 }
