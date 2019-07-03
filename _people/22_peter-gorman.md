@@ -7,7 +7,7 @@ image_name: peter-gorman.jpg
 name: Peter Gorman
 pronouns: He/Him
 title: Our team
-job-title: Design Partnership Manager
+job-title: Design Partnerships Lead
 location: Lab DC
 ---
 
