@@ -5,7 +5,9 @@ permalink: /about/join/
 title: Join the Lab
 ---
 
-Are you looking to make a positive impact on some of the biggest challenges in government? The Lab is always looking for creative thinkers to work with us as employees or on short term engagements as detailees.
+<p class="lab-content__lead">
+  Are you looking to make a positive impact on some of the biggest challenges in government? The Lab is always looking for creative thinkers to work with us as employees or on short term engagements as detailees.
+</p>
 
 ## Open positions
 
@@ -25,4 +27,4 @@ If you're a federal employee who has preferably completed at least one class wit
 
 ### Upcoming opportunities
 
-<a href="https://openopps.usajobs.gov/tasks/923">Photography for Design School at the Lab @ OPM</a>
+<a href="https://openopps.usajobs.gov/tasks/923">Photography for Design School at the Lab at OPM</a>
