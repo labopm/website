@@ -11,6 +11,22 @@
     <div class="grid-container">
       {{ content }}
     </div>
+    {% if page.highlight and page.section == 'what-we-do' %}
+      <div class="lab-content-highlight-warm">
+        <div class="lab-content-highlight-warm__body">
+          {% capture highlight_include %}{% include {{ page.highlight }} %}{% endcapture %}
+          {{ highlight_include | markdownify }}
+        </div>
+      </div>
+    {% endif %}
+    {% if page.highlight and page.section == 'about' %}
+      <div class="lab-content-highlight-cool">
+        <div class="lab-content-highlight-cool__body">
+          {% capture highlight_include %}{% include {{ page.highlight }} %}{% endcapture %}
+          {{ highlight_include | markdownify }}
+        </div>
+      </div>
+    {% endif %}
   </main>
   {% include _footer.html %}
 

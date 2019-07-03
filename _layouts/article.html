@@ -22,6 +22,9 @@
           {% include person-header.html %}
           {% endif %}
           {{ content }}
+          {% if people_page %}
+          <p><a href="../../about/team/">Meet more of our team</a></p>
+          {% endif %}
         </div>
         {% assign registration_id = page.registration-id %}
         {% if registration_id %}
@@ -35,22 +38,28 @@
         </aside>
         {% endif %}
         {% if page.title == 'Partner with us' %}
-        <aside class="usa-layout-docs__sidenav desktop:grid-col-4">
-          <section class="lab-cta">
-            <div class="lab-cta__body">
-              <a href="{{ site.baseurl }}/contact/" class="lab-cta__button">
-                Contact us
-              </a>
-              <p class="lab-cta__desc">
-                If you are interested in a partnership with the Lab, contact us directly and we will work with you to develop a way forward.
-              </p>
-            </div>
-          </section>
-        </aside>
+          {% include contact-cta.html %}
         {% endif %}
       </div>
     </div>
+    {% if page.highlight and page.section == 'what-we-do' %}
+      <div class="lab-content-highlight-warm">
+        <div class="lab-content-highlight-warm__body">
+          {% capture highlight_include %}{% include {{ page.highlight }} %}{% endcapture %}
+          {{ highlight_include | markdownify }}
+        </div>
+      </div>
+    {% endif %}
+    {% if page.highlight and page.section == 'about' %}
+      <div class="lab-content-highlight-cool">
+        <div class="lab-content-highlight-cool__body">
+          {% capture highlight_include %}{% include {{ page.highlight }} %}{% endcapture %}
+          {{ highlight_include | markdownify }}
+        </div>
+      </div>
+    {% endif %}
   </main>
+
   {% include _footer.html %}
 
   <script src="{{ site.baseurl }}/assets/js/uswds.min.js"></script>
