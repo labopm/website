@@ -11,6 +11,3 @@ location: Lab NY
 ---
 
 TK
-
-
-[Meet more of our team](../../about/meet/)

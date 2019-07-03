@@ -11,5 +11,3 @@ location: Lab DC
 ---
 
 TK
-
-[Meet more of our team](../../about/meet/)
