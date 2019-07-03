@@ -4,6 +4,7 @@ people_page: true
 section: about
 permalink: /people/aaron-stienstra/
 name: Aaron Stienstra
+image_name: aaron-stienstra.jpg
 pronouns: He/Him
 title: Our team
 job-title: Designer

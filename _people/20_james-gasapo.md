@@ -4,6 +4,7 @@ people_page: true
 section: about
 permalink: /people/james-gasapo/
 name: James Gasapo
+image_name: james-gasapo.jpg
 pronouns: He/Him
 title: Our team
 job-title: Management & Program Analyst
