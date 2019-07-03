@@ -3,7 +3,7 @@ layout: article
 section: take-a-class
 permalink: class/design-school/
 title: Design School
-locations: Washington, DC; San Francisco/Oakland, CA
+locations: Washington, DC; San Francisco, CA; New York, NY
 offered: Quarterly
 length: 5 days
 cost: $3,500
@@ -12,10 +12,6 @@ registration-id: 307
 next-offering: Jul 15-19, 2019
 next-offering-location: Washington, DC
 ---
-
-[More open enrollment classes](../../take-a-class/open-enrollment-classes/)
-
-### Class details
 
 #### Format
 

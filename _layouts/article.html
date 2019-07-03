@@ -22,6 +22,9 @@
           {% include person-header.html %}
           {% endif %}
           {{ content }}
+          {% if people_page %}
+          <p><a href="../../about/team/">Meet more of our team</a></p>
+          {% endif %}
         </div>
         {% assign registration_id = page.registration-id %}
         {% if registration_id %}
@@ -34,9 +37,29 @@
           {% include person-sidebar.html image_name=page.image_name %}
         </aside>
         {% endif %}
+        {% if page.title == 'Partner with us' %}
+          {% include contact-cta.html %}
+        {% endif %}
       </div>
     </div>
+    {% if page.highlight and page.section == 'what-we-do' %}
+      <div class="lab-content-highlight-warm">
+        <div class="lab-content-highlight-warm__body">
+          {% capture highlight_include %}{% include {{ page.highlight }} %}{% endcapture %}
+          {{ highlight_include | markdownify }}
+        </div>
+      </div>
+    {% endif %}
+    {% if page.highlight and page.section == 'about' %}
+      <div class="lab-content-highlight-cool">
+        <div class="lab-content-highlight-cool__body">
+          {% capture highlight_include %}{% include {{ page.highlight }} %}{% endcapture %}
+          {{ highlight_include | markdownify }}
+        </div>
+      </div>
+    {% endif %}
   </main>
+
   {% include _footer.html %}
 
   <script src="{{ site.baseurl }}/assets/js/uswds.min.js"></script>
