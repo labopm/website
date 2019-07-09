@@ -680,7 +680,7 @@ $lab-team-size-2019: 4.8;    // square root of 23
     padding-bottom: 1 / 4 * 100%;
     position:relative;
     float:left;
-    margin-bottom:.75rem;
+    margin-bottom:1.25rem;
     text-align:center;
     font-size: .875rem;
     @include at-media('tablet') {
@@ -690,7 +690,7 @@ $lab-team-size-2019: 4.8;    // square root of 23
   }
   &__viz {
     padding:0;
-    margin:25px 0;
+    margin:23px 0;
   }
   &__line {
     width:1px;
@@ -698,7 +698,7 @@ $lab-team-size-2019: 4.8;    // square root of 23
     padding-bottom:50%;
     position: absolute;
     z-index:100;
-    top: 25px;
+    top: 23px;
     left: 50%;
     background-color: color('ink');
   }
@@ -748,7 +748,7 @@ $lab-team-size-2019: 4.8;    // square root of 23
   }
   &__value {
     position:absolute;
-    padding:5px;
+    padding:3px;
     background-color: color($theme-color-lab-gold);
     text-align:center;
     font-size:1rem;
