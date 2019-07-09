@@ -17,14 +17,15 @@
           {% include hcd-guide-sidenav.html links=sidenavigation %}
         </aside>
         {% endif %}
-        <div class="usa-layout-docs__main desktop:grid-col-8 usa-prose">
-          {% if people_page %}
+        {% if people_page %}
+        <div class="usa-layout-docs__main mobile-lg:grid-col-6 desktop:grid-col-8 usa-prose">
           {% include person-header.html %}
-          {% endif %}
           {{ content }}
-          {% if people_page %}
           <p><a href="../../about/team/">Meet more of our team</a></p>
-          {% endif %}
+          {% else %}
+          <div class="usa-layout-docs__main desktop:grid-col-8 usa-prose">
+            {{ content }}
+            {% endif %}
         </div>
         {% assign registration_id = page.registration-id %}
         {% if registration_id %}
@@ -33,7 +34,7 @@
         </aside>
         {% endif %}
         {% if people_page %}
-        <aside class="usa-layout-docs__sidenav desktop:grid-col-4">
+        <aside class="usa-layout-docs__sidenav grid-col-8 mobile-lg:grid-col-6 desktop:grid-col-4">
           {% include person-sidebar.html image_name=page.image_name %}
         </aside>
         {% endif %}
