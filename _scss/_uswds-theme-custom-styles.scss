@@ -663,6 +663,104 @@ i.e.
   }
 }
 
+// ***************** HISTORY ***************** //
+$lab-max-team-size: 5;       // square root of 25
+$lab-team-size-2012: 2.45;   // square root of 6
+$lab-team-size-2013: 3.61;   // square root of 13
+$lab-team-size-2014: 3.74;   // square root of 14
+$lab-team-size-2015: 2.83;   // square root of 8
+$lab-team-size-2016: 3.32;   // square root of 11
+$lab-team-size-2017: 5;      // square root of 25
+$lab-team-size-2018: 4.8;    // square root of 23
+$lab-team-size-2019: 4.8;    // square root of 23
+
+.lab-history {
+  &__container {
+    width: 1 / 4 * 100%;
+    padding-bottom: 1 / 4 * 100%;
+    position:relative;
+    float:left;
+    margin-bottom:.75rem;
+    text-align:center;
+    font-size: .875rem;
+    @include at-media('tablet') {
+      width: 1 / 8 * 100%;
+      padding-bottom: 1 / 8 * 100%;
+    }
+  }
+  &__viz {
+    padding:0;
+    margin:25px 0;
+  }
+  &__line {
+    width:1px;
+    padding-top:20px;
+    padding-bottom:50%;
+    position: absolute;
+    z-index:100;
+    top: 25px;
+    left: 50%;
+    background-color: color('ink');
+  }
+  &__circle {
+    &-2012, &-2013, &-2014, &-2015, &-2016, &-2017, &-2018, &-2019 {
+      margin-top:20px;
+      border-radius:50%;
+      position: absolute;
+      z-index:99;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: color($theme-color-lab-gold);
+    }
+    &-2012 {
+      width: $lab-team-size-2012 / $lab-max-team-size * 100% * 0.9;
+      padding-bottom: $lab-team-size-2012 / $lab-max-team-size * 100% * 0.9;
+    }
+    &-2013 {
+      width: $lab-team-size-2013 / $lab-max-team-size * 100% * 0.9;
+      padding-bottom: $lab-team-size-2013 / $lab-max-team-size * 100% * 0.9;
+    }
+    &-2014 {
+      width: $lab-team-size-2014 / $lab-max-team-size * 100% * 0.9;
+      padding-bottom: $lab-team-size-2014 / $lab-max-team-size * 100% * 0.9;
+    }
+    &-2015 {
+      width: $lab-team-size-2015 / $lab-max-team-size * 100% * 0.9;
+      padding-bottom: $lab-team-size-2015 / $lab-max-team-size * 100% * 0.9;
+    }
+    &-2016 {
+      width: $lab-team-size-2016 / $lab-max-team-size * 100% * 0.9;
+      padding-bottom: $lab-team-size-2016 / $lab-max-team-size * 100% * 0.9;
+    }
+    &-2017 {
+      width: $lab-team-size-2017 / $lab-max-team-size * 100% * 0.9;
+      padding-bottom: $lab-team-size-2017 / $lab-max-team-size * 100% * 0.9;
+    }
+    &-2018 {
+      width: $lab-team-size-2018 / $lab-max-team-size * 100% * 0.9;
+      padding-bottom: $lab-team-size-2018 / $lab-max-team-size * 100% * 0.9;
+    }
+    &-2019 {
+      width: $lab-team-size-2019 / $lab-max-team-size * 100% * 0.9;
+      padding-bottom: $lab-team-size-2019 / $lab-max-team-size * 100% * 0.9;
+    }
+  }
+  &__value {
+    position:absolute;
+    padding:5px;
+    background-color: color($theme-color-lab-gold);
+    text-align:center;
+    font-size:1rem;
+    font-weight: $theme-font-weight-bold;
+    z-index:101;
+    top: 50%;
+    left: 50%;
+    margin-top:20px;
+    transform: translate(-50%, -50%);
+  }
+}
+
 // ***************** FOOTER ***************** //
 .lab-footer {
   &__primary-section {
