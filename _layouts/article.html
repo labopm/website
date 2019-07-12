@@ -18,7 +18,7 @@
         </aside>
         {% endif %}
         {% if people_page %}
-        <div class="usa-layout-docs__main mobile-lg:grid-col-6 desktop:grid-col-8 usa-prose">
+        <div class="usa-layout-docs__main mobile-lg:grid-col-8 usa-prose">
           {% include person-header.html %}
           {{ content }}
           <p><a href="../../about/team/">Meet more of our team</a></p>
@@ -34,8 +34,10 @@
         </aside>
         {% endif %}
         {% if people_page %}
-        <aside class="usa-layout-docs__sidenav grid-col-8 mobile-lg:grid-col-6 desktop:grid-col-4">
-          {% include person-sidebar.html image_name=page.image_name %}
+        <aside class="usa-layout-docs__sidenav grid-col-12 mobile-lg:grid-col-4">
+          <div class="grid row"><div class="grid-col-8 mobile-lg:grid-col-12" style="margin-left:auto;margin-right:auto">
+            {% include person-sidebar.html image_name=page.image_name %}
+          </div></div>
         </aside>
         {% endif %}
         {% if page.title == 'Partner with us' %}
