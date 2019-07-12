@@ -531,9 +531,9 @@ i.e.
 
   &__item {
     position: relative;
-    padding: units(3) units(1) units(1) units(0);
+    padding: units(2) units(1) units(1) units(0);
     margin: units(1) 0;
-    font-weight: bold;
+    font-weight: $theme-font-weight-semibold;
   }
 
   &__item::before {
@@ -541,7 +541,7 @@ i.e.
     top: 0;
     left: 0;
     content: '\2022';
-    font-size: 3rem;
+    font-size: 3.25rem;
     line-height: 0;
   }
 
@@ -563,6 +563,33 @@ i.e.
 
   &__item--where-we-collaborated::before {
     color: color($theme-color-lab-indigo);
+  }
+}
+
+.lab-locations-map-lg {
+  margin: 0 0 units(2) 0;
+  @include at-media('mobile-lg') {
+    margin:0;
+  }
+}
+
+.lab-locations-map-small-l {
+  margin: 0 units(2) 0 0;
+  display: inline-block;
+  @include at-media('mobile-lg') {
+    display:block;
+    width:inherit;
+    margin:0 0 units(3) 0;
+  }
+}
+
+.lab-locations-map-small-r {
+  margin: 0;
+  display: inline-block;
+  @include at-media('mobile-lg') {
+    display:block;
+    width:inherit;
+    margin:0;
   }
 }
 
