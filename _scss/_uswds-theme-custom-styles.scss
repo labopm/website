@@ -665,16 +665,30 @@ i.e.
   }
 
   &__location {
-    display: inline-block;
+    display:block;
     position: relative;
     font-weight: normal;
-    margin-left: units(1);
-    padding: 0 units(2);
+    margin-top:0.25rem;
+
+    @include at-media('tablet-lg') {
+      display: inline-block;
+      position: relative;
+      font-weight: normal;
+      margin-left: units(1);
+      padding: 0 units(2);
+    }
 
     &:before {
-      content: '|';
+      content: '';
       position: absolute;
       left: 0;
+      color: color($theme-color-lab-pewter);
+
+      @include at-media('tablet-lg') {
+        content:'|';
+        position:absolute;
+        left:0;
+      }
     }
   }
 
