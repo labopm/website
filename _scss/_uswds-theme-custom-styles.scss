@@ -237,7 +237,7 @@ i.e.
 
   &__body {
     @include grid-container;
-    padding: units(3) units(2) units(3);
+    padding: units(3) units(2.5) units(3) units(2);
 
     @include at-media('tablet') {
       padding: units(4) units(2) units(4);
@@ -251,11 +251,24 @@ i.e.
 
   &__body {
     @include grid-container;
-    padding: units(3) units(2) units(3);
+    padding: units(3) units(2.5) units(3) units(2);
 
     @include at-media('tablet') {
       padding: units(4) units(2) units(4);
     }
+  }
+}
+
+.lab-content-highlight-warm ul {
+  @include at-media('desktop') {
+    padding-right:6rem;
+  }
+}
+
+.lab-content-highlight-cool ul {
+  padding-right:1.25rem;
+  @include at-media('desktop') {
+    padding-right:6rem;
   }
 }
 
@@ -575,7 +588,6 @@ i.e.
 
 .lab-locations-map-small-l {
   margin: 0 units(2) 0 0;
-  display: inline-block;
   @include at-media('mobile-lg') {
     display:block;
     width:inherit;
@@ -585,7 +597,6 @@ i.e.
 
 .lab-locations-map-small-r {
   margin: 0;
-  display: inline-block;
   @include at-media('mobile-lg') {
     display:block;
     width:inherit;
@@ -795,11 +806,13 @@ $lab-team-size-2019: 4.8;    // square root of 23
   }
 
   &__sub-title {
-    padding: units(2.5) units(4) units(2.5) 0;
+    width: 310px;
+    padding: units(2.5) 0 units(2.5) 0;
     color: color($theme-color-lab-indigo);
     font-weight: $theme-font-weight-semibold;
 
     @include at-media('mobile-lg') {
+      width:auto;
       padding: units(2.5) 0;
     }
   }
