@@ -7,8 +7,6 @@ length: 1 day
 cost: $600
 session: single
 registration-id: 256
-next-offering: June 19, 2019
-next-offering-location: Washington, DC
 ---
 
 #### Format

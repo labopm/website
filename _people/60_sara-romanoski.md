@@ -10,4 +10,5 @@ title: Our team
 job-title: Presidential Management Fellow
 location: Lab DC
 ---
-TK
+
+Sara joined the Lab as a Presidential Management Fellow from a background in community planning. She specializes in addressing urban challenges including preservation, housing, economic development, and public health. In this work, she has consistently forwarded the interestes of independent small business through the conscious application of technology, community, and responsible land use. 
