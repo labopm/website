@@ -1,0 +1,54 @@
+/* ******** ******** ******** ******** ******** ******** ********
+ * main.scss - Contains the Sass source code 
+ *             for the Lab OPM Design Guide
+ * ******** ******** ******** ******** ******** ******** ******** */
+
+/* ****** VARIABLES AND MIXINS ****** */
+
+/* ------ TYPEFACES ------ */
+
+$base_header_typeface: "Merriweather, serif";
+$base_copy_typeface: "Merriweather Sans, sans-serif";
+
+
+
+/* ------ FONT SIZES ------ */
+
+$base_header_font_size: 2rem; // 24pt
+$base_copy_font_size: 1rem; // 12pt
+
+
+
+/* ------ FONT COLORS ------ */
+
+$top_header_font_color: #626368;
+$top_nav_link_color: #2d3f4d;
+$h1_font_color: #323a45;
+$h2_font_color: #00a8d9;
+$h3_font_color: #8d8d8d;
+$sub_head_font_color: #38393d;
+$span_detail_font_color: #8c8c8c;
+$splash_guide_link_font_color: #323a45;
+$splash_link_font_color: #17293f;
+$splash_print_link_font_color: #00a8d9;
+$sub_nav_current_page_font_color: #00a8d9;
+$sub_nav_link_font_color: #383b40;
+$copy_link_font_color: #00a8d9;
+$highlight_font_color: #969696;
+$next_section_font_color: #383b40;
+$next_page_link_font_color: #eeffff;
+
+
+
+/* ------ BORDERS & SPACERS ------ */
+
+$top_header_background_color: #f1f1f1;
+$top_nav_background_color: #00a8d9;
+$splash_background_color: #f4f4f6;
+$copy_background_color: #ffffff;
+$splash_border_color: #d0d1d3;
+$splash_nav_accent_color: #3d8fa5;
+$copy_bottom_border_color: #d8d8d8;
+$copy_border_color: #3d8fa5;
+
+
