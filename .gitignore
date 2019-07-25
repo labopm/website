@@ -1,9 +1,3 @@
 _site
 .sass-cache
 .jekyll-metadata
-/node_modules
-.DS_Store
-
-
-# ignore gulp-generated vendor files
-scss/lib
