@@ -5,5 +5,182 @@
 /* ****** VARIABLES AND MIXINS ****** */
 /* ------ TYPEFACES ------ */
 /* ------ FONT SIZES ------ */
+/* ------ FONT WEIGHTS ------ */
+/* ------ LINE HEIGHTS ------ */
 /* ------ FONT COLORS ------ */
-/* ------ BORDERS & SPACERS ------ */
+/* ------ BACKGROUNDS, BORDERS & SPACERS ------ */
+/* ------ MARGINS ------ */
+/* ------ WIDTHS ------ */
+/* 
+ * Calculated by subtracting the global value for the left margin of the webpage from the width 
+ * of the browser window. 
+ */
+/* ****** COPY ELEMENTS ****** */
+span,
+a,
+p {
+  font-family: "Source Sans Pro", sans-serif; }
+
+a {
+  text-decoration: underline !important; }
+
+h1,
+h3,
+.left-sub_head-p {
+  font-family: Merriweather, serif !important; }
+
+#section-top span {
+  font-weight: 400; }
+
+h1,
+h3 {
+  font-weight: 900 !important; }
+
+/* ****** BODY CONTENT ****** */
+/* ------ TOP HEADER ------ */
+#section-top {
+  width: 100%;
+  height: 1.69rem;
+  background-color: #f1f1f1; }
+  #section-top img {
+    display: inline-block;
+    margin: 0.31rem 0.25rem 0.31rem 9%; }
+  #section-top span {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: #626368; }
+
+/* '#section-top' refers to the gray bar at the top of the webpage within a desktop browser. */
+#header-top {
+  width: 100%;
+  padding: 2.2rem 0 1.3rem 9%;
+  background-color: #00a8d9;
+  /* Refers to the horizontal list of links within the top header. */
+  /* Refers to the search field within the top header. */ }
+  #header-top #top-a-logo,
+  #header-top nav,
+  #header-top #form-search {
+    display: inline-block; }
+  #header-top #top-a-logo {
+    width: 158px;
+    height: 30px;
+    margin-bottom: 0.3rem; }
+  #header-top nav {
+    margin-left: 9.69rem;
+    vertical-align: bottom; }
+    #header-top nav ul {
+      margin: 0;
+      padding: 0; }
+      #header-top nav ul li {
+        display: inline-block;
+        margin-left: 2rem;
+        list-style-type: none; }
+        #header-top nav ul li a {
+          display: inline-block;
+          font-size: 0.9rem;
+          font-weight: 700;
+          text-decoration: none !important;
+          color: #2d3f4d; }
+      #header-top nav ul li:first-of-type {
+        margin-left: 0; }
+    #header-top nav .nav-a-arrow {
+      margin-left: 0.5rem; }
+  #header-top #form-search {
+    margin: 0 0 0.35rem 2.81rem;
+    vertical-align: bottom; }
+    #header-top #form-search #form-search-input_field {
+      height: 41px;
+      margin: 0;
+      border: 1px solid #102f4e; }
+    #header-top #form-search #form-search-submit {
+      width: 53px;
+      height: 41px;
+      margin: 0;
+      background-color: #102f4e;
+      background-image: url("/test/assets/img/icons/search.png");
+      vertical-align: bottom; }
+
+/* 
+ * Refers to the blue bar holding the Lab*OPM logo, main navigation, and search field 
+ * located near the top of the desktop browser.
+ */
+#section-splash {
+  width: 100%;
+  height: 36.5rem;
+  padding: 2.19rem 11% 2.19rem 11%;
+  background-color: #f4f4f6;
+  /* 
+   * Refers to the content within the 'Splash' section except for the link named 
+   * 'All HCD Guides.'
+   */ }
+  #section-splash #splash-guides-a {
+    font-size: 1rem;
+    color: #323a45; }
+  #section-splash #splash-desc-div h1 {
+    color: #323a45;
+    margin: 2rem 0 0.5rem 0; }
+  #section-splash #splash-desc-div #desc-left-div,
+  #section-splash #splash-desc-div #desc-right-div {
+    float: left; }
+  #section-splash #splash-desc-div #desc-left-div {
+    width: 72%;
+    padding-right: 11%; }
+    #section-splash #splash-desc-div #desc-left-div .left-read-span {
+      color: #8c8c8c; }
+    #section-splash #splash-desc-div #desc-left-div .left-sub_head-p,
+    #section-splash #splash-desc-div #desc-left-div .left-sub_head-p-2 {
+      color: #38393d; }
+    #section-splash #splash-desc-div #desc-left-div .left-sub_head-p {
+      margin-top: 0.6rem;
+      font-size: 1.1rem;
+      line-height: 1.6; }
+    #section-splash #splash-desc-div #desc-left-div .left-sub_head-p-2 {
+      margin-top: 2.85rem;
+      line-height: 1.5; }
+  #section-splash #splash-desc-div #desc-right-div {
+    width: 24%; }
+    #section-splash #splash-desc-div #desc-right-div #right-print-div {
+      margin-top: 2.2rem;
+      /* 
+         * Refers to the link 'Print guide' which lies at the top 
+         * of the right column within the 'Splash' section.
+         */ }
+      #section-splash #splash-desc-div #desc-right-div #right-print-div #print-guide-a {
+        color: #00a8d9; }
+      #section-splash #splash-desc-div #desc-right-div #right-print-div img {
+        margin-left: 1rem; }
+    #section-splash #splash-desc-div #desc-right-div .right-links-aside {
+      margin-top: 3.25rem; }
+      #section-splash #splash-desc-div #desc-right-div .right-links-aside h3 {
+        margin-bottom: 0.75rem;
+        font-size: 1rem;
+        color: #8d8d8d; }
+      #section-splash #splash-desc-div #desc-right-div .right-links-aside a {
+        display: block;
+        margin-bottom: 0.6rem;
+        color: #17293f; }
+    #section-splash #splash-desc-div #desc-right-div #right-links-know_the_basics-aside {
+      margin-top: 3.8rem;
+      /* 
+         * Refers to the border seperating the links within the block of links named 
+         * 'Know the Basics.'
+         */ }
+      #section-splash #splash-desc-div #desc-right-div #right-links-know_the_basics-aside h3 {
+        margin-bottom: 1rem; }
+      #section-splash #splash-desc-div #desc-right-div #right-links-know_the_basics-aside a {
+        height: 27px;
+        background-image: url("/assets/img/icons/arrow_link.png");
+        background-repeat: no-repeat;
+        background-position: 95% 0;
+        font-weight: 700;
+        text-decoration: none !important; }
+      #section-splash #splash-desc-div #desc-right-div #right-links-know_the_basics-aside hr {
+        height: 2px;
+        margin: 0.8rem 0;
+        border: none;
+        background-color: #d0d1d3; }
+
+/* 
+* Refers to the copy and links which appear within the browser window of a desktop 
+* computer after the webpage loads.
+*/

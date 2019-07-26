@@ -3,42 +3,84 @@
   <head>
     <title>Design Guide - Lab&#183;OPM</title>
 
-
-<!-- WEBFONT REFERENCE -->
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Source+Sans+Pro:400,600,700&display=swap" rel="stylesheet">
+<!-- STYLEGUIDE REFERENCE -->
+    <link href="/assets/css/main.css" rel="stylesheet">
 
 <!-- Bootstrap 4 CORE CSS -->
-    <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-<!-- STYLEGUIDE REFERENCE -->
-    <link href="/test/assets/css/main.css" rel="stylesheet">
+<!-- GOOGLE FONTS REFERENCE -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700,900|Source+Sans+Pro:400,700&display=swap" rel="stylesheet">
   </head>
   <body>
 
 <!-- TOP BORDER -->
-    <div id="header-top">
-      <img src="/test/assets/img/icons/flag.png" alt="An official website of the United States Government" width="23" height="15" />
+    <section id="section-top">
+      <img src="/assets/img/icons/flag.png" alt="An official website of the United States Government" width="23" height="15" />
       <span>An official website of the United States Government</span>
-    </div>
+    </section>
 
 <!-- TOP NAVIGATION -->
-    <header id="nav-top">
-      <a href="/test" title="Home"><img src="/test/assets/img/logo/logo-desktop.png" alt="LabOPM" width="158" width="30" /></a>
+    <header id="header-top">
+      <a href="/" title="Home" id="top-a-logo"><img src="/assets/img/logo/logo-desktop.png" alt="LabOPM" width="158" width="30" /></a>
       <nav>
-        <a href="#" title="Section Name">Section Name</a>
-        <a href="#" title="Section Name">Section Name</a>&nbsp;<a href="#" title="Section Name">&#709;</a>
-        <a href="#" title="Section Name">Section Name</a>&nbsp;<a href="#" title="Section Name">&#709;</a>
+        <ul>
+          <li><a href="#" title="Section Name">Section Name</a><a href="#" title="Section Name" class="nav-a-arrow">&#709;</a></li>
+          <li><a href="#" title="Section Name">Section Name</a><a href="#" title="Section Name" class="nav-a-arrow">&#709;</a></li>
+          <li><a href="#" title="Section Name">Section Name</a><a href="#" title="Section Name" class="nav-a-arrow">&#709;</a></li>
+          <li><a href="#" title="Section Name">Section Name</a></li>
+        </ul>
       </nav>
       <form action="#" name="form-search" id="form-search">
-        <input type="search" name="input_field" id="form_search-input_field" size="15" maxlength="100" />
-        <input type="submit" name="form-search-submit" id="form-search-submit" />
+        <input type="search" name="input_field" id="form-search-input_field" size="15" maxlength="100" /><input type="image" src="/assets/img/icons/search.png" name="form-search-submit" id="form-search-submit" />
       </form>
     </header>
 
+<!-- SPLASH SECTION -->
+    <section id="section-splash">
+      <a href="#" id="splash-guides-a">All HCD Guides</a>
+      <div id="splash-desc-div">
+        <div id="desc-left-div">
+          <h1>Welcome to the Design Phase</h1>
+          <span class="left-read-span">3 min read</span>
+          <p class="left-sub_head-p">
+            Your Discovery Phase is complete or is wrapping up, and you and your team are ready to move into 
+            the Design phase. In this phase, the team will build on the research completed in the Discovery 
+            phase in order to create action in the form of a designed or evolved product, service, or system 
+            from what you learned. 
+          </p>
+          <p class="left-sub_head-p-2">
+            In this phase, you and the team will design sustainable products and services that 
+            answer the needs of the people on whom you centered your Discovery phase. Use this 
+            Concept Guide to help you understand the Why behind the design process. You'll be able 
+            to find the How in the upcoming HCD Design Phase Operations Guide. For guidance on How 
+            in the meantime, see the Making Design Methods developed by our friends over at 18F.
+          </p>
+        </div>
+        <div id="desc-right-div">
+          <div id="right-print-div">
+            <a href="#" id="print-guide-a">Print guide</a>
+            <img src="/assets/img/icons/print.png" width="32" height="36" alt="Print guide">
+          </div>
+          <aside class="right-links-aside" id="right-links-on_this_page-aside">
+            <h3>On this Page</h3>
+            <a href="#" class="splash-aside-a">What you should have done so far</a>
+            <a href="#" class="splash-aside-a">What to expect in the Design Phase</a>
+            <a href="#" class="splash-aside-a">A note on timeline</a>
+          </aside>
+          <aside class="right-links-aside links-aside-accents" id="right-links-know_the_basics-aside">
+            <h3>Know the Basics</h3>
+            <a href="#" title="Human-centered design">Human-centered design</a>
+            <hr>
+            <a href="#" title="Design in government">Design in government</a>
+          </aside>
+        </div>
+      </div>
+    </section>
 
 
 <!-- JAVASCRIPT REFERENCES -->
-    <script src="assets/js/main.js?v=26"></script>
+    <script src="/assets/js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
