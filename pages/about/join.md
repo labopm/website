@@ -25,6 +25,6 @@ Interested in a detail? Please <a href="mailto:lab@opm.gov?subject=Detail intere
 
 If you're a federal employee who has preferably completed at least one class with the Lab and you're interested about becoming more engaged with us, a "micro-detail" can provide you with greater exposure to our practices for a short period of time. Upcoming <a href="https://openopps.usajobs.gov">Open Opportunities</a> may offer the experience you need. Learn by doing and help us facilitate some of the trainings that we run.
 
-### Upcoming opportunities
+<!-- ### Upcoming opportunities -->
 
-<a href="https://openopps.usajobs.gov/tasks/923">Photography for Design School at the Lab at OPM</a>
+<!-- <a href="https://openopps.usajobs.gov/tasks/923">Photography for Design School at the Lab at OPM</a> -->
