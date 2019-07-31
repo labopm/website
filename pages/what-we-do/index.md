@@ -7,7 +7,7 @@ highlight: lab-different.md
 ---
 
 <p class="lab-content__lead">
-  The Lab is a group of designers helping the federal government solve complex challenges. Across all of our services, we strive to build human-centered design capacity across the federal government.
+The Lab is a team of designers with diverse backgrounds that helps our partners address complex challenges. Across all of our services, we strive to build human-centered design capacity across the federal government.
 </p>
 
 ### We teach.
@@ -17,9 +17,9 @@ We develop and offer design education classes informed by our experience practic
 ### We combine forces.
 We partner with federal agencies and other organizations to take on complex public sector challenges. Working with us can unleash new perspectives and fresh approaches to help solve pressing challenges. Learn more on the [Partner with us](partner/) page.
 
-### We share our tools.
+### We share our resources.
 
-We create teaching tools and other resources to help others practice design. [Download these materials for free under Resources](resources/).
+We create materials and teaching tools to help others practice design. [Download these for free under Resources](resources/).
 <!-- #### We make connections.
 Host and participate in events across the country dedicated to bringing innovators together to build and support human-centered design as an effective approach for solving complex challenges. Visit [Events](events/) to learn more about upcoming opportunities. -->
 
