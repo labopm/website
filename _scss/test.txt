@@ -1,0 +1,52 @@
+
+
+.lab-hero--hcd-guide {
+/* MODIFIED */
+  background-color: color($theme-color-primary-vivid);
+
+  &__body {
+/* MODIFIED */
+    padding: 1.5rem 2rem 2rem;
+
+    @include at-media('tablet') {
+      background-position: 480px 0;
+    }
+
+    @include at-media('tablet-lg') {
+      background-position: right 0;
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__sub-title {
+
+/* MODIFIED */
+    height: 32px;
+    display: inline-block;
+    color: color('white');
+
+/* MODIFIED */
+    a {
+      margin-top: 8px;
+      display: inline-block;
+      color: color('white');
+    }
+  }
+
+/* MODIFIED */
+  form {
+    float: right;
+
+    #search-input {
+      height: 40px;
+    }
+
+    input[type=image] {
+      width: 55px;
+      height: 40px;
+    }
+  }
+}
