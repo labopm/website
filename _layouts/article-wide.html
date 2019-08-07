@@ -9,24 +9,34 @@
   {% include _hero.html name=page.section %}
   <main id="main-content" role="main" class="usa-layout-docs usa-section lab-content">
     <div class="grid-container">
-      {{ content }}
+      <div class="grid-row grid-gap">
+        {% if page.section == 'hcd-guide' %}
+        {% assign sidenavigation = site.data.navigation['hcd-guide'] %}
+        <aside class="usa-layout-docs__sidenav desktop:grid-col-4">
+          <div class="usa-layout-docs__sticky">
+            {% include hcd-guide-sidenav.html links=sidenavigation %}
+          </div>
+        </aside>
+        {% endif %}
+        <div class="usa-layout-docs__main desktop:grid-col-8 usa-prose">
+          {{ content }}
+          <div class="usa-layout-content_bottom">
+            <a href="#top" title="To top" class="usa-back_to_top">To Top</a>
+            <hr>
+            {% if page.previous-link-url %}
+              {% assign previous_link_url = page.previous-link-url %}
+              {% assign previous_link_title = page.previous-link-title %}
+            <a href="{{ previous_link_url }}" title="{{ previous_link_title }}" class="usa-layout-section_link section_link_previous">{{ previous_link_title }}</a>
+            {% endif %}
+            {% if page.next-link-url %}
+              {% assign next_link_url = page.next-link-url %}
+              {% assign next_link_title = page.next-link-title %}
+            <a href="{{ next_link_url }}" title="{{ next_link_title }}" class="usa-layout-section_link">{{ next_link_title }}</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
     </div>
-    {% if page.highlight and page.section == 'what-we-do' %}
-      <div class="lab-content-highlight-warm">
-        <div class="lab-content-highlight-warm__body">
-          {% capture highlight_include %}{% include {{ page.highlight }} %}{% endcapture %}
-          {{ highlight_include | markdownify }}
-        </div>
-      </div>
-    {% endif %}
-    {% if page.highlight and page.section == 'about' %}
-      <div class="lab-content-highlight-cool">
-        <div class="lab-content-highlight-cool__body">
-          {% capture highlight_include %}{% include {{ page.highlight }} %}{% endcapture %}
-          {{ highlight_include | markdownify }}
-        </div>
-      </div>
-    {% endif %}
   </main>
   {% include _footer.html %}
 

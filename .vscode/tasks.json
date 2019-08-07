@@ -4,10 +4,16 @@
   "version": "2.0.0",
   "tasks": [
     {
-        "label": "Sass Compile",
-        "type": "shell",
-        "command": "node-sass 'c:\\Users\\chris\\OneDrive\\Chris C Jamison, Inc\\Projects\\web\\website\\test\\assets\\css\\main.scss' 'c:\\Users\\chris\\OneDrive\\Chris C Jamison, Inc\\Projects\\web\\website\\test\\assets\\css\\main.css'",
-        "group": "build"
-    }
-]
+      "label": "Sass Compile",
+      "type": "shell",
+      "command": "node-sass 'c:\\Users\\chris\\OneDrive\\Chris C Jamison, Inc\\Projects\\web\\website\\test\\assets\\css\\main.scss' 'c:\\Users\\chris\\OneDrive\\Chris C Jamison, Inc\\Projects\\web\\website\\test\\assets\\css\\main.css'",
+      "group": "build"
+    },
+    {
+      "label": "USWDS Sass Compile",
+      "type": "shell",
+      "command": "node-sass 'c:\\Users\\chris\\OneDrive\\Chris C Jamison, Inc\\Projects\\web\\design-guide\\_scss\\styles.scss' 'c:\\Users\\chris\\OneDrive\\Chris C Jamison, Inc\\Projects\\web\\design-guide\\assets\\stylesheets\\styles.css'",
+      "group": "build"
+    },
+  ]
 }

@@ -6,9 +6,13 @@ title: Visual Communication for Everyone
 length: 1 day
 cost: $600
 session: single
-next-offering: July 20, 2019
+next-offering: June 20, 2019
 next-offering-location: Washington, DC
 ---
+
+[More open enrollment classes](../../take-a-class/open-enrollment-classes/)
+
+### Class details
 
 #### Format
 

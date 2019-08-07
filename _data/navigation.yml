@@ -8,6 +8,9 @@ primary:
   - text: About the Lab
     href: /about/
     name: about
+  - text: HCD Guide Series
+    href: /hcd-guide/
+    name: hcd-guide
   - text: Contact us
     href: /contact/
     name: contact
@@ -53,68 +56,21 @@ about:
 #    href: /about/awards/
 
 hcd-guide:
-  - text: HCD Guide Series - Discovery
-    href: /what-we-do/resources/hcd-guide/discovery/
+  - text: Discovery Phase
+    href: /hcd-guide/discovery/
+    section-link: true
     sub-section: Discovery
-    subnav:
-    - text: Field Guide
-      href: /assets/doc/hcd-guide/discovery/HCD-Guide-Interagency-v1.5_pages.pdf
-    - text: Operations Guide
-      href: /assets/doc/hcd-guide/discovery/HCD_Ops_Guide_v12_pages.pdf
-  - text: HCD Guide Series - Design
-    href: /what-we-do/resources/hcd-guide/design/
-    sub-section: Design
-    subnav:
-    - text: Purpose of this Guide
-      href: /what-we-do/resources/hcd-guide/design/purpose/
-    - text: Human-Centered Design
-      href: /what-we-do/resources/hcd-guide/design/humancentereddesign/
-    - text: Design in Government
-      href: /what-we-do/resources/hcd-guide/design/govdesign/
-    - text: Design Phase Principles
-      href: /what-we-do/resources/hcd-guide/design/designphase/
-      subnav:
-      - text: Simple is Hard
-        href: /what-we-do/resources/hcd-guide/design/simple-is-hard/
-      - text: Team
-        href: /what-we-do/resources/hcd-guide/design/team/
-      - text: Participants
-        href: /what-we-do/resources/hcd-guide/design/participants/
-      - text: Public Sector Design
-        href: /what-we-do/resources/hcd-guide/design/publicsector/
-      - text: Design for Change
-        href: /what-we-do/resources/hcd-guide/design/designchange/
-    - text: Designed Things
-      href: /what-we-do/resources/hcd-guide/design/designedthings/
-      subnav:
-      - text: Products
-        href: /what-we-do/resources/hcd-guide/design/products/
-      - text: Services
-        href: /what-we-do/resources/hcd-guide/design/services/
-      - text: Systems
-        href: /what-we-do/resources/hcd-guide/design/systems/
-    - text: Communicating Ideas Through Design
-      href: /what-we-do/resources/hcd-guide/design/communicatingideas/
-      subnav:
-      - text: Envisioning Ideas
-        href: /what-we-do/resources/hcd-guide/design/envisioning/
-      - text: Building Out Ideas
-        href: /what-we-do/resources/hcd-guide/design/building/
-      - text: Iteration
-        href: /what-we-do/resources/hcd-guide/design/iteration/
-      - text: Feedback
-        href: /what-we-do/resources/hcd-guide/design/feedback/
-    - text: Design and Implementation
-      href: /what-we-do/resources/hcd-guide/design/designimplementation/
-    - text: What's Next
-      href: /what-we-do/resources/hcd-guide/design/whatsnext/
-    - text: Glossary
-      href: /what-we-do/resources/hcd-guide/design/glossary/
-    - text: Acknowledgements
-      href: /what-we-do/resources/hcd-guide/design/acknowledgements/
-  - text: HCD Guide Series - Deliver
-    href: /what-we-do/resources/hcd-guide/deliver/
-    sub-section: Deliver
-  - text: HCD Guide Series - Measure
-    href: /what-we-do/resources/hcd-guide/measure/
-    sub-section: Measure
+    subnav: 
+      - text: Welcome
+        href: /hcd-guide/discovery/
+      - text: Purpose of this guide
+        href: /hcd-guide/discovery/purpose/
+      - text: Design phase principles
+        href: /hcd-guide/discovery/design-phase/
+      - text: Designed Things
+        href: /hcd-guide/discovery/designed-things.htm
+      - text: Communicating ideas
+        href: /hcd-guide/discovery/communicating-ideas/
+      - text: Design & implementation
+        href: /hcd-guide/discovery/design-and-implementation/
+  

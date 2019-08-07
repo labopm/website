@@ -20,6 +20,297 @@ i.e.
 ----------------------------------------
 */
 
+$theme-font-family-serif: 'merriweather', serif;
+
+// ***************** CONTENT ***************** //
+/* MODIFIED */
+.usa-layout-docs__main {
+  padding-top: units(4);
+}
+
+.usa-prose {
+  h1 {
+    font-family: 'merriweather' !important;
+    font-weight: $theme-font-weight-light;
+    color: color('base-darker');
+  }
+
+  h1 + * {
+    margin-top: units(3);
+  }
+
+  &__reading_print {
+    img {
+      display: inline-block;
+    }
+  }
+
+  &__reading_time {
+    display: inline-block;
+    margin-right: units(2);
+    color: color('base');
+  }
+
+  &__print_guide_img {
+    display: inline-block;
+    position: relative;
+    top: units(1);
+  }
+
+  &__print_guide {
+    display: inline-block;
+    color: color('blue-warm-50v');
+  }
+
+  &__know_your_basics {
+    width: 15rem;
+    padding-bottom: units(1);
+    background-color: $color-yellow-10v;
+
+    a {
+      margin: units(1) 0 units(1) units(3);
+      display: block;
+      color: color('primary-dark')
+    }
+  }
+
+  &__know_header {
+    padding: units(1) 0 units(1) units(3);
+    background-color: $color-gold-20v;
+  }
+
+  p + *, p + * {
+    margin-top: units(3);
+  }
+  
+  p {
+    @include u-font-size('body', 'md');
+    color: color('base-darker');
+  }
+
+  h2 {
+    margin-top: units(7);
+    display: inline-block;
+    clear: both;
+    font-family: $theme-font-family-serif
+  }
+
+  .lab__bullet_points_columns, 
+  .lab__base_columns {
+    width: 17.25rem;
+    margin-top: units(4);
+    position: relative;
+    float: left;
+
+    p {
+      padding-top: units(1);
+      background-image: url('/assets/img/lab/hcd-guide/design/p-bullet_point.png');
+      background-repeat: no-repeat;
+    }
+  }
+
+  .lab__base_columns {
+    h4 {
+      font-size: font-size('base', 'md');
+      font-weight: $theme-font-weight-normal;
+    }
+
+    p {
+      background-image: none;
+    }
+  }
+
+  .lab__bullet_points_column_left, 
+  .lab__base_column_left {
+    margin-right: units(9);    
+  }
+
+  .lab__clear_spacer {
+    clear: both;
+  }
+
+  .lab__bullet_points_column_fullwidth {
+    width: 100%;
+    float: none;
+  }
+
+  .usa-layout-content_bottom {
+    margin-top: units(5);
+
+    .usa-back_to_top {
+      padding-left: units(3);
+      display: block;
+      background-image: url('/assets/img/lab/hcd-guide/design/to-top.png');
+      background-repeat: no-repeat;
+      font-size: font-size('base', 'sm');
+    }
+
+    hr {
+      margin: units(2) 0;
+      background-color: color('base');
+      border: none;
+    }
+
+    .usa-layout-section_link {
+      height: units(6);
+      padding: units(2) units(4) units(2) units(2);
+      float: right;
+      background-color: color('blue-warm-50v');
+      background-image: url('/assets/img/lab/hcd-guide/design/section-link-next.png');
+      background-repeat: no-repeat;
+      background-position: 89% 50%;
+      border-radius: 5px;
+      font-weight: font-weight('bold');
+      color: color('white');
+      text-decoration: none;
+      line-height: units(2);
+    }
+
+    .section_link_previous {
+      padding: units(2) units(2) units(2) units(4);
+      float: left;
+      background-image: url('/assets/img/lab/hcd-guide/design/section-link-previous.png');
+      background-position: 6% 50%;
+    }
+  }
+  
+  figure {
+    margin: units(2) 0;
+    
+    figcaption {
+      @include u-font-size('body', 'sm');
+      font-style: italic;
+      color: color('base');
+    }
+  }
+
+  .lab__figure_with_title {
+    margin-top: units(8);
+
+    h3 {
+      font-weight: $theme-font-weight-normal;
+      font-size: font-size('base', 'lg');
+      color: color('base-dark');
+    }
+  }
+
+  .lab-cta__quote {
+    background-color: color('gray-cool-2');
+    padding: units(3) units(5);
+
+    hr {
+      height: px-to-rem(2px);
+      background-color: color('gold-40v');
+      border: none;
+    }
+
+    blockquote {
+      margin: units(2) 0;
+      font-family: $theme-font-family-serif;
+      font-weight: $theme-font-weight-bold;
+    }
+
+    .lab-cta__attributed_to {
+      margin: 0 units(2);
+      display: inline-block;
+      color: color('blue-warm-70v');
+    }
+  }
+  
+  .lab-cta__quote blockquote + hr, 
+  .lab-cta__quote blockquote + hr + span + hr {
+    width: 34%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .usa-accordion {
+    &__heading {
+      display: block;
+
+      button {
+        background-color: color('gold-20v');
+        font-weight: $theme-font-weight-normal;
+        font-size: font-size('body', 'lg');
+      }
+    }
+
+    &__content {
+      background-color: color('gold-5v');
+      
+      p {
+        padding-bottom: units(3);
+      }
+    }
+  }
+
+  .lab__case_in_point {
+    &_wrapper {
+      height: auto;
+      position: relative;
+    }
+
+    &_header {
+      background-image: url('/assets/img/lab/hcd-guide/design/case-in-point-horizontal.png');
+      background-position: 100% 50%;
+      background-repeat: no-repeat;
+    }
+
+    &_title {
+      width: 8rem;
+      padding: units(1);
+      display: block;
+      background-color: color('white');
+      border: px-to-rem(2px) solid color('gold-30v');
+      font-family: $theme-font-family-serif;
+      font-weight: $theme-font-weight-bold;
+      color: color('gray-cool-80');
+    }
+
+    &_copy {
+      width: 36.2rem;
+      display: inline-block;
+
+      h2 {
+        margin-top: units(4);
+      }
+
+      p {
+        margin-bottom: units(3);
+      }
+    }
+
+    &_vertical_border {
+      width: px-to-rem(46px);
+      height: 87%;
+      display: inline-block;
+      position: absolute;
+      clear: both;
+      background-image: url('/assets/img/lab/hcd-guide/design/case-in-point-vertical.png');
+      background-repeat: repeat-y;
+      background-position: px-to-rem(4px) 0px;
+      vertical-align: top;
+    }
+
+    &_bottom_border {
+      width: 100%;
+      height: px-to-rem(46px);
+      background-image: url('/assets/img/lab/hcd-guide/design/case-in-point-bottom.png');
+      background-position: 100% 50%;
+      background-repeat: no-repeat;
+    }
+  }
+  
+}
+
+.usa-accordion__reference_link {
+  padding-right: units(2);
+  background-image: url('/assets/img/lab/hcd-guide/design/external-link-arrow.png');
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+}
+
+
 .lab-content {
   // This keeps us from having super short content wells
   // Might want to consider 80vh
@@ -28,17 +319,9 @@ i.e.
   &__lead {
     @include u-font-size('body', 8);
     line-height: line-height('heading', 3);
-    max-width: 60ex; // approximates Tim's thoughtful and purposeful decision to go with 7 columns
+    max-width: 60ex; // approximates Tim's odd decision to go with 7 columns
   }
 }
-
-.lab-content h3 {
-  font-weight: $theme-font-weight-semibold;
-}
-
-// .lab-content img {
-//   max-width:960px;
-// }
 
 .lab-content-caption-container {
   margin: 0 0 units(4) 0;
@@ -68,6 +351,8 @@ i.e.
   @include u-font-size('body', '2xs');
   font-style: italic;
 }
+
+
 
 // Components
 // ***************** HEADER ***************** //
@@ -113,8 +398,59 @@ i.e.
     @include at-media('desktop') {
       padding: units(15) units(4) units(4);
     }
+
+    @include at-media('tablet') {
+      background-position: 480px 0;
+    }
+
+    @include at-media('tablet-lg') {
+      background-position: right 0;
+    }
+    
+    /* MODIFIED */
+    padding: units(2) units(4) units(2) units(4) !important;
   }
 
+  &__title {
+    margin-top: 0;
+  }
+    
+  &__sub-title {
+
+/* MODIFIED */
+    height: units(4);
+    display: inline-block;
+    color: color('white');
+
+/* MODIFIED */
+    a {
+      margin-top: units(0.5);
+      display: inline-block;
+      font-size: font-size($theme-navigation-font-family, 'xs');
+      color: color('white');
+    }
+
+    a:first-of-type {
+      margin-right: units(3);
+    }
+  }
+
+/* MODIFIED */
+  form {
+    display: inline-block;
+    float: right;
+
+    #search-input {
+      height: units(4);
+      border-radius: $theme-border-radius-md;
+    }
+
+    input[type=image] {
+      width: units(5);
+      height: units(4);
+    }
+  }
+  
   &__title {
     color: color('white');
 
@@ -128,59 +464,16 @@ i.e.
   }
 }
 
+.lab-hero--hcd-guide {
+/* MODIFIED */
+  background-color: color('blue-warm-50v');
+}
+
 .lab-hero--home {
   background-image: url('../img/lab/home/design-school-blue.jpg');
   background-position: center center;
-
-  &__title {
-    font-weight:$theme-font-weight-semibold;
-    font-size: 2rem;
-    padding-right:1.5rem;
-
-    @include at-media('tablet') {
-      max-width: 600px;
-      font-size: 2.5rem;
-      padding-right:0;
-    }
-
-    @include at-media('desktop') {
-      max-width: 600px;
-      font-size: 2.5rem;
-      padding-right:0;
-    }
-  }
 }
 
-.lab-hero--what-we-do,
-.lab-hero--hcd-guide {
-  background-color: color($theme-color-lab-coral);
-
-  &__body {
-    @include at-media('tablet') {
-      background-image: url('../img/lab/hero-coral-detail.jpg');
-    }
-  }
-}
-
-.lab-hero--hcd-guide {
-  &__body {
-    @include at-media('tablet') {
-      background-position: 480px 0;
-    }
-
-    @include at-media('tablet-lg') {
-      background-position: right 0;
-    }
-  }
-
-  &__title {
-    margin-top: 0;
-  }
-
-  &__sub-title {
-    color: color('white');
-  }
-}
 
 .lab-hero--about {
   background-color: color($theme-color-lab-sky);
@@ -214,61 +507,27 @@ i.e.
       background-image: url('../img/lab/hero-aqua-detail.jpg');
       background-position: right 75%;
     }
-      @include at-media('tablet-lg') {
-        background-image: url('../img/lab/hero-aqua-detail.jpg');
-        background-position: right 75%;
-      }
-      @include at-media('desktop') {
-        background-image: url('../img/lab/hero-aqua-detail.jpg');
-        background-position: right 83%;
-      }
   }
+}
 
-  &__title {
-    color: color('ink');
-  }
+// ***************** MAIN CONTENT ***************** //
+
+.usa-section {
+  padding-top: 0 !important;
 }
 
 
 // ***************** CONTENT HIGHLIGHT ***************** //
-.lab-content-highlight-cool {
-  background-color: color($theme-color-lab-glacier);
-  margin: 3rem 0 0;
-
-  &__body {
-    @include grid-container;
-    padding: units(3) units(2.5) units(3) units(2);
-
-    @include at-media('tablet') {
-      padding: units(4) units(2) units(4);
-    }
-  }
-}
-
-.lab-content-highlight-warm {
+.lab-content-highlight {
   background-color: color($theme-color-lab-sand);
-  margin: 3rem 0 0;
 
   &__body {
     @include grid-container;
-    padding: units(3) units(2.5) units(3) units(2);
+    padding: units(6) units(2) units(4);
 
     @include at-media('tablet') {
-      padding: units(4) units(2) units(4);
+      padding: units(8) units(2) units(4);
     }
-  }
-}
-
-.lab-content-highlight-warm ul {
-  @include at-media('desktop') {
-    padding-right:6rem;
-  }
-}
-
-.lab-content-highlight-cool ul {
-  padding-right:1.25rem;
-  @include at-media('desktop') {
-    padding-right:6rem;
   }
 }
 
@@ -281,7 +540,7 @@ i.e.
   &__container {
     display: flex;
     flex-wrap: wrap;
-    margin: units(4) 0 0 -1em;
+    margin: units(4) 0 units(4) -1em;
   }
 
   &__body {
@@ -291,13 +550,8 @@ i.e.
     text-align: center;
   }
 
-  &__desc {
-    margin:1rem auto 0;
-  }
-
   &__button {
     @include makeButton();
-    line-height:1.25rem;
   }
 }
 
@@ -345,16 +599,12 @@ i.e.
 }
 
 // ***************** HOME ***************** //
-.lab-home-highlight h3, .lab-home-media-object h3 {
-  font-weight: $theme-font-weight-bold;
-}
-
 .lab-home-highlight,
 .lab-home-media-object {
   &__container {
     @include at-media('tablet') {
       @include grid-container;
-      padding: units(4) units(2) units(3);
+      padding: units(7) units(2) units(3);
     }
   }
 
@@ -362,17 +612,10 @@ i.e.
   &__lead {
     @include u-font-size('body', 11);
     line-height: line-height('heading', 2);
-    font-size:1.375rem;
-      @include at-media('mobile-lg') {
-        font-size:1.75rem;
-      }
   }
 
   &__title {
-    margin-bottom: 0;
-    @include at-media('mobile-lg') {
-      margin-bottom: units(1);
-    }
+    margin-bottom: units(1);
   }
 
   &__lead-link {
@@ -384,7 +627,7 @@ i.e.
   background-color: color($theme-color-lab-mist);
 
   &__container {
-    padding: units(2.5) units(2) units(2);
+    padding: units(5) units(2) units(3);
   }
 
   &__body {
@@ -392,28 +635,18 @@ i.e.
       @include grid-col(7);
     }
   }
-
-  &__lead {
-    margin-top: 0;
-    padding-right:2rem;
-    @include at-media('mobile-lg') {
-      margin-top: units(1);
-      padding-right:0;
-    }
-  }
 }
 
 .lab-home-highlight--white {
   background-color: color('white');
-  margin-bottom: units(3);
 }
 
 .lab-home-media-object {
   &__container {
-    padding-top: units(3);
+    padding-top: units(5);
 
     @include at-media('tablet') {
-      padding: units(3) units(2) units(3);
+      padding: units(5) units(2) units(3);
     }
   }
 
@@ -424,30 +657,17 @@ i.e.
       @include grid-col(7);
       padding: 0;
     }
-
-    @include at-media('desktop') {
-      padding: units(4) 0 0 0;
-    }
   }
 
   &__lead {
-    margin-top: 0;
-    padding-right:2rem;
-    @include at-media('mobile-lg') {
-      margin-top: units(1);
-      padding-right:0;
-    }
-    @include at-media('desktop') {
-      padding-right:3rem;
-    }
+    margin: 0;
   }
 
   &__figure {
     height: 150px;
     text-align: center;
     width: 100%;
-    margin-top: units(3);
-    margin-bottom: units(2);
+    margin-top: units(5);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: 75%;
@@ -455,14 +675,10 @@ i.e.
     @include at-media('tablet') {
       @include grid-col(4);
       margin: 0;
-      height: 240px;
+      height: 320px;
       background-color: inherit;
-      background-size: contain;
+      background-size: 100%;
       @include grid-offset(1);
-    }
-
-    @include at-media('tablet') {
-      height: 280px;
     }
   }
 
@@ -500,7 +716,6 @@ i.e.
 
     @include at-media('tablet') {
       background-image: url('../img/lab/home/bulb-circle.png');
-      background-position: center;
     }
   }
 
@@ -544,9 +759,9 @@ i.e.
 
   &__item {
     position: relative;
-    padding: units(2) units(1) units(1) units(0);
+    padding: units(3) units(1) units(1);
     margin: units(1) 0;
-    font-weight: $theme-font-weight-semibold;
+    font-weight: bold;
   }
 
   &__item::before {
@@ -554,7 +769,7 @@ i.e.
     top: 0;
     left: 0;
     content: '\2022';
-    font-size: 3.25rem;
+    font-size: 3rem;
     line-height: 0;
   }
 
@@ -579,33 +794,24 @@ i.e.
   }
 }
 
-.lab-locations-map-lg {
-  margin: 0 0 units(2) 0;
-  @include at-media('mobile-lg') {
-    margin:0;
-  }
-}
-
-.lab-locations-map-small-l {
-  margin: 0 units(2) 0 0;
-  @include at-media('mobile-lg') {
-    display:block;
-    width:inherit;
-    margin:0 0 units(3) 0;
-  }
-}
-
-.lab-locations-map-small-r {
-  margin: 0;
-  @include at-media('mobile-lg') {
-    display:block;
-    width:inherit;
-    margin:0;
-  }
-}
-
 // ***************** SIDENAV ***************** //
+.usa-layout-docs__sidenav {
+  padding-top: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 1rem !important;
+}
+
+.usa-layout-docs__sticky {
+  width: 18rem;
+  min-height: 29.69rem;
+  padding: units(4) units(4) units(4) units(2);
+  position: fixed;
+  background-color: color('base-lightest');
+}
+
 .lab-hcd-guide-nav {
+  position: absolute;
+
   &__title {
     display: block;
     text-decoration: none;
@@ -614,26 +820,75 @@ i.e.
     @include permaLink(color('primary'));
     margin-bottom: units(2);
   }
+
+  .usa-sidenav {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    &__item {
+      border-top: none;
+
+      .usa-current {
+        color: color('base-darker');
+      }
+
+      .usa-current::after {
+        background-color: #ffbe2e !important;
+        border-radius: 0.5rem !important;
+        top: 0.89rem !important;
+        width: 0.5rem !important;
+        height: 0.5rem;
+      }
+    }
+  }  
 }
+
+.lab-hcd-guide-highlights {
+  margin-left: units(2);
+  position: absolute;
+  bottom: 1rem;
+
+  span {
+    display: inline-block;
+    margin: 0.19rem 0.31rem 0 0;
+    vertical-align: top;
+    @include u-font-size('body', 'xs');
+    color: color('base-darker');
+  }
+
+  button {
+    width: 58px;
+    height: 28px;
+    display: inline-block;
+    border: none;
+    background-color: color('base-lightest');
+    background-image: url('/assets/img/lab/hcd-guide/design/highlights-off.svg');
+  }
+}
+
+
+
+
+
 
 // ***************** TEAM ***************** //
 .lab-team {
   &__body {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 0 0 -1em;
+    margin: units(4) 0 units(4) -1em;
   }
 }
 
 .lab-team-person {
   display: flex;
   flex: 1;
-  padding: 2em 0 0 1em;
+  padding: 1em 0 0 1em;
 
   &__link {
     display: block;
     width: 100%;
-    padding: units(2) units(2) 0 units(2);
+    padding: units(4) units(2);
     text-decoration: none;
     text-align: center;
     color: color('ink');
@@ -652,7 +907,7 @@ i.e.
   }
 
   &__body {
-    padding: units(2) 0 0 0;
+    padding: units(2) 0;
   }
 
   &__name {
@@ -665,30 +920,16 @@ i.e.
   }
 
   &__location {
-    display:block;
+    display: inline-block;
     position: relative;
     font-weight: normal;
-    margin-top:0.25rem;
-
-    @include at-media('tablet-lg') {
-      display: inline-block;
-      position: relative;
-      font-weight: normal;
-      margin-left: units(1);
-      padding: 0 units(2);
-    }
+    margin-left: units(1);
+    padding: 0 units(1);
 
     &:before {
-      content: '';
+      content: '|';
       position: absolute;
       left: 0;
-      color: color($theme-color-lab-pewter);
-
-      @include at-media('tablet-lg') {
-        content:'|';
-        position:absolute;
-        left:0;
-      }
     }
   }
 
@@ -715,104 +956,6 @@ i.e.
   }
 }
 
-// ***************** HISTORY ***************** //
-$lab-max-team-size: 5;       // square root of 25
-$lab-team-size-2012: 2.45;   // square root of 6
-$lab-team-size-2013: 3.61;   // square root of 13
-$lab-team-size-2014: 3.74;   // square root of 14
-$lab-team-size-2015: 2.83;   // square root of 8
-$lab-team-size-2016: 3.32;   // square root of 11
-$lab-team-size-2017: 5;      // square root of 25
-$lab-team-size-2018: 4.8;    // square root of 23
-$lab-team-size-2019: 4.8;    // square root of 23
-
-.lab-history {
-  &__container {
-    width: 1 / 4 * 100%;
-    padding-bottom: 1 / 4 * 100%;
-    position:relative;
-    float:left;
-    margin-bottom:1.25rem;
-    text-align:center;
-    font-size: .875rem;
-    @include at-media('tablet') {
-      width: 1 / 8 * 100%;
-      padding-bottom: 1 / 8 * 100%;
-    }
-  }
-  &__viz {
-    padding:0;
-    margin:23px 0;
-  }
-  &__line {
-    width:1px;
-    padding-top:20px;
-    padding-bottom:50%;
-    position: absolute;
-    z-index:100;
-    top: 23px;
-    left: 50%;
-    background-color: color('ink');
-  }
-  &__circle {
-    &-2012, &-2013, &-2014, &-2015, &-2016, &-2017, &-2018, &-2019 {
-      margin-top:20px;
-      border-radius:50%;
-      position: absolute;
-      z-index:99;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: color($theme-color-lab-gold);
-    }
-    &-2012 {
-      width: $lab-team-size-2012 / $lab-max-team-size * 100% * 0.9;
-      padding-bottom: $lab-team-size-2012 / $lab-max-team-size * 100% * 0.9;
-    }
-    &-2013 {
-      width: $lab-team-size-2013 / $lab-max-team-size * 100% * 0.9;
-      padding-bottom: $lab-team-size-2013 / $lab-max-team-size * 100% * 0.9;
-    }
-    &-2014 {
-      width: $lab-team-size-2014 / $lab-max-team-size * 100% * 0.9;
-      padding-bottom: $lab-team-size-2014 / $lab-max-team-size * 100% * 0.9;
-    }
-    &-2015 {
-      width: $lab-team-size-2015 / $lab-max-team-size * 100% * 0.9;
-      padding-bottom: $lab-team-size-2015 / $lab-max-team-size * 100% * 0.9;
-    }
-    &-2016 {
-      width: $lab-team-size-2016 / $lab-max-team-size * 100% * 0.9;
-      padding-bottom: $lab-team-size-2016 / $lab-max-team-size * 100% * 0.9;
-    }
-    &-2017 {
-      width: $lab-team-size-2017 / $lab-max-team-size * 100% * 0.9;
-      padding-bottom: $lab-team-size-2017 / $lab-max-team-size * 100% * 0.9;
-    }
-    &-2018 {
-      width: $lab-team-size-2018 / $lab-max-team-size * 100% * 0.9;
-      padding-bottom: $lab-team-size-2018 / $lab-max-team-size * 100% * 0.9;
-    }
-    &-2019 {
-      width: $lab-team-size-2019 / $lab-max-team-size * 100% * 0.9;
-      padding-bottom: $lab-team-size-2019 / $lab-max-team-size * 100% * 0.9;
-    }
-  }
-  &__value {
-    position:absolute;
-    padding:3px;
-    background-color: color($theme-color-lab-gold);
-    text-align:center;
-    font-size:1rem;
-    font-weight: $theme-font-weight-bold;
-    z-index:101;
-    top: 50%;
-    left: 50%;
-    margin-top:20px;
-    transform: translate(-50%, -50%);
-  }
-}
-
 // ***************** FOOTER ***************** //
 .lab-footer {
   &__primary-section {
@@ -820,139 +963,40 @@ $lab-team-size-2019: 4.8;    // square root of 23
   }
 
   &__sub-title {
-    width: 310px;
-    padding: units(2.5) 0 units(2.5) 0;
+    padding: units(4) 0;
     color: color($theme-color-lab-indigo);
-    font-weight: $theme-font-weight-semibold;
-
-    @include at-media('mobile-lg') {
-      width:auto;
-      padding: units(2.5) 0;
-    }
   }
 
   .usa-footer__primary-section {
     background-color: color($theme-color-lab-moon);
   }
 
-  .usa-footer__secondary-link {
-  font-size: .875rem;
-    @include at-media('desktop') {
-      padding-top:0.5rem;
-    }
-  }
-
   &.usa-footer--big .usa-footer__primary-content--collapsible.hidden .lab-footer__address {
     display: none;
   }
 
-  &__required-links {
-    // margin-top:1.5rem;
-    opacity: 0.65;
-    @include at-media(desktop) {
-      border-left:1px solid #bbb;
-      padding-top:0;
-      margin-top: 0.25rem;
-    }
-  }
-
   &__required-links-list {
     display: block;
+    margin-top: units(2);
+
+    @include at-media('mobile-lg') {
+      margin-top: 0;
+    }
   }
 
   &__required-links-item {
     display: inline-block;
-    @include u-font-size('body', 'sm');
-    margin-left: 0;
-
-    @include at-media('desktop') {
-      display: block;
-      padding-top:0;
-    }
+    @include u-font-size('body', '2xs');
   }
 
   &__required-links-link {
     display: block;
-    padding: units(1) units(2) units(1) 0;
-
-    @include at-media('desktop') {
-      padding: 0;
-    }
-  }
-}
-
-.usa-footer {
-  font-size: .875rem;
-}
-
-.usa-footer__logo-heading {
-  margin-bottom:0;
-  margin-top:.375rem;
-  font-size:1.2rem;
-  line-height:1.5rem;
-
-  @include at-media('tablet') {
-    padding-right:2rem;
-  }
-}
-.usa-footer__logo-img {
-  width: 58px;
-  height: 58px;
-  margin: 0;
-
-  @include at-media('desktop') {
-  width: 66px;
-  height: 66px;
-  }
-}
-
-.usa-footer__secondary-section {
-  @include at-media('desktop') {
-    padding-bottom:2.5rem;
-    padding-top:1.5rem;
-  }
-}
-
-.usa-footer__secondary-section a:link {
-  color: color('ink');
-  text-decoration: none;
-}
-
-.usa-footer__secondary-section a:active {
-  color: color('ink');
-  text-decoration: underline;
-}
-
-.usa-footer__secondary-section a:hover {
-  color: color('ink');
-  text-decoration: underline;
-}
-
-.usa-footer__secondary-section a:visited {
-  color: color('ink');
-  text-decoration: none;
-}
-
-.usa-footer__address {
-  margin-top:0.25rem;
-}
-
-.usa-footer__contact-heading {
-  font-size:1rem;
-}
-
-.usa-footer__OPM-heading {
-  font-size:1rem;
-  display:none;
-  margin: 0 0 .25rem;
-  @include at-media('desktop') {
-    display:block;
+    padding: units(1) units(1) units(1) 0;
   }
 }
 
 .lab-footer .lab-footer__connect-item {
   margin-left: 0;
-  padding-top:0.3rem;
 }
 
 .lab-footer,
