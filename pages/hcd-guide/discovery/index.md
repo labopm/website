@@ -4,6 +4,7 @@ section: hcd-guide
 sub-section: Discovery
 permalink: /hcd-guide/discovery/
 title: Discovery Phase
+previous-link-title: none
 next-link-url: /hcd-guide/discovery/purpose.htm
 next-link-title: Purpose of this guide
 ---
@@ -33,7 +34,12 @@ next-link-title: Purpose of this guide
   <a href="#" title="Human-Centered Design">Human-Centered Design</a>
   <a href="#" title="Design in government">Design in government</a>
 </div>
-
+<div class="usa-prose__skip_ahead usa-prose__mobile_visible">
+  <hr>
+  <h4>Skip ahead</h4>
+  <a href="#design-phase" title="What to expect in the Design Phase">What to expect in the Design Phase</a>
+  <a href="#timeline" title="A note on timeline">A note on timeline</a>
+</div>
 <h2>What should you have done so far</h2>
 <p>
   Since you have either completed or are wrapping up the Discovery Phase, 

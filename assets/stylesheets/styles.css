@@ -27879,6 +27879,7 @@ i.e.
   color: #a9aeb1; }
 
 .usa-prose__print_guide_img {
+  margin-right: 0.5rem;
   display: inline-block;
   position: relative;
   top: 0.5rem; }
@@ -27943,20 +27944,20 @@ i.e.
   width: 100%;
   float: none; }
 
-.usa-prose .usa-layout-content_bottom {
+.usa-prose .usa-layout__content_bottom {
   margin-top: 2.5rem; }
-  .usa-prose .usa-layout-content_bottom .usa-back_to_top {
+  .usa-prose .usa-layout__content_bottom .usa-back_to_top {
     padding-left: 1.5rem;
     display: block;
     background-image: url("/assets/img/lab/hcd-guide/design/to-top.png");
     background-repeat: no-repeat;
     font-size: 1rem; }
-  .usa-prose .usa-layout-content_bottom hr {
+  .usa-prose .usa-layout__content_bottom hr {
     height: 0.125rem;
     margin: 1rem 0;
     background-color: #a9aeb1;
     border: none; }
-  .usa-prose .usa-layout-content_bottom .usa-layout-section_link {
+  .usa-prose .usa-layout__content_bottom .usa-layout__section_link {
     height: 3rem;
     padding: 1rem 2rem 1rem 1rem;
     float: right;
@@ -27969,7 +27970,7 @@ i.e.
     color: white;
     text-decoration: none;
     line-height: 1rem; }
-  .usa-prose .usa-layout-content_bottom .section_link_previous {
+  .usa-prose .usa-layout__content_bottom .section_link_previous {
     padding: 1rem 1rem 1rem 2rem;
     float: left;
     background-image: url("/assets/img/lab/hcd-guide/design/section-link-previous.png");
@@ -28832,6 +28833,16 @@ i.e.
 .l-hcd-guide .right_text {
   text-align: right; }
 
+@media (min-width: 415px) {
+  .lab-hero__desktop_visible {
+    display: inline-block !important; }
+  .lab-hero__mobile_visible {
+    display: none !important; }
+  .usa-prose__desktop_visible {
+    display: block !important; }
+  .usa-prose__mobile_visible {
+    display: none !important; } }
+
 @media (max-width: 414px) {
   .lab-hero__desktop_visible {
     display: none !important; }
@@ -28852,18 +28863,48 @@ i.e.
     float: none; }
     .lab-hero__form_search_mobile input[type='search'] {
       display: none; }
+  .usa-prose__desktop_visible {
+    display: none; }
+  .usa-prose__mobile_visible {
+    display: block !important; }
+  .usa-prose hr {
+    height: 0.0625rem;
+    margin: 1rem 0;
+    background-color: #a9aeb1;
+    border: none; }
   .usa-prose__know_your_basics {
     width: 100%; }
+  .usa-prose__skip_ahead hr {
+    margin-top: 5rem; }
+  .usa-prose__skip_ahead h4 {
+    margin-top: 1rem;
+    font-family: "merriweather", serif;
+    color: #71767a; }
+  .usa-prose__skip_ahead a {
+    display: block;
+    margin-top: 0.5rem; }
   .usa-prose .lab__bullet_points_columns {
     width: 100%; }
   .usa-prose .lab__bullet_points_column_left {
     margin-right: 0; }
-  .usa-prose .usa-layout-content_bottom .usa-back_to_top {
-    width: 4.5rem;
-    margin: 0 auto; }
-  .usa-prose .usa-layout-content_bottom .usa-layout-section_link {
-    width: 10rem;
-    padding: 0 1rem 0 0;
+  .usa-prose .usa-layout__content_bottom .usa-back_to_top {
+    width: 3rem;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    padding-left: 0;
+    background-position: 50% 0%; }
+  .usa-prose .usa-layout__content_bottom hr {
+    height: 0.0625rem; }
+  .usa-prose .usa-layout__content_bottom .usa-layout__link_wrapper {
+    width: 100%;
+    height: 3rem;
+    margin-top: 1.5rem; }
+  .usa-prose .usa-layout__content_bottom .usa-layout__section_link {
+    width: 10.5rem;
+    height: 2.75rem;
+    padding: 0 1.5rem 0 0;
+    display: table-cell;
+    float: none;
     background-color: white;
     background-image: url("/assets/img/lab/hcd-guide/design/section-link-next-mobile.png");
     background-position: 100% 50%;
@@ -28872,4 +28913,16 @@ i.e.
     font-weight: normal;
     text-align: right;
     color: #2672de;
-    text-decoration: underline; } }
+    text-decoration: underline;
+    vertical-align: middle; }
+  .usa-prose .usa-layout__content_bottom .section_link_previous {
+    background-image: url("/assets/img/lab/hcd-guide/design/section-link-previous-mobile.png");
+    background-position: 0% 50%;
+    padding: 0 0 0 1.5rem;
+    text-align: left; }
+  .usa-prose .usa-layout__content_bottom .section_link_one_next {
+    display: block;
+    float: right; }
+  .usa-prose .lab-cta__quote blockquote + hr,
+  .usa-prose .lab-cta__quote blockquote + hr + span + hr {
+    width: 17%; } }
