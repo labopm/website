@@ -1,18 +1,20 @@
 <div class="lab-hero lab-hero--{{ include.name }}">
   <div class="lab-hero__body">
     {% if page.section == 'hcd-guide' %}
-    <!-- <div class="lab-hero__sub-title lab-hero--{{include.name}}__sub-title display-inline-block height-4"> -->
-        <div class="lab-hero__sub-title lab-hero--{{include.name}}__sub-title">
+    <div class="lab-hero__sub-title lab-hero--{{include.name}}__sub-title lab-hero__desktop_visible">
     {% assign hcd_section_link = site.data.navigation.hcd-guide.href %}
       <a href="{{ site.baseurl}} {{ hcd_section_link }}" title="All HCD Guides">All HCD Guides</a>
       <a href="javascript:window.print();" title="Print Guide">Print Guide</a>
-
-      <!-- <a href="{{ site.baseurl}} {{ hcd_section_link }}" title="All HCD Guides" class="display-inline-block text-white margin-top-05 margin-right-5">All HCD Guides</a> -->
-      <!-- <a href="javascript:window.print();" title="Print Guide" class="display-inline-block text-white margin-top-05">Print Guide</a> -->
     </div>
-    <!-- <form action="#" class="display-inline-block float-right"> -->
-    <form action="#">
-      <!-- <input class="usa-input" id="search-input" type="search" name="q" placeholder="Search this guide..."><input type="image" src="/test/assets/img/icons/search.png" /> -->
+    <div class="lab-hero__sub-title lab-hero--{{include.name}}__sub-title lab-hero__mobile_visible">
+      {% assign hcd_section_link = site.data.navigation.hcd-guide.href %}
+        <span class="lab-hero__guide_menu_title">Guide Menu</span>
+        <a href="#" title="Guide Menu" class="lab-hero__guide_menu_link"><img src="/assets/img/lab/hcd-guide/design/guide-menu-icon.png" alt="Guide Menu" /></a>
+        <form action="#" class="lab-hero__form_search_mobile">
+          <input type="search" placeholder="Search this guide..." class="padding-left-1 border-0 radius-left-sm" /><input type="image" src="/assets/img/lab/hcd-guide/design/search-icon-mobile.png" />
+        </form>
+      </div>
+    <form action="#" class="lab-hero__desktop_visible">
       <input type="search" placeholder="Search this guide..." class="padding-left-1 border-0 radius-left-sm" /><input type="image" src="/test/assets/img/icons/search.png" />
     </form>
     {% endif %}

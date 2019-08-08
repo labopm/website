@@ -27908,7 +27908,7 @@ i.e.
   color: #3d4551; }
 
 .usa-prose h2 {
-  margin-top: 3.5rem;
+  margin-top: 2rem;
   display: inline-block;
   clear: both;
   font-family: "merriweather", serif; }
@@ -27952,6 +27952,7 @@ i.e.
     background-repeat: no-repeat;
     font-size: 1rem; }
   .usa-prose .usa-layout-content_bottom hr {
+    height: 0.125rem;
     margin: 1rem 0;
     background-color: #a9aeb1;
     border: none; }
@@ -27962,7 +27963,7 @@ i.e.
     background-color: #2672de;
     background-image: url("/assets/img/lab/hcd-guide/design/section-link-next.png");
     background-repeat: no-repeat;
-    background-position: 89% 50%;
+    background-position: calc(100% - 0.81rem) 50%;
     border-radius: 5px;
     font-weight: bold;
     color: white;
@@ -28048,6 +28049,15 @@ i.e.
     margin-top: 2rem; }
   .usa-prose .lab__case_in_point_copy p {
     margin-bottom: 1.5rem; }
+  .usa-prose .lab__case_in_point_copy .lab__case_in_point_info {
+    width: 1.5rem;
+    height: 1.75rem;
+    background-color: white;
+    background-image: url("/assets/img/lab/hcd-guide/design/case-in-point-info.svg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    border: none;
+    -webkit-appearance: none; }
 
 .usa-prose .lab__case_in_point_vertical_border {
   width: 2.875rem;
@@ -28821,3 +28831,45 @@ i.e.
 
 .l-hcd-guide .right_text {
   text-align: right; }
+
+@media (max-width: 414px) {
+  .lab-hero__desktop_visible {
+    display: none !important; }
+  .lab-hero__mobile_visible {
+    display: block !important; }
+  .lab-hero__body {
+    padding: 1rem !important; }
+  .lab-hero__guide_menu_title {
+    width: 6.5rem;
+    margin-top: 0.3rem;
+    display: inline-block;
+    text-transform: uppercase;
+    vertical-align: top; }
+  .lab-hero__guide_menu_link {
+    display: inline-block; }
+  .lab-hero__form_search_mobile {
+    display: inline-block;
+    float: none; }
+    .lab-hero__form_search_mobile input[type='search'] {
+      display: none; }
+  .usa-prose__know_your_basics {
+    width: 100%; }
+  .usa-prose .lab__bullet_points_columns {
+    width: 100%; }
+  .usa-prose .lab__bullet_points_column_left {
+    margin-right: 0; }
+  .usa-prose .usa-layout-content_bottom .usa-back_to_top {
+    width: 4.5rem;
+    margin: 0 auto; }
+  .usa-prose .usa-layout-content_bottom .usa-layout-section_link {
+    width: 10rem;
+    padding: 0 1rem 0 0;
+    background-color: white;
+    background-image: url("/assets/img/lab/hcd-guide/design/section-link-next-mobile.png");
+    background-position: 100% 50%;
+    border-radius: 0;
+    line-height: 1.4;
+    font-weight: normal;
+    text-align: right;
+    color: #2672de;
+    text-decoration: underline; } }
