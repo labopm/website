@@ -10,3 +10,4 @@ At the Lab we are focused on helping the federal government use design to solve 
 <h2>Featured partnerships</h2>
 
 [USAJOBS](usajobs/)
+<a href="{{ site.baseurl }}/what-we-do/featured-work/usajobs.html">USAJOBS</a>
