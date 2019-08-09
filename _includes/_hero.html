@@ -6,14 +6,41 @@
       <a href="{{ site.baseurl}} {{ hcd_section_link }}" title="All HCD Guides">All HCD Guides</a>
       <a href="javascript:window.print();" title="Print Guide">Print Guide</a>
     </div>
-    <div class="lab-hero__sub-title lab-hero--{{include.name}}__sub-title lab-hero__mobile_visible">
-      {% assign hcd_section_link = site.data.navigation.hcd-guide.href %}
+    <div class="lab-hero__sub-title lab-hero--{{include.name}}__sub-title lab-hero__guide_menu lab-hero__mobile_visible">
+      <span class="lab-hero__guide_menu_title">Guide Menu</span>
+      <a href="#" title="Guide Menu" class="lab-hero__guide_menu_link"><img src="/assets/img/lab/hcd-guide/design/guide-menu-icon.png" alt="Guide Menu" /></a>
+      <form action="#" class="lab-hero__form_search_mobile">
+        <input type="search" placeholder="Search this guide..." class="padding-left-1 border-0 radius-left-sm" /><input type="image" src="/assets/img/lab/hcd-guide/design/search-icon-mobile.png" />
+      </form>
+    </div>
+    <div class="lab-hero__guide_menu_content lab-hero__mobile_visible">
+      <div class="lab-hero__guide_menu_header">
         <span class="lab-hero__guide_menu_title">Guide Menu</span>
-        <a href="#" title="Guide Menu" class="lab-hero__guide_menu_link"><img src="/assets/img/lab/hcd-guide/design/guide-menu-icon.png" alt="Guide Menu" /></a>
-        <form action="#" class="lab-hero__form_search_mobile">
-          <input type="search" placeholder="Search this guide..." class="padding-left-1 border-0 radius-left-sm" /><input type="image" src="/assets/img/lab/hcd-guide/design/search-icon-mobile.png" />
-        </form>
+        <a href="#" title="Close Menu" class="lab-hero__guide_menu__close_link"><img src="/assets/img/lab/hcd-guide/design/guide-menu-close-mobile.png" alt="Close Menu" /></a>
       </div>
+      <nav class="lab-hero__guide_nav">
+        <ul>
+          <li><a href="#" title="Welcome">Welcome</a></li>
+          <li><a href="#" title="Purpose of this guide">Purpose of this guide</a></li>
+          <li><a href="#" title="Design phase principles">Design phase principles</a><a href="#" title="View more topics in Design phase principles"><img src="/assets/img/lab/hcd-guide/design/guide-menu-view-more-mobile.png" width="13" height="13" title="View more topics in Design phase principles" /></a></li>
+          <li><a href="#" title="Designed things">Designed things</a><a href="#" title="View more topics in Designed things"><img src="/assets/img/lab/hcd-guide/design/guide-menu-view-more-mobile.png" width="13" height="13" title="View more topics in Designed things" /></a></li>
+          <li><a href="#" title="Communicating ideas">Communicating ideas</a><a href="#" title="View more topics in Communicating ideas"><img src="/assets/img/lab/hcd-guide/design/guide-menu-view-more-mobile.png" width="13" height="13" title="View more topics in Communicating ideas" /></a></li>
+          <li><a href="#" title="Design &amp; Implementation">"Design &amp; Implementation</a></li>
+        </ul>
+      </nav>
+      <div class="lab-hero__guide_menu_highlights">
+        <span class="lab-hero__highlights_desc">Highlights</span>
+        <button type="button" title="Turn highlights on" class="lab-hero__highlights_button"></button>
+      </div>
+      <div class="lab-hero__guide_misc_links">
+        <ul>
+          <li><a href="#" title="Print guide">Print guide</a></li>
+          <li><a href="#" title="Glossary">Glossary</a></li>
+          <li><a href="#" title="Acknowledgements">Acknowledgements</a></li>
+          <li><a href="#" title="All HCD Guides">All HCD Guides</a></li>
+        </ul>
+      </div>
+    </div>
     <form action="#" class="lab-hero__desktop_visible">
       <input type="search" placeholder="Search this guide..." class="padding-left-1 border-0 radius-left-sm" /><input type="image" src="/test/assets/img/icons/search.png" />
     </form>

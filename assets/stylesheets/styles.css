@@ -27887,7 +27887,7 @@ i.e.
 
 .usa-prose__print_guide {
   display: inline-block;
-  color: #2672de; }
+  color: #0076d6; }
 
 .usa-prose__know_your_basics {
   width: 15rem;
@@ -27931,8 +27931,19 @@ i.e.
   font-size: 1.0625rem;
   font-weight: 400; }
 
+.usa-prose .lab__base_columns h3 {
+  font-family: Public Sans Web, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  font-weight: normal;
+  color: #565c65; }
+
 .usa-prose .lab__base_columns p {
   background-image: none; }
+
+.usa-prose .lab__list_strong {
+  padding-left: 0; }
+  .usa-prose .lab__list_strong li {
+    font-weight: bold;
+    list-style-type: none; }
 
 .usa-prose .lab__bullet_points_column_left,
 .usa-prose .lab__base_column_left {
@@ -27962,7 +27973,7 @@ i.e.
     height: 3rem;
     padding: 1rem 2rem 1rem 1rem;
     float: right;
-    background-color: #2672de;
+    background-color: #0076d6;
     background-image: url("/assets/img/lab/hcd-guide/design/section-link-next.png");
     background-repeat: no-repeat;
     background-position: calc(100% - 0.81rem) 50%;
@@ -28013,17 +28024,20 @@ i.e.
   display: inline-block;
   vertical-align: middle; }
 
-.usa-prose .usa-accordion__heading {
-  display: block; }
-  .usa-prose .usa-accordion__heading button {
-    background-color: #ffbe2e;
-    font-weight: 400;
-    font-size: 1.375rem; }
-
-.usa-prose .usa-accordion__content {
-  background-color: #fef0c8; }
-  .usa-prose .usa-accordion__content p {
-    padding-bottom: 1.5rem; }
+.usa-prose .usa-accordion {
+  margin-top: 2rem; }
+  .usa-prose .usa-accordion__heading {
+    display: block; }
+    .usa-prose .usa-accordion__heading button {
+      background-color: #ffbe2e;
+      font-weight: 400;
+      font-size: 1.375rem; }
+  .usa-prose .usa-accordion__content {
+    background-color: #fef0c8; }
+    .usa-prose .usa-accordion__content p {
+      padding-bottom: 1.5rem; }
+  .usa-prose .usa-accordion__reference {
+    margin-top: 0.5rem; }
 
 .usa-prose .lab__case_in_point_wrapper {
   height: auto;
@@ -28193,7 +28207,7 @@ i.e.
 
 .lab-hero--hcd-guide {
   /* MODIFIED */
-  background-color: #2672de; }
+  background-color: #0076d6; }
 
 .lab-hero--home {
   background-image: url("../img/lab/home/design-school-blue.jpg");
@@ -28899,6 +28913,10 @@ i.e.
     .usa-prose .lab__case_in_point_copy .lab__case_in_point_bullet_mobile {
       margin-left: 0.5rem;
       display: inline-block !important; }
+  .usa-prose .lab__base_columns {
+    width: 100%; }
+    .usa-prose .lab__base_columns p {
+      padding-top: 0; }
   .usa-prose .usa-layout__content_bottom .usa-back_to_top {
     width: 3rem;
     margin: 0 auto;
@@ -28924,7 +28942,7 @@ i.e.
     line-height: 1.4;
     font-weight: normal;
     text-align: right;
-    color: #2672de;
+    color: #0076d6;
     text-decoration: underline;
     vertical-align: middle; }
   .usa-prose .usa-layout__content_bottom .section_link_previous {

@@ -66,11 +66,12 @@ hcd-guide:
       - text: Purpose of this guide
         href: /hcd-guide/discovery/purpose/
       - text: Design phase principles
-        href: /hcd-guide/discovery/design-phase/
+        href: /hcd-guide/discovery/design-phase-principles.htm
       - text: Designed Things
         href: /hcd-guide/discovery/designed-things.htm
       - text: Communicating ideas
         href: /hcd-guide/discovery/communicating-ideas/
       - text: Design & implementation
         href: /hcd-guide/discovery/design-and-implementation/
-  
+      - href: Services
+        href: /hcd-guide/discovery/services.htm
