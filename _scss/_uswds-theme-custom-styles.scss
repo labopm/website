@@ -30,6 +30,7 @@ $theme-font-family-serif: 'merriweather', serif;
 
 .usa-prose {
   h1 {
+    margin-top: 1rem;
     font-family: 'merriweather' !important;
     font-weight: $theme-font-weight-light;
     color: color('base-darker');
@@ -90,7 +91,7 @@ $theme-font-family-serif: 'merriweather', serif;
   }
 
   h2 {
-    margin-top: units(4);
+    margin-top: units(6);
     display: inline-block;
     clear: both;
     font-family: $theme-font-family-serif
@@ -1315,7 +1316,7 @@ $theme-font-family-serif: 'merriweather', serif;
 
     &__skip_ahead {
       hr {
-        margin-top: 5rem;
+        margin-top: 3rem;
       }
 
       h4 {
@@ -1336,6 +1337,25 @@ $theme-font-family-serif: 'merriweather', serif;
 
     .lab__bullet_points_column_left {
       margin-right: 0;
+    }
+
+    .lab__case_in_point_header {
+      background-image: url('/assets/img/lab/hcd-guide/design/case-in-point-horizontal-mobile.png');
+      background-position: 0% 0%;
+      background-repeat: repeat-x;
+    }
+
+    .lab__case_in_point_copy {
+      width: 100%;
+
+      p {
+        margin-bottom: 0;
+      }
+      
+      .lab__case_in_point_bullet_mobile {
+        margin-left: units(1);
+        display: inline-block !important;
+      }
     }
 
     .usa-layout__content_bottom {

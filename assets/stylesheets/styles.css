@@ -27863,6 +27863,7 @@ i.e.
   padding-top: 2rem; }
 
 .usa-prose h1 {
+  margin-top: 1rem;
   font-family: 'merriweather' !important;
   font-weight: 300;
   color: #3d4551; }
@@ -27909,7 +27910,7 @@ i.e.
   color: #3d4551; }
 
 .usa-prose h2 {
-  margin-top: 2rem;
+  margin-top: 3rem;
   display: inline-block;
   clear: both;
   font-family: "merriweather", serif; }
@@ -28875,7 +28876,7 @@ i.e.
   .usa-prose__know_your_basics {
     width: 100%; }
   .usa-prose__skip_ahead hr {
-    margin-top: 5rem; }
+    margin-top: 3rem; }
   .usa-prose__skip_ahead h4 {
     margin-top: 1rem;
     font-family: "merriweather", serif;
@@ -28887,6 +28888,17 @@ i.e.
     width: 100%; }
   .usa-prose .lab__bullet_points_column_left {
     margin-right: 0; }
+  .usa-prose .lab__case_in_point_header {
+    background-image: url("/assets/img/lab/hcd-guide/design/case-in-point-horizontal-mobile.png");
+    background-position: 0% 0%;
+    background-repeat: repeat-x; }
+  .usa-prose .lab__case_in_point_copy {
+    width: 100%; }
+    .usa-prose .lab__case_in_point_copy p {
+      margin-bottom: 0; }
+    .usa-prose .lab__case_in_point_copy .lab__case_in_point_bullet_mobile {
+      margin-left: 0.5rem;
+      display: inline-block !important; }
   .usa-prose .usa-layout__content_bottom .usa-back_to_top {
     width: 3rem;
     margin: 0 auto;
