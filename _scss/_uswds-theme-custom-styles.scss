@@ -24,6 +24,37 @@ $theme-font-family-serif: 'merriweather', serif;
 
 // ***************** CONTENT ***************** //
 /* MODIFIED */
+@media (min-width: 64rem) {
+  .grid-container {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .grid-row.grid-gap > * {
+    padding-left: 1.5rem;
+  }
+
+  .desktop\:grid-col-4 {
+    width: 40%;
+  }
+
+  .desktop\:grid-col-8 {
+    width: 59%;
+  }
+
+  .usa-layout-docs__sticky {
+    left: 23%;
+  }
+
+  .usa-prose {
+    .usa-layout__content_bottom {
+      width: 40.5rem;
+    }
+  }
+}
+
+
 .usa-layout-docs__main {
   padding-top: units(4);
 }
@@ -834,6 +865,7 @@ $theme-font-family-serif: 'merriweather', serif;
   padding-top: 0 !important;
   padding-left: 0 !important;
   padding-right: 1rem !important;
+  background-color: color('base-lightest');
 }
 
 .usa-layout-docs__sticky {
@@ -1310,6 +1342,84 @@ $theme-font-family-serif: 'merriweather', serif;
 
       input[type='search'] {
         display: none;
+      }
+    }
+
+    &__guide_menu {
+      display: block !important;
+    }
+
+    &__guide_menu_content {
+      display: none !important;
+    }
+
+    &__guide_menu_header {
+      a {
+        display: inline-block;
+        float: right;
+      }
+    }
+
+    &__guide_menu_nav {
+      ul {
+        padding-left: 0;
+        list-style-type: none;
+
+        li {
+          margin-bottom: units(1);
+          border-bottom: px-to-rem(1px) solid color('white');
+
+          a {
+            margin-bottom: units(1);
+            display: inline-block;
+            color: color('white');
+            text-decoration: none;
+          }
+
+          a + a {
+            float: right;
+          }
+        }
+      }
+    }
+
+    &__guide_menu_highlights {
+      margin-top: units(5);
+
+      .lab-hero__highlights_desc {
+        display: inline-block;
+        margin: 0.19rem 0.31rem 0 0;
+        vertical-align: top;
+        @include u-font-size('body', 'xs');
+        color: color('white');
+      }
+    
+      .lab-hero__highlights_button {
+        width: 58px;
+        height: 28px;
+        display: inline-block;
+        border: none;
+        border-radius: px-to-rem(15px);
+        background-color: color('base-lightest');
+        background-image: url('/assets/img/lab/hcd-guide/design/highlights-off.svg');
+      }
+    }
+
+    &__guide_menu_misc_links {
+      margin-top: units(4);
+
+      ul {
+        padding-left: 0;
+        list-style-type: none;
+
+        li {
+          margin-bottom: 0.5rem;
+        }
+
+        a {
+          color: color('white');
+          text-decoration: none;
+        }
       }
     }
   }
