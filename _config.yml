@@ -13,31 +13,50 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@example.com
+title: The Lab at OPM
+email: lap@opm.gov
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  The Lab helps government organizations transform their programs, processes, and people through human-centered design.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+repository: labopm/webiste
+
+github_url: https://github.com/labopm
 
 # Build settings
 markdown: kramdown
-theme: minima
+
+# Plugins
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-redirect-from
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# Jekyll SEO Tag
+# See https://github.com/jekyll/jekyll-seo-tag
+logo: /img/lab-logo.png
+
+exclude:
+  - ".ruby-version"
+  - ".sass-cache"
+  - CONTRIBUTING.md
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - README.md
+  - config
+  - js
+  - manifest.yml
+  - node_modules
+  - package.json
+  - gulpfile.js
+  - circle.yml
+  - css
+  - package-lock.json
+
+collections:
+  classes:
+    output: true
+  people:
+    output: true
