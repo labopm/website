@@ -38,13 +38,6 @@ plugins:
 # See https://github.com/jekyll/jekyll-seo-tag
 logo: /img/lab-logo.png
 
-collections:
-  classes:
-    output: true
-  people:
-    output: true
-
-# Exclude from processing.
 exclude:
   - ".ruby-version"
   - ".sass-cache"
@@ -62,3 +55,9 @@ exclude:
   - circle.yml
   - css
   - package-lock.json
+
+collections:
+  classes:
+    output: true
+  people:
+    output: true
