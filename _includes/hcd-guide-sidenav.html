@@ -1,4 +1,7 @@
 <nav class="lab-hcd-guide-nav">
+  <a href="{{ site.baseurl }}/what-we-do/resources/hcd-guide/" class="lab-hcd-guide-nav__title">
+    HCD Guide Series
+  </a>
   <ul class="usa-sidenav">
     {% for link in include.links %}
       {% assign _href = link.href %}
@@ -6,31 +9,17 @@
       {% if link.href == page.url or link.href == page.permalink or link.sub-section == page.sub-section %}
         {% assign _current = true %}
       {% endif %}
-      {% if link.section-link == true %}
-        {% assign _sectionlink = true %}
-      {% else %}
-        {% assign _sectionlink = false %}
-      {% endif %}
     <li class="usa-sidenav__item">
-      {% if _sectionlink == true %}
-        {% assign _subnav = link.subnav %}
-        {% include subnav.html links=_subnav %}
-      {% else %}
       <a href="{{ site.baseurl }}{{ link.href }}" {% if _current %} class="usa-current" {% endif %} {% if link.class %}class="{{ link.class }}" {% endif %}>
         {{ link.text }}
       </a>
-        {% if link.subnav and _current %}
-          {% assign _subnav = link.subnav %}
-        <ul class="usa-sidenav__sublist">
-          {% include subnav.html links=_subnav %}
-        </ul>
-        {% endif %}
+      {% if link.subnav and _current %}
+        {% assign _subnav = link.subnav %}
+      <ul class="usa-sidenav__sublist">
+        {% include subnav.html links=_subnav %}
+      </ul>
       {% endif %}
     </li>
     {% endfor %}
   </ul>
 </nav>
-<div class="lab-hcd-guide-highlights">
-  <span class="lab-hcd-guide-highlights-desc">Highlights</span>
-  <button type="button" title="Turn highlights on" class="lab-hcd-guide-highlights-button"></button>
-</div>
