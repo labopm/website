@@ -7,8 +7,6 @@ length: 1 day
 cost: $600
 session: single
 registration-id: 296
-next-offering: September 17, 2019
-next-offering-location: Washington DC
 ---
 
 [More open enrollment classes](../../take-a-class/open-enrollment-classes/)
