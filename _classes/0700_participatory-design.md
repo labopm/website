@@ -11,6 +11,10 @@ next-offering: October 10, 2019
 next-offering-location: Washington DC
 ---
 
+[More open enrollment classes](../../take-a-class/open-enrollment-classes/)
+
+### Class details
+
 #### Format
 
 Activity-oriented learning in a classroom setting

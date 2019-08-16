@@ -13,6 +13,8 @@ next-offering: September 17-19, 2019
 next-offering-location: New York City
 ---
 
+[More open enrollment classes](../../take-a-class/open-enrollment-classes/)
+
 #### Format
 
 Activity-oriented learning, classroom and field exercises

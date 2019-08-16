@@ -8,8 +8,12 @@ cost: $600
 session: single
 registration-id: 256
 next-offering: October 9, 2019
-next-offering-location: Washington DC
+next-offering-location: Washington, DC
 ---
+
+[More open enrollment classes](../../take-a-class/open-enrollment-classes/)
+
+### Class details
 
 #### Format
 
