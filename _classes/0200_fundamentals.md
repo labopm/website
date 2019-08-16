@@ -9,8 +9,8 @@ length: 3 days
 cost: $1,900
 session: multi
 registration-id: 234
-next-offering: August 20-22, 2019; September 17-19, 2019
-next-offering-location: Washington, DC
+next-offering: September 17-19, 2019
+next-offering-location: New York City
 ---
 
 [More open enrollment classes](../../take-a-class/open-enrollment-classes/)
