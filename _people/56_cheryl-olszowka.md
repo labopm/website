@@ -11,4 +11,4 @@ job-title: Management & Program Analyst
 location: Lab DC
 ---
 
-Cheryl joins the Lab as a Presidential Management Fellow (PMF). She works with the Lab team on operational management and administration and projects that respond to public sector challenges. Cheryl brings 16 years of problem-solving, coordination, and implementation experience in the arts, film and television, and academia Cheryl earned her Master of Public Administration from American University and her Bachelor of Fine Arts in Stage Management from Boston University.
+Cheryl joins the Lab as a Presidential Management Fellow (PMF). She works with the Lab team on operational management and administration and projects that respond to public sector challenges. Cheryl brings 15 years of problem-solving, coordination, and implementation experience in the arts, film and television, and academia Cheryl earned her Master of Public Administration from American University and her Bachelor of Fine Arts in Stage Management from Boston University.
