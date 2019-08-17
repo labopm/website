@@ -7,13 +7,14 @@ length: 1 day
 cost: $600
 session: single
 registration-id: 256
+<<<<<<< HEAD
 next-offering: June 19, 2019
 next-offering-location: Washington, DC
+=======
+next-offering: October 9, 2019
+next-offering-location: Washington DC
+>>>>>>> parent of bd7df4df... Merge branch 'master' into content-updates
 ---
-
-[More open enrollment classes](../../take-a-class/open-enrollment-classes/)
-
-### Class details
 
 #### Format
 

@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: article-wide
 section: about
 permalink: /about/
 title: About the Lab
@@ -13,8 +13,6 @@ Enable and engage public sector employees to transform their programs, processes
 ## Our vision
 
 To create the conditions that enable a dynamic public sector to deliver effective programs, services, and products.
-
-<img alt="Participants in Design School" src="{{site.baseurl }}/assets/img/lab/design-school.jpg">
 
 ## Our approach
 

@@ -4,6 +4,7 @@ people_page: true
 section: about
 permalink: /people/eulani-labay/
 name: Eulani Labay
+image_name: eulani-labay.jpg
 pronouns: She/Her
 title: Our team
 job-title: Experience Designer

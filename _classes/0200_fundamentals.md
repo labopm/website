@@ -13,8 +13,6 @@ next-offering: August 20-22, 2019; September 17-19, 2019
 next-offering-location: Washington, DC
 ---
 
-[More open enrollment classes](../../take-a-class/open-enrollment-classes/)
-
 #### Format
 
 Activity-oriented learning, classroom and field exercises
