@@ -9,7 +9,7 @@ length: 5 days
 cost: $3,500
 session: multi
 registration-id: 307
-next-offering: September 17-19, 2019
+next-offering: October 21-25, 2019
 next-offering-location: New York City
 ---
 
