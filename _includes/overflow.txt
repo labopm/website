@@ -1,0 +1,69 @@
+<!-- {% if link.subnav and _current %}
+          {% assign _subnav = link.subnav %}
+        <ul class="usa-sidenav__sublist">
+          {% include subnav.html links=_subnav %}
+        </ul>
+        {% endif %} -->
+
+            <!-- <ul class="usa-sidenav__sublist">
+      {% include subnav.html links=_subnav %}
+    </ul> -->
+- text: Design Phase
+    href: /hcd-guide/design/
+    section-link: true
+    sub-section: Design
+    subnav:
+    - text: Purpose of this Guide
+      href: /hcd-guide/design/purpose/
+    - text: Human-Centered Design
+      href: /hcd-guide/design/humancentereddesign/
+    - text: Design in Government
+      href: /hcd-guide/design/govdesign/
+    - text: Design Phase Principles
+      href: /hcd-guide/design/designphase/
+      subnav:
+      - text: Simple is Hard
+        href: /hcd-guide/design/simple-is-hard/
+      - text: Team
+        href: /hcd-guide/design/team/
+      - text: Participants
+        href: /hcd-guide/design/participants/
+      - text: Public Sector Design
+        href: /hcd-guide/design/publicsector/
+      - text: Design for Change
+        href: /hcd-guide/design/designchange/
+    - text: Designed Things
+      href: /hcd-guide/design/designedthings/
+      subnav:
+      - text: Products
+        href: /hcd-guide/design/products/
+      - text: Services
+        href: /hcd-guide/design/services/
+      - text: Systems
+        href: /hcd-guide/design/systems/
+    - text: Communicating Ideas Through Design
+      href: /hcd-guide/design/communicatingideas/
+      section-link: true
+      subnav:
+      - text: Envisioning Ideas
+        href: /hcd-guide/design/envisioning/
+      - text: Building Out Ideas
+        href: /hcd-guide/design/building/
+      - text: Iteration
+        href: /hcd-guide/design/iteration/
+      - text: Feedback
+        href: /hcd-guide/design/feedback/
+    - text: Design and Implementation
+      href: /hcd-guide/design/designimplementation/
+    - text: What's Next
+      href: /hcd-guide/design/whatsnext/
+    - text: Glossary
+      href: /hcd-guide/design/glossary/
+    - text: Acknowledgements
+      href: /hcd-guide/design/acknowledgements/
+  - text: Deliver Phase
+    href: /hcd-guide/deliver/
+    sub-section: Deliver
+  - text: Measure Phase
+    href: /hcd-guide/measure/
+    sub-section: Measure

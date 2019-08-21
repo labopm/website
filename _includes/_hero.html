@@ -1,12 +1,23 @@
 <div class="lab-hero lab-hero--{{ include.name }}">
   <div class="lab-hero__body lab-hero--{{ include.name }}__body">
     {% if page.section == 'hcd-guide' %}
-    <h4 class="lab-hero__sub-title lab-hero--{{include.name}}__sub-title">
-      HCD Guide: {{ page.sub-section }} Phase
-    </h4>
-    {% endif %}
+      <div class="lab-hero__sub-title lab-hero--{{ page.section }}__sub-title lab-hero--hcd-guide__desktop_visible">
+      {% assign hcd_section_link = site.data.navigation.hcd-guide.href %}
+        <a href="{{ site.baseurl}} {{ hcd_section_link }}" title="All HCD Guides">All HCD Guides</a>
+        <a href="javascript:window.print();" title="Print Guide">Print Guide</a>
+      </div>
+      {% assign mobilenavigation = site.data.navigation['hcd-guide'] %}
+      {% include hcd-guide-nav-mobile.html links=mobilenavigation %}
+      <form action="#" class="lab-hero--hcd-guide__search_form lab-hero--hcd-guide__desktop_visible">
+        <input type="search" placeholder="Search this guide..." class="lab-hero--hcd-guide__search_form lab-hero--hcd-guide__desktop_visible" /><input type="image" src="/assets/img/lab/hcd-guide/design/search.png" class="lab-hero--hcd-guide__desktop_visible" />
+      </form>
+    </div>
+    <!-- <div class="lab-hero__nav_bar_visible">&nbsp;</div> -->
+    {% else %}
     {% if page.title %}
-    <h1 class="lab-hero__title lab-hero--{{include.name}}__title">{{ page.title }}</h1>
+      <h1 class="lab-hero__title lab-hero--{{include.name}}__title">{{ page.title }}</h1>
+    {% endif %}
     {% endif %}
   </div>
 </div>
+
