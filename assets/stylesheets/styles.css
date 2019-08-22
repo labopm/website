@@ -28913,6 +28913,12 @@ i.e.
 .usa-prose__hcd-guide .lab__base_columns p {
   background-image: none; }
 
+.usa-prose__hcd-guide .lab__base_columns h3,
+.usa-prose__hcd-guide .lab__h3_sans_serif {
+  font-family: Public Sans Web, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  font-weight: normal;
+  color: #565c65; }
+
 .usa-prose__hcd-guide .lab__list_strong {
   padding-left: 0; }
   .usa-prose__hcd-guide .lab__list_strong li {
@@ -28922,6 +28928,21 @@ i.e.
 .usa-prose__hcd-guide .lab__bullet_points_column_left,
 .usa-prose__hcd-guide .lab__base_column_left {
   margin-right: 4.5rem; }
+
+.usa-prose__hcd-guide .lab__split_columns {
+  max-width: 71ex;
+  margin-bottom: 3rem; }
+  .usa-prose__hcd-guide .lab__split_columns .lab__split_columns_img,
+  .usa-prose__hcd-guide .lab__split_columns .lab__split_columns_copy {
+    display: inline-block; }
+  .usa-prose__hcd-guide .lab__split_columns .lab__split_columns_img {
+    margin-right: 1rem; }
+  .usa-prose__hcd-guide .lab__split_columns .lab__split_columns_copy {
+    width: 25rem;
+    margin-top: 0;
+    vertical-align: top; }
+  .usa-prose__hcd-guide .lab__split_columns .lab__split_columns_copy::after {
+    clear: none; }
 
 .usa-prose__hcd-guide .lab__clear_spacer {
   clear: both; }
@@ -28960,7 +28981,7 @@ i.e.
     padding: 1rem 1rem 1rem 2rem;
     float: left;
     background-image: url("/assets/img/lab/hcd-guide/design/section-link-previous.png");
-    background-position: 6% 50%; }
+    background-position: 0.75rem 50%; }
 
 .usa-prose__hcd-guide figure {
   margin: 1rem 0; }
@@ -29132,10 +29153,16 @@ i.e.
     float: right; }
     .lab-hero--hcd-guide__search_form #search-input {
       height: 2rem;
-      border-radius: 0.5; }
-    .lab-hero--hcd-guide__search_form input[type=image] {
+      padding-left: 1rem;
+      float: left;
+      border: none;
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+      -webkit-appearance: none; }
+    .lab-hero--hcd-guide__search_form #search-submit {
       width: 2.5rem;
-      height: 2rem; }
+      height: 2rem;
+      float: right; }
   .lab-hero--hcd-guide__nav_bar_visible {
     height: 1rem;
     opacity: 0;
@@ -29206,6 +29233,7 @@ i.e.
   position: relative !important; }
 
 .usa-layout-docs__sidenav {
+  min-height: 57.69rem;
   padding-top: 0 !important;
   padding-left: 0 !important;
   padding-right: 1rem !important;
