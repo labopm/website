@@ -284,16 +284,20 @@ $theme-font-family-serif: 'merriweather', serif;
         margin-bottom: units(3);
       }
 
-      .lab__case_in_point_info {
-        width: px-to-rem(24px);
-        height: px-to-rem(28px);
-        background-color: color('white');
-        background-image: url('/assets/img/lab/hcd-guide/design/case-in-point-info.png');
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        border: none;
-        -webkit-appearance: none;
+      .lab__case_in_point_bullet_mobile {
+        display: none;
       }
+    }
+
+    &_info {
+      width: px-to-rem(24px);
+      height: px-to-rem(28px);
+      background-color: color('white');
+      background-image: url('/assets/img/lab/hcd-guide/design/case-in-point-info.png');
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      border: none;
+      -webkit-appearance: none;
     }
 
     &_vertical_border {
@@ -316,8 +320,8 @@ $theme-font-family-serif: 'merriweather', serif;
       background-repeat: no-repeat;
     }
   }
-  
 }
+
 
 .usa-accordion__reference_link {
   padding-right: units(2);
@@ -497,7 +501,7 @@ $theme-font-family-serif: 'merriweather', serif;
 
 #usa-layout-docs__sticky {
   width: 18rem;
-  min-height: 29.69rem;
+  min-height: 57.69rem;
   padding: units(4) units(4) units(4) units(2);
   position: fixed;
   background-color: color('base-lightest');
@@ -540,7 +544,7 @@ $theme-font-family-serif: 'merriweather', serif;
 .lab-hcd-guide-highlights {
   margin-left: units(2);
   position: absolute;
-  bottom: 1rem;
+  bottom: units(8);
 
   span {
     display: inline-block;
@@ -562,7 +566,7 @@ $theme-font-family-serif: 'merriweather', serif;
 
 /* ****** FOOTER ****** */
 
-.lab-footer__hcd-guide {
+/* .lab-footer__hcd-guide {
   width: 65%;
   margin: 0 auto;
 }
@@ -573,7 +577,7 @@ $theme-font-family-serif: 'merriweather', serif;
 
 .usa-footer__contact-links_hcd-guide {
   right: 17.5%;
-}
+} */
 
 
 @media (min-width: 100rem) {
@@ -663,7 +667,7 @@ $theme-font-family-serif: 'merriweather', serif;
 
   .usa-layout-docs__main_hcd-guide {
     margin-top: units(4);
-    padding-bottom: 1rem;
+    padding-bottom: units(8);
     order: 3;
   }
 

@@ -29044,15 +29044,18 @@ i.e.
     margin-top: 2rem; }
   .usa-prose__hcd-guide .lab__case_in_point_copy p {
     margin-bottom: 1.5rem; }
-  .usa-prose__hcd-guide .lab__case_in_point_copy .lab__case_in_point_info {
-    width: 1.5rem;
-    height: 1.75rem;
-    background-color: white;
-    background-image: url("/assets/img/lab/hcd-guide/design/case-in-point-info.png");
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    border: none;
-    -webkit-appearance: none; }
+  .usa-prose__hcd-guide .lab__case_in_point_copy .lab__case_in_point_bullet_mobile {
+    display: none; }
+
+.usa-prose__hcd-guide .lab__case_in_point_info {
+  width: 1.5rem;
+  height: 1.75rem;
+  background-color: white;
+  background-image: url("/assets/img/lab/hcd-guide/design/case-in-point-info.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  border: none;
+  -webkit-appearance: none; }
 
 .usa-prose__hcd-guide .lab__case_in_point_vertical_border {
   width: 2.875rem;
@@ -29210,7 +29213,7 @@ i.e.
 
 #usa-layout-docs__sticky {
   width: 18rem;
-  min-height: 29.69rem;
+  min-height: 57.69rem;
   padding: 2rem 2rem 2rem 1rem;
   position: fixed;
   background-color: #f0f0f0; }
@@ -29243,7 +29246,7 @@ i.e.
 .lab-hcd-guide-highlights {
   margin-left: 1rem;
   position: absolute;
-  bottom: 1rem; }
+  bottom: 4rem; }
   .lab-hcd-guide-highlights span {
     display: inline-block;
     margin: 0.19rem 0.31rem 0 0;
@@ -29259,16 +29262,18 @@ i.e.
     background-image: url("/assets/img/lab/hcd-guide/design/highlights-off.svg"); }
 
 /* ****** FOOTER ****** */
-.lab-footer__hcd-guide {
+/* .lab-footer__hcd-guide {
   width: 65%;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 .usa-footer__logo_hcd-guide {
-  left: 17.5%; }
+  left: 17.5%;
+}
 
 .usa-footer__contact-links_hcd-guide {
-  right: 17.5%; }
-
+  right: 17.5%;
+} */
 @media (min-width: 100rem) {
   .grid-container__hcd-guide .grid-row.grid-gap > * {
     padding-left: 5.5rem; }
@@ -29321,7 +29326,7 @@ i.e.
     padding-bottom: 8.125rem; }
   .usa-layout-docs__main_hcd-guide {
     margin-top: 2rem;
-    padding-bottom: 1rem;
+    padding-bottom: 4rem;
     order: 3; }
   .lab-hero--hcd-guide__body {
     background-image: none;
