@@ -370,6 +370,7 @@ $theme-font-family-serif: 'merriweather', serif;
       width: 100%;
       position: absolute;
       top: 50%;
+      z-index: 300;
     }
 
     #usa-prose__hcd-guide__carousel_nav_previous, 
