@@ -61,17 +61,41 @@ hcd-guide:
     section-link: true
     sub-section: Discovery
     subnav: 
-      - text: Welcome
+      - text: Welcome to the Design Phase!
         href: /hcd-guide/discovery/
       - text: Purpose of this guide
-        href: /hcd-guide/discovery/purpose/
+        href: /hcd-guide/discovery/purpose-of-this-guide.htm
       - text: Design phase principles
         href: /hcd-guide/discovery/design-phase-principles.htm
-      - text: Designed Things
+      - text: Principle one - Getting to simple is hard
+        href: /hcd-guide/discovery/getting-to-simple-is-hard.htm
+      - text: Team work
+        href: /hcd-guide/discovery/team-work.htm
+      - text: Design for humans
+        href: /hcd-guide/discovery/design-for-humans.htm
+      - text: Design at scale
+        href: /hcd-guide/discovery/design-at-scale.htm
+      - text: Design for change
+        href: /hcd-guide/discovery/design-for-change.htm
+      - text: Designed things
         href: /hcd-guide/discovery/designed-things.htm
-      - text: Communicating ideas
-        href: /hcd-guide/discovery/communicating-ideas/
-      - text: Design & implementation
-        href: /hcd-guide/discovery/design-and-implementation/
+      - text: Products
+        href: /hcd-guide/discovery/products.htm
       - text: Services
         href: /hcd-guide/discovery/services.htm
+      - text: Systems
+        href: /hcd-guide/discovery/systems.htm
+      - text: Communicating ideas through design
+        href: /hcd-guide/discovery/communicating-ideas-through-design.htm
+      - text: Envisioning ideas
+        href: /hcd-guide/discovery/envisioning-ideas.htm
+      - text: Building out ideas
+        href: /hcd-guide/discovery/building-out-ideas.htm
+      - text: Iteration
+        href: /hcd-guide/discovery/iteration.htm
+      - text: Feedback
+        href: /hcd-guide/discovery/feedback.htm
+      - text: Design & Implementation
+        href: /hcd-guide/discovery/design-and-implementation.htm
+      - text: What's next
+        href: /hcd-guide/discovery/whats-next.htm

@@ -5,8 +5,8 @@ sub-section: Discovery
 permalink: /hcd-guide/discovery/
 title: Discovery Phase
 previous-link-title: none
-next-link-url: /hcd-guide/discovery/purpose.htm
-next-link-title: Get Started
+next-link-url: /hcd-guide/discovery/purpose-of-this-guide.htm
+next-link-title: Purpose of this guide
 ---
 
 <h1>Welcome to the Design Phase</h1>
@@ -102,6 +102,7 @@ next-link-title: Get Started
   <p>
     Creating <a href="#" title="lots of ideas">lots of ideas.</a> 
     for product, service, or system solutions.
+  </p>
   <p>
     Analyzing whether those ideas could be expressed best as 
     <a href="#" title="products">products,</a>  
@@ -114,6 +115,7 @@ next-link-title: Get Started
     <a href="#" title="multiple iterations of your idea for the above">multiple iterations of your idea for the above.</a>
   </p>  
 </div>
+
 <div class="lab__bullet_points_columns lab__bullet_points_column_right">
   <p>
     Understanding and communicating how your product, service, or system might need to 
@@ -130,6 +132,7 @@ next-link-title: Get Started
   </p>
 </div>
 <div class="lab__clear_spacer"></div>
+
 <h2 id="timeline">A note on timeline</h2>
 <p>
   Each Design Phase differs depending on the nature of the product, service, or system, 
@@ -137,32 +140,38 @@ next-link-title: Get Started
   and the scope of the project itself. If necessary, create a rough map of each 
   of these parameters to understand your timeline.
 </p>
+
 <p>
   Templates for this will be provided in the Design Phase Operations Guide, but to start, 
   you can also modify the 
   <a href="#" title="Project Frame-Reframe template" class="usa-prose__hcd-guide_print_not_visible">Project Frame-Reframe template</a> 
   from pages 16-17 of the Discovery Operations Guide for this purpose. Map onto that template the following parameters:
 </p>
+
 <div class="lab__bullet_points_columns lab__bullet_points_column_fullwidth">
   <p>
     What is the nature of your opportunity spaces? Are they big and conceptual? 
     Or smaller and tactical?
   </p>
+
   <p>
     Do you have a team with many conceptual skills? Or one with deep 
     technical knowledge?
   </p>
+
   <p>
     Do you have ready access to the stakeholders and participants, 
     or is access less well defined?
   </p>
 </div>
+
 <p>
   If the majority of these answers falls on the upper half of the Project Frame-Reframe template, 
   create a generous timeline for your Design phase. You'll need time to break down your 
   Opportunities into workable parts, to find partners with any technical skills you may 
   need and to get on the calendars of your stakeholders and participants.
 </p>
+
 <p>
   On the other hand, if all of your answers fall in the lower, more tactical region of the 
   Project Frame-Reframe template, you might consider expanding your Design Phase aim 
