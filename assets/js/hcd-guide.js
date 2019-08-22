@@ -780,3 +780,77 @@ function expandSearchBar()  {
   hero_element.classList.remove("hero_scroll_down");
   hero_element.classList.add("hero_scroll_up");
 }
+
+
+
+function cycleImages(cycle_direction, carousel_id_value)  {
+  var contains_visible_image;
+
+  var carousel_id_num_value = "";
+
+  carousel_id_num_value = slice(carousel_id_value, (carousel_id_value.length - 1));
+  
+  var carousel_images_wrapper_selector = "";
+
+  carousel_images_wrapper_selector = "carousel-images-" + carousel_id_num_value;
+
+  var carousel_images_wrapper_element = {};
+
+  carousel_images_wrapper_element = document.getElementById(carousel_images_wrapper_selector);
+
+  var carousel_image_selector_static = "";
+
+  carousel_image_selector_static = "usa-prose__hcd-guide__carousel_image";
+
+  var carousel_images_selector = "";
+
+  caroursel_images_selector = carousel_images_wrapper_selector + " ." + carousel_image_selector_static;
+
+  var carousel_images_elements = {};
+
+  carousel_images_elements = document.getElementsByClassName(carousel_images_selector);
+  
+  var i;
+
+  var image_which_is_visible;
+
+  for (i = 0; i < carousel_images_elements.length; i++) {
+    contains_visible_image = carousel_images_elements[i].classList.contains(carousel_image_selector_static);
+
+    if (contains_visible_image === true)  {
+      image_which_is_visible = i;
+    }
+  }
+
+  var carousel_image_visible_selector = "usa-prose__hcd-guide__carousel_image_visible";
+
+  carousel_images_elements.classList.remove(carousel_image_visible_selector);
+
+  var carousel_image_new_visible_selector = carousel_id_value + "-";
+
+  var num_carousel_images;
+
+  num_carousel_images = carousel_images_elements.length;
+
+  var image_to_make_visible;
+
+  if (cycle_direction === "previous") {
+    if (image_which_is_visible !== 0) {
+      image_to_make_visible = image_which_is_visible - 1;
+      
+    } else {
+      image_to_make_visible = num_carousel_images;
+    }
+
+    carousel_image_new_visible_selector = carousel_image_new_visible_selector + image_to_make_visible.toString();
+  } else {
+    if (image_which_is_visible !== (num_carousel_images - 1)) {
+      image_to_make_visible = image_which_is_visible + 1;
+      
+    } else {
+      image_to_make_visible = 1;
+    }
+
+    carousel_image_new_visible_selector = carousel_image_new_visible_selector + image_which_is_visible.toString();
+  }
+}

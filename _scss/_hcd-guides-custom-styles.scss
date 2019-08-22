@@ -125,7 +125,7 @@ $theme-font-family-serif: 'merriweather', serif;
   }
 
   .lab__split_columns {
-    max-width: 71ex;
+    max-width: 75ex;
     margin-bottom: units(6);
 
     .lab__split_columns_img, 
@@ -138,7 +138,7 @@ $theme-font-family-serif: 'merriweather', serif;
     }
 
     .lab__split_columns_copy {
-      width: 25rem;
+      width: 22rem;
       margin-top: 0;
       vertical-align: top;
     }
@@ -349,6 +349,57 @@ $theme-font-family-serif: 'merriweather', serif;
       background-image: url('/assets/img/lab/hcd-guide/design/case-in-point-bottom.png');
       background-position: 100% 50%;
       background-repeat: no-repeat;
+    }
+  }
+
+  &__carousel {
+    max-width: 76ex;
+    position: relative;
+
+    &_image {
+      display: none;
+    }
+
+    &_image_visible {
+      margin: 0 auto;
+      display: block;
+
+    }
+
+    &_navigation {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+    }
+
+    #usa-prose__hcd-guide__carousel_nav_previous, 
+    #usa-prose__hcd-guide__carousel_nav_next {
+      position: relative;
+    }
+
+    #usa-prose__hcd-guide__carousel_nav_previous {
+      left: 2rem;
+    }
+
+    #usa-prose__hcd-guide__carousel_nav_next {
+      right: 2rem;
+      float: right;
+    }
+
+    &_caption {
+      width: 70%;
+      padding: units(2);
+      position: absolute;
+      bottom: units(4);
+      left: 15%;
+      background-color: color('base');
+      opacity: 0.9;
+      z-index: 200;
+    }
+
+    &_images {
+      position: relative;
+      z-index: 100;
     }
   }
 }
