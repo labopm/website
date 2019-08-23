@@ -29274,14 +29274,14 @@ i.e.
   position: relative !important; }
 
 .usa-layout-docs__sidenav {
-  min-height: 57.69rem;
+  min-height: 29.69rem;
   padding-top: 0 !important;
   padding-left: 0 !important;
   padding-right: 1rem !important; }
 
 #usa-layout-docs__sticky {
   width: 18rem;
-  min-height: 57.69rem;
+  min-height: 29.69rem;
   padding: 2rem 0;
   position: fixed; }
 

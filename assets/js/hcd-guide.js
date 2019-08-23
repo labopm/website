@@ -122,7 +122,7 @@ this.console.log("scroll_value = " + scroll_value);
     // The threshold which when reached by a visitor scrolling down a webpage is calcluated by taking the CSS 
     // value, 'top', of the footer and subtracting the height of the footer and the amount of 'padding' 
     // at the bottom of the main block of content is passed on.
-    stop_side_navigation_scrolling_value = current_footer_top_value - (footer_height_value + main_content_padding_bottom_value);
+    stop_side_navigation_scrolling_value = current_footer_top_value +(footer_height_value + main_content_padding_bottom_value);
 this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigation_scrolling_value);
 
 /*     // A variable is initialized which will hold a number which sets the threshold when when reached triggers the IF/ELSE 
@@ -172,17 +172,16 @@ this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigatio
 
         var side_navigation_values = [];
 
+        scroll_value = html_height - current_position;
+
         side_navigation_values = [
-          current_position, 
           scroll_value, 
           stop_side_navigation_scrolling_value
         ];
-
+        
         stopSideNavigationScrolling(side_navigation_values);
 
         previous_position = current_position;
-
-this.console.log("html_height - current_position = " + (html_height - current_position));
       }
     );
 
@@ -490,13 +489,11 @@ function isSideNavigationFixed()  {
 
 
 function stopSideNavigationScrolling(side_navigation_values)  {
-  var current_position;
   var scroll_value;
   var stop_side_navigation_scrolling_value;
   
-  current_position = side_navigation_values[0];
-  scroll_value = side_navigation_values[1];
-  stop_side_navigation_scrolling_value = side_navigation_values[2];
+  scroll_value = side_navigation_values[0];
+  stop_side_navigation_scrolling_value = side_navigation_values[1];
 
   is_side_navigation_fixed = isSideNavigationFixed();
 
