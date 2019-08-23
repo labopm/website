@@ -3,18 +3,24 @@
     {% for link in include.links %}
       {% assign _href = link.href %}
       {% assign _current = false %}
+
       {% if link.href == page.url or link.href == page.permalink or link.sub-section == page.sub-section %}
         {% assign _current = true %}
       {% endif %}
-      {% if link.section-link == true %}
+
+      {% if _all-links == true %}
+      {{ _all-links }}
+      {% endif %}
+      {% if link.subnav %}
         {% assign _sectionlink = true %}
       {% else %}
         {% assign _sectionlink = false %}
       {% endif %}
-    <li class="usa-sidenav__item">
+
+      <li class="usa-sidenav__item">
       {% if _sectionlink == true %}
         {% assign _subnav = link.subnav %}
-        {% include subnav.html links=_subnav %}
+        {% include subnav.html links=_subnav section_href=_href %}
       {% else %}
       <a href="{{ site.baseurl }}{{ link.href }}" {% if _current %} class="usa-current" {% endif %} {% if link.class %}class="{{ link.class }}" {% endif %}>
         {{ link.text }}

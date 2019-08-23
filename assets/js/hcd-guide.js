@@ -51,7 +51,7 @@ window.addEventListener("load",
     // of the padding along the bottom of the main block of content is subtracted 
     // from the height of all of the HTML content. That value is passed on.
     scroll_value = html_height - footer_height - side_navigation_height - side_navigation_top - main_content_padding_value;
-
+this.console.log("scroll_value = " + scroll_value);
     // A String which will hold the CSS selector for the side navigation is initialized.
     var side_navigation_selector = "";
 
@@ -123,14 +123,16 @@ window.addEventListener("load",
     // value, 'top', of the footer and subtracting the height of the footer and the amount of 'padding' 
     // at the bottom of the main block of content is passed on.
     stop_side_navigation_scrolling_value = current_footer_top_value - (footer_height_value + main_content_padding_bottom_value);
+this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigation_scrolling_value);
 
-
-    // A variable is initialized which will hold a number which sets the threshold when when reached triggers the IF/ELSE 
+/*     // A variable is initialized which will hold a number which sets the threshold when when reached triggers the IF/ELSE 
     // statement to stop the side navigation from scrolling.
     var side_navigation_threshold_value;
 
     // The number which sets the threshold for the scrolling of the side navigation is passed on.
-    side_navigation_threshold_value = 90;
+    side_navigation_threshold_value = 25;
+ */
+    var side_navigation_top_value;
 
     // A variable is initialized which will hold the vertical position within a webpage 
     // a visitor has scrolled to.
@@ -168,20 +170,19 @@ window.addEventListener("load",
           expandSearchBar();
         }
 
-        var stop_side_navigation_values = [];
+        var side_navigation_values = [];
 
-        stop_side_navigation_values = [
+        side_navigation_values = [
           current_position, 
-          stop_side_navigation_scrolling_value, 
-          side_navigation_threshold_value, 
-          scroll_value
+          scroll_value, 
+          stop_side_navigation_scrolling_value
         ];
 
-        stopSideNavigationScrolling(stop_side_navigation_values);
+        stopSideNavigationScrolling(side_navigation_values);
 
         previous_position = current_position;
 
-        
+this.console.log("html_height - current_position = " + (html_height - current_position));
       }
     );
 
@@ -488,18 +489,14 @@ function isSideNavigationFixed()  {
 
 
 
-function stopSideNavigationScrolling(stop_side_navigation_values)  {
+function stopSideNavigationScrolling(side_navigation_values)  {
   var current_position;
-  var stop_side_navigation_scrolling_value;
-  var side_navigation_threshold_value;
   var scroll_value;
-
-  current_position = stop_side_navigation_values[0];
-  stop_side_navigation_scrolling_value = stop_side_navigation_values[1];
-  side_navigation_threshold_value = stop_side_navigation_values[2];
-  scroll_value = stop_side_navigation_values[3];
-
-  var is_side_navigation_fixed;
+  var stop_side_navigation_scrolling_value;
+  
+  current_position = side_navigation_values[0];
+  scroll_value = side_navigation_values[1];
+  stop_side_navigation_scrolling_value = side_navigation_values[2];
 
   is_side_navigation_fixed = isSideNavigationFixed();
 
@@ -514,35 +511,26 @@ function stopSideNavigationScrolling(stop_side_navigation_values)  {
 
   // The HTML DOM element which refers to the side navigation is passed on.
   side_navigation_element = document.getElementById(side_navigation_selector);
+  scroll_value = scroll_value - stop_side_navigation_scrolling_value;
+  console.log("scroll_value = " + scroll_value);
 
-  var side_navigation_offset_left_value;
-
-  side_navigation_offset_left_value = 16;
-
-  var side_navigation_left_value;
-
-  side_navigation_left_value = side_navigation_element.offsetLeft;
-
-  if (current_position > (stop_side_navigation_scrolling_value - side_navigation_threshold_value) && is_side_navigation_fixed === true) {
+  if (scroll_value < -540 && is_side_navigation_fixed === true) {
     side_navigation_element.classList.remove("side_navigation_start");
     side_navigation_element.classList.add("side_navigation_stop");
+  
+    var side_navigation_top_value;
 
-    scroll_value = scroll_value + "px";
+    side_navigation_top_value = window.getComputedStyle(side_navigation_element, null).getPropertyValue("top");
+
+    side_navigation_element.style.top = stop_side_navigation_scrolling_value;
     
-    side_navigation_left_value = side_navigation_left_value + side_navigation_offset_left_value;
-    side_navigation_left_value = side_navigation_left_value + "px";
-
-    side_navigation_element.style.top = scroll_value;
-    side_navigation_element.style.left = side_navigation_left_value;
-  } else if (current_position < stop_side_navigation_scrolling_value && is_side_navigation_fixed === false) {
-    side_navigation_left_value = side_navigation_left_value - side_navigation_offset_left_value;
-    side_navigation_left_value = side_navigation_left_value + "px";
-
+    // side_navigation_element.style.left = side_navigation_left_value;
+  } else if (scroll_value > -540 && is_side_navigation_fixed === false) {
 
     side_navigation_element.classList.remove("side_navigation_stop");
     side_navigation_element.classList.add("side_navigation_start");
     
-    side_navigation_element.style.left = side_navigation_left_value;
+    // side_navigation_element.style.left = side_navigation_left_value;
   }
 }
 

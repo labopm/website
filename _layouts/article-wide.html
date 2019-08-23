@@ -14,7 +14,7 @@
         {% assign sidenavigation = site.data.navigation['hcd-guide'] %}
         <aside class="usa-layout-docs__sidenav desktop:grid-col-4">
           <div id="usa-layout-docs__sticky">
-            {% include hcd-guide-sidenav.html links=sidenavigation %}
+          {% include hcd-guide-sidenav.html links=sidenavigation %}
           </div>
         </aside>
         <div class="usa-layout-docs__main_hcd-guide desktop:grid-col-8 usa-prose__hcd-guide">
@@ -31,6 +31,7 @@
             {% if page.next-link-url %}
               {% assign next_link_url = page.next-link-url %}
               {% assign next_link_title = page.next-link-title %}
+              
               {% if page.previous-link-title == 'none' %}
                 {% assign link_class = 'usa-layout__section_link section_link_one_next' %}
               {% else %}

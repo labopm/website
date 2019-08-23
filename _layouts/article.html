@@ -15,15 +15,15 @@
           {% assign sidenavigation = site.data.navigation['hcd-guide'] %}
         <aside class="usa-layout-docs__sidenav desktop:grid-col-4">
           <div class="usa-layout-docs__sticky">
-            {% include hcd-guide-sidenav.html links=sidenavigation %}
+            <!-- {% include hcd-guide-sidenav.html links=sidenavigation %} -->
           </div>
         </aside>
         {% endif %}
         <div class="usa-layout-docs__main desktop:grid-col-8 usa-prose">
           {% if people_page %}
-          {% include person-header.html %}
+            {% include person-header.html %}
           {% endif %}
-          {{ content }}
+          <!-- {{ content }} -->
         </div>
         {% assign registration_id = page.registration-id %}
         {% if registration_id %}
@@ -31,6 +31,7 @@
           {% include registration.html id=registration_id next-offering=page.next-offering next-offering-location=page.next-offering-location %}
         </aside>
         {% endif %}
+
         {% if people_page %}
         <aside class="usa-layout-docs__sidenav desktop:grid-col-4">
           {% include person-sidebar.html image_name=page.image_name %}

@@ -58,8 +58,6 @@ about:
 hcd-guide:
   - text: Design Phase
     href: /hcd-guide/design/
-    section-link: true
-    sub-section: Design
     subnav: 
       - text: Welcome
         href: /hcd-guide/design/
@@ -68,7 +66,7 @@ hcd-guide:
       - text: Design phase principles
         href: /hcd-guide/design/design-phase-principles.htm
         sub-section: true
-        subnav: 
+        sub-subnav: 
         - text: Principle one - Getting to simple is hard
           href: /hcd-guide/design/getting-to-simple-is-hard.htm
         - text: Team work
@@ -82,7 +80,7 @@ hcd-guide:
       - text: Designed things
         href: /hcd-guide/design/designed-things.htm
         sub-section: true
-        subnav:
+        sub-subnav: 
         - text: Products
           href: /hcd-guide/design/products.htm
         - text: Services
@@ -92,7 +90,7 @@ hcd-guide:
       - text: Communicating ideas through design
         href: /hcd-guide/design/communicating-ideas-through-design.htm
         sub-section: true
-        subnav: 
+        sub-subnav: 
         - text: Envisioning ideas
           href: /hcd-guide/design/envisioning-ideas.htm
         - text: Building out ideas
