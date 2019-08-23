@@ -551,42 +551,61 @@ function stopSideNavigationScrolling(stop_side_navigation_values)  {
 function shrinkSearchBar()  {
   // A String which will hold the CSS selector which refers to the links and input field 
   // held within the 'Search' bar is initialized.
-  var search_bar_content_selector = "";
+  var hero_bar_selector = "";
 
   // The value of the CSS selector which refers to the content of the 'Search' bar 
   // is passed on.
-  search_bar_content_selector = "lab-hero--hcd-guide__body";
+  hero_bar_selector = "lab-hero--hcd-guide__body";
 
   // An Object which will hold the HTML DOM object for the 'Search' bar is initalized.
-  var search_bar_content_element = {};
+  var hero_bar_element = {};
 
   // The HTML DOM object which refers to the 'Search' bar is passed on.
-  search_bar_content_element = document.getElementsByClassName(search_bar_content_selector)[0];
+  hero_bar_element = document.getElementsByClassName(hero_bar_selector)[0];
   
   // The opacity of the content held within the search bar is set to zero 
   // and the search bar is removed from visibility.  
-  search_bar_content_element.classList.remove("search_bar_scroll_up");
-  search_bar_content_element.classList.add("search_bar_scroll_down");
+  hero_bar_element.classList.remove("hero_bar_scroll_up");
+  hero_bar_element.classList.add("hero_bar_scroll_down");
 
-  /*  // A String is initialized which will contain the selector which refers to the 
+   // A String is initialized which will contain the selector which refers to the 
   // blue bar which appears as a visitor scrolls down.
-  var blue_bar_selector = "";
+  var print_links_selector = "";
 
   // The CSS selector which refers to the HTML element containing the blue bar 
   // is passed on.
-  blue_bar_selector = "lab-hero__nav_bar_visible";
+  print_links_selector = "lab-hero--hcd-guide__sub-title";
 
     // An Object variable which will hold the HTML DOM object which refers to the 
   // blue bar which appears as a visitor scrolls down is initialized.
-  var blue_bar_element = {};
+  var print_links_element = {};
 
   // The HTML DOM object which refers to the blue bar is passed on.
-  blue_bar_element = document.getElementsByClassName(blue_bar_selector)[0];
+  print_links_element = document.getElementsByClassName(print_links_selector)[0];
 
   // The blue bar is made visible.
-  blue_bar_element.classList.remove("search_bar_scroll_up");
-  blue_bar_element.classList.add("search_bar_scroll_down");
- */
+  print_links_element.classList.remove("hero_bar_content_scroll_up");
+  print_links_element.classList.add("hero_bar_content_scroll_down");
+  
+  // A String is initialized which will contain the selector which refers to the 
+  // blue bar which appears as a visitor scrolls down.
+  var search_field_selector = "";
+
+  // The CSS selector which refers to the HTML element containing the blue bar 
+  // is passed on.
+  search_field_selector = "lab-hero--hcd-guide__search_form";
+
+    // An Object variable which will hold the HTML DOM object which refers to the 
+  // blue bar which appears as a visitor scrolls down is initialized.
+  var search_field_element = {};
+
+  // The HTML DOM object which refers to the blue bar is passed on.
+  search_field_element = document.getElementsByClassName(search_field_selector)[0];
+
+  // The blue bar is made visible.
+  search_field_element.classList.remove("hero_bar_content_scroll_up");
+  search_field_element.classList.add("hero_bar_content_scroll_down");
+
   var hero_selector = "";
 
   hero_selector = "lab-hero--hcd-guide";
@@ -686,22 +705,22 @@ function expandSearchBar()  {
  */
   // A String which will hold the CSS selector which refers to the links and input field 
   // held within the 'Search' bar is initialized.
-  var search_bar_content_selector = "";
+  var hero_bar_selector = "";
 
   // The value of the CSS selector which refers to the content of the 'Search' bar 
   // is passed on.
-  search_bar_content_selector = "lab-hero--hcd-guide__body";
+  hero_bar_selector = "lab-hero--hcd-guide__body";
 
   // An Object which will hold the HTML DOM element which refers to the 'Search' bar 
   // is initialized.
-  var search_bar_content_element = {};
+  var hero_bar_element = {};
 
   // The HTML DOM element which the above variable refers to is passed on.
-  search_bar_content_element = document.getElementsByClassName(search_bar_content_selector)[0];
+  hero_bar_element = document.getElementsByClassName(hero_bar_selector)[0];
  
   // CSS values which makes the content of the 'Search' bar visible are passed on.
-  search_bar_content_element.classList.remove("search_bar_not_visible");
-  search_bar_content_element.classList.add("search_bar_visible");
+  hero_bar_element.classList.remove("hero_bar_scroll_down");
+  hero_bar_element.classList.add("hero_bar_scroll_up");
 
   var main_content_selector = "";
 
@@ -773,12 +792,51 @@ function expandSearchBar()  {
   hero_element = {};
 
   hero_element = document.getElementsByClassName(hero_selector)[0];
-  
+/*   
   search_bar_content_element.classList.remove("search_bar_scroll_down");
   search_bar_content_element.classList.add("search_bar_scroll_up");
-  
+ */  
   hero_element.classList.remove("hero_scroll_down");
   hero_element.classList.add("hero_scroll_up");
+
+     // A String is initialized which will contain the selector which refers to the 
+  // blue bar which appears as a visitor scrolls down.
+  var print_links_selector = "";
+
+  // The CSS selector which refers to the HTML element containing the blue bar 
+  // is passed on.
+  print_links_selector = "lab-hero--hcd-guide__sub-title";
+
+    // An Object variable which will hold the HTML DOM object which refers to the 
+  // blue bar which appears as a visitor scrolls down is initialized.
+  var print_links_element = {};
+
+  // The HTML DOM object which refers to the blue bar is passed on.
+  print_links_element = document.getElementsByClassName(print_links_selector)[0];
+
+  // The blue bar is made visible.
+  print_links_element.classList.remove("hero_bar_content_scroll_down");
+  print_links_element.classList.add("hero_bar_content_scroll_up");
+  
+  // A String is initialized which will contain the selector which refers to the 
+  // blue bar which appears as a visitor scrolls down.
+  var search_field_selector = "";
+
+  // The CSS selector which refers to the HTML element containing the blue bar 
+  // is passed on.
+  search_field_selector = "lab-hero--hcd-guide__search_form";
+
+    // An Object variable which will hold the HTML DOM object which refers to the 
+  // blue bar which appears as a visitor scrolls down is initialized.
+  var search_field_element = {};
+
+  // The HTML DOM object which refers to the blue bar is passed on.
+  search_field_element = document.getElementsByClassName(search_field_selector)[0];
+
+  // The blue bar is made visible.
+  search_field_element.classList.remove("hero_bar_content_scroll_down");
+  search_field_element.classList.add("hero_bar_content_scroll_up");
+
 }
 
 

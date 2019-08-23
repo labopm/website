@@ -1,12 +1,12 @@
 ---
 layout: article-wide
 section: hcd-guide
-sub-section: Discovery
-permalink: /hcd-guide/discovery/
-title: Discovery Phase
+sub-section: Design
+permalink: /hcd-guide/design/
+title: Design Phase
 previous-link-title: none
-next-link-url: /hcd-guide/discovery/purpose-of-this-guide.htm
-next-link-title: Purpose of this guide
+next-link-url: /hcd-guide/design/purpose-of-this-guide.htm
+next-link-title: Get started
 ---
 
 <h1>Welcome to the Design Phase</h1>
@@ -31,7 +31,7 @@ next-link-title: Purpose of this guide
 </p>
 <div class="usa-prose__hcd-guide__know_the_basics">
   <div class="usa-prose__hcd-guide__know_header">
-    Know your basics
+    Know the basics
   </div>
   <a href="#" title="Human-Centered Design">Human-Centered Design</a>
   <a href="#" title="Design in government">Design in government</a>

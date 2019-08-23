@@ -7,9 +7,9 @@
   {% include _banner.html %}
   {% include _header.html %}
   {% include _hero.html name=page.section %}
-  <main id="main-content" role="main" class="usa-layout-docs usa-section lab-content{%if page.section == 'hcd-guide' %} main-content__hcd-guide{% endif %}">
-    {% if page.section == 'hcd-guide' %}
-    <div class="grid-container{%if page.section == 'hcd-guide' %} grid-container__hcd-guide{% endif %}">
+  {% if page.section == 'hcd-guide' %}
+  <main id="main-content" role="main" class="usa-layout-docs usa-section lab-content main-content__hcd-guide">
+    <div class="grid-container grid-container__hcd-guide">
       <div class="grid-row grid-gap">
         {% assign sidenavigation = site.data.navigation['hcd-guide'] %}
         <aside class="usa-layout-docs__sidenav desktop:grid-col-4">
@@ -43,10 +43,14 @@
         </div>
       </div>
     </div>
-    {% else %}
-    <div class="grid-container">
-      {{ content }}
+    <div class="main-content__hcd-guide__background">
+      &nbsp;
     </div>
+    {% else %}
+    <main id="main-content" role="main" class="usa-layout-docs usa-section lab-content">
+      <div class="grid-container">
+        {{ content }}
+      </div>
     {% if page.highlight and page.section == 'what-we-do' %}
       <div class="lab-content-highlight-warm">
         <div class="lab-content-highlight-warm__body">
