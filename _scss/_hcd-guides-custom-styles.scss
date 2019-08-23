@@ -9,7 +9,7 @@ $theme-font-family-serif: 'merriweather', serif;
     margin-top: 1rem;
     font-family: 'merriweather', serif !important;
     font-weight: $theme-font-weight-light !important;
-    color: color('base-darker');
+    color: color('gray-cool-80');
   }
 
   h1 + * {
@@ -70,7 +70,8 @@ $theme-font-family-serif: 'merriweather', serif;
     margin-top: units(6);
     display: block;
     clear: both;
-    font-family: $theme-font-family-serif
+    font-family: $theme-font-family-serif;
+    color: color('gray-cool-80');
   }
 
   .lab__bullet_points_columns, 
@@ -242,7 +243,7 @@ $theme-font-family-serif: 'merriweather', serif;
     .lab-cta__attributed_to {
       margin: 0 units(2);
       display: inline-block;
-      color: color('blue-warm-70v');
+      color:  #112E51;
     }
   }
   
@@ -506,6 +507,7 @@ $theme-font-family-serif: 'merriweather', serif;
 
 .usa-header__hcd-guide {
   background-color: color('white');
+  z-index: 300;
 }
 
 .search_bar_visible {
@@ -688,6 +690,10 @@ $theme-font-family-serif: 'merriweather', serif;
   .desktop\:grid-col-8 {
     width: 59%; 
   }
+
+  .main-content__hcd-guide__background {
+    width: 40% !important;
+  }
   
   .usa-prose__hcd-guide {
     .usa-layout__content_bottom {
@@ -742,6 +748,10 @@ $theme-font-family-serif: 'merriweather', serif;
   .main-content__hcd-guide {
     padding-top: 0;
     padding-bottom: 8.125rem;
+
+    &__background {
+      width: 35%;
+    }
   }
 
   .usa-layout-docs__main_hcd-guide {
@@ -786,16 +796,13 @@ $theme-font-family-serif: 'merriweather', serif;
     }
   }
 
-  .main-content__hcd-guide {
-    &__background {
-      width: 35%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: color('base-lightest');
-      z-index: -100;
-    }
+  .main-content__hcd-guide__background {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: color('base-lightest');
+    z-index: -100;
   }
 }
 

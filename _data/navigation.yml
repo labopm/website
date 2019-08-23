@@ -67,9 +67,8 @@ hcd-guide:
         href: /hcd-guide/design/purpose-of-this-guide.htm
       - text: Design phase principles
         href: /hcd-guide/design/design-phase-principles.htm
-        sub-section-link: true
-        sub-section: Design phase principles
-        sub-section-subnav: 
+        sub-section: true
+        subnav: 
         - text: Principle one - Getting to simple is hard
           href: /hcd-guide/design/getting-to-simple-is-hard.htm
         - text: Team work

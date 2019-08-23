@@ -5,6 +5,7 @@ sub-section: Design
 permalink: /hcd-guide/design/
 title: Design Phase
 previous-link-title: none
+previous-link-url: none
 next-link-url: /hcd-guide/design/purpose-of-this-guide.htm
 next-link-title: Get started
 ---
@@ -15,13 +16,13 @@ next-link-title: Get started
   <a href="#" title="Print guide" class="usa-prose__hcd-guide__print_guide_img"><img src="/assets/img/lab/hcd-guide/design/print-guide.svg" width="22" height="29" alt="Print guide" /></a>
   <a href="#" title="Print guide" class="usa-prose__hcd-guide__print_guide">Print section</a>
 </div>
-<!-- <p class="lab-content__lead"> -->
+
 <p>
   Your <a href="#" title="Discovery Phase" class="usa-prose__hcd-guide_print_not_visible">Discovery Phase</a> 
   is complete or is wrapping up, and you and your team are ready to move into the Design phase. 
   In this phase, the team will build on the research completed in the Discovery phase in 
-  order to create action in the   form of a designed or evolved product, service, or 
-  system from what you learned.   In this phase, you and the team will design sustainable 
+  order to create action in the form of a designed or evolved product, service, or 
+  system from what you learned. In this phase, you and the team will design sustainable 
   products and services   that answer the needs of the people on whom you centered your Discovery phase. 
   Use this Concept Guide to help you understand the Why behind the design process. 
   You&rsquo;ll be able to find the How in the upcoming HCD Design Phase Operations Guide. 
@@ -178,4 +179,3 @@ next-link-title: Get started
   to either take on a slightly larger, more strategic Opportunity space in order 
   to have more impact upon the Delivery of your product, service, or system.
 </p>
-
