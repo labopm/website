@@ -29488,11 +29488,15 @@ i.e.
   .main_content_scroll_down {
     top: 8.125rem;
     padding-bottom: 8.125rem !important; }
+  #usa-layout-docs__sticky .lab-hcd-guide-nav {
+    position: relative; }
   .usa-layout-docs__background {
     left: -0.5rem; }
   .usa-prose__hcd-guide .lab__bullet_points_columns,
   .usa-prose__hcd-guide .lab__base_columns {
-    width: 43rem; } }
+    width: 43rem; }
+  .position_static {
+    position: static !important; } }
 
 @media (min-width: 40em) {
   .main-content__hcd-guide {

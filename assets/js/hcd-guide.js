@@ -237,27 +237,112 @@ this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigatio
       );
     }
 
-    /* var description_buttons_selector = "";
+    var main_menu_selector = "";
 
-    description_buttons_selector = "lab__button";
+    main_menu_selector = "usa-menu-btn";
 
-    var description_buttons_elements = {};
+    var main_menu_element = {};
 
-    description_buttons_elements = document.getElementsByClassName(description_buttons_selector);
+    main_menu_element = document.getElementsByClassName(main_menu_selector)[0];
 
-    if (description_buttons_elements !== undefined) {
-      var i;
+    if (main_menu_element !== undefined) {
+      main_menu_element.addEventListener('click', 
+        function () {
+          console.log("1");
+          var window_width;
 
-      for (i = 0; i < description_buttons_elements.length; i++) {
-        description_buttons_elements[i].addEventListener('click', 
-          function () {
-            console.log("1");
+          window_width = window.innerWidth;
+
+          if (window_width > 414 && window_width < 1024) {
+            showTabletMainMenu();
           }
-        );
-      }
-    } */
+        }
+      );
+    }
+
+    var main_menu_close_selector = "";
+
+    main_menu_close_selector = "usa-nav__close";
+
+    var main_menu_close_element = {};
+
+    main_menu_close_element = document.getElementsByClassName(main_menu_close_selector)[0];
+
+    if (main_menu_close_element !== undefined) {
+      main_menu_close_element.addEventListener('click', 
+        function () {
+          var window_width;
+
+          window_width = window.innerWidth;
+
+          if (window_width > 414 && window_width < 1024) {
+            closeTabletMainMenu();
+          }
+        }
+      );
+    }
   }
 );
+
+
+
+function closeTabletMainMenu()  {
+  var gray_banner_selector = "";
+  var hero_selector = "";
+  var main_content_selector = "";
+
+  gray_banner_selector = "usa-banner__hcd-guide";
+  hero_selector = "lab-hero--hcd-guide";
+  main_content_selector = "main-content__hcd-guide";
+
+  var gray_banner_element = {};
+  var hero_element = {};
+  var main_content_element = {};
+
+  gray_banner_element = document.getElementsByClassName(gray_banner_selector)[0];
+  hero_element = document.getElementsByClassName(hero_selector)[0];
+  main_content_element = document.getElementsByClassName(main_content_selector)[0];
+
+  gray_banner_element.classList.remove("position_static");
+  hero_element.classList.remove("position_static");
+
+  var current_position;
+
+  current_position = window.pageYOffset;
+
+  if (current_position !== 0) {
+    main_content_element.classList.add("main_content_scroll_down");
+  }
+}
+
+
+
+function showTabletMainMenu()  {
+  var gray_banner_selector = "";
+  var hero_selector = "";
+  var main_content_selector = "";
+
+  gray_banner_selector = "usa-banner__hcd-guide";
+  hero_selector = "lab-hero--hcd-guide";
+  main_content_selector = "main-content__hcd-guide";
+
+  var gray_banner_element = {};
+  var hero_element = {};
+  var main_content_element = {};
+
+  gray_banner_element = document.getElementsByClassName(gray_banner_selector)[0];
+  hero_element = document.getElementsByClassName(hero_selector)[0];
+  main_content_element = document.getElementsByClassName(main_content_selector)[0];
+
+  gray_banner_element.classList.remove("position_static");
+  gray_banner_element.classList.add("position_static");
+
+  hero_element.classList.remove("position_static");
+  hero_element.classList.add("position_static");
+
+  main_content_element.classList.remove("main_content_scroll_down");
+  main_content_element.classList.add("main_content_main_menu_visible");
+}
 
 
 

@@ -886,15 +886,25 @@ $theme-font-family-serif: 'merriweather', serif;
     padding-bottom: 8.125rem !important;
   }
 
+  #usa-layout-docs__sticky {
+    .lab-hcd-guide-nav {
+      position: relative;
+    }
+  }
+
   .usa-layout-docs__background {
     left: -0.5rem;
   }
-
+  
   .usa-prose__hcd-guide { 
     .lab__bullet_points_columns, 
     .lab__base_columns {
       width: 43rem;
     }
+  }
+
+  .position_static {
+    position: static !important;
   }
 }
 
