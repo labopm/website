@@ -87,7 +87,7 @@ hcd-guide:
           href: /hcd-guide/design/services.htm
         - text: Systems
           href: /hcd-guide/design/systems.htm
-      - text: Communicating ideas through design
+      - text: Communicating ideas
         href: /hcd-guide/design/communicating-ideas-through-design.htm
         sub-section: true
         sub-subnav: 

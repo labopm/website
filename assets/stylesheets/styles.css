@@ -28839,7 +28839,9 @@ i.e.
 .usa-prose__hcd-guide h1 {
   margin-top: 1rem;
   font-family: 'merriweather', serif !important;
-  font-weight: 300 !important;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2;
   color: #2d2e2f; }
 
 .usa-prose__hcd-guide h1 + * {
@@ -28880,7 +28882,9 @@ i.e.
   margin-top: 1.5rem; }
 
 .usa-prose__hcd-guide p {
-  font-size: 1.0625rem;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.62;
   color: #3d4551; }
 
 .usa-prose__hcd-guide h2 {
@@ -28888,6 +28892,9 @@ i.e.
   display: block;
   clear: both;
   font-family: "merriweather", serif;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.2;
   color: #2d2e2f; }
 
 .usa-prose__hcd-guide .lab__bullet_points_columns,
@@ -28908,6 +28915,7 @@ i.e.
 
 .usa-prose__hcd-guide .lab__base_columns h3 {
   font-family: Public Sans Web, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  font-size: 1.375rem;
   font-weight: normal;
   color: #565c65; }
 
@@ -28930,6 +28938,9 @@ i.e.
 .usa-prose__hcd-guide .lab__base_column_left {
   margin-right: 2.5rem; }
 
+.usa-prose__hcd-guide .lab__clear_spacer {
+  clear: both; }
+
 .usa-prose__hcd-guide .lab__split_columns {
   max-width: 75ex;
   margin-bottom: 3rem; }
@@ -28939,20 +28950,23 @@ i.e.
   .usa-prose__hcd-guide .lab__split_columns .lab__split_columns_img {
     margin-right: 1rem; }
   .usa-prose__hcd-guide .lab__split_columns .lab__split_columns_copy {
-    width: 22rem;
+    width: 51%;
     margin-top: 0;
     vertical-align: top; }
   .usa-prose__hcd-guide .lab__split_columns .lab__split_columns_copy::after {
     clear: none; }
 
-.usa-prose__hcd-guide .lab__clear_spacer {
-  clear: both; }
+.usa-prose__hcd-guide__ul {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+  list-style-type: none; }
 
 .usa-prose__hcd-guide .lab__bullet_points_column_fullwidth {
   width: 100%;
   float: none; }
 
 .usa-prose__hcd-guide .usa-layout__content_bottom {
+  max-width: 66ex;
   margin-top: 2.5rem; }
   .usa-prose__hcd-guide .usa-layout__content_bottom .usa-back_to_top {
     padding-left: 1.5rem;
@@ -28992,6 +29006,7 @@ i.e.
     max-width: 78ex;
     font-size: 1rem;
     font-style: italic;
+    line-height: 1.35;
     color: #a9aeb1; }
 
 .usa-prose__hcd-guide .lab__figure_with_title {
@@ -29064,7 +29079,7 @@ i.e.
   color: #2d2e2f; }
 
 .usa-prose__hcd-guide .lab__case_in_point_copy {
-  max-width: 72.1ex;
+  width: 30.95rem;
   display: inline-block; }
   .usa-prose__hcd-guide .lab__case_in_point_copy h2 {
     margin-top: 2rem; }
@@ -29315,12 +29330,19 @@ i.e.
       border-top: none; }
       .lab-hcd-guide-nav .usa-sidenav__item .usa-current {
         color: #3d4551; }
-      .lab-hcd-guide-nav .usa-sidenav__item .usa-current::after {
-        background-color: #ffbe2e !important;
-        border-radius: 0.5rem !important;
-        top: 0.89rem !important;
-        width: 0.5rem !important;
-        height: 0.5rem; }
+    .lab-hcd-guide-nav .usa-sidenav .usa-current::after {
+      width: 0.5rem !important;
+      height: 0.5rem;
+      background-color: #ffbe2e !important;
+      border-radius: 0.5rem !important;
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0.89rem !important;
+      bottom: 0.25rem;
+      left: 0; }
+    .lab-hcd-guide-nav .usa-sidenav .usa-sidenav__sublist .usa-sidenav__item .usa-current::after {
+      left: 0.75rem; }
 
 .lab-hcd-guide-highlights {
   margin-top: 4rem;
@@ -29358,17 +29380,13 @@ i.e.
   .desktop\:grid-col-4 {
     width: 37.33333%; }
   .desktop\:grid-col-8 {
-    width: 59%; }
-  .usa-prose__hcd-guide .usa-layout__content_bottom {
-    width: 40.5rem; } }
+    width: 59%; } }
 
 @media (min-width: 60rem) and (max-width: 99rem) {
   .grid-container__hcd-guide .grid-row.grid-gap > * {
     padding-left: 5.5rem; }
   .desktop\:grid-col-8 {
-    width: 59%; }
-  .usa-prose__hcd-guide .usa-layout__content_bottom {
-    width: 38.63rem; } }
+    width: 59%; } }
 
 @media (min-width: 64rem) {
   /*   .usa-nav-container {

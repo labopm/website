@@ -17,33 +17,33 @@
   {% endif %} 
 <li class="usa-sidenav__item">
   <a href="{{ site.baseurl }}{{ link.href }}" title="{{ link.text }}" {% if _link-current %} class="usa-current" {% endif %} {% if link.class %}class="{{ link.class }}" {% endif %}>{{ link.text }} {{ link.class }}</a>
-    {% if _link-sub-section == true and _link-current == true %}
-      {% assign _sub-sub-section = link.sub-subnav %}
+  {% if _link-sub-section == true and _link-current == true %}
+    {% assign _sub-sub-section = link.sub-subnav %}
     <ul class="usa-sidenav__sublist">
-      {% include subnav.html links=_sub-sub-section %}
+    {% include subnav.html links=_sub-sub-section %}
     </ul>
-    {% elsif _link-sub-section == true %}
-      {% assign _sub-sub-section = link.sub-subnav %}
-      {% assign _link-within_section = false %}
-      
-      {% for sub_link in _sub-sub-section %}
-        {% if sub_link.href == page.url %}
-          {% assign _link-within_section = true %}
-        {% endif %}
-      {% endfor %}
-      
-      {% if _link-within_section == true %}
-    <ul class="usa-sidenav__sublist">
-      {% include subnav.html links=_sub-sub-section %}
-    </ul>
+  {% elsif _link-sub-section == true %}
+    {% assign _sub-sub-section = link.sub-subnav %}
+    {% assign _link-within_section = false %}
+    
+    {% for sub_link in _sub-sub-section %}
+      {% if sub_link.href == page.url %}
+        {% assign _link-within_section = true %}
       {% endif %}
-
-      {% if _landing_page == true %}
+    {% endfor %}
+    
+    {% if _link-within_section == true %}
     <ul class="usa-sidenav__sublist">
-      {% include subnav.html links=_sub-sub-section %}
+    {% include subnav.html links=_sub-sub-section %}
     </ul>
-      {% endif %}
     {% endif %}
+
+    {% if _landing_page == true %}
+    <ul class="usa-sidenav__sublist">
+    {% include subnav.html links=_sub-sub-section %}
+    </ul>
+    {% endif %}
+  {% endif %}
 </li>
 {% endfor %}
 

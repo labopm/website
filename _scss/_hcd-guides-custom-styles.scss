@@ -8,7 +8,9 @@ $theme-font-family-serif: 'merriweather', serif;
   h1 {
     margin-top: 1rem;
     font-family: 'merriweather', serif !important;
-    font-weight: $theme-font-weight-light !important;
+    font-size: font-size('heading', '3xl');
+    font-weight: font-weight('light');
+    line-height: line-height('heading', 2);
     color: color('gray-cool-80');
   }
 
@@ -62,7 +64,9 @@ $theme-font-family-serif: 'merriweather', serif;
   }
   
   p {
-    @include u-font-size('body', 'md');
+    font-size: font-size('body', 'sm');
+    font-weight: font-weight('normal');
+    line-height: line-height('body', 5);
     color: color('base-darker');
   }
 
@@ -71,6 +75,9 @@ $theme-font-family-serif: 'merriweather', serif;
     display: block;
     clear: both;
     font-family: $theme-font-family-serif;
+    font-size: font-size('heading', 'xl');
+    font-weight: font-weight('bold');
+    line-height: line-height('heading', 2);
     color: color('gray-cool-80');
   }
 
@@ -96,6 +103,7 @@ $theme-font-family-serif: 'merriweather', serif;
 
     h3 {
       font-family: font-family('sans');
+      font-size: font-size('heading', 'lg');
       font-weight: font-weight('normal');
       color: color('gray-cool-60');
     }
@@ -111,6 +119,7 @@ $theme-font-family-serif: 'merriweather', serif;
     font-weight: font-weight('normal');
     color: color('gray-cool-60');
   }
+
   .lab__list_strong {
     padding-left: 0;
 
@@ -123,6 +132,10 @@ $theme-font-family-serif: 'merriweather', serif;
   .lab__bullet_points_column_left, 
   .lab__base_column_left {
     margin-right: units(5);    
+  }
+
+  .lab__clear_spacer {
+    clear: both;
   }
 
   .lab__split_columns {
@@ -139,7 +152,7 @@ $theme-font-family-serif: 'merriweather', serif;
     }
 
     .lab__split_columns_copy {
-      width: 22rem;
+      width: 51%;
       margin-top: 0;
       vertical-align: top;
     }
@@ -149,9 +162,10 @@ $theme-font-family-serif: 'merriweather', serif;
     }
   }
 
-
-  .lab__clear_spacer {
-    clear: both;
+  &__ul {
+    margin-top: 0;
+    margin-bottom: units(0.5);
+    list-style-type: none;
   }
 
   .lab__bullet_points_column_fullwidth {
@@ -160,6 +174,7 @@ $theme-font-family-serif: 'merriweather', serif;
   }
 
   .usa-layout__content_bottom {
+    max-width: 66ex;
     margin-top: units(5);
 
     .usa-back_to_top {
@@ -211,6 +226,7 @@ $theme-font-family-serif: 'merriweather', serif;
       max-width: 78ex;
       font-size: font-size('body', 5);
       font-style: italic;
+      line-height: line-height('body', 3);
       color: color('base');
     }
   }
@@ -220,7 +236,7 @@ $theme-font-family-serif: 'merriweather', serif;
 
     h3 {
       font-weight: $theme-font-weight-normal;
-      font-size: font-size('base', 'lg');
+      font-size: font-size('heading', 'lg');
       color: color('base-dark');
     }
   }
@@ -241,7 +257,7 @@ $theme-font-family-serif: 'merriweather', serif;
       font-family: $theme-font-family-serif;
       font-size: font-size('sans', 4);
       font-weight: $theme-font-weight-bold;
-      line-height: line-height('heading', 5);
+      line-height: line-height('body', 5);
     }
 
     .lab-cta__attributed_to {
@@ -311,7 +327,7 @@ $theme-font-family-serif: 'merriweather', serif;
     }
 
     &_copy {
-      max-width: 72.1ex;
+      width: 30.95rem;
       display: inline-block;
 
       h2 {
@@ -640,13 +656,26 @@ $theme-font-family-serif: 'merriweather', serif;
       .usa-current {
         color: color('base-darker');
       }
+    }
 
-      .usa-current::after {
-        background-color: #ffbe2e !important;
-        border-radius: 0.5rem !important;
-        top: 0.89rem !important;
-        width: 0.5rem !important;
-        height: 0.5rem;
+    .usa-current::after {
+      width: units(1) !important;
+      height: units(1);
+      background-color: color('gold-20v') !important;
+      border-radius: 0.5rem !important;
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0.89rem !important;
+      bottom: units(0.5);
+      left: 0;
+    }
+
+    .usa-sidenav__sublist {
+      .usa-sidenav__item {
+        .usa-current::after {
+          left: 0.75rem;
+        }
       }
     }
   }  
@@ -704,12 +733,6 @@ $theme-font-family-serif: 'merriweather', serif;
   .desktop\:grid-col-8 {
     width: 59%; 
   }
-  
-  .usa-prose__hcd-guide {
-    .usa-layout__content_bottom {
-      width: 40.5rem; 
-    }
-  }
 }
 
 @media (min-width: 60rem) and (max-width: 99rem)  {
@@ -722,12 +745,7 @@ $theme-font-family-serif: 'merriweather', serif;
   .desktop\:grid-col-8 {
     width: 59%; 
   }
-    
-  .usa-prose__hcd-guide
-    .usa-layout__content_bottom {
-      width: 38.63rem; 
-    } 
-  }
+}
 
 
 
