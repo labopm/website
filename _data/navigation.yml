@@ -67,15 +67,15 @@ hcd-guide:
         href: /hcd-guide/design/design-phase-principles.htm
         sub-section: true
         sub-subnav: 
-        - text: Principle one - Getting to simple is hard
+        - text: 1. Simple is hard
           href: /hcd-guide/design/getting-to-simple-is-hard.htm
-        - text: Team work
+        - text: 2. Team work
           href: /hcd-guide/design/team-work.htm
-        - text: Design for humans
+        - text: 3. Design for humans
           href: /hcd-guide/design/design-for-humans.htm
-        - text: Design at scale
+        - text: 4. Design at scale
           href: /hcd-guide/design/design-at-scale.htm
-        - text: Design for change
+        - text: 5. Design for change
           href: /hcd-guide/design/design-for-change.htm
       - text: Designed things
         href: /hcd-guide/design/designed-things.htm
