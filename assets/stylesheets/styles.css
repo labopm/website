@@ -29042,15 +29042,22 @@ i.e.
     font-weight: 700;
     line-height: 1.62;
     color: #112f4e; }
+  .usa-prose__hcd-guide .lab-cta__quote .lab-cta__attributed_to_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    transform: translateY(-1.25rem); }
   .usa-prose__hcd-guide .lab-cta__quote .lab-cta__attributed_to {
-    margin: 0 1rem;
-    display: inline-block;
-    color: #112f4e; }
+    padding: 0 1rem;
+    display: block;
+    position: relative;
+    color: #112f4e;
+    background-color: #f7f9fa; }
 
-.usa-prose__hcd-guide .lab-cta__quote blockquote + hr,
-.usa-prose__hcd-guide .lab-cta__quote blockquote + hr + span + hr {
-  width: 34.9%;
-  display: inline-block;
+.usa-prose__hcd-guide .lab-cta__quote blockquote + hr {
+  width: 100%;
+  display: block;
   vertical-align: middle; }
 
 .usa-prose__hcd-guide .usa-accordion {
@@ -29062,7 +29069,7 @@ i.e.
       background-color: #ffbe2e;
       font-family: Public Sans Web, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
       font-weight: 400;
-      font-size: 1.25rem; }
+      font-size: 1rem; }
   .usa-prose__hcd-guide .usa-accordion__content {
     background-color: #fef0c8; }
     .usa-prose__hcd-guide .usa-accordion__content p {
