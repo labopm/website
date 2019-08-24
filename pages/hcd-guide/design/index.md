@@ -4,8 +4,6 @@ section: hcd-guide
 sub-section: Design
 permalink: /hcd-guide/design/
 title: Design Phase
-previous-link-title: none
-previous-link-url: none
 next-link-url: /hcd-guide/design/purpose-of-this-guide.htm
 next-link-title: Get started
 ---

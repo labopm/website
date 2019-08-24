@@ -545,6 +545,7 @@ $theme-font-family-serif: 'merriweather', serif;
 .main_content_scroll_down {
   position: relative;
   top: px-to-rem(146px);
+  padding-bottom: px-to-rem(146px) !important;
 }
 
 .hero_scroll_up {
@@ -594,15 +595,14 @@ $theme-font-family-serif: 'merriweather', serif;
 
 // ***************** SIDENAV ***************** //
 .usa-layout-docs__sidenav {
-  min-height: 29.69rem;
+  min-height: 37.69rem;
   padding-top: 0 !important;
   padding-left: 0 !important;
   padding-right: 1rem !important;
 }
 
 #usa-layout-docs__sticky {
-  width: 18rem;
-  min-height: 29.69rem;
+  width: 21.5rem;
   padding: units(4) 0;
   position: sticky;
 }
@@ -757,7 +757,7 @@ $theme-font-family-serif: 'merriweather', serif;
 @media (min-width: 40em) {
   .main-content__hcd-guide {
     padding-top: 0;
-    padding-bottom: 8.125rem;
+    padding-bottom: 0;
   }
 
   .usa-layout-docs__main_hcd-guide {

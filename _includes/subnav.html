@@ -14,7 +14,7 @@
     {% assign _landing_page = true %}
   {% else %}
     {% assign _landing_page = false %}
-  {% endif %}  
+  {% endif %} 
   
 <li class="usa-sidenav__item">
   <a href="{{ site.baseurl }}{{ link.href }}" title="{{ link.text }}" {% if _link-current %} class="usa-current" {% endif %} {% if link.class %}class="{{ link.class }}" {% endif %}>{{ link.text }} {{ link.class }}</a>
