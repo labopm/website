@@ -76,7 +76,7 @@ $theme-font-family-serif: 'merriweather', serif;
 
   .lab__bullet_points_columns, 
   .lab__base_columns {
-    width: 15.5rem;
+    width: 46%;
     margin-top: units(4);
     position: relative;
     float: left;
@@ -202,6 +202,10 @@ $theme-font-family-serif: 'merriweather', serif;
   
   figure {
     margin: units(2) 0;
+
+    img {
+      height: auto;
+    }
     
     figcaption {
       max-width: 78ex;
@@ -578,12 +582,12 @@ $theme-font-family-serif: 'merriweather', serif;
   top: px-to-rem(82px);
 }
 
-.side_navigation_start {
-  position: fixed !important;
-  top: px-to-rem(146px) !important;
+.side_navigation_scroll_down {
+  position: sticky !important;
+  top: px-to-rem(146px);
 }
 
-.side_navigation_stop {
+.side_navigation_scroll_up {
   position: relative !important;
 }
 
@@ -600,7 +604,18 @@ $theme-font-family-serif: 'merriweather', serif;
   width: 18rem;
   min-height: 29.69rem;
   padding: units(4) 0;
-  position: fixed;
+  position: sticky;
+}
+
+.usa-layout-docs__background {
+  width: 100vw;
+  height: 100%;
+  margin-right: px-to-rem(20px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: color('base-lightest');
+  z-index: -100;
 }
 
 .lab-hcd-guide-nav {
@@ -638,10 +653,9 @@ $theme-font-family-serif: 'merriweather', serif;
 }
 
 .lab-hcd-guide-highlights {
+  margin-top: units(8);
   margin-left: units(2);
-  position: absolute;
-  bottom: units(8);
-
+  
   span {
     display: inline-block;
     margin: 0.19rem 0.31rem 0 0;
@@ -689,10 +703,6 @@ $theme-font-family-serif: 'merriweather', serif;
 
   .desktop\:grid-col-8 {
     width: 59%; 
-  }
-
-  .main-content__hcd-guide__background {
-    width: 40% !important;
   }
   
   .usa-prose__hcd-guide {
@@ -748,10 +758,6 @@ $theme-font-family-serif: 'merriweather', serif;
   .main-content__hcd-guide {
     padding-top: 0;
     padding-bottom: 8.125rem;
-
-    &__background {
-      width: 35%;
-    }
   }
 
   .usa-layout-docs__main_hcd-guide {
@@ -794,15 +800,6 @@ $theme-font-family-serif: 'merriweather', serif;
     &__mobile_visible {
       display: none;
     }
-  }
-
-  .main-content__hcd-guide__background {
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: color('base-lightest');
-    z-index: -100;
   }
 }
 
@@ -883,6 +880,10 @@ $theme-font-family-serif: 'merriweather', serif;
     padding-top: 0;
   }
 
+  .usa-layout-docs__background {
+    display: none;
+  }
+
   .usa-navbar {
     background-color: color('white');
     
@@ -894,10 +895,6 @@ $theme-font-family-serif: 'merriweather', serif;
   .main-content__hcd-guide {
     position: relative;
     top: 0;
-
-    &__background {
-      display: none;
-    }
   }
 
   .usa-layout-docs__sidenav {

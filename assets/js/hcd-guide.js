@@ -2,46 +2,29 @@ window.addEventListener("load",
   function () {
     // String variables which will hold the CSS selectors which refer to all HTML content, the footer, 
     // and the side navigation, and the main block of content are initialized.
-    var html_selector = "";
-    var footer_selector = "";
-    var side_navigation_selector = "";
-    var main_content_selector = "";
+    var content_bottom_selector = "";
+    var nav_selector = "";
 
     // The CSS selectors which refer to the main block of content, the footer, the side navigation, 
     // and the main block of content are defined and passed on. 
     // defined and passed on.
-    html_selector = "html";
-    footer_selector = "footer";
-    side_navigation_selector = "usa-layout-docs__sticky";
-    main_content_selector = "main-content__hcd-guide";
+    content_bottom_selector = "usa-layout__content_bottom";
+    nav_selector = "lab-hcd-guide-nav";
 
-    var html_element = {};
-    var footer_element = {};
-    var side_navigation_element = {};
-    var main_content_element = {};
+    var content_bottom_element = {};
+    var nav_element = {};
 
-    html_element = document.getElementsByTagName(html_selector)[0];
-    footer_element = document.getElementsByTagName(footer_selector)[0];
-    side_navigation_element = document.getElementById(side_navigation_selector);
-    main_content_element = document.getElementsByClassName(main_content_selector)[0];
+    content_bottom_element = document.getElementsByClassName(content_bottom_selector)[0];
+    nav_element = document.getElementsByClassName(nav_selector)[0];
 
     // Number variables which will hold the height of all the HTML content, the footer, and the side 
     // navigation are initialized.
-    var html_height;
-    var footer_height;
-    var side_navigation_height;
-    var side_navigation_top;
+    var content_bottom_top;
+    var nav_height;
 
     // The height of the HTML elements the above variables refer to are passed on.
-    html_height = parseInt(window.getComputedStyle(html_element, null).getPropertyValue("height"));
-    footer_height = parseInt(window.getComputedStyle(footer_element, null).getPropertyValue("height"));
-    side_navigation_height = parseInt(window.getComputedStyle(side_navigation_element, null).getPropertyValue("height"));
-    side_navigation_top = parseInt(window.getComputedStyle(side_navigation_element, null).getPropertyValue("top"));
-
-    // A Number variable which will hold the bottom padding of the main block of content is initialized.
-    var main_content_padding_value;
-    
-    main_content_padding_value = parseInt(window.getComputedStyle(main_content_element, null).getPropertyValue('padding-bottom'));
+    content_bottom_top = parseInt(content_bottom_element.getBoundingClientRect().top);
+    nav_height = parseInt(window.getComputedStyle(nav_element, null).getPropertyValue("height"));
 
     // A Number variable which will hold the sum of the heights of the footer, side navigation 
     // and the value of the padding at the bottom of the main block of content is intialized.
@@ -50,7 +33,7 @@ window.addEventListener("load",
     // The sum of the heights of the footer and side navigation combined with the value 
     // of the padding along the bottom of the main block of content is subtracted 
     // from the height of all of the HTML content. That value is passed on.
-    scroll_value = html_height - footer_height - side_navigation_height - side_navigation_top - main_content_padding_value;
+    scroll_value = content_bottom_top - nav_height - 146;
 this.console.log("scroll_value = " + scroll_value);
     // A String which will hold the CSS selector for the side navigation is initialized.
     var side_navigation_selector = "";
@@ -113,7 +96,7 @@ this.console.log("scroll_value = " + scroll_value);
     // The value of the footer's 'top' is passed on.
     current_footer_top_value = parseInt(footer_element.getBoundingClientRect().top);
 
-
+/* 
     // A variable which will hold a number which serves as a threshold, which when reached as a 
     // visitor scrolls up and down the page, will either prevent the side navigation from scrolling, 
     // or allow it to scroll again is initialized.
@@ -124,15 +107,17 @@ this.console.log("scroll_value = " + scroll_value);
     // at the bottom of the main block of content is passed on.
     stop_side_navigation_scrolling_value = current_footer_top_value +(footer_height_value + main_content_padding_bottom_value);
 this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigation_scrolling_value);
-
-/*     // A variable is initialized which will hold a number which sets the threshold when when reached triggers the IF/ELSE 
+ */
+    // A variable is initialized which will hold a number which sets the threshold when when reached triggers the IF/ELSE 
     // statement to stop the side navigation from scrolling.
     var side_navigation_threshold_value;
 
     // The number which sets the threshold for the scrolling of the side navigation is passed on.
-    side_navigation_threshold_value = 25;
- */
+    side_navigation_threshold_value = 100;
+
     var side_navigation_top_value;
+
+    side_navigation_top_value = "146px";
 
     // A variable is initialized which will hold the vertical position within a webpage 
     // a visitor has scrolled to.
@@ -172,11 +157,13 @@ this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigatio
 
         var side_navigation_values = [];
 
-        scroll_value = html_height - current_position;
+        // scroll_value = html_height - current_position;
 
         side_navigation_values = [
-          scroll_value, 
-          stop_side_navigation_scrolling_value
+          current_position, 
+          side_navigation_threshold_value, 
+          side_navigation_top_value, 
+          scroll_value
         ];
         
         stopSideNavigationScrolling(side_navigation_values);
@@ -460,7 +447,17 @@ function isHeroLarge()  {
 
 
 
-function isSideNavigationFixed()  {
+function stopSideNavigationScrolling(side_navigation_values)  {
+  var current_position;
+  var side_navigation_threshold_value;
+  var side_navigation_top_value;
+  var scroll_value;
+  
+  current_position = side_navigation_values[0];
+  side_navigation_threshold_value = side_navigation_values[1];
+  side_navigation_top_value = side_navigation_values[2];
+  scroll_value = side_navigation_values[3];
+
   // A String which will hold the CSS selector for the side navigation is initialized.
   var side_navigation_selector = "";
 
@@ -476,58 +473,17 @@ function isSideNavigationFixed()  {
   var side_navigation_position_value = "";
 
   side_navigation_position_value = window.getComputedStyle(side_navigation_element, null).getPropertyValue("position");
-
-  if (side_navigation_position_value === "fixed") {
-    is_side_navigation_fixed = true;
-  } else {
-    is_side_navigation_fixed = false;
-  }
-
-  return is_side_navigation_fixed;
-}
-
-
-
-function stopSideNavigationScrolling(side_navigation_values)  {
-  var scroll_value;
-  var stop_side_navigation_scrolling_value;
   
-  scroll_value = side_navigation_values[0];
-  stop_side_navigation_scrolling_value = side_navigation_values[1];
+  if (current_position < scroll_value) {
+    side_navigation_element.classList.remove("side_navigation_scroll_up");
+    side_navigation_element.classList.add("side_navigation_scroll_down");
 
-  is_side_navigation_fixed = isSideNavigationFixed();
-
-  // A String which will hold the CSS selector for the side navigation is initialized.
-  var side_navigation_selector = "";
-
-  // The CSS selector referring to the side navigation is passed on.
-  side_navigation_selector = "usa-layout-docs__sticky";
-
-  // An Object which will hold the HTML DOM element which refers to the side navigation is initialized.
-  var side_navigation_element = {};
-
-  // The HTML DOM element which refers to the side navigation is passed on.
-  side_navigation_element = document.getElementById(side_navigation_selector);
-  scroll_value = scroll_value - stop_side_navigation_scrolling_value;
-  console.log("scroll_value = " + scroll_value);
-
-  if (scroll_value < -540 && is_side_navigation_fixed === true) {
-    side_navigation_element.classList.remove("side_navigation_start");
-    side_navigation_element.classList.add("side_navigation_stop");
-  
-    var side_navigation_top_value;
-
-    side_navigation_top_value = window.getComputedStyle(side_navigation_element, null).getPropertyValue("top");
-
-    side_navigation_element.style.top = stop_side_navigation_scrolling_value;
+    side_navigation_element.style.top = side_navigation_top_value;
+  } else if (current_position >= scroll_value && side_navigation_position_value === "sticky")  {
+    side_navigation_element.classList.remove("side_navigation_scroll_down");
+    side_navigation_element.classList.add("side_navigation_scroll_up");
     
-    // side_navigation_element.style.left = side_navigation_left_value;
-  } else if (scroll_value > -540 && is_side_navigation_fixed === false) {
-
-    side_navigation_element.classList.remove("side_navigation_stop");
-    side_navigation_element.classList.add("side_navigation_start");
-    
-    // side_navigation_element.style.left = side_navigation_left_value;
+    side_navigation_element.style.top = scroll_value + "px";
   }
 }
 
