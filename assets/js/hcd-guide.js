@@ -40,7 +40,7 @@ window.addEventListener("load",
     // of the padding along the bottom of the main block of content is subtracted 
     // from the height of all of the HTML content. That value is passed on.
     scroll_value = current_position + (content_bottom_top - nav_height - 146);
-this.console.log("scroll_value = " + scroll_value);
+
     // A String which will hold the CSS selector for the side navigation is initialized.
     var side_navigation_selector = "";
 
@@ -237,6 +237,26 @@ this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigatio
         }
       );
     }
+
+    /* var description_buttons_selector = "";
+
+    description_buttons_selector = "lab__button";
+
+    var description_buttons_elements = {};
+
+    description_buttons_elements = document.getElementsByClassName(description_buttons_selector);
+
+    if (description_buttons_elements !== undefined) {
+      var i;
+
+      for (i = 0; i < description_buttons_elements.length; i++) {
+        description_buttons_elements[i].addEventListener('click', 
+          function () {
+            console.log("1");
+          }
+        );
+      }
+    } */
   }
 );
 
@@ -344,9 +364,79 @@ function hideGuideMenu()  {
   if (main_content_contains_class_value === false)  {
     main_content_element.classList.add("main-content__hcd-guide");
   }
+}
 
+
+
+function showDescription(description_name)  {
+  var button_selector = "";
+
+  button_selector = "lab__button_" + description_name;
+  
+  var button_element = {};
+
+  button_element = document.getElementById(button_selector);
+
+  var button_location;
+
+  var current_position;
+
+  current_position = window.pageYOffset;
+
+  button_location = (parseInt(button_element.getBoundingClientRect().y) + current_position - 170);
+
+  var overlay_selector = "";
+
+  overlay_selector = "usa-overlay";
+
+  overlay_element = {};
+
+  overlay_element = document.getElementsByClassName(overlay_selector)[0];
+
+  overlay_element.classList.remove("description_overlay_off");
+  overlay_element.classList.add("description_overlay_on");
+
+  var description_selector = "";
+
+  description_selector = "lab__description_" + description_name;
+
+  var description_element = {};
+
+  description_element = document.getElementById(description_selector);
+
+  button_location = button_location + "px";
+
+  description_element.classList.remove("description_off");
+  description_element.classList.add("description_on");
+
+  description_element.style.top = button_location;
+}
+
+
+
+function closeDescription(description_name) {
+  overlay_selector = "usa-overlay";
+
+  overlay_element = {};
+
+  overlay_element = document.getElementsByClassName(overlay_selector)[0];
+
+  overlay_element.classList.remove("description_overlay_on");
+  overlay_element.classList.add("description_overlay_off");
+
+  var description_selector = "";
+
+  description_selector = "lab__description_" + description_name;
+  
+  var description_element = {};
+
+  description_element = document.getElementById(description_selector);
+
+  description_element.classList.remove("description_on");
+  description_element.classList.add("description_off");
 
 }
+
 
 
 function showMobileSearchForm() {
@@ -391,6 +481,7 @@ function showMobileSearchForm() {
 
   guide_menu_title_element.classList.add("guide_menu_title_not_visible");
 }
+
 
 
 function isMobileMenuVisible()  {

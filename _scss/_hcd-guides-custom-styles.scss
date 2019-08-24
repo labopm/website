@@ -81,6 +81,13 @@ $theme-font-family-serif: 'merriweather', serif;
     color: color('gray-cool-80');
   }
 
+  h3 {
+    font-family: font-family('sans');
+    font-size: font-size('heading', 'lg');
+    font-weight: font-weight('normal');
+    color: color('gray-cool-60');
+  }
+
   .lab__bullet_points_columns, 
   .lab__base_columns {
     width: 46%;
@@ -161,11 +168,16 @@ $theme-font-family-serif: 'merriweather', serif;
       clear: none;
     }
   }
-
+  
   &__ul {
     margin-top: 0;
     margin-bottom: units(0.5);
     list-style-type: none;
+  }
+  
+  .usa-prose__hcd-guide__ol li, 
+  .usa-prose__hcd-guide__ul li {
+    color: color('gray-cool-70');
   }
 
   .lab__bullet_points_column_fullwidth {
@@ -258,12 +270,13 @@ $theme-font-family-serif: 'merriweather', serif;
       font-size: font-size('sans', 4);
       font-weight: $theme-font-weight-bold;
       line-height: line-height('body', 5);
+      color: color('blue-80v');
     }
 
     .lab-cta__attributed_to {
       margin: 0 units(2);
       display: inline-block;
-      color:  #112E51;
+      color:  color('blue-80v');
     }
   }
   
@@ -305,6 +318,7 @@ $theme-font-family-serif: 'merriweather', serif;
   .lab__case_in_point {
     &_wrapper {
       max-width: 78ex;
+      margin-top: units(3);
       height: auto;
       position: relative;
     }
@@ -328,7 +342,9 @@ $theme-font-family-serif: 'merriweather', serif;
 
     &_copy {
       width: 30.95rem;
-      display: inline-block;
+      height: auto;
+      display: table-cell;
+      float: none;
 
       h2 {
         margin-top: units(4);
@@ -343,23 +359,11 @@ $theme-font-family-serif: 'merriweather', serif;
       }
     }
 
-    &_info {
-      width: px-to-rem(24px);
-      height: px-to-rem(28px);
-      background-color: color('white');
-      background-image: url('/assets/img/lab/hcd-guide/design/case-in-point-info.png');
-      background-position: 50% 50%;
-      background-repeat: no-repeat;
-      border: none;
-      -webkit-appearance: none;
-    }
-
     &_vertical_border {
       width: px-to-rem(46px);
-      height: 88%;
-      display: inline-block;
-      position: absolute;
-      clear: both;
+      height: auto;
+      display: table-cell;
+      float: none;
       background-image: url('/assets/img/lab/hcd-guide/design/case-in-point-vertical.png');
       background-repeat: repeat-y;
       background-position: px-to-rem(4px) 0px;
@@ -367,10 +371,20 @@ $theme-font-family-serif: 'merriweather', serif;
     }
 
     &_bottom_border {
-      width: 100%;
+      width: calc(100% - 46px);
       height: px-to-rem(46px);
+      float: left;
       background-image: url('/assets/img/lab/hcd-guide/design/case-in-point-bottom.png');
-      background-position: 100% 50%;
+      background-position: 0 50%;
+      background-repeat: no-repeat;
+    }
+
+    &_bottom_border_corner {
+      width: px-to-rem(46px);
+      height: px-to-rem(46px);
+      float: left;
+      background-image: url('/assets/img/lab/hcd-guide/design/case-in-point-bottom-corner.png');
+      background-position: 0px 0px;
       background-repeat: no-repeat;
     }
   }
@@ -426,7 +440,63 @@ $theme-font-family-serif: 'merriweather', serif;
       z-index: 100;
     }
   }
+
+  .lab__button {
+    width: px-to-rem(24px);
+    height: px-to-rem(28px);
+    background-color: color('white');
+    background-image: url('/assets/img/lab/hcd-guide/design/case-in-point-info.png');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    border: none;
+    -webkit-appearance: none;
+  }
+
+  .lab__description {
+    width: px-to-rem(590px);
+    height: auto;
+    display: none;
+    position: absolute;
+    border-radius: 5px;
+    background-color: color('white');
+    z-index: 500;
+
+    &_header {
+      height: px-to-rem(80px);
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      background-color: color('gray-cool-2');
+
+      &_img, 
+      &_h4, 
+      &_a {
+        display: inline-block;
+      }
+
+      &_img {
+        margin: 1.75rem units(2) 0 units(2);
+        vertical-align: top;
+      }
+
+      &_h4 {
+        margin-top: 1.75rem;
+        font-family: $theme-font-family-serif;
+        font-size: font-size('heading', 6);
+        vertical-align: top;
+      }
+
+      &_a {
+        margin: 1.75rem units(4) 0 0;
+        float: right;
+      }
+    }
+
+    &_copy {
+      margin: units(4) units(8);
+    }
+  }
 }
+
 
 
 .usa-accordion__reference_link {
@@ -434,6 +504,7 @@ $theme-font-family-serif: 'merriweather', serif;
   background-image: url('/assets/img/lab/hcd-guide/design/external-link-arrow.png');
   background-position: 100% 50%;
   background-repeat: no-repeat;
+  color: color('blue-70v');
 }
 
 
@@ -608,6 +679,24 @@ $theme-font-family-serif: 'merriweather', serif;
   position: relative !important;
 }
 
+.description_overlay_on {
+  visibility: visible;
+  opacity: 0.2;
+}
+
+.description_overlay_off {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.description_on {
+  display: block !important;
+}
+
+.description_off {
+  display: none !important;
+}
+
 
 // ***************** SIDENAV ***************** //
 .usa-layout-docs__sidenav {
@@ -618,7 +707,7 @@ $theme-font-family-serif: 'merriweather', serif;
 }
 
 #usa-layout-docs__sticky {
-  width: 21.5rem;
+  width: 100%;
   padding: units(4) 0;
   position: sticky;
 }
@@ -661,20 +750,21 @@ $theme-font-family-serif: 'merriweather', serif;
     .usa-current::after {
       width: units(1) !important;
       height: units(1);
+      margin-top: -0.25rem;
       background-color: color('gold-20v') !important;
       border-radius: 0.5rem !important;
       content: '';
       display: block;
       position: absolute;
-      top: 0.89rem !important;
-      bottom: units(0.5);
+      top: 50%;
+      bottom: 50%;
       left: 0;
     }
 
     .usa-sidenav__sublist {
       .usa-sidenav__item {
         .usa-current::after {
-          left: 0.75rem;
+          left: 1rem;
         }
       }
     }
@@ -767,6 +857,14 @@ $theme-font-family-serif: 'merriweather', serif;
   .grid-container__hcd-guide {
     .grid-row.grid-gap > * {
       padding-left: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 64.99rem)  {
+  .usa-prose__hcd-guide { 
+    .lab__case_in_point_vertical_border {
+      background-position: 0px 0px;
     }
   }
 }
@@ -1122,6 +1220,8 @@ $theme-font-family-serif: 'merriweather', serif;
     }
 
     &__skip_ahead {
+      margin-bottom: units(3);
+
       hr {
         margin-top: 3rem;
       }

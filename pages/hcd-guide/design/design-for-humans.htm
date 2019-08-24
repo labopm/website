@@ -25,9 +25,9 @@ next-link-title: 4. Design at scale
 <h3>In stakeholders</h3>
 <p>
   The design process strives to include all possible 
-  participants <button type="button" class="lab__case_in_point_info" id="lab__comment_particpants">&nbsp;</button> 
+  participants <button type="button" class="lab__button" id="lab__button_participants" onclick="showDescription('participants');">&nbsp;</button> 
   and 
-  stakeholders <button type="button" class="lab__case_in_point_info" id="lab__comment_stakeholders">&nbsp;</button> 
+  stakeholders <button type="button" class="lab__button" id="lab__button_stakeholders" onclick="showDescription('stakeholders');">&nbsp;</button> 
   in the Discovery phase. The thinking is that, if teams talk to all the people who work 
   with a product, service, or system as participants as well as all those who administer, 
   approve, or oversee it as leadership stakeholders and design with them, 
@@ -97,6 +97,7 @@ next-link-title: 4. Design at scale
   </div>
   <div class="lab__case_in_point_vertical_border lab-hero__desktop_visible">&nbsp;</div>
   <div class="lab__case_in_point_bottom_border lab-hero__desktop_visible">&nbsp;</div>
+  <div class="lab__case_in_point_bottom_border_corner lab-hero__desktop_visible">&nbsp;</div>
 </div>
 <div class="lab__clear_spacer"></div>
 
@@ -162,5 +163,39 @@ next-link-title: 4. Design at scale
   </div>
   <div class="lab__case_in_point_vertical_border lab-hero__desktop_visible">&nbsp;</div>
   <div class="lab__case_in_point_bottom_border lab-hero__desktop_visible">&nbsp;</div>
+  <div class="lab__case_in_point_bottom_border_corner lab-hero__desktop_visible">&nbsp;</div>
 </div>
 <div class="lab__clear_spacer"></div>
+
+<div class="lab__description" id="lab__description_participants">
+  <div class="lab__description_header">
+    <img src="/assets/img/lab/hcd-guide/design/case-in-point-info.png" alt="Description" class="lab__description_header_img">
+    <h4 class="lab__description_header_h4">Participants</h4>
+    <a href="javascript:closeDescription('participants');" title="Close description" class="lab__description_header_a"><img src="/assets/img/lab/hcd-guide/design/description-close.png" alt="Close description" class="lab__description_close_img" /></a>
+  </div>
+  <div class="lab__description_copy">
+    <p>
+      Participants are people who work with a product, service, or system in the course of their 
+      normal public usage or workflows, such as entering information on a website page or pages 
+      or processing that information inside the organization.
+    </p>
+  </div>
+</div>
+
+<div class="lab__description" id="lab__description_stakeholders">
+  <div class="lab__description_header">
+    <img src="/assets/img/lab/hcd-guide/design/case-in-point-info.png" alt="Description" class="lab__description_header_img">
+    <h4 class="lab__description_header_h4">Stakeholders</h4>
+    <a href="javascript:closeDescription('stakeholders');" title="Close description" class="lab__description_header_a"><img src="/assets/img/lab/hcd-guide/design/description-close.png" alt="Close description" class="lab__description_close_img" /></a>
+  </div>
+  <div class="lab__description_copy">
+    <p>
+      Stakeholders are people who may not use the product, service, or system directly 
+      but are responsible for administering those who do use it, approving funding 
+      for its development and maintenance, and understanding the greater organization 
+      in which it functions.
+    </p>
+  </div>
+</div>
+  
+  
