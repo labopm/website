@@ -679,6 +679,11 @@ $theme-font-family-serif: 'merriweather', serif;
   position: relative !important;
 }
 
+.side_navigation_hold {
+  position: relative !important;
+  top: 0;
+}
+
 .description_overlay_on {
   visibility: visible;
   opacity: 0.2;
@@ -862,9 +867,33 @@ $theme-font-family-serif: 'merriweather', serif;
 }
 
 @media (max-width: 64.99rem)  {
+  .lab-hero--hcd-guide {
+    top: 4.4rem;
+
+    &__body {
+      padding: units(2) units(9) units(2) units(2) !important;
+    }
+  }
+
   .usa-prose__hcd-guide { 
     .lab__case_in_point_vertical_border {
       background-position: 0px 0px;
+    }
+  }
+
+  .main_content_scroll_down {
+    top: 8.125rem;
+    padding-bottom: 8.125rem !important;
+  }
+
+  .usa-layout-docs__background {
+    left: -0.5rem;
+  }
+
+  .usa-prose__hcd-guide { 
+    .lab__bullet_points_columns, 
+    .lab__base_columns {
+      width: 43rem;
     }
   }
 }

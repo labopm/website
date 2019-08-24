@@ -29344,6 +29344,10 @@ i.e.
 .side_navigation_scroll_up {
   position: relative !important; }
 
+.side_navigation_hold {
+  position: relative !important;
+  top: 0; }
+
 .description_overlay_on {
   visibility: visible;
   opacity: 0.2; }
@@ -29475,8 +29479,20 @@ i.e.
     padding-left: 1.5rem; } }
 
 @media (max-width: 64.99rem) {
+  .lab-hero--hcd-guide {
+    top: 4.4rem; }
+    .lab-hero--hcd-guide__body {
+      padding: 1rem 4.5rem 1rem 1rem !important; }
   .usa-prose__hcd-guide .lab__case_in_point_vertical_border {
-    background-position: 0px 0px; } }
+    background-position: 0px 0px; }
+  .main_content_scroll_down {
+    top: 8.125rem;
+    padding-bottom: 8.125rem !important; }
+  .usa-layout-docs__background {
+    left: -0.5rem; }
+  .usa-prose__hcd-guide .lab__bullet_points_columns,
+  .usa-prose__hcd-guide .lab__base_columns {
+    width: 43rem; } }
 
 @media (min-width: 40em) {
   .main-content__hcd-guide {

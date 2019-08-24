@@ -137,7 +137,6 @@ this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigatio
 
     side_navigation_values = [
       current_position, 
-      side_navigation_threshold_value, 
       side_navigation_top_value, 
       scroll_value
     ];
@@ -548,14 +547,12 @@ function isHeroLarge()  {
 
 function stopSideNavigationScrolling(side_navigation_values)  {
   var current_position;
-  var side_navigation_threshold_value;
   var side_navigation_top_value;
   var scroll_value;
   
   current_position = side_navigation_values[0];
-  side_navigation_threshold_value = side_navigation_values[1];
-  side_navigation_top_value = side_navigation_values[2];
-  scroll_value = side_navigation_values[3];
+  side_navigation_top_value = side_navigation_values[1];
+  scroll_value = side_navigation_values[2];
 
   // A String which will hold the CSS selector for the side navigation is initialized.
   var side_navigation_selector = "";
@@ -573,18 +570,29 @@ function stopSideNavigationScrolling(side_navigation_values)  {
 
   side_navigation_position_value = window.getComputedStyle(side_navigation_element, null).getPropertyValue("position");
   
-  if (current_position < scroll_value) {
+  var window_width;
+
+  window_width = window.innerWidth;
+
+  if (current_position < scroll_value && window_width >= 1024) {
     side_navigation_element.classList.remove("side_navigation_scroll_up");
     side_navigation_element.classList.add("side_navigation_scroll_down");
 
     side_navigation_element.style.top = side_navigation_top_value;
   } else if (current_position >= scroll_value && 
              side_navigation_position_value === "sticky" && 
-             scroll_value > 0)  {
+             scroll_value > 0 && 
+             window_width >= 1024)  {
     side_navigation_element.classList.remove("side_navigation_scroll_down");
     side_navigation_element.classList.add("side_navigation_scroll_up");
     
     side_navigation_element.style.top = scroll_value + "px";
+  } else if (window_width < 1024) {
+    side_navigation_element.classList.remove("side_navigation_scroll_up");
+    side_navigation_element.classList.remove("side_navigation_scroll_down");
+    side_navigation_element.classList.remove("side_navigation_hold");
+    side_navigation_element.classList.add("side_navigation_hold");
+
   }
 }
 
