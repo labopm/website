@@ -1,8 +1,19 @@
 
 $theme-font-family-serif: 'merriweather', serif;
 
+
+
+
 // ***************** CONTENT ***************** //
 
+
+.hcd-guide__print_page_num  {
+  display: none;
+}
+
+.hcd-guide__print_wrapper {
+  display: block;
+}
 
 .usa-prose__hcd-guide {
   h1 {
@@ -825,7 +836,7 @@ $theme-font-family-serif: 'merriweather', serif;
 } */
 
 
-@media (min-width: 100rem) {
+@media screen and (min-width: 100rem) {
   .grid-container__hcd-guide {
     .grid-row.grid-gap > * {
       padding-left: 5.5rem;
@@ -841,7 +852,7 @@ $theme-font-family-serif: 'merriweather', serif;
   }
 }
 
-@media (min-width: 60rem) and (max-width: 99rem)  {
+@media screen and (min-width: 60rem) and (max-width: 99rem)  {
   .grid-container__hcd-guide {
     .grid-row.grid-gap > * {
       padding-left: 5.5rem;
@@ -855,7 +866,7 @@ $theme-font-family-serif: 'merriweather', serif;
 
 
 
-@media (min-width: 64rem) {
+@media screen and (min-width: 64rem) {
 /*   .usa-nav-container {
     max-width: 100%;
     padding-left: 0;
@@ -877,7 +888,7 @@ $theme-font-family-serif: 'merriweather', serif;
   }
 }
 
-@media (max-width: 64.99rem)  {
+@media screen and (max-width: 64.99rem)  {
   .lab-hero--hcd-guide {
     top: 4.4rem;
 
@@ -920,7 +931,7 @@ $theme-font-family-serif: 'merriweather', serif;
 }
 
 
-@media (min-width: 40em) {
+@media screen and (min-width: 40em) {
   .main-content__hcd-guide {
     padding-top: 0;
     padding-bottom: 0;
@@ -947,7 +958,7 @@ $theme-font-family-serif: 'merriweather', serif;
   }
 }
 
-@media (min-width: 415px) {
+@media screen and (min-width: 415px) {
   .lab-hero--hcd-guide {
     &__desktop_visible {
       display: inline-block;
@@ -969,7 +980,7 @@ $theme-font-family-serif: 'merriweather', serif;
   }
 }
 
-@media (max-width: 414px)	{
+@media screen and (max-width: 414px)	{
   .usa-banner__hcd-guide, 
   .usa-header__hcd-guide, 
   .lab-hero--hcd-guide {
@@ -1419,5 +1430,100 @@ $theme-font-family-serif: 'merriweather', serif;
 
   .usa-footer__contact-links_hcd-guide {
     right: auto;
+  }
+}
+
+@media print {
+  @page {
+    size: landscape
+  }
+
+  .usa-banner__hcd-guide, 
+  .usa-overlay, 
+  .usa-header__hcd-guide, 
+  .lab-hero--hcd-guide, 
+  .usa-prose__hcd-guide__reading_print, 
+  .grid-container__hcd-guide > div > .usa-layout-docs__sidenav, 
+  .usa-layout__content_bottom, 
+  footer, 
+  figure, 
+  .usa-prose__hcd-guide__mobile_visible {
+    display: none;
+  }
+
+  .main-content__hcd-guide, 
+  .grid-container__hcd-guide {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .main_content_scroll_down {
+    top: 0;
+    padding-bottom: 0 !important;
+  }
+
+  .hcd-guide__print {
+    &_wrapper, 
+    &_page_num, 
+    &_page_counter:after {
+      display: inline-table;
+      vertical-align: top;
+    }
+
+    &_wrapper {
+      width: 64ex;
+      border-spacing: 2rem;
+    }
+
+    &_column_right {
+      page-break-after: always;
+    }
+
+    &_page_num  {
+      width: 40px;
+      margin-top: units(9);
+
+      hr {
+        border: 1px solid;
+      }
+    }
+
+    &_page_counter:after {
+      counter-increment: page;
+      content: counter(page);
+    }
+
+    &_page_num_title {
+      height: 253px;
+      margin-top: 0.75rem;
+      line-height: 1;
+      writing-mode: vertical-rl;
+      text-orientation: sideways;
+    }
+  }
+
+  .lab__case_in_point {
+    &_header, 
+    &_vertical_border, 
+    &_bottom_border, 
+    &_bottom_border_corner {
+      background-image: none !important;
+    }
+  }
+
+  .lab__case_in_point_wrapper {
+    width: 54ex !important;
+  }
+
+  .usa-prose__hcd-guide { 
+    .lab__case_in_point_copy {
+      width: 450px;
+      display: block;
+    }
+  }
+
+  .usa-prose__hcd-guide_print_not_visible {
+    text-decoration: none;
+    color: color('black'); 
   }
 }
