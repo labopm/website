@@ -166,7 +166,7 @@ next-link-title: Get started
 
 <p>
   If the majority of these answers falls on the upper half of the Project Frame-Reframe template, 
-  create a generous timeline for your Design phase. You'll need time to break down your 
+  create a generous timeline for your Design phase. You&rsquo;ll need time to break down your 
   Opportunities into workable parts, to find partners with any technical skills you may 
   need and to get on the calendars of your stakeholders and participants.
 </p>
