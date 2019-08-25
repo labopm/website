@@ -96,37 +96,37 @@ next-link-title: Get started
   <p>
     Continuing to practice human-centeredness through the learning 
     and application of high-level 
-    <a href="{{ site.baseurl }}/design/design-phase-principles.htm" title="design principles">design principles.</a>
+    <a href="{{ site.baseurl }}/hcd-guide/design/design-phase-principles.htm" title="design principles">design principles.</a>
   </p>
   <p>
-    Creating <a href="{{ site.baseurl }}/design/.htm" title="lots of ideas">lots of ideas.</a> 
+    Creating <a href="{{ site.baseurl }}/hcd-guide/design/designed-things.htm" title="lots of ideas">lots of ideas.</a> 
     for product, service, or system solutions.
   </p>
   <p>
     Analyzing whether those ideas could be expressed best as 
-    <a href="{{ site.baseurl }}/design/products.htm" title="products">products,</a>  
-    <a href="{{ site.baseurl }}/design/services.htm" title="services">services,</a> 
+    <a href="{{ site.baseurl }}/hcd-guide/design/products.htm" title="products">products,</a>  
+    <a href="{{ site.baseurl }}/hcd-guide/design/services.htm" title="services">services,</a> 
     or 
-    <a href="{{ site.baseurl }}/design/systems.htm" title="systems">systems.</a>
+    <a href="{{ site.baseurl }}/hcd-guide/design/systems.htm" title="systems">systems.</a>
   </p>
   <p>
     Creating 
-    <a href="{{ site.baseurl }}/design/iteration.htm" title="multiple iterations of your idea for the above">multiple iterations of your idea for the above.</a>
+    <a href="{{ site.baseurl }}/hcd-guide/design/iteration.htm" title="multiple iterations of your idea for the above">multiple iterations of your idea for the above.</a>
   </p>  
 </div>
 
 <div class="lab__bullet_points_columns lab__bullet_points_column_right">
   <p>
     Understanding and communicating how your product, service, or system might need to 
-    <a href="{{ site.baseurl }}/design/design-for-change.htm" title="change in the future">change in the future.</a>
+    <a href="{{ site.baseurl }}/hcd-guide/design/design-for-change.htm" title="change in the future">change in the future.</a>
     
   </p>
   <p>
     Creating and administering the prototype testing with participants and 
-    <a href="{{ site.baseurl }}/design/feedback.htm" title="receiving feedback">receiving feedback.</a>    
+    <a href="{{ site.baseurl }}/hcd-guide/design/feedback.htm" title="receiving feedback">receiving feedback.</a>    
   </p>
   <p>
-    <a href="{{ site.baseurl }}/design/design-and-implentation.htm#" title="Working with implementation teams">Working with implementation teams</a> 
+    <a href="{{ site.baseurl }}/hcd-guide/design/design-and-implementation.htm" title="Working with implementation teams">Working with implementation teams</a> 
     to set your participants up for a beneficial and positive Delivery experience.
   </p>
 </div>
@@ -143,7 +143,7 @@ next-link-title: Get started
 <p>
   Templates for this will be provided in the Design Phase Operations Guide, but to start, 
   you can also modify the 
-  <a href="https://github.com/labopm/HCD-Guides/blob/master/HCD_Ops_Guide_v12_spreads.pd" target="_blank" title="Project Frame-Reframe template" class="usa-prose__hcd-guide_print_not_visible">Project Frame-Reframe template</a> 
+  <a href="https://github.com/labopm/HCD-Guides/blob/master/HCD_Ops_Guide_v12_spreads.pdf" target="_blank" title="Project Frame-Reframe template" class="usa-prose__hcd-guide_print_not_visible">Project Frame-Reframe template</a> 
   from pages 16-17 of the Discovery Operations Guide for this purpose. Map onto that template the following parameters:
 </p>
 
