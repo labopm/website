@@ -7,7 +7,9 @@ $theme-font-family-serif: 'merriweather', serif;
 // ***************** CONTENT ***************** //
 
 
-.hcd-guide__print_page_num  {
+.hcd-guide__print_page_num, 
+.hcd-guide__print_footnotes_link, 
+.hcd-guide__print_footnotes  {
   display: none;
 }
 
@@ -1450,6 +1452,7 @@ $theme-font-family-serif: 'merriweather', serif;
   footer, 
   figure, 
   .lab__button, 
+  .usa-prose__hcd-guide__carousel, 
   .usa-prose__hcd-guide__mobile_visible {
     display: none;
   }
@@ -1484,7 +1487,16 @@ $theme-font-family-serif: 'merriweather', serif;
       *:first-child {
         margin-top: 0;
       }
-  
+    }
+
+    &_one_column {
+      width: 425px;
+      margin-right: 475px;
+      column-count: 1;
+    }
+
+    &_with_links {
+      height: 700px;
     }
 
     &_page_num  {
@@ -1505,7 +1517,28 @@ $theme-font-family-serif: 'merriweather', serif;
       text-orientation: sideways;
     }
 
+    &_footnotes_link {
+      display: inline;
+    }
+
+    &_footnotes {
+      width: 900px;
+      padding-top: units(2);
+      display: block;
+      clear: both;
+      border-top: 1px solid;
+
+      &_link_num {
+        display: inline-block;
+        margin-right: units(2);
+        font-family: font-family('sans');
+        font-size: font-size('body', '3xs');
+      }
+    }
+    
     &_references {
+      margin-top: units(3);
+
       hr {
         border: 1px solid;
       }
@@ -1567,6 +1600,22 @@ $theme-font-family-serif: 'merriweather', serif;
   .usa-prose__hcd-guide {
     .lab-cta__quote {
       background-color: color('white');
+    }
+  }
+
+  .usa-prose__hcd-guide {
+    .lab__split_columns {
+      margin-top: units(3);
+      margin-bottom: 0;
+
+      .lab__split_columns_img_wrapper {
+        display: none;
+      }
+    
+      .lab__split_columns_copy {
+        max-width: 100%;
+        margin: 0;
+      }
     }
   }
 }
