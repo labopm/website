@@ -477,7 +477,7 @@ function showDescription(description_name)  {
 
   var description_selector = "";
 
-  description_selector = "lab__description_" + description_name;
+  description_selector = "lab__hcd-guide__description_" + description_name;
 
   var description_element = {};
 
@@ -505,7 +505,7 @@ function closeDescription(description_name) {
 
   var description_selector = "";
 
-  description_selector = "lab__description_" + description_name;
+  description_selector = "lab__hcd-guide__description_" + description_name;
   
   var description_element = {};
 

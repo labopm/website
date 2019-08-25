@@ -69,7 +69,7 @@ hcd-guide:
         sub-section: true
         sub-subnav: 
         - text: 1. Simple is hard
-          href: /hcd-guide/design/getting-to-simple-is-hard.htm
+          href: /hcd-guide/design/simple-is-hard.htm
         - text: 2. Team work
           href: /hcd-guide/design/team-work.htm
         - text: 3. Design for humans

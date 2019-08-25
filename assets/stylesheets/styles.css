@@ -29189,7 +29189,7 @@ i.e.
   border: none;
   -webkit-appearance: none; }
 
-.usa-prose__hcd-guide .lab__description {
+.usa-prose__hcd-guide .lab__hcd-guide__description {
   width: 36.875rem;
   height: auto;
   display: none;
@@ -29197,26 +29197,26 @@ i.e.
   border-radius: 5px;
   background-color: white;
   z-index: 500; }
-  .usa-prose__hcd-guide .lab__description_header {
+  .usa-prose__hcd-guide .lab__hcd-guide__description_header {
     height: 5rem;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     background-color: #f7f9fa; }
-    .usa-prose__hcd-guide .lab__description_header_img, .usa-prose__hcd-guide .lab__description_header_h4, .usa-prose__hcd-guide .lab__description_header_a {
+    .usa-prose__hcd-guide .lab__hcd-guide__description_header_img, .usa-prose__hcd-guide .lab__hcd-guide__description_header_h4, .usa-prose__hcd-guide .lab__hcd-guide__description_header_a {
       display: inline-block; }
-    .usa-prose__hcd-guide .lab__description_header_img {
+    .usa-prose__hcd-guide .lab__hcd-guide__description_header_img {
       margin: 1.75rem 1rem 0 1rem;
       vertical-align: top; }
-    .usa-prose__hcd-guide .lab__description_header_h4 {
+    .usa-prose__hcd-guide .lab__hcd-guide__description_header_h4 {
       margin-top: 1.75rem;
       font-family: "merriweather", serif;
       font-size: 1.0625rem;
       font-weight: bold;
       vertical-align: top; }
-    .usa-prose__hcd-guide .lab__description_header_a {
+    .usa-prose__hcd-guide .lab__hcd-guide__description_header_a {
       margin: 1.75rem 2rem 0 0;
       float: right; }
-  .usa-prose__hcd-guide .lab__description_copy {
+  .usa-prose__hcd-guide .lab__hcd-guide__description_copy {
     margin: 2rem 4rem; }
 
 .usa-accordion__reference_link {
@@ -29815,6 +29815,10 @@ i.e.
 @media print {
   @page {
     size: landscape; }
+  h1 {
+    font-size: 2rem !important; }
+  h2 {
+    font-size: 1.375rem !important; }
   .usa-banner__hcd-guide,
   .usa-overlay,
   .usa-header__hcd-guide,
@@ -29896,6 +29900,18 @@ i.e.
   .usa-prose__hcd-guide .lab__bullet_points_columns,
   .usa-prose__hcd-guide .lab__base_columns {
     width: 100%; }
+  .usa-prose__hcd-guide .lab__hcd-guide__description {
+    width: 425px;
+    display: block;
+    position: relative; }
+    .usa-prose__hcd-guide .lab__hcd-guide__description_header {
+      background-color: white; }
+    .usa-prose__hcd-guide .lab__hcd-guide__description_header_img {
+      margin: 1.75rem 1rem 0 1rem !important; }
+    .usa-prose__hcd-guide .lab__hcd-guide__description_header_a {
+      display: none; }
+    .usa-prose__hcd-guide .lab__hcd-guide__description_copy {
+      margin: 0 2rem; }
   .lab__case_in_point_header, .lab__case_in_point_vertical_border, .lab__case_in_point_bottom_border, .lab__case_in_point_bottom_border_corner {
     background-image: none !important; }
   .lab__case_in_point_vertical_border, .lab__case_in_point_bottom_border, .lab__case_in_point_bottom_border_corner {
