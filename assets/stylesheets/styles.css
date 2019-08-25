@@ -29835,18 +29835,15 @@ i.e.
     display: inline-table;
     vertical-align: top; }
   .hcd-guide__print_wrapper {
-    width: 64ex;
-    border-spacing: 2rem; }
-  .hcd-guide__print_column_right {
-    page-break-after: always; }
+    width: 470px;
+    height: 730px;
+    border-spacing: 2rem 0; }
   .hcd-guide__print_page_num {
     width: 40px;
-    margin-top: 4.5rem; }
+    margin-top: 4.5rem;
+    page-break-after: always; }
     .hcd-guide__print_page_num hr {
       border: 1px solid; }
-  .hcd-guide__print_page_counter:after {
-    counter-increment: page;
-    content: counter(page); }
   .hcd-guide__print_page_num_title {
     height: 253px;
     margin-top: 0.75rem;
@@ -29855,11 +29852,13 @@ i.e.
     text-orientation: sideways; }
   .lab__case_in_point_header, .lab__case_in_point_vertical_border, .lab__case_in_point_bottom_border, .lab__case_in_point_bottom_border_corner {
     background-image: none !important; }
+  .lab__case_in_point_vertical_border, .lab__case_in_point_bottom_border, .lab__case_in_point_bottom_border_corner {
+    display: none; }
   .lab__case_in_point_wrapper {
-    width: 54ex !important; }
-  .usa-prose__hcd-guide .lab__case_in_point_copy {
-    width: 450px;
-    display: block; }
+    width: 406px !important; }
+  .lab__case_in_point_copy {
+    width: 406px !important;
+    display: block !important; }
   .usa-prose__hcd-guide_print_not_visible {
     text-decoration: none;
     color: black; } }

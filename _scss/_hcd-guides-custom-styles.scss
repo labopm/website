@@ -1471,26 +1471,19 @@ $theme-font-family-serif: 'merriweather', serif;
     }
 
     &_wrapper {
-      width: 64ex;
-      border-spacing: 2rem;
-    }
-
-    &_column_right {
-      page-break-after: always;
+      width: 470px;
+      height: 730px;
+      border-spacing: 2rem 0;
     }
 
     &_page_num  {
       width: 40px;
       margin-top: units(9);
+      page-break-after: always;
 
       hr {
         border: 1px solid;
       }
-    }
-
-    &_page_counter:after {
-      counter-increment: page;
-      content: counter(page);
     }
 
     &_page_num_title {
@@ -1509,16 +1502,20 @@ $theme-font-family-serif: 'merriweather', serif;
     &_bottom_border_corner {
       background-image: none !important;
     }
-  }
 
-  .lab__case_in_point_wrapper {
-    width: 54ex !important;
-  }
+    &_vertical_border, 
+    &_bottom_border, 
+    &_bottom_border_corner {
+      display: none;
+    }
 
-  .usa-prose__hcd-guide { 
-    .lab__case_in_point_copy {
-      width: 450px;
-      display: block;
+    &_wrapper {
+      width: 406px !important;
+    }
+
+    &_copy {
+      width: 406px !important;
+      display: block !important;
     }
   }
 
