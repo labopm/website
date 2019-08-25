@@ -28950,15 +28950,14 @@ i.e.
 
 .usa-prose__hcd-guide .lab__split_columns {
   max-width: 75ex;
-  margin-bottom: 3rem; }
-  .usa-prose__hcd-guide .lab__split_columns .lab__split_columns_img,
+  margin-bottom: 3rem;
+  display: flex; }
+  .usa-prose__hcd-guide .lab__split_columns .lab__split_columns_img_wrapper {
+    max-width: 24ex; }
   .usa-prose__hcd-guide .lab__split_columns .lab__split_columns_copy {
-    display: inline-block; }
-  .usa-prose__hcd-guide .lab__split_columns .lab__split_columns_img {
-    margin-right: 1rem; }
-  .usa-prose__hcd-guide .lab__split_columns .lab__split_columns_copy {
-    width: 51%;
-    margin-top: 0;
+    max-width: 49ex;
+    margin: 0 0 0 1.25rem;
+    display: block;
     vertical-align: top; }
   .usa-prose__hcd-guide .lab__split_columns .lab__split_columns_copy::after {
     clear: none; }
@@ -29075,7 +29074,9 @@ i.e.
     .usa-prose__hcd-guide .usa-accordion__content p {
       padding-bottom: 1.5rem; }
   .usa-prose__hcd-guide .usa-accordion__reference {
-    margin-top: 0.5rem; }
+    margin-top: 1.5rem; }
+    .usa-prose__hcd-guide .usa-accordion__reference h4 {
+      margin: 0.75rem 0 0.25rem 0; }
 
 .usa-prose__hcd-guide .lab__case_in_point_wrapper {
   width: 545px;
