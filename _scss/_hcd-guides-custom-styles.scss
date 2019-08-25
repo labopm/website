@@ -1017,6 +1017,17 @@ $theme-font-family-serif: 'merriweather', serif;
     top: px-to-rem(84px);
   }
 
+  .hero_bar_scroll_up {
+    width: 100%;
+    display: block;
+    position: relative;
+    top: px-to-rem(12px);
+  }
+
+  .hero_bar_content_scroll_up {
+    display: none !important;
+  }
+
   .search_bar_scroll_down {
     position: fixed;
     top: 0;
@@ -1050,8 +1061,8 @@ $theme-font-family-serif: 'merriweather', serif;
 
   .usa-navbar {
     background-color: color('white');
-    
   }
+
   .usa-section {
     padding-top: units(2);
   }
@@ -1064,6 +1075,8 @@ $theme-font-family-serif: 'merriweather', serif;
   .usa-layout-docs__sidenav {
     display: none;
   }
+
+
   
   .lab-hero--hcd-guide {
     padding: 0;
@@ -1077,7 +1090,8 @@ $theme-font-family-serif: 'merriweather', serif;
     }
 
     &__body {
-      padding: units(1) 0.75rem units(1) units(2);
+      min-width: 100%;
+      padding: units(1) 0.75rem units(1) units(2) !important;
       background-color: color('blue-50v');
     }
 
@@ -1186,11 +1200,17 @@ $theme-font-family-serif: 'merriweather', serif;
         }
 
         li:first-of-type {
-          display: none;
+          border-bottom: none;
         }
 
-        .lab-hero--hcd-guide__guide_menu-mobilenav__sublist {
-          display: none;
+        .usa-sidenav__sublist {
+          li:first-of-type {
+            border-bottom: 0.0625rem solid white;
+          }
+        }
+  
+        .usa-sidenav__contains_submenu {
+          border-bottom: none;
         }
       }
     }
@@ -1236,6 +1256,7 @@ $theme-font-family-serif: 'merriweather', serif;
     }
   }
 
+  
   .usa-prose__hcd-guide {
     &__desktop_visible {
       display: none;

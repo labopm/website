@@ -14,27 +14,29 @@
   <nav class="lab-hero--hcd-guide__guide_menu_nav">
     <ul>
     {% for link in include.links %}
-    {% assign _href = link.href %}
-    {% assign _current = false %}
-    {% if link.href == page.url or link.href == page.permalink or link.sub-section == page.sub-section %}
-      {% assign _current = true %}
-    {% endif %}
-    {% if link.section-link == true %}
-      {% assign _sectionlink = true %}
-    {% else %}
-      {% assign _sectionlink = false %}
-    {% endif %}  
+      {% assign _href = link.href %}
+      {% assign _current = false %}
+
+      {% if link.href == page.url or link.href == page.permalink or link.sub-section == page.sub-section %}
+        {% assign _current = true %}
+      {% endif %}
+      
+      {% if link.section-link == true %}
+        {% assign _sectionlink = true %}
+      {% else %}
+        {% assign _sectionlink = false %}
+      {% endif %}  
       <li>
     {% if _sectionlink == true %}
-    {% assign _subnav = link.subnav %}
-    {% include subnav-mobile.html links=_subnav %}
+      {% assign _subnav = link.subnav %}
+      {% include subnav-mobile.html links=_subnav section_href=_href%}
     {% else %}
       <a href="{{ site.baseurl }}{{ link.href }}">
         {{ link.text }}
       </a>
       {% if link.subnav and _current %}
         {% assign _subnav = link.subnav %}
-          <a href="{{ site.baseurl }}{{ link.href }}" title="{{ link.text }}" {% if _current %} class="lab-hero--hcd-guide__guide_menu-mobilenav-current" {% endif %}>{{ link.text }}</a><a href="#" title="View more topics in {{ link.text }}"><img src="/assets/img/lab/hcd-guide/design/guide-menu-view-more-mobile.png" width="13" height="13" title="View more topics in {{ link.text }}" /></a>
+          <a href="{{ site.baseurl }}{{ link.href }}" title="{{ link.text }}" {% if _current %} class="lab-hero--hcd-guide__guide_menu-mobile nav-current" {% endif %}>{{ link.text }}</a><a href="#" title="View more topics in {{ link.text }}"><img src="/assets/img/lab/hcd-guide/design/guide-menu-view-more-mobile.png" width="13" height="13" title="View more topics in {{ link.text }}" /></a>
            <ul class="lab-hero--hcd-guide__guide_menu-mobilenav__sublist">
             {% include subnav-mobile.html links=_subnav %}
           </ul> 

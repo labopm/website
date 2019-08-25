@@ -1,15 +1,53 @@
 {% for link in include.links %}
   {% assign _link-current = false %}
+
   {% if link.href == page.url or link.href == page.permalink %}
     {% assign _link-current = true %}
   {% endif %}
-<li>
+
+  {% if link.sub-section == true %} 
+    {% assign _link-sub-section = true %}
+  {% else %}
+    {% assign _link-sub-section = false %}
+  {% endif %}
+
+  {% if page.url == include.section_href %}
+    {% assign _landing_page = true %}
+  {% else %}
+    {% assign _landing_page = false %}
+  {% endif %} 
+
+  {% if _link-sub-section == true and _link-current == true %}
+    {% assign _sub-sub-section = link.sub-subnav %}
+  {% elsif _link-sub-section == true %}
+    {% assign _sub-sub-section = link.sub-subnav %}
+    {% assign _link-within_section = false %}
+    
+    {% for sub_link in _sub-sub-section %}
+      {% if sub_link.href == page.url %}
+        {% assign _link-within_section = true %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
+<li{%if _link-current == true and _link-sub-section == true %} class="usa-sidenav__contains_submenu"{% endif %} {%if _link-within_section == true and _link-sub-section == true %} class="usa-sidenav__contains_submenu"{% endif %} {%if _landing_page == true and _link-sub-section == true %} class="usa-sidenav__contains_submenu"{% endif %}>
   <a href="{{ site.baseurl }}{{ link.href }}" title="{{ link.text }}" {% if _link-current %} class="lab-hero--hcd-guide__guide_menu-mobilenav-current" {% endif %}>{{ link.text }} {{ link.class }}</a>{% if link.subnav and _link-current %}<a href="{{ site.baseurl }}{{ link.href }}" title="View more topics in {{ link.text }}"" class="lab-hero--hcd-guide__guide_menu_view_more"><img src="/assets/img/lab/hcd-guide/design/guide-menu-view-more-mobile.png" width="13" height="13" title="View more topics in {{ link.text }}" /></a>{% endif %}
-    {% if link.subnav and _current %}
-      {% assign _subnav = link.subnav %}
-    <ul class="lab-hero--hcd-guide__guide_menu-mobilenav__sublist">
-      {% include subnav-mobile.html links=_subnav %}
+  {% if _link-sub-section == true and _link-current == true %}
+    <ul class="usa-sidenav__sublist">
+    {% include subnav-mobile.html links=_sub-sub-section %}
+    </ul>
+  {% elsif _link-sub-section == true %}
+    {% if _link-within_section == true %}
+    <ul class="usa-sidenav__sublist">
+      {% include subnav-mobile.html links=_sub-sub-section %}
     </ul>
     {% endif %}
+
+    {% if _landing_page == true %}
+    <ul class="usa-sidenav__sublist">
+      {% include subnav-mobile.html links=_sub-sub-section %}
+    </ul>
+    {% endif %}
+  {% endif %}
 </li>
 {% endfor %}

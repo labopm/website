@@ -58,6 +58,7 @@ about:
 hcd-guide:
   - text: Design Phase
     href: /hcd-guide/design/
+    section-link: true
     subnav: 
       - text: Welcome
         href: /hcd-guide/design/

@@ -29565,6 +29565,13 @@ i.e.
     height: 0;
     position: fixed;
     top: 5.25rem; }
+  .hero_bar_scroll_up {
+    width: 100%;
+    display: block;
+    position: relative;
+    top: 0.75rem; }
+  .hero_bar_content_scroll_up {
+    display: none !important; }
   .search_bar_scroll_down {
     position: fixed;
     top: 0; }
@@ -29601,7 +29608,8 @@ i.e.
     .lab-hero--hcd-guide__mobile_visible {
       display: block; }
     .lab-hero--hcd-guide__body {
-      padding: 0.5rem 0.75rem 0.5rem 1rem;
+      min-width: 100%;
+      padding: 0.5rem 0.75rem 0.5rem 1rem !important;
       background-color: #0076d6; }
     .lab-hero--hcd-guide__guide_menu {
       height: 2.25rem;
@@ -29666,9 +29674,11 @@ i.e.
       .lab-hero--hcd-guide__guide_menu_nav ul .lab-hero--hcd-guide__guide_menu-mobilenav-current {
         font-weight: bold; }
       .lab-hero--hcd-guide__guide_menu_nav ul li:first-of-type {
-        display: none; }
-      .lab-hero--hcd-guide__guide_menu_nav ul .lab-hero--hcd-guide__guide_menu-mobilenav__sublist {
-        display: none; }
+        border-bottom: none; }
+      .lab-hero--hcd-guide__guide_menu_nav ul .usa-sidenav__sublist li:first-of-type {
+        border-bottom: 0.0625rem solid white; }
+      .lab-hero--hcd-guide__guide_menu_nav ul .usa-sidenav__contains_submenu {
+        border-bottom: none; }
     .lab-hero--hcd-guide__guide_menu_highlights {
       margin-top: 2.5rem; }
       .lab-hero--hcd-guide__guide_menu_highlights .lab-hero--hcd-guide__highlights_desc {

@@ -1,5 +1,6 @@
 {% for link in include.links %}
   {% assign _link-current = false %}
+  
   {% if link.href == page.url or link.href == page.permalink %}
     {% assign _link-current = true %}
   {% endif %}
