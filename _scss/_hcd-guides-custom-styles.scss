@@ -1442,11 +1442,14 @@ $theme-font-family-serif: 'merriweather', serif;
   .usa-overlay, 
   .usa-header__hcd-guide, 
   .lab-hero--hcd-guide, 
+  .usa-prose__hcd-guide__know_the_basics, 
   .usa-prose__hcd-guide__reading_print, 
   .grid-container__hcd-guide > div > .usa-layout-docs__sidenav, 
-  .usa-layout__content_bottom, 
+  .usa-layout__content_bottom,
+  .usa-accordion,  
   footer, 
   figure, 
+  .lab__button, 
   .usa-prose__hcd-guide__mobile_visible {
     display: none;
   }
@@ -1466,19 +1469,27 @@ $theme-font-family-serif: 'merriweather', serif;
     &_wrapper, 
     &_page_num, 
     &_page_counter:after {
-      display: inline-table;
-      vertical-align: top;
+      display: block;
+      float: left;
+      top: 0;
     }
 
     &_wrapper {
-      width: 470px;
-      height: 730px;
-      border-spacing: 2rem 0;
+      width: 900px;
+      height: 880px;
+      column-width: 425px;
+      column-count: 2;
+      column-gap: 2rem;
+
+      *:first-child {
+        margin-top: 0;
+      }
+  
     }
 
     &_page_num  {
       width: 40px;
-      margin-top: units(9);
+      margin: units(9) 0 0 units(4);
       page-break-after: always;
 
       hr {
@@ -1493,7 +1504,36 @@ $theme-font-family-serif: 'merriweather', serif;
       writing-mode: vertical-rl;
       text-orientation: sideways;
     }
+
+    &_references {
+      hr {
+        border: 1px solid;
+      }
+
+      h5 {
+        font-family: font-family('sans');
+        text-transform: uppercase;
+      }
+      
+      p {
+        padding: 0 units(4);
+        font-size: font-size('body', '3xs');
+      }
+
+      span {
+        display: block;
+        font-weight: font-weight('bold');
+      }
+    }
   }
+
+  .usa-prose__hcd-guide { 
+    .lab__bullet_points_columns,
+    .lab__base_columns {
+      width: 100%;
+    }
+  } 
+
 
   .lab__case_in_point {
     &_header, 
@@ -1510,17 +1550,23 @@ $theme-font-family-serif: 'merriweather', serif;
     }
 
     &_wrapper {
-      width: 406px !important;
+      width: 425px !important;
     }
 
     &_copy {
-      width: 406px !important;
+      width: 425px !important;
       display: block !important;
     }
   }
 
-  .usa-prose__hcd-guide_print_not_visible {
+  .hcd-guide__print_not_visible {
     text-decoration: none;
     color: color('black'); 
+  }
+
+  .usa-prose__hcd-guide {
+    .lab-cta__quote {
+      background-color: color('white');
+    }
   }
 }

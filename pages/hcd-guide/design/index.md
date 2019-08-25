@@ -8,6 +8,8 @@ next-link-url: /hcd-guide/design/purpose-of-this-guide.htm
 next-link-title: Get started
 ---
 
+<div class="hcd-guide__print_wrapper hcd-guide__print_column_left">
+
 <h1>Welcome to the Design Phase</h1>
 <div class="usa-prose__hcd-guide__reading_print">
   <span class="usa-prose__hcd-guide__reading_time">4 min read</span>
@@ -16,7 +18,7 @@ next-link-title: Get started
 </div>
 
 <p>
-  Your <a href="https://github.com/labopm/HCD-Guides" title="Discovery Phase" target="_blank" class="usa-prose__hcd-guide_print_not_visible">Discovery Phase</a> 
+  Your <a href="https://github.com/labopm/HCD-Guides" title="Discovery Phase" target="_blank" class="hcd-guide__print_not_visible">Discovery Phase</a> 
   is complete or is wrapping up, and you and your team are ready to move into the Design phase. 
   In this phase, the team will build on the research completed in the Discovery phase in 
   order to create action in the form of a designed or evolved product, service, or 
@@ -25,7 +27,7 @@ next-link-title: Get started
   Use this Concept Guide to help you understand the Why behind the design process. 
   You&rsquo;ll be able to find the How in the upcoming HCD Design Phase Operations Guide. 
   For guidance on How in the meantime, see the 
-  <a href="https://methods.18f.gov/make/" title="Making Design Methods" target="_blank" class="usa-prose__hcd-guide_print_not_visible">Making Design Methods</a> 
+  <a href="https://methods.18f.gov/make/" title="Making Design Methods" target="_blank" class="hcd-guide__print_not_visible">Making Design Methods</a> 
   developed by our friends over at 18F.
 </p>
 <div class="usa-prose__hcd-guide__know_the_basics">
@@ -45,6 +47,10 @@ next-link-title: Get started
 <p>
   Since you have either completed or are wrapping up the Discovery Phase, that means the team has:
 </p>
+
+</div>
+<div class="hcd-guide__print_wrapper hcd-guide__print_column_right">
+
 <div class="lab__bullet_points_columns lab__bullet_points_column_left">
   <p>
     Partnered with stakeholders to understand their broad needs and area 
@@ -79,10 +85,18 @@ next-link-title: Get started
   </p>
 </div>
 <div class="lab__clear_spacer"></div>
+
+</div>
+<div class="hcd-guide__print_page_num">
+  <div class="hcd-guide__print_page_counter">1</div>
+  <hr>
+  <div class="hcd-guide__print_page_num_title">HCD Design Phase Concept Guide</div>
+</div>
+
 <p>
   If you&rsquo;re not sure if you&rsquo;ve completed all these points, or feel that you need 
   more information or direction on them, please see the 
-  <a href="https://github.com/labopm/HCD-Guides" title="Human-Centered Design Discovery Phase Guides" target="_blank" class="usa-prose__hcd-guide_print_not_visible">Human-Centered Design Discovery Phase Guides.</a>
+  <a href="https://github.com/labopm/HCD-Guides" title="Human-Centered Design Discovery Phase Guides" target="_blank" class="hcd-guide__print_not_visible">Human-Centered Design Discovery Phase Guides.</a>
 </p>
 <h2 id="design-phase">What to expect in the Design Phase</h2>
 <p>
@@ -143,7 +157,7 @@ next-link-title: Get started
 <p>
   Templates for this will be provided in the Design Phase Operations Guide, but to start, 
   you can also modify the 
-  <a href="https://github.com/labopm/HCD-Guides/blob/master/HCD_Ops_Guide_v12_spreads.pd" target="_blank" title="Project Frame-Reframe template" class="usa-prose__hcd-guide_print_not_visible">Project Frame-Reframe template</a> 
+  <a href="https://github.com/labopm/HCD-Guides/blob/master/HCD_Ops_Guide_v12_spreads.pd" target="_blank" title="Project Frame-Reframe template" class="hcd-guide__print_not_visible">Project Frame-Reframe template</a> 
   from pages 16-17 of the Discovery Operations Guide for this purpose. Map onto that template the following parameters:
 </p>
 
