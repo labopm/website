@@ -40,7 +40,6 @@ window.addEventListener("load",
     // of the padding along the bottom of the main block of content is subtracted 
     // from the height of all of the HTML content. That value is passed on.
     scroll_value = current_position + (content_bottom_top - nav_height - 146);
-this.console.log("scroll_value = " + scroll_value);
     // A String which will hold the CSS selector for the side navigation is initialized.
     var side_navigation_selector = "";
 
@@ -243,7 +242,6 @@ this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigatio
     if (main_menu_element !== undefined) {
       main_menu_element.addEventListener('click', 
         function () {
-          console.log("1");
           var window_width;
 
           window_width = window.innerWidth;
@@ -633,7 +631,7 @@ function stopSideNavigationScrolling(side_navigation_values)  {
   current_position = side_navigation_values[0];
   side_navigation_top_value = side_navigation_values[1];
   scroll_value = side_navigation_values[2];
-console.log("current_position = " + current_position);
+
   // A String which will hold the CSS selector for the side navigation is initialized.
   var side_navigation_selector = "";
 
@@ -653,12 +651,10 @@ console.log("current_position = " + current_position);
   var window_width;
 
   window_width = window.innerWidth;
-console.log("window_width = " + window_width);
 
   if (current_position < scroll_value && window_width >= 1024) {
     side_navigation_element.classList.remove("side_navigation_scroll_up");
     side_navigation_element.classList.add("side_navigation_scroll_down");
-console.log("1");
     side_navigation_element.style.top = side_navigation_top_value;
   } else if (current_position >= scroll_value && 
              side_navigation_position_value === "sticky" && 
@@ -666,14 +662,8 @@ console.log("1");
              window_width >= 1024)  {
     side_navigation_element.classList.remove("side_navigation_scroll_down");
     side_navigation_element.classList.add("side_navigation_scroll_up");
-    
-    side_navigation_element.style.top = scroll_value + "px";
-  } else if (window_width < 1024) {
-    side_navigation_element.classList.remove("side_navigation_scroll_up");
-    side_navigation_element.classList.remove("side_navigation_scroll_down");
-    side_navigation_element.classList.remove("side_navigation_hold");
-    side_navigation_element.classList.add("side_navigation_hold");
 
+    side_navigation_element.style.top = scroll_value + "px";
   }
 }
 
@@ -788,7 +778,7 @@ function shrinkSearchBar()  {
     // IF/ELSE statement which sets the gray banner and header to the top of the webpage 
     // and sets the blue bar to the top of the browser window if the browser is a 
     // mobile browser. Otherwise, only the blue bar is set to the top of the browser window.
-    if (window_width <= 414)  {
+    if (window_width <= 1024)  {
       gray_banner_element.classList.remove("gray_banner_scroll_up");
       gray_banner_element.classList.add("gray_banner_scroll_down");
 
