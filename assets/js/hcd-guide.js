@@ -304,11 +304,34 @@ function cycleHighlights()  {
 
   highlights_button_element = document.getElementsByClassName(highlights_button_selector)[0];
 
-  var highlights_button_click_state_value = "";
+  var is_highlights_button_off = "";
 
-  highlights_button_click_state_value = highlights_button_element.contains("lab-hero--hcd-guide__highlights_off");
+  is_highlights_button_off = highlights_button_element.classList.contains("lab-hero--hcd-guide__highlights_off");
 
-console.log("highlights_button_click_state_value = " + highlights_button_click_state_value);
+  var highlighted_copy_selector = "";
+
+  highlighted_copy_selector = "usa-prose__hcd-guide__highlight_copy";
+
+  var highlighted_copy_element = {};
+
+  highlighted_copy_element = document.getElementsByClassName(highlighted_copy_selector)[0];
+
+  console.log("is_highlights_button_off = " + is_highlights_button_off);
+
+  if (is_highlights_button_off === true)  {
+    highlights_button_element.classList.remove("lab-hero--hcd-guide__highlights_off");
+    highlights_button_element.classList.add("lab-hero--hcd-guide__highlights_on");
+
+    highlighted_copy_element.classList.remove("usa-prose__hcd-guide__highlight_copy_off");
+    highlighted_copy_element.classList.add("usa-prose__hcd-guide__highlight_copy_on");
+  } else {
+    highlights_button_element.classList.remove("lab-hero--hcd-guide__highlights_on");
+    highlights_button_element.classList.add("lab-hero--hcd-guide__highlights_off");
+    
+    highlighted_copy_element.classList.remove("usa-prose__hcd-guide__highlight_copy_on");
+    highlighted_copy_element.classList.add("usa-prose__hcd-guide__highlight_copy_off");
+
+  }
 }
 
 

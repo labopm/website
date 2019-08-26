@@ -481,6 +481,10 @@ $theme-font-family-serif: 'merriweather', serif;
       position: relative;
       z-index: 100;
     }
+
+    &__highlight_copy {
+      display: inline;
+    }
   }
 
   .lab__button {
@@ -745,6 +749,16 @@ $theme-font-family-serif: 'merriweather', serif;
   display: none !important;
 }
 
+.usa-prose__hcd-guide__highlight_copy_off {
+  background-color: color('white');
+  color: color('base-darker');
+}
+
+.usa-prose__hcd-guide__highlight_copy_on {
+  background-color: color('red-warm-40v');
+  color: color('white');
+}
+
 
 // ***************** SIDENAV ***************** //
 .usa-layout-docs__sidenav {
@@ -837,6 +851,14 @@ $theme-font-family-serif: 'merriweather', serif;
     display: inline-block;
     border: none;
     background-color: color('base-lightest');
+    background-image: url('/assets/img/lab/hcd-guide/design/highlights-off.svg');
+  }
+
+  .lab-hero--hcd-guide__highlights_on {
+    background-image: url('/assets/img/lab/hcd-guide/design/highlights-on.svg');
+  }
+
+  .lab-hero--hcd-guide__highlights_off {
     background-image: url('/assets/img/lab/hcd-guide/design/highlights-off.svg');
   }
 }
@@ -1310,10 +1332,6 @@ $theme-font-family-serif: 'merriweather', serif;
         border-radius: px-to-rem(15px);
         background-color: color('base-lightest');
         background-image: url('/assets/img/lab/hcd-guide/design/highlights-off.svg');
-      }
-
-      .lab-hero--hcd-guide__highlights_off {
-        background-image: url('/assets/img/lab/hcd-guide/design/highlights-on.svg');
       }
     }
 

@@ -29196,6 +29196,8 @@ i.e.
   .usa-prose__hcd-guide__carousel_images {
     position: relative;
     z-index: 100; }
+  .usa-prose__hcd-guide__carousel__highlight_copy {
+    display: inline; }
 
 .usa-prose__hcd-guide .lab__button {
   width: 1.5rem;
@@ -29397,6 +29399,14 @@ i.e.
 .description_off {
   display: none !important; }
 
+.usa-prose__hcd-guide__highlight_copy_off {
+  background-color: white;
+  color: #3d4551; }
+
+.usa-prose__hcd-guide__highlight_copy_on {
+  background-color: #ee601d;
+  color: white; }
+
 .usa-layout-docs__sidenav {
   min-height: 37.69rem;
   padding-top: 0 !important;
@@ -29466,6 +29476,10 @@ i.e.
     display: inline-block;
     border: none;
     background-color: #f0f0f0;
+    background-image: url("/assets/img/lab/hcd-guide/design/highlights-off.svg"); }
+  .lab-hcd-guide-highlights .lab-hero--hcd-guide__highlights_on {
+    background-image: url("/assets/img/lab/hcd-guide/design/highlights-on.svg"); }
+  .lab-hcd-guide-highlights .lab-hero--hcd-guide__highlights_off {
     background-image: url("/assets/img/lab/hcd-guide/design/highlights-off.svg"); }
 
 /* ****** FOOTER ****** */

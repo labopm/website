@@ -23,8 +23,9 @@ next-link-title: Get started
   is complete or is wrapping up, and you and your team are ready to move into the Design phase. 
   In this phase, the team will build on the research completed in the Discovery phase in 
   order to create action in the form of a designed or evolved product, service, or 
-  system from what you learned. In this phase, you and the team will design sustainable 
-  products and services   that answer the needs of the people on whom you centered your Discovery phase. 
+  system from what you learned. 
+  <span class="usa-prose__hcd-guide__highlight_copy usa-prose__hcd-guide__highlight_copy_off">In this phase, you and the team will design sustainable</span> 
+  products and services that answer the needs of the people on whom you centered your Discovery phase. 
   Use this Concept Guide to help you understand the Why behind the design process. 
   You&rsquo;ll be able to find the How in the upcoming HCD Design Phase Operations Guide. 
   For guidance on How in the meantime, see the 
