@@ -274,9 +274,42 @@ this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigatio
         }
       );
     }
+
+    var highlights_button_selector = "";
+
+    highlights_button_selector = "lab-hcd-guide-highlights-button";
+
+    var highlights_button_element = {};
+
+    highlights_button_element = document.getElementsByClassName(highlights_button_selector)[0];
+
+    if (highlights_button_element !== undefined) {
+      highlights_button_element.addEventListener('click', 
+        function () {
+          cycleHighlights();
+        }
+      );
+    }
   }
 );
 
+
+
+function cycleHighlights()  {
+  var highlights_button_selector = "";
+
+  highlights_button_selector = "lab-hcd-guide-highlights-button";
+
+  var highlights_button_element = {};
+
+  highlights_button_element = document.getElementsByClassName(highlights_button_selector)[0];
+
+  var highlights_button_click_state_value = "";
+
+  highlights_button_click_state_value = highlights_button_element.contains("lab-hero--hcd-guide__highlights_off");
+
+console.log("highlights_button_click_state_value = " + highlights_button_click_state_value);
+}
 
 
 function closeTabletMainMenu()  {
