@@ -10,7 +10,8 @@ $theme-font-family-serif: 'merriweather', serif;
 .hcd-guide__print_page_num, 
 .hcd-guide__print_footnotes_link, 
 .hcd-guide__print_footnotes, 
-.hcd-guide__print_references  {
+.hcd-guide__print_references, 
+.hcd-guide__print_show_element  {
   display: none;
 }
 
@@ -362,9 +363,6 @@ $theme-font-family-serif: 'merriweather', serif;
 
     &_header {
       width: 100%;
-      background-image: url('/assets/img/lab/hcd-guide/design/case-in-point-horizontal.png');
-      background-position: 100% 50%;
-      background-repeat: no-repeat;
     }
 
     &_title {
@@ -1555,7 +1553,14 @@ $theme-font-family-serif: 'merriweather', serif;
 
 @media print {
   @page {
-    size: landscape
+    size: letter landscape;
+    max-width: 11in;
+    max-height: 8.5in;
+    margin: 2cm;
+  }
+
+  @page:last-child {
+    page-break-after: auto;
   }
 
   h1 {
@@ -1579,7 +1584,8 @@ $theme-font-family-serif: 'merriweather', serif;
   figure, 
   .lab__button, 
   .usa-prose__hcd-guide__carousel, 
-  .usa-prose__hcd-guide__mobile_visible {
+  .usa-prose__hcd-guide__mobile_visible, 
+  .usa-prose__hcd-guide .lab__case_in_point_wrapper::after {
     display: none;
   }
 
@@ -1596,43 +1602,53 @@ $theme-font-family-serif: 'merriweather', serif;
 
   .hcd-guide__print {
     &_wrapper, 
-    &_page_num, 
-    &_page_counter:after {
+    &_page_num {
       display: block;
       float: left;
-      top: 0;
+      vertical-align: top;
     }
 
     &_wrapper {
-      width: 900px;
-      height: 880px;
-      column-width: 425px;
+      width: 845px;
+      height: 670px;
+      position: relative;
+      top: 0;
+      column-width: 410px;
       column-count: 2;
-      column-gap: 2rem;
+      column-gap: 1rem;
 
       *:first-child {
-        margin-top: 0;
+        margin-top: 0 !important;
       }
     }
 
     &_one_column {
-      width: 425px;
-      margin-right: 475px;
+      width: 430px;
+      margin-right: 415px;
+      column-width: 410px;
       column-count: 1;
     }
 
     &_with_links {
-      height: 700px;
+      height: 624px;
     }
 
     &_page_num  {
       width: 40px;
-      margin: units(9) 0 0 units(4);
+      height: 596px;
+      margin-left: 0.75cm;
+      position: relative;
+      top: 1cm;
+      right: 0.5cm;
       page-break-after: always;
 
       hr {
         border: 1px solid;
       }
+    }
+
+    &_page_num:after {
+      clear: both;
     }
 
     &_page_num_title {
@@ -1648,8 +1664,9 @@ $theme-font-family-serif: 'merriweather', serif;
     }
 
     &_footnotes {
-      width: 900px;
-      padding-top: units(2);
+      width: 845px;
+      height: 50px;
+      padding-top: 0.5cm;
       display: block;
       clear: both;
       border-top: 1px solid;
@@ -1689,6 +1706,14 @@ $theme-font-family-serif: 'merriweather', serif;
         word-break: break-all;
       }
     }
+
+    &_hide_element {
+      display: none;
+    }
+
+    &_show_element {
+      display: block;
+    }
   }
 
   .usa-prose__hcd-guide { 
@@ -1704,6 +1729,7 @@ $theme-font-family-serif: 'merriweather', serif;
         position: relative;
   
         &_header {
+          height: 1.6cm;
           background-color: color('white');
         }
   
@@ -1716,36 +1742,37 @@ $theme-font-family-serif: 'merriweather', serif;
         }
   
         &_copy {
-          margin: 0 units(4);
+          margin: 0 1cm 0 1.6cm;
+          page-break-inside: auto;
+        }
+      }
+    }
+
+    .lab__case_in_point {
+      &_wrapper {
+        border: none;
+      }
+      
+      &_title {
+        position: relative;
+        top: -10px;
+      }
+
+      &_wrapper {
+        margin: 1cm 0 0.5cm 0;
+      }
+
+      &_copy {
+        h2 {
+          margin-top: 0;
+        }
+
+        p {
           page-break-inside: auto;
         }
       }
     }
   } 
-
-  .lab__case_in_point {
-    &_header, 
-    &_vertical_border, 
-    &_bottom_border, 
-    &_bottom_border_corner {
-      background-image: none !important;
-    }
-
-    &_vertical_border, 
-    &_bottom_border, 
-    &_bottom_border_corner {
-      display: none;
-    }
-
-    &_wrapper {
-      width: 425px !important;
-    }
-
-    &_copy {
-      width: 425px !important;
-      display: block !important;
-    }
-  }
 
   .hcd-guide__print_not_visible {
     text-decoration: none;

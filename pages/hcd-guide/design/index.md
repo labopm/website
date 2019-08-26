@@ -8,7 +8,7 @@ next-link-url: /hcd-guide/design/purpose-of-this-guide.htm
 next-link-title: Get started
 ---
 
-<div class="hcd-guide__print_wrapper hcd-guide__print_with_links">
+<div class="hcd-guide__print_wrapper hcd-guide__print_with_links hcd-guide__print_one_column">
 
 <h1>Welcome to the Design Phase</h1>
 <div class="usa-prose__hcd-guide__reading_print">
@@ -46,6 +46,19 @@ next-link-title: Get started
   <a href="#design-phase" title="What to expect in the Design Phase">What to expect in the Design Phase</a>
   <a href="#timeline" title="A note on timeline">A note on timeline</a>
 </div>
+
+</div>
+<div class="hcd-guide__print_page_num">
+  <div class="hcd-guide__print_page_counter">1</div>
+  <hr>
+  <div class="hcd-guide__print_page_num_title">HCD Design Phase Concept Guide</div>
+</div>
+<div class="hcd-guide__print_footnotes">
+  <div class="hcd-guide__print_footnotes_link_num">[1] https://github.com/labopm/HCD-Guides</div>
+  <div class="hcd-guide__print_footnotes_link_num">[2] https://methods.18f.gov/make/</div>
+</div>
+<div class="hcd-guide__print_wrapper">
+
 <h2>What you should have done so far</h2>
 <p>
   Since you have either completed or are wrapping up the Discovery Phase, that means the team has:
@@ -88,21 +101,12 @@ next-link-title: Get started
 
 </div>
 <div class="hcd-guide__print_page_num">
-  <div class="hcd-guide__print_page_counter">1</div>
+  <div class="hcd-guide__print_page_counter">2</div>
   <hr>
   <div class="hcd-guide__print_page_num_title">HCD Design Phase Concept Guide</div>
 </div>
-<div class="hcd-guide__print_footnotes">
-  <div class="hcd-guide__print_footnotes_link_num">[1] https://github.com/labopm/HCD-Guides</div>
-  <div class="hcd-guide__print_footnotes_link_num">[2] https://methods.18f.gov/make/</div>
-</div>
 <div class="hcd-guide__print_wrapper">
 
-<p>
-  If you&rsquo;re not sure if you&rsquo;ve completed all these points, or feel that you need 
-  more information or direction on them, please see the 
-  <a href="https://github.com/labopm/HCD-Guides" title="Human-Centered Design Discovery Phase Guides" target="_blank" class="hcd-guide__print_not_visible">Human-Centered Design Discovery Phase Guides.</a>
-</p>
 <h2 id="design-phase">What to expect in the Design Phase</h2>
 <p>
   To set you and your team up for success in the Design Phase, this Guide 
@@ -153,6 +157,13 @@ next-link-title: Get started
 </div>
 <div class="lab__clear_spacer"></div>
 
+</div>
+<div class="hcd-guide__print_page_num">
+  <div class="hcd-guide__print_page_counter">3</div>
+  <hr>
+  <div class="hcd-guide__print_page_num_title">HCD Design Phase Concept Guide</div>
+</div>
+<div class="hcd-guide__print_wrapper">
 <h2 id="timeline">A note on timeline</h2>
 <p>
   Each Design Phase differs depending on the nature of the product, service, or system, 
@@ -160,6 +171,8 @@ next-link-title: Get started
   and the scope of the project itself. If necessary, create a rough map of each 
   of these parameters to understand your timeline.
 </p>
+
+
 
 <p>
   Templates for this will be provided in the Design Phase Operations Guide, but to start, 
@@ -185,13 +198,7 @@ next-link-title: Get started
   </p>
 </div>
 
-</div>
-<div class="hcd-guide__print_page_num">
-  <div class="hcd-guide__print_page_counter">2</div>
-  <hr>
-  <div class="hcd-guide__print_page_num_title">HCD Design Phase Concept Guide</div>
-</div>
-<div class="hcd-guide__print_wrapper">
+
 
 <p>
   If the majority of these answers falls on the upper half of the Project Frame-Reframe template, 
@@ -209,7 +216,7 @@ next-link-title: Get started
 
 </div>
 <div class="hcd-guide__print_page_num">
-  <div class="hcd-guide__print_page_counter">3</div>
+  <div class="hcd-guide__print_page_counter">4</div>
   <hr>
   <div class="hcd-guide__print_page_num_title">HCD Design Phase Concept Guide</div>
 </div>

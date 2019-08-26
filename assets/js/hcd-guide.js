@@ -316,8 +316,6 @@ function cycleHighlights()  {
 
   highlighted_copy_element = document.getElementsByClassName(highlighted_copy_selector)[0];
 
-  console.log("is_highlights_button_off = " + is_highlights_button_off);
-
   if (is_highlights_button_off === true)  {
     highlights_button_element.classList.remove("lab-hero--hcd-guide__highlights_off");
     highlights_button_element.classList.add("lab-hero--hcd-guide__highlights_on");
