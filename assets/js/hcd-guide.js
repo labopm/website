@@ -274,14 +274,14 @@ this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigatio
         }
       );
     }
-
+/* 
     var highlights_button_selector = "";
 
-    highlights_button_selector = "lab-hcd-guide-highlights-button";
+    highlights_button_selector = "switch";
 
     var highlights_button_element = {};
 
-    highlights_button_element = document.getElementsByClassName(highlights_button_selector)[0];
+    highlights_button_element = document.getElementById(highlights_button_selector);
 
     if (highlights_button_element !== undefined) {
       highlights_button_element.addEventListener('click', 
@@ -290,7 +290,7 @@ this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigatio
         }
       );
     }
-  }
+  } */
 );
 
 
@@ -1063,28 +1063,40 @@ function expandSearchBar()  {
 
 
 
-function cycleImages(cycle_direction, carousel_id_value)  {
+function cycleGallery(cycle_direction, carousel_id_value)  {
   var contains_visible_image;
 
   var carousel_id_num_value = "";
 
   carousel_id_num_value = carousel_id_value.substr(carousel_id_value.length - 1);
 
-  var carousel_images_wrapper_selector = "";
+  var carousel_image_selector_static = "";
+  var carousel_caption_selector_static = "";
+  var carousel_dot_selector_static = "";
+  var carousel_image_visible_selector = "";
+  var carousel_caption_visible_selector = "";
+  var carousel_dot_visible_selector = "";
 
   carousel_images_wrapper_selector = "carousel-images-" + carousel_id_num_value;
-
-  var carousel_image_selector_static = "";
-
   carousel_image_selector_static = "usa-prose__hcd-guide__carousel_set_" + carousel_id_num_value;
+  carousel_caption_selector_static = "usa-prose__hcd-guide__carousel_caption_set_" + carousel_id_num_value;
+  carousel_dot_selector_static = "usa-prose__hcd-guide__carousel_dot_set_" + carousel_id_num_value;
+  carousel_caption_selector = "usa-prose__hcd-guide__carousel_caption";
+  carousel_dot_selector = "usa-prose__hcd-guide__carousel_dot";
 
   var carousel_images_elements = {};
+  var carousel_caption_elements = {};
+  var carousel_dot_elements = {};
+
 
   carousel_images_elements = document.getElementsByClassName(carousel_image_selector_static);
+  carousel_caption_elements = document.getElementsByClassName(carousel_caption_selector_static);
+  carousel_dot_elements = document.getElementsByClassName(carousel_dot_selector_static);
 
-  var carousel_image_visible_selector = "";
   
   carousel_image_visible_selector = "usa-prose__hcd-guide__carousel_image_visible";
+  carousel_caption_visible_selector = "usa-prose__hcd-guide__carousel_caption_visible";
+  carousel_dot_visible_selector = "usa-prose__hcd-guide__carousel_dot_visible";
 
   var i;
 
@@ -1094,64 +1106,75 @@ function cycleImages(cycle_direction, carousel_id_value)  {
 
   var image_which_is_visible;
 
-  image_which_is_visible = false;
-
-  var carousel_id_data_Array = [];
-
-  var carousel_image_id_value = "";
-
-  var carousel_set_value = "";
+  image_which_is_visible = 0;
 
   var num_of_images_in_set;
 
   num_of_images_in_set = 0;
 
   for (i = 0; i < num_carousel_images; i++) {
-    carousel_image_id_value = carousel_images_elements[i].getAttribute("id");
-
-    carousel_id_data_Array = carousel_image_id_value.split("-");
-
-    carousel_set_value = carousel_id_data_Array[2];
+    contains_visible_image = carousel_images_elements[i].classList.contains(carousel_image_visible_selector);
     
-    if (carousel_set_value === carousel_id_num_value) {
-      num_of_images_in_set++;
-      contains_visible_image = carousel_images_elements[i].classList.contains(carousel_image_visible_selector);
+    num_of_images_in_set++;
 
-      if (contains_visible_image === true)  {
-        image_which_is_visible = i + 1;
-      } else {
-        contains_visible_image = false;
-      }
+    if (contains_visible_image === true)  {
+      image_which_is_visible = i + 1;
+    } else {
+      contains_visible_image = false;
     }
     
     carousel_images_elements[i].classList.remove(carousel_image_visible_selector);
+    carousel_caption_elements[i].classList.remove(carousel_caption_visible_selector);
+    carousel_dot_elements[i].classList.remove(carousel_dot_visible_selector);
   }
 
-  var carousel_image_new_visible_selector = "carousel-img-" + carousel_id_num_value + "-";
+  var carousel_image_new_visible_selector = "";
+  var carousel_caption_new_visible_selector = "";
+  var carousel_dot_new_visible_selector = "";
+  
+  carousel_image_new_visible_selector = "carousel-img-" + carousel_id_num_value + "-";
+  carousel_caption_new_visible_selector = "carousel-caption-" + carousel_id_num_value + "-";
+  carousel_dot_new_visible_selector = "carousel-dot-" + carousel_id_num_value + "-";
 
   var image_to_make_visible;
 
+  image_to_make_visible = 0;
+
   if (cycle_direction === "previous") {
     if (image_which_is_visible !== 0) {
-      image_to_make_visible = image_which_is_visible - 1;
-      
+      image_to_make_visible = num_of_images_in_set - 1;
     } else {
       image_to_make_visible = num_carousel_images;
     }
   } else {
     if (image_which_is_visible !== num_of_images_in_set) {
       image_to_make_visible = image_which_is_visible + 1;
-      
     } else {
       image_to_make_visible = 1;
     }
-  }
+  }/* 
+
+  if (image_to_make_visible === 1 && cycle_direction === "next")  {
+    carousel_caption_elements[num_of_images_in_set].classList.remove(carousel_caption_visible_selector);
+  } */
 
   carousel_image_new_visible_selector = carousel_image_new_visible_selector + image_to_make_visible.toString();
+  carousel_caption_new_visible_selector = carousel_caption_new_visible_selector + image_to_make_visible.toString();
+  carousel_dot_new_visible_selector = carousel_dot_new_visible_selector + image_to_make_visible.toString();
 
   var carousel_image_new_visible_element = {};
+  var carousel_caption_new_visible_element = {};
+  var carousel_dot_new_visible_element = {};
 
   carousel_image_new_visible_element = document.getElementById(carousel_image_new_visible_selector);
+  carousel_caption_new_visible_element = document.getElementById(carousel_caption_new_visible_selector);
+  carousel_dot_new_visible_element = document.getElementById(carousel_dot_new_visible_selector);
+
+  carousel_image_new_visible_element.classList.remove(carousel_image_visible_selector);
+  carousel_caption_new_visible_element.classList.remove(carousel_caption_visible_selector);
+  carousel_dot_new_visible_element.classList.remove(carousel_dot_visible_selector);
 
   carousel_image_new_visible_element.classList.add(carousel_image_visible_selector);
+  carousel_caption_new_visible_element.classList.add(carousel_caption_visible_selector);
+  carousel_dot_new_visible_element.classList.add(carousel_dot_visible_selector);
 }

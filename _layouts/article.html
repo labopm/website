@@ -15,7 +15,7 @@
           {% assign sidenavigation = site.data.navigation['hcd-guide'] %}
         <aside class="usa-layout-docs__sidenav desktop:grid-col-4">
           <div class="usa-layout-docs__sticky">
-            <!-- {% include hcd-guide-sidenav.html links=sidenavigation %} -->
+            {% include hcd-guide-sidenav.html links=sidenavigation %}
           </div>
         </aside>
         {% endif %}
@@ -23,7 +23,7 @@
           {% if people_page %}
             {% include person-header.html %}
           {% endif %}
-          <!-- {{ content }} -->
+          {{ content }}
         </div>
         {% assign registration_id = page.registration-id %}
         {% if registration_id %}
