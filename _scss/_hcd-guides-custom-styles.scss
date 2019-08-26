@@ -1188,9 +1188,27 @@ $theme-font-family-serif: 'merriweather', serif;
     }
 
     &__guide_menu_link {
-      margin-top: units(1);
+      margin-top: 0.1rem !important;
+      width: 30px;
       display: inline-block;
       vertical-align: top;
+    }
+
+    &__guide_menu_link div,
+    &__guide_menu_link:before,
+    &__guide_menu_link:after {
+      background-color: #fff;
+      border-radius: 3px;
+      content: '';
+      display: block;
+      height: 3px;
+      margin: 6px 0;
+    }
+
+    &__guide_menu_link {
+      div {
+        width: 75%;
+      }
     }
 
     &__guide_menu_search_link {
@@ -1450,7 +1468,7 @@ $theme-font-family-serif: 'merriweather', serif;
       width: units(6);
       margin: 0 auto;
       padding-top: units(3);
-      padding-left: 0;
+      padding-left: 0 !important;
       background-position: 50% 0%;
     }
 
@@ -1465,28 +1483,28 @@ $theme-font-family-serif: 'merriweather', serif;
     }
 
     .usa-layout__section_link {
-      width: 10.5rem;
-      height: px-to-rem(44px);
-      padding: 0 units(3) 0 0;
-      display: table-cell;
-      float: none;
-      background-color: color('white');
-      background-image: url('/assets/img/lab/hcd-guide/design/section-link-next-mobile.png');
-      background-position: 100% 50%;
-      border-radius: 0;
-      line-height: 1.4;
-      font-weight: font-weight('normal');
-      text-align: right;
-      color: color('blue-50v');
-      text-decoration: underline;
-      vertical-align: middle;
+      width: 10.5rem !important;
+      height: px-to-rem(44px) !important;
+      padding: 0 units(3) 0 0 !important;
+      display: table-cell !important;
+      float: none !important;
+      background-color: color('white') !important;
+      background-image: url('/assets/img/lab/hcd-guide/design/section-link-next-mobile.png') !important;
+      background-position: 100% 50% !important;
+      border-radius: 0 !important;
+      line-height: 1.4 !important;
+      font-weight: font-weight('normal') !important;
+      text-align: right !important;
+      color: color('blue-50v') !important;
+      text-decoration: underline !important;
+      vertical-align: middle !important;
     }
 
     .section_link_previous {
-      background-image: url('/assets/img/lab/hcd-guide/design/section-link-previous-mobile.png');
-      background-position: 0% 50%;
-      padding: 0 0 0 units(3);
-      text-align: left;
+      background-image: url('/assets/img/lab/hcd-guide/design/section-link-previous-mobile.png') !important;
+      background-position: 0% 50% !important;
+      padding: 0 0 0 units(3) !important;
+      text-align: left !important;
     }
 
     .section_link_one_next {
@@ -1494,6 +1512,11 @@ $theme-font-family-serif: 'merriweather', serif;
       float: right;
     }
   }
+
+  .usa-prose__hcd-guide_h1 {
+    font-size: font-size('heading', 'xl') !important;
+  }
+
 }
 
 @media print {
