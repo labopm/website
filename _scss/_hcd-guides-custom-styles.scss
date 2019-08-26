@@ -97,6 +97,7 @@ $theme-font-family-serif: 'merriweather', serif;
   }
 
   h3 {
+    margin-top: 1.5rem;
     font-family: font-family('sans');
     font-size: font-size('heading', 'lg');
     font-weight: font-weight('normal');
@@ -1666,7 +1667,7 @@ $theme-font-family-serif: 'merriweather', serif;
     &_footnotes {
       width: 845px;
       height: 50px;
-      padding-top: 0.5cm;
+      padding-top: 0.1cm;
       display: block;
       clear: both;
       border-top: 1px solid;
@@ -1682,6 +1683,7 @@ $theme-font-family-serif: 'merriweather', serif;
     &_references {
       margin-top: units(3);
       display: block;
+      page-break-before: always;
 
       hr {
         border: 1px solid;
