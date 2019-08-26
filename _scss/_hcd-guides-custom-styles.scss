@@ -9,7 +9,8 @@ $theme-font-family-serif: 'merriweather', serif;
 
 .hcd-guide__print_page_num, 
 .hcd-guide__print_footnotes_link, 
-.hcd-guide__print_footnotes  {
+.hcd-guide__print_footnotes, 
+.hcd-guide__print_references  {
   display: none;
 }
 
@@ -246,7 +247,7 @@ $theme-font-family-serif: 'merriweather', serif;
     
     figcaption {
       max-width: 78ex;
-      font-size: font-size('body', 5);
+      font-size: font-size('body', 4);
       font-style: italic;
       line-height: line-height('body', 3);
       color: color('base');

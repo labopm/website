@@ -28838,7 +28838,8 @@ i.e.
 
 .hcd-guide__print_page_num,
 .hcd-guide__print_footnotes_link,
-.hcd-guide__print_footnotes {
+.hcd-guide__print_footnotes,
+.hcd-guide__print_references {
   display: none; }
 
 .hcd-guide__print_wrapper {
@@ -29022,7 +29023,7 @@ i.e.
     height: auto; }
   .usa-prose__hcd-guide figure figcaption {
     max-width: 78ex;
-    font-size: 1rem;
+    font-size: 0.9375rem;
     font-style: italic;
     line-height: 1.35;
     color: #a9aeb1; }
