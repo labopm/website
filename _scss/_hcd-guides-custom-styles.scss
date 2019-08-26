@@ -1055,7 +1055,11 @@ $theme-font-family-serif: 'merriweather', serif;
     width: 100%;
     display: block;
     position: relative;
-    top: px-to-rem(12px);
+    top: px-to-rem(11px);
+  }
+
+  .hero_bar_scroll_down {
+    display: none;
   }
 
   .hero_bar_content_scroll_up {
@@ -1421,11 +1425,6 @@ $theme-font-family-serif: 'merriweather', serif;
       }
     
     }
-
-    .lab-cta__quote blockquote + hr, 
-    .lab-cta__quote blockquote + hr + span + hr {
-      width: 17%;
-    }
   }
 
   .lab-footer__hcd_guide {
@@ -1450,6 +1449,11 @@ $theme-font-family-serif: 'merriweather', serif;
 
   .hero_scroll_up {
     top: px-to-rem(58px);
+  }
+
+  .main_content_scroll_down {
+    top: 8.125rem !important;
+    padding-bottom: 11rem !important;
   }
 
   .lab-hero--hcd-guide {
@@ -1518,6 +1522,13 @@ $theme-font-family-serif: 'merriweather', serif;
     font-size: font-size('heading', 'xl') !important;
   }
 
+  .usa-prose__hcd-guide {
+    .lab-cta__quote {
+      .lab-cta__attributed_to_wrapper {
+        transform: translateY(-1.8rem);
+      }
+    }
+  }
 }
 
 @media print {
@@ -1631,6 +1642,7 @@ $theme-font-family-serif: 'merriweather', serif;
     
     &_references {
       margin-top: units(3);
+      display: block;
 
       hr {
         border: 1px solid;
@@ -1649,6 +1661,10 @@ $theme-font-family-serif: 'merriweather', serif;
       span {
         display: block;
         font-weight: font-weight('bold');
+      }
+
+      a {
+        word-break: break-all;
       }
     }
   }
@@ -1679,6 +1695,7 @@ $theme-font-family-serif: 'merriweather', serif;
   
         &_copy {
           margin: 0 units(4);
+          page-break-inside: auto;
         }
       }
     }

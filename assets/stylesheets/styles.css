@@ -29597,7 +29597,9 @@ i.e.
     width: 100%;
     display: block;
     position: relative;
-    top: 0.75rem; }
+    top: 0.6875rem; }
+  .hero_bar_scroll_down {
+    display: none; }
   .hero_bar_content_scroll_up {
     display: none !important; }
   .search_bar_scroll_down {
@@ -29800,9 +29802,6 @@ i.e.
     width: 100%; }
     .usa-prose__hcd-guide .lab__base_columns p {
       padding-top: 0; }
-  .usa-prose__hcd-guide .lab-cta__quote blockquote + hr,
-  .usa-prose__hcd-guide .lab-cta__quote blockquote + hr + span + hr {
-    width: 17%; }
   .lab-footer__hcd_guide {
     width: 100%;
     margin: 0 auto; }
@@ -29816,6 +29815,9 @@ i.e.
     top: 1.375rem; }
   .hero_scroll_up {
     top: 3.625rem; }
+  .main_content_scroll_down {
+    top: 8.125rem !important;
+    padding-bottom: 11rem !important; }
   .lab-hero--hcd-guide__guide_menu_content {
     width: 100%; }
   .lab-hero--hcd-guide__guide_menu_nav {
@@ -29859,7 +29861,9 @@ i.e.
     display: block;
     float: right; }
   .usa-prose__hcd-guide_h1 {
-    font-size: 2rem !important; } }
+    font-size: 2rem !important; }
+  .usa-prose__hcd-guide .lab-cta__quote .lab-cta__attributed_to_wrapper {
+    transform: translateY(-1.8rem); } }
 
 @media print {
   @page {
@@ -29934,7 +29938,8 @@ i.e.
       font-family: Public Sans Web, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
       font-size: 0.8125rem; }
   .hcd-guide__print_references {
-    margin-top: 1.5rem; }
+    margin-top: 1.5rem;
+    display: block; }
     .hcd-guide__print_references hr {
       border: 1px solid; }
     .hcd-guide__print_references h5 {
@@ -29946,6 +29951,8 @@ i.e.
     .hcd-guide__print_references span {
       display: block;
       font-weight: bold; }
+    .hcd-guide__print_references a {
+      word-break: break-all; }
   .usa-prose__hcd-guide .lab__bullet_points_columns,
   .usa-prose__hcd-guide .lab__base_columns {
     width: 100%; }
@@ -29960,7 +29967,8 @@ i.e.
     .usa-prose__hcd-guide .lab__hcd-guide__description_header_a {
       display: none; }
     .usa-prose__hcd-guide .lab__hcd-guide__description_copy {
-      margin: 0 2rem; }
+      margin: 0 2rem;
+      page-break-inside: auto; }
   .lab__case_in_point_header, .lab__case_in_point_vertical_border, .lab__case_in_point_bottom_border, .lab__case_in_point_bottom_border_corner {
     background-image: none !important; }
   .lab__case_in_point_vertical_border, .lab__case_in_point_bottom_border, .lab__case_in_point_bottom_border_corner {
