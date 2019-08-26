@@ -29147,7 +29147,7 @@ button:focus {
 .usa-prose__hcd-guide .lab__case_in_point_wrapper {
   width: 100%;
   height: auto;
-  margin: 2.5rem 0;
+  margin: 4rem 0 2.5rem 0;
   padding: 1rem 1rem 1rem 0;
   position: relative;
   border: 2px solid #e5a000;
@@ -29271,12 +29271,15 @@ button:focus {
   width: 36.875rem;
   height: auto;
   display: none;
-  position: absolute;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 5px;
   background-color: white;
   z-index: 500; }
   .usa-prose__hcd-guide .lab__hcd-guide__description_header {
-    height: 5rem;
+    height: 4rem;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     background-color: #f7f9fa; }
@@ -29295,7 +29298,7 @@ button:focus {
       margin: 1.75rem 2rem 0 0;
       float: right; }
   .usa-prose__hcd-guide .lab__hcd-guide__description_copy {
-    margin: 2rem 4rem; }
+    margin: 1rem 3rem; }
 
 .usa-accordion__reference_link {
   padding-right: 1rem;
@@ -29462,7 +29465,7 @@ button:focus {
   color: #3d4551; }
 
 .usa-prose__hcd-guide__highlight_copy_on {
-  background-color: #ee601d;
+  background-color: #3d4551;
   color: white; }
 
 .usa-prose__hcd-guide__carousel_image_visible {
@@ -29494,7 +29497,7 @@ button:focus {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #f0f0f0;
+  background-color: #f7f9fa;
   z-index: -100; }
 
 .lab-hcd-guide-nav {
@@ -29512,7 +29515,10 @@ button:focus {
     margin-left: 0 !important;
     margin-right: 0 !important; }
     .lab-hcd-guide-nav .usa-sidenav__item {
-      border-top: none; }
+      border-top: none;
+      /*  a:hover {
+        color: color('')
+      } */ }
       .lab-hcd-guide-nav .usa-sidenav__item .usa-current {
         color: #3d4551; }
     .lab-hcd-guide-nav .usa-sidenav .usa-current::after {

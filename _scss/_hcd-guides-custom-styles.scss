@@ -420,7 +420,7 @@ button:focus {
     &_wrapper {
       width: 100%;
       height: auto;
-      margin: units(5) 0;
+      margin: units(8) 0 units(5) 0;
       padding: units(2) units(2) units(2) 0;
       position: relative;
       border: 2px solid color('gold-30v');
@@ -588,13 +588,16 @@ button:focus {
     width: px-to-rem(590px);
     height: auto;
     display: none;
-    position: absolute;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 5px;
     background-color: color('white');
     z-index: 500;
 
     &_header {
-      height: px-to-rem(80px);
+      height: px-to-rem(64px);
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
       background-color: color('gray-cool-2');
@@ -625,7 +628,7 @@ button:focus {
     }
 
     &_copy {
-      margin: units(4) units(8);
+      margin: units(2) units(6);
     }
   }
 }
@@ -841,7 +844,7 @@ button:focus {
 }
 
 .usa-prose__hcd-guide__highlight_copy_on {
-  background-color: color('red-warm-40v');
+  background-color: color('base-darker');
   color: color('white');
 }
 
@@ -881,7 +884,7 @@ button:focus {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: color('base-lightest');
+  background-color: color('gray-cool-2');
   z-index: -100;
 }
 
@@ -904,6 +907,9 @@ button:focus {
     &__item {
       border-top: none;
 
+     /*  a:hover {
+        color: color('')
+      } */
       .usa-current {
         color: color('base-darker');
       }

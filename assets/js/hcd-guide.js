@@ -289,8 +289,8 @@ this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigatio
           cycleHighlights();
         }
       );
-    }
-  } */
+    }*/
+  } 
 );
 
 
@@ -515,7 +515,6 @@ function hideGuideMenu()  {
     guide_menu_title_element.classList.add("guide_menu_title_visible");
     
   }
-
 }
 
 
@@ -561,7 +560,13 @@ function showDescription(description_name)  {
   description_element.classList.remove("description_off");
   description_element.classList.add("description_on");
 
-  description_element.style.top = button_location;
+  overlay_element.addEventListener("click", 
+    function () {
+      closeDescription(description_name);
+    }
+  );
+
+  // description_element.style.top = button_location;
 }
 
 
@@ -574,8 +579,15 @@ function closeDescription(description_name) {
   overlay_element = document.getElementsByClassName(overlay_selector)[0];
 
   overlay_element.classList.remove("description_overlay_on");
+  
   overlay_element.classList.add("description_overlay_off");
 
+  setTimeout(
+    function () {
+      overlay_element.classList.remove("is-visible");
+    }, 50
+  );
+  
   var description_selector = "";
 
   description_selector = "lab__hcd-guide__description_" + description_name;
