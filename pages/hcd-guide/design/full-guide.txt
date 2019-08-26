@@ -1,15 +1,3 @@
----
-layout: full-guide
-section: hcd-guide
-permalink: /hcd-guide/design/design-and-implementation.htm
-title: Design & Implementation
-previous-link-url: /hcd-guide/design/feedback.htm
-previous-link-title: Feedback
-next-link-url: /hcd-guide/design/whats-next.htm
-next-link-title: What's next
-
----
-
 <div class="hcd-guide__print_wrapper hcd-guide__print_with_links hcd-guide__print_one_column">
 
 <h1>Welcome to the Design Phase</h1>
@@ -2469,4 +2457,4 @@ next-link-title: What's next
   <div class="hcd-guide__print_page_counter">49</div>
   <hr>
   <div class="hcd-guide__print_page_num_title">HCD Design Phase Concept Guide</div>
-</div> -->
+</div>
