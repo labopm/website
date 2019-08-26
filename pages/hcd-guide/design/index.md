@@ -212,4 +212,3 @@ next-link-title: Get started
   <hr>
   <div class="hcd-guide__print_page_num_title">HCD Design Phase Concept Guide</div>
 </div>
-<div class="hcd-guide__print_wrapper">
