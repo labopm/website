@@ -383,7 +383,8 @@ function showGuideMenu()  {
   guide_menu_display_value = window.getComputedStyle(guide_menu_element).getPropertyValue("display");
 
   if (guide_menu_display_value === "block")  {
-    guide_menu_element.style.display = "none";
+    guide_menu_element.classList.remove("guide_menu_visible");
+    guide_menu_element.classList.add("guide_menu_not_visible");
 
     var guide_menu_nav_selector = "";
 
@@ -393,7 +394,8 @@ function showGuideMenu()  {
 
     guide_menu_nav_element = document.getElementsByClassName(guide_menu_nav_selector)[0];
 
-    guide_menu_nav_element.style.display = "block";
+    guide_menu_nav_element.classList.remove("guide_menu_nav_not_visible");
+    guide_menu_nav_element.classList.add("guide_menu_nav_visible");
   } 
 } 
 
@@ -413,6 +415,9 @@ function hideGuideMenu()  {
   guide_menu_display_value = window.getComputedStyle(guide_menu_element).getPropertyValue("display");
 
   if (guide_menu_display_value === "none")  {
+    guide_menu_element.classList.remove("guide_menu_not_visible");
+    guide_menu_element.classList.add("guide_menu_visible");
+
     var guide_menu_nav_selector = "";
 
     guide_menu_nav_selector = "lab-hero--hcd-guide__guide_menu_content";
@@ -421,9 +426,8 @@ function hideGuideMenu()  {
 
     guide_menu_nav_element = document.getElementsByClassName(guide_menu_nav_selector)[0];
 
-    guide_menu_nav_element.style.display = "none";
-
-    guide_menu_element.style.display = "block";
+    guide_menu_nav_element.classList.remove("guide_menu_nav_visible");
+    guide_menu_nav_element.classList.add("guide_menu_nav_not_visible");
   }
 
   var main_content_selector = "";
@@ -441,6 +445,23 @@ function hideGuideMenu()  {
   if (main_content_contains_class_value === false)  {
     main_content_element.classList.add("main-content__hcd-guide");
   }
+
+  var is_guide_menu_title_visible = isGuideMenuTitleVisible();
+
+  if (is_guide_menu_title_visible === false) {
+    var guide_menu_title_selector = "";
+
+    guide_menu_title_selector = "lab-hero--hcd-guide__guide_menu_title";
+
+    var guide_menu_title_element = {};
+    
+    guide_menu_title_element = document.getElementsByClassName(guide_menu_title_selector)[0];
+
+    guide_menu_title_element.classList.remove("guide_menu_title_not_visible");
+    guide_menu_title_element.classList.add("guide_menu_title_visible");
+    
+  }
+
 }
 
 
@@ -558,6 +579,32 @@ function showMobileSearchForm() {
 
   guide_menu_title_element.classList.add("guide_menu_title_not_visible");
 }
+
+
+function isGuideMenuTitleVisible() {
+  var search_mobile_link_selector = "";
+
+  search_mobile_link_selector = "lab-hero--hcd-guide__guide_menu_search_link";
+
+  var search_mobile_link_element = {};
+  
+  search_mobile_link_element = document.getElementsByClassName(search_mobile_link_selector)[0];
+
+  var search_mobile_link_display_value = "";
+
+  search_mobile_link_display_value = window.getComputedStyle(search_mobile_link_element, null).getPropertyValue("display");
+
+  var is_guide_menu_title_visible;
+
+  if (search_mobile_link_display_value === "block") {
+    is_guide_menu_title_visible = true;   
+  } else {
+    is_guide_menu_title_visible = false;
+  }
+
+  return is_guide_menu_title_visible;
+}
+
 
 
 
@@ -880,7 +927,7 @@ function expandSearchBar()  {
   // The width of the browser window is passed on.
   window_width = window.innerWidth;
 
-  if (window_width <= 414)  {
+  if (window_width <= 1024)  {
     gray_banner_element.classList.remove("gray_banner_scroll_down");
     gray_banner_element.classList.add("gray_banner_scroll_up");
 

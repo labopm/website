@@ -978,7 +978,7 @@ $theme-font-family-serif: 'merriweather', serif;
   }
 }
 
-@media screen and (min-width: 415px) {
+@media screen and (min-width: 1025px) {
   .lab-hero--hcd-guide {
     &__desktop_visible {
       display: inline-block;
@@ -1000,7 +1000,7 @@ $theme-font-family-serif: 'merriweather', serif;
   }
 }
 
-@media screen and (max-width: 414px)	{
+@media screen and (max-width: 64rem)	{
   .usa-banner__hcd-guide, 
   .usa-header__hcd-guide, 
   .lab-hero--hcd-guide {
@@ -1074,11 +1074,52 @@ $theme-font-family-serif: 'merriweather', serif;
   .main_content_scroll_down {
     top: 9.125rem !important;
     padding-bottom: 11rem !important;
-  }/* 
+  }
+  
+  .guide_menu_nav_not_visible {
+    display: none !important;
+  }
 
-  .main_content_scroll_up {
-    top: 10rem;
-  } */
+  .guide_menu_nav_visible {
+    display: block !important;
+  }
+
+  .guide_menu_not_visible {
+    display: none !important;
+  }
+
+  .guide_menu_visible {
+    display: block !important;
+  }
+ 
+  .guide_menu_title_not_visible {
+    display: none !important;
+  }
+
+  .guide_menu_title_visible {
+    display: block !important;
+  }
+  
+  .search_mobile_link_not_visible {
+    display: none !important;
+  }
+  
+  .search_mobile_link_hide {
+    display: none !important;
+  }
+
+  .search_mobile_link_show {
+    display: block !important;
+  }
+  
+  .search_form_visible {
+    display: inline-block !important;
+    float: right !important;
+  }
+
+  .search_field_visible {
+    display: inline-block !important;
+  }
 
   .usa-banner {
     background-color: color('base-lightest');
@@ -1146,27 +1187,15 @@ $theme-font-family-serif: 'merriweather', serif;
       vertical-align: top;
     }
 
-    .guide_menu_title_not_visible {
-      display: none !important;
-    }
-
     &__guide_menu_link {
       margin-top: units(1);
       display: inline-block;
       vertical-align: top;
     }
 
-    .search_mobile_link_not_visible {
-      display: none !important;
-    }
-
     &__guide_menu_search_link {
       margin-top: 0 !important;
       float: right;
-    }
-
-    .search_mobile_link_hide {
-      display: none !important;
     }
     
     &__guide_menu_search {
@@ -1185,15 +1214,6 @@ $theme-font-family-serif: 'merriweather', serif;
       .lab-hero--hcd-guide__search_submit_image {
         height: px-to-rem(36px);
       }
-    }
-
-    .search_form_visible {
-      display: inline-block !important;
-      float: right !important;
-    }
-
-    .search_field_visible {
-      display: inline-block !important;
     }
 
     &__guide_menu_content {
@@ -1383,56 +1403,6 @@ $theme-font-family-serif: 'merriweather', serif;
     
     }
 
-    .usa-layout__content_bottom {
-      .usa-back_to_top {
-        width: units(6);
-        margin: 0 auto;
-        padding-top: units(3);
-        padding-left: 0;
-        background-position: 50% 0%;
-      }
-
-      hr {
-        height: px-to-rem(1px);
-      }
-
-      .usa-layout__link_wrapper {
-        width: 100%;
-        height: units(6);
-        margin-top: units(3);
-      }
-
-      .usa-layout__section_link {
-        width: 10.5rem;
-        height: px-to-rem(44px);
-        padding: 0 units(3) 0 0;
-        display: table-cell;
-        float: none;
-        background-color: color('white');
-        background-image: url('/assets/img/lab/hcd-guide/design/section-link-next-mobile.png');
-        background-position: 100% 50%;
-        border-radius: 0;
-        line-height: 1.4;
-        font-weight: font-weight('normal');
-        text-align: right;
-        color: color('blue-50v');
-        text-decoration: underline;
-        vertical-align: middle;
-      }
-
-      .section_link_previous {
-        background-image: url('/assets/img/lab/hcd-guide/design/section-link-previous-mobile.png');
-        background-position: 0% 50%;
-        padding: 0 0 0 units(3);
-        text-align: left;
-      }
-
-      .section_link_one_next {
-        display: block;
-        float: right;
-      }
-    }
-
     .lab-cta__quote blockquote + hr, 
     .lab-cta__quote blockquote + hr + span + hr {
       width: 17%;
@@ -1450,6 +1420,79 @@ $theme-font-family-serif: 'merriweather', serif;
 
   .usa-footer__contact-links_hcd-guide {
     right: auto;
+  }
+}
+
+
+@media screen and (min-width: 25.9375rem) and (max-width: 64rem)	{
+  .header_scroll_up {
+    top: px-to-rem(22px);
+  }
+
+  .hero_scroll_up {
+    top: px-to-rem(58px);
+  }
+
+  .lab-hero--hcd-guide {
+    &__guide_menu_content {
+      width: 100%;
+    }
+
+    &__guide_menu_nav {
+      width: 18rem;
+    }
+  }
+}
+
+@media screen and (max-width: 25.875rem) {
+  .usa-layout__content_bottom {
+    .usa-back_to_top {
+      width: units(6);
+      margin: 0 auto;
+      padding-top: units(3);
+      padding-left: 0;
+      background-position: 50% 0%;
+    }
+
+    hr {
+      height: px-to-rem(1px);
+    }
+
+    .usa-layout__link_wrapper {
+      width: 100%;
+      height: units(6);
+      margin-top: units(3);
+    }
+
+    .usa-layout__section_link {
+      width: 10.5rem;
+      height: px-to-rem(44px);
+      padding: 0 units(3) 0 0;
+      display: table-cell;
+      float: none;
+      background-color: color('white');
+      background-image: url('/assets/img/lab/hcd-guide/design/section-link-next-mobile.png');
+      background-position: 100% 50%;
+      border-radius: 0;
+      line-height: 1.4;
+      font-weight: font-weight('normal');
+      text-align: right;
+      color: color('blue-50v');
+      text-decoration: underline;
+      vertical-align: middle;
+    }
+
+    .section_link_previous {
+      background-image: url('/assets/img/lab/hcd-guide/design/section-link-previous-mobile.png');
+      background-position: 0% 50%;
+      padding: 0 0 0 units(3);
+      text-align: left;
+    }
+
+    .section_link_one_next {
+      display: block;
+      float: right;
+    }
   }
 }
 
