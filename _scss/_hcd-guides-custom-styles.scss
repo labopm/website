@@ -1311,6 +1311,10 @@ $theme-font-family-serif: 'merriweather', serif;
         background-color: color('base-lightest');
         background-image: url('/assets/img/lab/hcd-guide/design/highlights-off.svg');
       }
+
+      .lab-hero--hcd-guide__highlights_off {
+        background-image: url('/assets/img/lab/hcd-guide/design/highlights-on.svg');
+      }
     }
 
     &__guide_menu_misc_links {

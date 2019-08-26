@@ -30,7 +30,7 @@
     {% endfor %}
   {% endif %}
 
-<li{%if _link-current == true and _link-sub-section == true %} class="usa-sidenav__contains_submenu"{% endif %} {%if _link-within_section == true and _link-sub-section == true %} class="usa-sidenav__contains_submenu"{% endif %} {%if _landing_page == true and _link-sub-section == true %} class="usa-sidenav__contains_submenu"{% endif %}>
+<li{%if _link-current == true and _link-sub-section == true %} class="usa-sidenav__contains_submenu"{% endif %} {%if _link-within_section == true and _link-sub-section == true %} class="usa-sidenav__contains_submenu"{% endif %}>
   <a href="{{ site.baseurl }}{{ link.href }}" title="{{ link.text }}" {% if _link-current %} class="lab-hero--hcd-guide__guide_menu-mobilenav-current" {% endif %}>{{ link.text }} {{ link.class }}</a>{% if link.subnav and _link-current %}<a href="{{ site.baseurl }}{{ link.href }}" title="View more topics in {{ link.text }}"" class="lab-hero--hcd-guide__guide_menu_view_more"><img src="/assets/img/lab/hcd-guide/design/guide-menu-view-more-mobile.png" width="13" height="13" title="View more topics in {{ link.text }}" /></a>{% endif %}
   {% if _link-sub-section == true and _link-current == true %}
     <ul class="usa-sidenav__sublist">
@@ -41,13 +41,13 @@
     <ul class="usa-sidenav__sublist">
       {% include subnav-mobile.html links=_sub-sub-section %}
     </ul>
-    {% endif %}
+    {% endif %}<!-- 
 
     {% if _landing_page == true %}
     <ul class="usa-sidenav__sublist">
       {% include subnav-mobile.html links=_sub-sub-section %}
     </ul>
-    {% endif %}
+    {% endif %} -->
   {% endif %}
 </li>
 {% endfor %}
