@@ -514,6 +514,11 @@ function showGuideMenu()  {
     guide_menu_nav_element.classList.remove("guide_menu_nav_not_visible");
     guide_menu_nav_element.classList.add("guide_menu_nav_visible");
   } 
+
+  gray_banner_element.classList.add("gray_banner_mobile_visible_scroll_up");
+  header_element.classList.add("header_mobile_visible_scroll_up");
+  hero_element.classList.add("hero_mobile_visible_scroll_up");
+
 } 
 
 
@@ -576,8 +581,34 @@ function hideGuideMenu()  {
 
     guide_menu_link_title_element.classList.remove("guide_menu_link_title_not_visible");
     guide_menu_link_title_element.classList.add("guide_menu_link_title_visible");
-    
   }
+
+  var gray_banner_selector = "";
+  var header_selector = "";
+  var hero_bar_selector = "";
+
+  // The CSS selectors which refer to the gray banner, header and main block of content 
+  // are passed on.
+  gray_banner_selector = "usa-banner__hcd-guide";
+  header_selector = "usa-header__hcd-guide";
+  hero_bar_selector = "lab-hero--hcd-guide__body";
+
+  // Objects which will hold HTML DOM objects for the gray banner, header, and 
+  // main block of content are initialized.
+  var gray_banner_element = {};
+  var header_element = {};
+  var hero_bar_element = {};
+
+  // HTML DOM objects which refer to the HTML elements the above variables refer 
+  // to are passed on.
+  gray_banner_element = document.getElementsByClassName(gray_banner_selector)[0];
+  header_element = document.getElementsByClassName(header_selector)[0];
+  hero_bar_element = document.getElementsByClassName(hero_bar_selector)[0];
+
+  gray_banner_element.classList.remove("gray_banner_mobile_visible_scroll_up");
+  header_element.classList.remove("header_mobile_visible_scroll_up");
+  hero_bar_element.classList.remove("hero_mobile_visible_scroll_up");
+
 }
 
 
@@ -709,31 +740,26 @@ function showMobileSearchForm() {
   guide_menu_link_title_element.classList.add("guide_menu_link_title_not_visible");
 }
 
- 
+*/ 
 function isGuideMenuLinkVisible() {
-  var search_mobile_link_selector = "";
+  var guide_menu_content_selector = "";
 
-  search_mobile_link_selector = "lab-hero--hcd-guide__guide_menu_search_link";
+  guide_menu_content_selector = "lab-hero--hcd-guide__guide_menu_content";
 
-  var search_mobile_link_element = {};
+  var guide_menu_content_element = {};
   
-  search_mobile_link_element = document.getElementsByClassName(search_mobile_link_selector)[0];
+  guide_menu_content_element = document.getElementsByClassName(guide_menu_content_selector)[0];
 
-  var search_mobile_link_display_value = "";
+  var guide_menu_content_class = "";
+  
+  guide_menu_content_class = "guide_menu_nav_visible";
 
-  search_mobile_link_display_value = window.getComputedStyle(search_mobile_link_element, null).getPropertyValue("display");
+  var is_guide_menu_content_visible;
 
-  var is_guide_menu__visible;
+  is_guide_menu_content_visible = guide_menu_content_element.classList.contains(guide_menu_content_class);
 
-  if (search_mobile_link_display_value === "block") {
-    is_guide_menu__visible = true;   
-  } else {
-    is_guide_menu__visible = false;
-  }
-
-  return is_guide_menu__visible;
+  return is_guide_menu_content_visible;
 }
-*/
 
 
 
@@ -746,17 +772,13 @@ function isMobileMenuVisible()  {
 
   mobile_menu_element = document.getElementsByClassName(mobile_menu_selector)[0];
 
-  var mobile_menu_display_value = "";
+  var mobile_menu_class = "";
 
-  mobile_menu_display_value = mobile_menu_element.style.display;
+  mobile_menu_class = "guide_menu_nav_visible";
   
   var is_mobile_menu_visible;
 
-  if (mobile_menu_display_value === "block")  {
-    is_mobile_menu_visible = true;
-  } else {
-    is_mobile_menu_visible = false;
-  }
+  is_mobile_menu_visible = mobile_menu_element.classList.contains(mobile_menu_class);
 
   return is_mobile_menu_visible;
 }
@@ -840,7 +862,7 @@ function stopSideNavigationScrolling(side_navigation_values)  {
     side_navigation_element.classList.add("side_navigation_scroll_up");
 
     side_navigation_element.style.top = scroll_value + "px";
-  }
+  } 
 }
 
 
@@ -928,44 +950,44 @@ function shrinkSearchBar()  {
   window_width = window.innerWidth;
 
   // Strings which will hold the CSS selectors for the gray banner, header, and 
-    // main block of content are initialized.
-    var gray_banner_selector = "";
-    var header_selector = "";
-    var main_content_selector = "";
+  // main block of content are initialized.
+  var gray_banner_selector = "";
+  var header_selector = "";
+  var main_content_selector = "";
 
-    // The CSS selectors which refer to the gray banner, header and main block of content 
-    // are passed on.
-    gray_banner_selector = "usa-banner__hcd-guide";
-    header_selector = "usa-header__hcd-guide";
-    main_content_selector = "main-content__hcd-guide";
+  // The CSS selectors which refer to the gray banner, header and main block of content 
+  // are passed on.
+  gray_banner_selector = "usa-banner__hcd-guide";
+  header_selector = "usa-header__hcd-guide";
+  main_content_selector = "main-content__hcd-guide";
 
-    // Objects which will hold HTML DOM objects for the gray banner, header, and 
-    // main block of content are initialized.
-    var gray_banner_element = {};
-    var header_element = {};
-    var main_content_element = {};
+  // Objects which will hold HTML DOM objects for the gray banner, header, and 
+  // main block of content are initialized.
+  var gray_banner_element = {};
+  var header_element = {};
+  var main_content_element = {};
 
-    // HTML DOM objects which refer to the HTML elements the above variables refer 
-    // to are passed on.
-    gray_banner_element = document.getElementsByClassName(gray_banner_selector)[0];
-    header_element = document.getElementsByClassName(header_selector)[0];
-    main_content_element = document.getElementsByClassName(main_content_selector)[0];
+  // HTML DOM objects which refer to the HTML elements the above variables refer 
+  // to are passed on.
+  gray_banner_element = document.getElementsByClassName(gray_banner_selector)[0];
+  header_element = document.getElementsByClassName(header_selector)[0];
+  main_content_element = document.getElementsByClassName(main_content_selector)[0];
 
-    // IF/ELSE statement which sets the gray banner and header to the top of the webpage 
-    // and sets the blue bar to the top of the browser window if the browser is a 
-    // mobile browser. Otherwise, only the blue bar is set to the top of the browser window.
-    if (window_width <= 1024)  {
-      gray_banner_element.classList.remove("gray_banner_scroll_up");
-      gray_banner_element.classList.add("gray_banner_scroll_down");
+  // IF/ELSE statement which sets the gray banner and header to the top of the webpage 
+  // and sets the blue bar to the top of the browser window if the browser is a 
+  // mobile browser. Otherwise, only the blue bar is set to the top of the browser window.
+  if (window_width <= 1024)  {
+    gray_banner_element.classList.remove("gray_banner_scroll_up");
+    gray_banner_element.classList.add("gray_banner_scroll_down");
 
-      header_element.classList.remove("header_scroll_up");
-      header_element.classList.add("header_scroll_down");
-    } else {
-      gray_banner_element.classList.add("gray_banner_scroll_down");
-      header_element.classList.add("header_scroll_down");
-    }
+    header_element.classList.remove("header_scroll_up");
+    header_element.classList.add("header_scroll_down");
+  } else {
+    gray_banner_element.classList.add("gray_banner_scroll_down");
+    header_element.classList.add("header_scroll_down");
+  }
 
-    main_content_element.classList.add("main_content_scroll_down");
+  main_content_element.classList.add("main_content_scroll_down");
 
   /* // IF statement which adds a CSS value which will affix the blue bar of the search bar 
   // to the top of the browser window.
@@ -1050,20 +1072,6 @@ function expandSearchBar()  {
   main_content_element = document.getElementsByClassName(main_content_selector)[0];
 
   
-  // A Number which will hold the width of the browser window is initialized.
-  var window_width;
-
-  // The width of the browser window is passed on.
-  window_width = window.innerWidth;
-
-  if (window_width <= 1024)  {
-    gray_banner_element.classList.remove("gray_banner_scroll_down");
-    gray_banner_element.classList.add("gray_banner_scroll_up");
-
-    header_element.classList.remove("header_scroll_down");
-    header_element.classList.add("header_scroll_up");
-  }
-
 /*   // A String which will hold the value of the CSS property, 'position', of the blue bar is initialized.
   var search_bar_position_left_value;
 
@@ -1115,6 +1123,21 @@ function expandSearchBar()  {
   print_links_element.classList.remove("hero_bar_content_scroll_down");
   print_links_element.classList.add("hero_bar_content_scroll_up");
   
+  // A Number which will hold the width of the browser window is initialized.
+  var window_width;
+
+  // The width of the browser window is passed on.
+  window_width = window.innerWidth;
+
+  if (window_width <= 1024)  {
+    gray_banner_element.classList.remove("gray_banner_scroll_down");
+    gray_banner_element.classList.add("gray_banner_scroll_up");
+
+    header_element.classList.remove("header_scroll_down");
+    header_element.classList.add("header_scroll_up");
+  }
+
+
   /* // A String is initialized which will contain the selector which refers to the 
   // blue bar which appears as a visitor scrolls down.
   var search_field_selector = "";
