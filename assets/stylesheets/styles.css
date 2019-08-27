@@ -29458,16 +29458,15 @@ button:not([disabled]):focus {
   .lab-hero--hcd-guide__sub-title {
     height: 2rem;
     display: inline-block;
-    color: white;
-    /*   a:first-of-type {
-      margin-top: 0.45rem;
-      margin-right: units(3);
-     }*/ }
+    color: white; }
     .lab-hero--hcd-guide__sub-title a {
       margin-top: 0.4rem;
       display: inline-block;
       font-size: 0.9375rem;
       color: white; }
+    .lab-hero--hcd-guide__sub-title a:first-of-type {
+      margin-top: 0.45rem;
+      margin-right: 1.5rem; }
   .lab-hero--hcd-guide .lab-hero--home__body {
     margin-left: auto ;
     margin-right: auto ;
@@ -29672,7 +29671,7 @@ button:not([disabled]):focus {
     .lab-hcd-guide-nav .usa-sidenav .usa-sidenav__sublist .usa-sidenav__item .usa-current::after {
       left: 1rem; }
 
-.lab-hcd-guide-highlights {
+.lab-hero--hcd-guide__highlights {
   margin-top: 4rem;
   margin-left: 1rem;
   /* 
@@ -29683,13 +29682,13 @@ button:not([disabled]):focus {
   .lab-hero--hcd-guide__highlights_off {
     background-image: url('/assets/img/lab/hcd-guide/design/highlights-off.svg');
   } */ }
-  .lab-hcd-guide-highlights span {
+  .lab-hero--hcd-guide__highlights span {
     display: inline-block;
     margin: 0.19rem 0.31rem 0 0;
     vertical-align: top;
     font-size: 0.9375rem;
     color: #3d4551; }
-  .lab-hcd-guide-highlights button {
+  .lab-hero--hcd-guide__highlights button {
     width: 58px;
     height: 28px;
     display: inline-block;
@@ -30001,7 +30000,7 @@ button:not([disabled]):focus {
           border-bottom: none; }
     .lab-hero--hcd-guide__guide_menu_highlights {
       margin-top: 2.5rem; }
-      .lab-hero--hcd-guide__guide_menu_highlights .lab-hero--hcd-guide__highlights_desc {
+      .lab-hero--hcd-guide__guide_menu_highlights .lab-hero--hcd-guide__guide_menu_highlights_desc {
         display: inline-block;
         margin: 0.19rem 0.31rem 0 0;
         vertical-align: top;
@@ -30160,7 +30159,10 @@ button:not([disabled]):focus {
     max-height: 8.5in;
     margin: 2cm; */ }
   @page :right {
-    content: "HCD Design Phase Concept Guide"; }
+    content: "HCD Design Phase Concept Guide";
+    margin: 0; }
+  @page :left {
+    margin: 1in; }
   @page :right {
     @top-right {
       content: counter(page); } }
