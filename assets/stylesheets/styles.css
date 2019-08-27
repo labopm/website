@@ -30202,7 +30202,10 @@ button:not([disabled]):focus {
     -webkit-column-count: 2;
     column-count: 2;
     column-count: 2;
-    column-gap: 0.5in; }
+    column-gap: 0.5in;
+    display: auto;
+    float: auto;
+    vertical-align: auto; }
     .hcd-guide__print_wrapper *:first-child {
       margin-top: 0 !important; }
   .hcd-guide__print_one_column {

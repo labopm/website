@@ -1936,12 +1936,9 @@ button:not([disabled]):focus {
   }
 
   .hcd-guide__print {
-    &_wrapper, 
+   /*  &_wrapper, 
     &_page_num {
-      display: block;
-      float: left;
-      vertical-align: top;
-    }
+    } */
 
     &_wrapper {
      /*  width: 845px;
@@ -1982,6 +1979,10 @@ button:not([disabled]):focus {
       top: 1cm;
       right: 0.5cm;
       page-break-after: always;
+      display: block;
+      float: left;
+      vertical-align: top;
+
 
       hr {
         border: 1px solid;
