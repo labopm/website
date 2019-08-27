@@ -94,8 +94,8 @@ hcd-guide:
         sub-subnav: 
         - text: Envisioning ideas
           href: /hcd-guide/design/envisioning-ideas.htm
-        - text: Building out ideas
-          href: /hcd-guide/design/building-out-ideas.htm
+        #- text: Building out ideas
+        #  href: /hcd-guide/design/building-out-ideas.htm
         - text: Iteration
           href: /hcd-guide/design/iteration.htm
         - text: Feedback

@@ -4,6 +4,7 @@ section: hcd-guide
 sub-section: Design
 permalink: /hcd-guide/design/
 title: Design Phase
+previous-link-title: none
 next-link-url: /hcd-guide/design/purpose-of-this-guide.htm
 next-link-title: Get started
 ---
@@ -13,8 +14,10 @@ next-link-title: Get started
 <h1>Welcome to the Design Phase</h1>
 <div class="usa-prose__hcd-guide__reading_print">
   <span class="usa-prose__hcd-guide__reading_time">4 min read</span>
-  <a href="javascript:window.print();" title="Print guide" class="usa-prose__hcd-guide__print_guide_img"><img src="/assets/img/lab/hcd-guide/design/print-guide.svg" width="22" height="29" alt="Print guide" /></a>
-  <a href="javascript:window.print();" title="Print guide" class="usa-prose__hcd-guide__print_guide">Print section</a>
+  <a href="javascript:window.print();" title="Print guide" class="usa-prose__hcd-guide__print_guide_img usa-prose__hcd-guide__print_desktop_visible"><img src="/assets/img/lab/hcd-guide/design/print-guide.svg" width="22" height="29" alt="Print guide" /></a>
+  <a href="javascript:window.print();" title="Print guide" class="usa-prose__hcd-guide__print_guide usa-prose__hcd-guide__print_desktop_visible">Print page on desktop</a>
+  <a href="#" title="Print guide" class="usa-prose__hcd-guide__print_guide_img usa-prose__hcd-guide__print_mobile_visible"><img src="/assets/img/lab/hcd-guide/design/print-guide.svg" width="22" height="29" alt="Print guide" /></a>
+  <a href="" title="Print guide" class="usa-prose__hcd-guide__print_guide usa-prose__hcd-guide__print_mobile_visible">PDF</a>
 </div>
 
 <p>
