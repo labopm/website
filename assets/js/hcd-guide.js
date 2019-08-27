@@ -257,7 +257,7 @@ this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigatio
       }
     );
 
-    var guide_menu_link_title_selector = "";
+    /* var guide_menu_link_title_selector = "";
     
     guide_menu_link_title_selector = "lab-hero--hcd-guide__guide_menu_link_title";
 
@@ -269,7 +269,7 @@ this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigatio
       function () {
         showGuideMenu();
       }
-    );
+    ); */
 
     var guide_menu_close_link_selector = {}; 
     
@@ -535,41 +535,39 @@ function showGuideMenu()  {
 
   var gray_banner_selector = "";
   var header_selector = "";
+  var hero_bar_selector = "";
 
   // The CSS selectors which refer to the gray banner, header and main block of content 
   // are passed on.
   gray_banner_selector = "usa-banner__hcd-guide";
   header_selector = "usa-header__hcd-guide";
+  hero_bar_selector = "lab-hero--hcd-guide";
 
   // Objects which will hold HTML DOM objects for the gray banner, header, and 
   // main block of content are initialized.
   var gray_banner_element = {};
   var header_element = {};
+  var hero_bar_element = {};
 
   // HTML DOM objects which refer to the HTML elements the above variables refer 
   // to are passed on.
   gray_banner_element = document.getElementsByClassName(gray_banner_selector)[0];
   header_element = document.getElementsByClassName(header_selector)[0];
+  hero_bar_element = document.getElementsByClassName(hero_bar_selector)[0];
 
+  gray_banner_element.classList.remove("gray_banner_scroll_up");
+  header_element.classList.remove("header_scroll_up");
   gray_banner_element.classList.add("gray_banner_mobile_visible_scroll_up");
   header_element.classList.add("header_mobile_visible_scroll_up");
+  hero_bar_element.classList.add("hero_mobile_visible_scroll_up");
+    
 
-  var current_position;
+    
 
-  current_position = window.pageYOffset;
+   
 
-  if (current_position > 0) {
-    var hero_bar_selector = "";
-
-    hero_bar_selector = "lab-hero--hcd-guide";
-
-    var hero_bar_element = {};
-
-    hero_bar_element = document.getElementsByClassName(hero_bar_selector)[0];
-
-    hero_bar_element.classList.add("hero_mobile_visible_scroll_up");
-
-  }
+    
+ /*  } */
 
 } 
 
@@ -619,9 +617,9 @@ function hideGuideMenu()  {
   if (main_content_contains_class_value === false)  {
     main_content_element.classList.add("main-content__hcd-guide");
   }
-
+/*
   var is_guide_menu_link_visible = isGuideMenuLinkVisible();
-
+ 
   if (is_guide_menu_link_visible === false) {
     var guide_menu_link_title_selector = "";
 
@@ -633,7 +631,7 @@ function hideGuideMenu()  {
 
     guide_menu_link_title_element.classList.remove("guide_menu_link_title_not_visible");
     guide_menu_link_title_element.classList.add("guide_menu_link_title_visible");
-  }
+  } */
 
   var gray_banner_selector = "";
   var header_selector = "";
@@ -660,7 +658,6 @@ function hideGuideMenu()  {
   gray_banner_element.classList.remove("gray_banner_mobile_visible_scroll_up");
   header_element.classList.remove("header_mobile_visible_scroll_up");
   hero_bar_element.classList.remove("hero_mobile_visible_scroll_up");
-
 }
 
 
@@ -804,7 +801,7 @@ function isGuideMenuLinkVisible() {
 
   var guide_menu_content_class = "";
   
-  guide_menu_content_class = "guide_menu_nav_visible";
+  guide_menu_content_class = "guide_menu_visible";
 
   var is_guide_menu_content_visible;
 
@@ -832,7 +829,7 @@ function isMobileMenuVisible()  {
 
   is_mobile_menu_visible = mobile_menu_element.classList.contains(mobile_menu_class);
 
-  return is_mobile_menu_visible;
+  return mobile_menu_element.classList.contains(mobile_menu_class);
 }
 
 

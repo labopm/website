@@ -1591,20 +1591,21 @@ button:not([disabled]):focus {
       }
     }
     
-    &__guide_menu_link_title,
+    &__guide_menu_link,
     &__guide_menu_title {
-      width: 6.5rem;
+      width: 8rem;
+      height: 1.6rem;
       margin-top: px-to-rem(7px);
       display: inline-block;
+      font-size: font-size('body', 'sm') !important;
+
       color: color('white');
       text-transform: uppercase;
       vertical-align: top;
     }
 
     &__guide_menu_link_title {
-      font-size: font-size('body', 'sm') !important;
       margin-right: units(1) !important;
-      text-decoration: none;
     }
 
     &__guide_menu_title {
@@ -1612,28 +1613,37 @@ button:not([disabled]):focus {
     }
 
     &__guide_menu_link {
-      margin-top: px-to-rem(7px);
-      width: 30px;
-      display: inline-block;
-      vertical-align: top;
+      background-image: url('/assets/img/lab/hcd-guide/design/guide-menu-icon.png');
+      background-repeat: no-repeat;
+      background-position: 100% 0%;
+      text-decoration: none;
 
-      div {
-        width: 75%;
-      }
+
+      /* span {
+        display: inline-block;
+      } */
+    }
+/* 
+    &__guide_menu_link_wrapper {
+      width: 25px;
+      margin-left: 0.5rem;
     }
 
-    &__guide_menu_link div,
-    &__guide_menu_link:before,
-    &__guide_menu_link:after {
+    &__guide_menu_icon div,
+    &__guide_menu_icon:before,
+    &__guide_menu_icon:after {
       background-color: #fff;
       border-radius: 3px;
       content: '';
-      display: block;
+      display: inline-block;
       height: 2px;
       margin: 4px 0;
     }
 
-    
+    &__guide_menu_icon div {
+      width: 75%;
+    } */
+
     &__guide_menu_search_link {
       margin-top: 0 !important;
       float: right;
