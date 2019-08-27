@@ -29111,6 +29111,9 @@ body .progress-wrap::after {
   font-weight: bold;
   color: #a9aeb1; }
 
+.usa-prose__hcd-guide ol li {
+  color: #3d4551; }
+
 .usa-prose__hcd-guide .lab__bullet_points_columns,
 .usa-prose__hcd-guide .lab__base_columns {
   width: 46%;

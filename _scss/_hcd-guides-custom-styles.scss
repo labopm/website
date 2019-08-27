@@ -321,6 +321,12 @@ body .progress-wrap::after {
     color: color('base');
   }
 
+  ol {
+    li {
+      color: color('base-darker');
+    }
+  }
+
   .lab__bullet_points_columns, 
   .lab__base_columns {
     width: 46%;
