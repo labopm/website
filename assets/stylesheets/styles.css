@@ -29248,7 +29248,8 @@ button:not([disabled]):focus {
 .usa-prose__hcd-guide .lab-cta__quote {
   max-width: 78ex;
   background-color: #f7f9fa;
-  padding: 1rem 2rem; }
+  margin-bottom: 1.5rem;
+  padding: 1rem 2rem 0 2rem; }
   .usa-prose__hcd-guide .lab-cta__quote hr {
     height: 0.125rem;
     background-color: #c2850c;

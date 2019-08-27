@@ -498,7 +498,8 @@ button:not([disabled]):focus {
   .lab-cta__quote {
     max-width: 78ex;
     background-color: color('gray-cool-2');
-    padding: units(2) units(4);
+    margin-bottom: units(3);
+    padding: units(2) units(4) 0 units(4);
 
     hr {
       height: px-to-rem(2px);
