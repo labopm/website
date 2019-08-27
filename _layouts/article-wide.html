@@ -45,7 +45,7 @@
             {% if page.previous-link-url %}
               {% assign previous_link_url = page.previous-link-url %}
               {% assign previous_link_title = page.previous-link-title %}
-              {% assign link_class = 'usa-prose__hcd-guide_a usa-layout__section_link section_link_previous' %}
+              {% assign link_class = 'usa-layout__section_link section_link_previous' %}
               <a href="{{ previous_link_url }}" title="{{ previous_link_title }}" class="{{ link_class }}">{{ previous_link_title }}</a>
             {% endif %}
             {% if page.next-link-url %}

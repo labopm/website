@@ -219,6 +219,7 @@ body .progress-wrap::after {
 
 .lab__button {
   background-color: color('blue-50v') !important;
+  outline-offset: 0.25rem;
 }
 
 .lab__button:hover {
@@ -554,6 +555,12 @@ body .progress-wrap::after {
 
     &__content {
       background-color: color('gold-5v');
+
+      p, 
+      span, 
+      h4 {
+        line-height: line-height('body', 2);
+      }
       
       p {
         padding-bottom: units(3);
@@ -2091,7 +2098,7 @@ body .progress-wrap::after {
     &_page_num_title {
       height: 253px;
       margin-top: 0.75rem;
-      line-height: 1;
+      line-height: line-height('body', 1);
       writing-mode: vertical-rl;
       text-orientation: sideways;
     }

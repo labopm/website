@@ -29029,7 +29029,8 @@ body .progress-wrap::after {
   background-color: transparent !important; }
 
 .lab__button {
-  background-color: #0076d6 !important; }
+  background-color: #0076d6 !important;
+  outline-offset: 0.25rem; }
 
 .lab__button:hover {
   background-color: #2378c3 !important; }
@@ -29288,6 +29289,10 @@ body .progress-wrap::after {
       font-size: 1rem; }
   .usa-prose__hcd-guide .usa-accordion__content {
     background-color: #fef0c8; }
+    .usa-prose__hcd-guide .usa-accordion__content p,
+    .usa-prose__hcd-guide .usa-accordion__content span,
+    .usa-prose__hcd-guide .usa-accordion__content h4 {
+      line-height: 1.2; }
     .usa-prose__hcd-guide .usa-accordion__content p {
       padding-bottom: 1.5rem; }
   .usa-prose__hcd-guide .usa-accordion__reference {
