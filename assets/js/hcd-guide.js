@@ -591,7 +591,7 @@ function hideGuideMenu()  {
   // are passed on.
   gray_banner_selector = "usa-banner__hcd-guide";
   header_selector = "usa-header__hcd-guide";
-  hero_bar_selector = "lab-hero--hcd-guide__body";
+  hero_bar_selector = "lab-hero--hcd-guide";
 
   // Objects which will hold HTML DOM objects for the gray banner, header, and 
   // main block of content are initialized.
