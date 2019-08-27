@@ -29153,6 +29153,8 @@ button:not([disabled]):focus {
   display: flex; }
   .usa-prose__hcd-guide .lab__split_columns .lab__split_columns_img_wrapper {
     max-width: 24ex; }
+    .usa-prose__hcd-guide .lab__split_columns .lab__split_columns_img_wrapper .lab__split_columns_img {
+      width: 100%; }
   .usa-prose__hcd-guide .lab__split_columns .lab__split_columns_copy {
     max-width: 49ex;
     margin: 0 0 0 1.25rem;
@@ -29232,7 +29234,7 @@ button:not([disabled]):focus {
 .usa-prose__hcd-guide .lab-cta__quote {
   max-width: 78ex;
   background-color: #f7f9fa;
-  padding: 1.5rem 2.5rem; }
+  padding: 1rem 2rem; }
   .usa-prose__hcd-guide .lab-cta__quote hr {
     height: 0.125rem;
     background-color: #c2850c;
@@ -30154,7 +30156,9 @@ button:not([disabled]):focus {
   .usa-prose__hcd-guide .lab-cta__quote .lab-cta__attributed_to_wrapper {
     transform: translateY(-1.8rem); }
   .usa-prose__hcd-guide .usa-prose__hcd-guide__carousel_caption {
-    font-size: 0.875rem; } }
+    font-size: 0.875rem; }
+  .usa-prose__hcd-guide__mobile_figure {
+    display: block !important; } }
 
 @media print {
   @page {

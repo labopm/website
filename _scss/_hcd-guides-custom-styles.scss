@@ -374,6 +374,10 @@ button:not([disabled]):focus {
 
     .lab__split_columns_img_wrapper {
       max-width: 24ex;
+
+      .lab__split_columns_img {
+        width: 100%;
+      }
     }
 
     .lab__split_columns_copy {
@@ -476,7 +480,7 @@ button:not([disabled]):focus {
   .lab-cta__quote {
     max-width: 78ex;
     background-color: color('gray-cool-2');
-    padding: units(3) units(5);
+    padding: units(2) units(4);
 
     hr {
       height: px-to-rem(2px);
@@ -1882,6 +1886,10 @@ button:not([disabled]):focus {
 
     .usa-prose__hcd-guide__carousel_caption {
       font-size: font-size('base', 3);
+    }
+
+    &__mobile_figure {
+      display: block !important;
     }
   }
 }
