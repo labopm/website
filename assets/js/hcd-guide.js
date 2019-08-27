@@ -190,7 +190,7 @@ this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigatio
         is_hero_large = isHeroLarge();
         num_class_in_hero = numClassInHero();
         is_mobile_menu_visible = isMobileMenuVisible();
-
+this.console.log("is_mobile_menu_visible = " + is_mobile_menu_visible);
         /* var offset = 50;
         var duration = 550;
 
@@ -559,14 +559,14 @@ function showGuideMenu()  {
   header_element.classList.remove("header_scroll_up");
   gray_banner_element.classList.add("gray_banner_mobile_visible_scroll_up");
   header_element.classList.add("header_mobile_visible_scroll_up");
-  hero_bar_element.classList.add("hero_mobile_visible_scroll_up");
+    
     
 
     
 
    
 
-    
+    hero_bar_element.classList.add("hero_mobile_visible_scroll_up");
  /*  } */
 
 } 
@@ -602,21 +602,17 @@ function hideGuideMenu()  {
     guide_menu_nav_element.classList.add("guide_menu_nav_not_visible");
   }
 
-  var main_content_selector = "";
+   /* else if (current_position === 0 && main_content_contains_class_value === true)  {
+    main_content_element.classList.remove("main_content_scroll_down");
+  } */
+  /* if (current_position === 0) {
+     else if (main_content_contains_class_value === true)  {
+      var current_position;    }
+  } else {
+    main_content_element.classList.add("main_content_scroll_down");
+  } */
 
-  main_content_selector = "main-content__hcd-guide";
-
-  var main_content_element = {};
-
-  main_content_element = document.getElementsByClassName(main_content_selector)[0];
   
-  var main_content_contains_class_value;
-
-  main_content_contains_class_value = main_content_element.classList.contains("main-content__hcd-guide");
-
-  if (main_content_contains_class_value === false)  {
-    main_content_element.classList.add("main-content__hcd-guide");
-  }
 /*
   var is_guide_menu_link_visible = isGuideMenuLinkVisible();
  
@@ -654,6 +650,30 @@ function hideGuideMenu()  {
   gray_banner_element = document.getElementsByClassName(gray_banner_selector)[0];
   header_element = document.getElementsByClassName(header_selector)[0];
   hero_bar_element = document.getElementsByClassName(hero_bar_selector)[0];
+
+  var main_content_selector = "";
+
+  main_content_selector = "main-content__hcd-guide";
+
+  var main_content_element = {};
+
+  main_content_element = document.getElementsByClassName(main_content_selector)[0];
+  
+  var main_content_contains_class_value;
+  var header_top_value;
+
+
+  main_content_contains_class_value = main_content_element.classList.contains("main_content_to_leave_up");
+  header_top_value = window.getComputedStyle(header_element, null).getPropertyValue("top");
+console.log("main_content_contains_class_value = " + main_content_contains_class_value);
+  current_position = window.pageYOffset;
+
+  if (current_position === 0 && main_content_contains_class_value === true)  {
+    main_content_element.classList.remove("main_content_scroll_down");
+    main_content_element.classList.remove("main_content_to_leave_up");
+    main_content_element.classList.add("main_content_after_scroll");
+    
+  }
 
   gray_banner_element.classList.remove("gray_banner_mobile_visible_scroll_up");
   header_element.classList.remove("header_mobile_visible_scroll_up");
@@ -1205,7 +1225,25 @@ function expandSearchBar()  {
   // The blue bar is made visible.
   search_field_element.classList.remove("hero_bar_content_scroll_down");
   search_field_element.classList.add("hero_bar_content_scroll_up");
- */
+
+  
+ 
+  */
+
+
+ var main_content_contains_class_value;
+ var header_top_value;
+
+
+ main_content_contains_class_value = main_content_element.classList.contains("main_content_scroll_down");
+ header_top_value = window.getComputedStyle(header_element, null).getPropertyValue("top");
+console.log("main_content_contains_class_value = " + main_content_contains_class_value);
+ current_position = window.pageYOffset;
+console.log("header_top_value = " + header_top_value);
+ if (main_content_contains_class_value === true && header_top_value === "48px")  {
+  main_content_element.classList.remove("main_content_after_scroll");
+  main_content_element.classList.add("main_content_to_leave_up");
+ }
 }
 
 

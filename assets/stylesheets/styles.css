@@ -29532,7 +29532,7 @@ button:not([disabled]):focus {
       font-size: 0.9375rem;
       color: white; }
     .lab-hero--hcd-guide__sub-title a:first-of-type {
-      margin-top: 0.45rem;
+      margin-top: 0.5rem;
       margin-right: 1.5rem; }
     .lab-hero--hcd-guide__sub-title a:hover {
       color: #f7f9fa; }
@@ -29908,6 +29908,7 @@ button:not([disabled]):focus {
     position: fixed;
     top: 0; }
   .gray_banner_mobile_visible_scroll_up {
+    height: 3rem;
     position: relative;
     top: 0; }
   .header_scroll_down {
@@ -29917,23 +29918,25 @@ button:not([disabled]):focus {
     position: fixed;
     top: 3rem; }
   .header_mobile_visible_scroll_up {
+    height: 3rem;
     position: relative;
     top: 0; }
   .hero_scroll_down {
     position: fixed !important;
     top: 0; }
   .hero_scroll_up {
-    height: 0;
+    height: 2.25rem;
     position: fixed;
-    top: 5.1875rem; }
+    top: 6rem; }
   .hero_mobile_visible_scroll_up {
+    height: 2.25rem;
     position: relative;
-    top: -0.75rem; }
+    top: 0; }
   .hero_bar_scroll_up {
     width: 100%;
     display: block;
     position: relative;
-    top: 0.625rem; }
+    top: 0; }
   .hero_bar_scroll_down {
     display: none; }
   .hero_bar_content_scroll_up {
@@ -29946,6 +29949,9 @@ button:not([disabled]):focus {
     top: 6rem; }
   .main_content_scroll_down {
     top: 9.125rem !important;
+    padding-bottom: 11rem !important; }
+  .main_content_after_scroll {
+    top: 3.125rem !important;
     padding-bottom: 11rem !important; }
   .guide_menu_nav_not_visible {
     display: none !important; }
@@ -30187,11 +30193,11 @@ button:not([disabled]):focus {
 
 @media screen and (max-width: 25.875rem) {
   h1 {
-    font-size: 2.25rem; }
+    font-size: 2rem !important; }
   h2 {
-    font-size: 1.75rem; }
+    font-size: 1.75rem !important; }
   h3 {
-    font-size: 1.25rem; }
+    font-size: 1.25rem !important; }
   .main-content__hcd-guide {
     overflow: hidden; }
   .usa-layout__content_bottom .usa-back_to_top {
@@ -30241,7 +30247,7 @@ button:not([disabled]):focus {
     border-right: none;
     padding-right: 4rem; }
   .usa-prose__hcd-guide .usa-prose__hcd-guide__carousel_caption {
-    font-size: 0.875rem; }
+    font-size: 0.875rem !important; }
   .usa-prose__hcd-guide__mobile_figure {
     display: block !important; } }
 

@@ -897,7 +897,7 @@ button:not([disabled]):focus {
     }
 
     a:first-of-type {
-      margin-top: 0.45rem;
+      margin-top: units(1);
       margin-right: units(3);
     }
 
@@ -1426,6 +1426,7 @@ button:not([disabled]):focus {
   }
 
   .gray_banner_mobile_visible_scroll_up {
+    height: px-to-rem(48px);
     position: relative;
     top: 0;
   }
@@ -1441,6 +1442,7 @@ button:not([disabled]):focus {
   }
 
   .header_mobile_visible_scroll_up {
+    height: px-to-rem(48px);
     position: relative;
     top: 0;
   }
@@ -1451,21 +1453,27 @@ button:not([disabled]):focus {
   }
 
   .hero_scroll_up {
-    height: 0;
+    height: px-to-rem(36px);
     position: fixed;
-    top: px-to-rem(83px);
+    top: px-to-rem(96px);
   }
 
   .hero_mobile_visible_scroll_up {
+    height: px-to-rem(36px);
     position: relative;
-    top: px-to-rem(-12px);
+    // top: px-to-rem(-12px);
+    top: 0;
   }
+
+  
 
   .hero_bar_scroll_up {
     width: 100%;
     display: block;
     position: relative;
-    top: px-to-rem(10px);
+    // top: px-to-rem(12px);
+    top: 0;
+
   }
 
   .hero_bar_scroll_down {
@@ -1491,6 +1499,11 @@ button:not([disabled]):focus {
     padding-bottom: 11rem !important;
   }
   
+  .main_content_after_scroll {
+    top: 3.125rem !important;
+    padding-bottom: 11rem !important;
+  }
+
   .guide_menu_nav_not_visible {
     display: none !important;
   }
@@ -1906,15 +1919,15 @@ button:not([disabled]):focus {
 
 @media screen and (max-width: 25.875rem) {
   h1 {
-    font-size: font-size('heading', 13);
+    font-size: font-size('heading', 12) !important;
   }
 
   h2 {
-    font-size: font-size('heading', 11);
+    font-size: font-size('heading', 11) !important;
   }
 
   h3 {
-    font-size: font-size('heading', 8);
+    font-size: font-size('heading', 8) !important;
   }
 
   .main-content__hcd-guide {
@@ -1991,7 +2004,7 @@ button:not([disabled]):focus {
     }
 
     .usa-prose__hcd-guide__carousel_caption {
-      font-size: font-size('base', 3);
+      font-size: font-size('base', 3) !important;
     }
 
     &__mobile_figure {
