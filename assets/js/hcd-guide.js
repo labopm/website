@@ -1325,30 +1325,24 @@ function cycleGallery(cycle_direction, carousel_id_value)  {
 
   image_to_make_visible = 0;
 
-console.log("image_which_is_visible = " + image_which_is_visible);
-console.log("num_of_images_in_set = " + num_of_images_in_set);
   if (cycle_direction === "previous") {
     if (image_which_is_visible === 1) {
-      image_to_make_visible = num_of_images_in_set - 1;      
+      image_to_make_visible = num_of_images_in_set;      
     } else {
       image_to_make_visible = image_which_is_visible - 1;
     }
   } else {
-    if (image_which_is_visible === num_of_images_in_set - 1) {
+    if (image_which_is_visible === num_of_images_in_set) {
       image_to_make_visible = 1;      
     } else {
       image_to_make_visible = image_which_is_visible + 1;
     }
-  }/* 
-
-  if (image_to_make_visible === 1 && cycle_direction === "next")  {
-    carousel_caption_elements[num_of_images_in_set].classList.remove(carousel_caption_visible_selector);
-  } */
+  }
 
   carousel_image_new_visible_selector = carousel_image_new_visible_selector + image_to_make_visible.toString();
   carousel_caption_new_visible_selector = carousel_caption_new_visible_selector + image_to_make_visible.toString();
   carousel_dot_new_visible_selector = carousel_dot_new_visible_selector + image_to_make_visible.toString();
-  console.log("carousel_dot_new_visible_selector = " + carousel_dot_new_visible_selector);
+
   var carousel_image_new_visible_element = {};
   var carousel_caption_new_visible_element = {};
   var carousel_dot_new_visible_element = {};
