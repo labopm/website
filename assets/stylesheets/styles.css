@@ -29013,25 +29013,28 @@ body .progress-wrap::after {
       transition: all 0.2s ease-in-out;
       transform: translateX(22px); }
 
-a {
+.usa-sidenav a,
+.usa-prose__hcd-guide_a {
   color: #0076d6 !important; }
 
-a:hover {
+.usa-sidenav a:hover,
+.usa-prose__hcd-guide_a:hover {
   color: #2378c3 !important; }
 
-a:active {
+.usa-sidenav a:active,
+.usa-prose__hcd-guide_a:active {
   color: #112f4e !important; }
 
-button {
+.lab__button {
   background-color: #0076d6 !important; }
 
-button:hover {
+.lab__button:hover {
   background-color: #2378c3 !important; }
 
-button:active {
+.lab__button:active {
   background-color: #112f4e !important; }
 
-button:not([disabled]):focus {
+.lab__button:not([disabled]):focus {
   outline-offset: 0.25rem; }
 
 .usa-prose__hcd-guide h1 {

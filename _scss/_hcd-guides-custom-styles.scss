@@ -198,31 +198,34 @@ body .progress-wrap::after {
   }
 }
 
-a {
+.usa-sidenav a,
+.usa-prose__hcd-guide_a {
   color: color('blue-50v') !important;
 }
 
-a:hover {
+.usa-sidenav a:hover, 
+.usa-prose__hcd-guide_a:hover {
   color: color('primary') !important;
 }
 
-a:active {
+.usa-sidenav a:active, 
+.usa-prose__hcd-guide_a:active {
   color: color('blue-80v') !important;
 }
 
-button {
+.lab__button {
   background-color: color('blue-50v') !important;
 }
 
-button:hover {
+.lab__button:hover {
   background-color: color('primary') !important;
 }
 
-button:active {
+.lab__button:active {
   background-color: color('blue-80v') !important;
 }
 
-button:not([disabled]):focus {
+.lab__button:not([disabled]):focus {
   outline-offset: 0.25rem;
 }
 

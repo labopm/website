@@ -23,7 +23,7 @@
         <div class="usa-layout-docs__main_hcd-guide desktop:grid-col-8 usa-prose__hcd-guide">
           {{ content }}
           <div class="usa-layout__content_bottom">
-              <a href="#top" title="To top" class="usa-back_to_top">To Top</a>
+              <a href="#top" title="To top" class="usa-prose__hcd-guide_a usa-back_to_top">To Top</a>
               <hr>
            <!--  <div class="section">			
               <div class="center-wrap">			
@@ -45,7 +45,8 @@
             {% if page.previous-link-url %}
               {% assign previous_link_url = page.previous-link-url %}
               {% assign previous_link_title = page.previous-link-title %}
-              <a href="{{ previous_link_url }}" title="{{ previous_link_title }}" class="usa-layout__section_link section_link_previous">{{ previous_link_title }}</a>
+              {% assign link_class = 'usa-prose__hcd-guide_a usa-layout__section_link section_link_previous' %}
+              <a href="{{ previous_link_url }}" title="{{ previous_link_title }}" class="{{ link_class }}">{{ previous_link_title }}</a>
             {% endif %}
             {% if page.next-link-url %}
               {% assign next_link_url = page.next-link-url %}
