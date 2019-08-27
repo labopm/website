@@ -1074,7 +1074,7 @@ button:not([disabled]):focus {
   margin-top: units(8);
   margin-left: units(2);
            
-  span {
+  &__desc {
     display: inline-block;
     margin: 0.19rem 0.31rem 0 0;
     vertical-align: top;
@@ -1082,7 +1082,7 @@ button:not([disabled]):focus {
     color: color('base-darker');
   }
 
-  button {
+/*   button {
     width: 58px;
     height: 28px;
     display: inline-block;
@@ -1090,7 +1090,7 @@ button:not([disabled]):focus {
     background-color: color('base-lightest');
     background-image: url('/assets/img/lab/hcd-guide/design/highlights-off.svg');
   }
-/* 
+ *//* 
   .lab-hero--hcd-guide__highlights_on {
     background-image: url('/assets/img/lab/hcd-guide/design/highlights-on.svg');
   }
@@ -1886,7 +1886,8 @@ button:not([disabled]):focus {
 @media print {
   @page {
     size: landscape;
-    margin: 1in;
+ margin: 1in 0 1in 1in;
+
 
     /* size: letter landscape;
     max-width: 11in;
@@ -1894,7 +1895,7 @@ button:not([disabled]):focus {
     margin: 2cm; */
   }
 
-  @page:right {
+ /*  @page:right {
     content: "HCD Design Phase Concept Guide";
   margin:0;
   }
@@ -1902,12 +1903,12 @@ button:not([disabled]):focus {
   @page:left {
   margin: 1in;
   }
-  
+
   @page:right{
     @top-right {
       content: counter(page);
     }
-  }
+  } */
 
 
   @page:last-child {
