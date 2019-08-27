@@ -27623,24 +27623,23 @@ button:not([disabled]):focus {
     width: 100%; }
   .lab-hero--hcd-guide__guide_menu_nav {
     width: 18rem; } }
-@media screen and (max-width: 25.875rem) {
-  h1 {
-<<<<<<< HEAD
-    font-size: 2rem !important; }
-  h2 {
-    font-size: 1.75rem !important; }
-  h3 {
-    font-size: 1.25rem !important; }
-=======
-    font-size: 2.25rem; }
+    @media screen and (max-width: 25.875rem) {
+      h1 {
+    <<<<<<< HEAD
+        font-size: 2rem !important; }
+      h2 {
+        font-size: 1.75rem !important; }
+      h3 {
+        font-size: 1.25rem !important; }
+    =======
+        font-size: 2.25rem; }
+    
+      h2 {
+        font-size: 1.75rem; }
+    
+      h3 {
+        font-size: 1.25rem; }
 
-  h2 {
-    font-size: 1.75rem; }
-
-  h3 {
-    font-size: 1.25rem; }
-
->>>>>>> 638959f4c511f72ef0f6013010c300f90725ad2d
   .main-content__hcd-guide {
     overflow: hidden; }
 
