@@ -29025,6 +29025,9 @@ body .progress-wrap::after {
 .usa-prose__hcd-guide_a:active {
   color: #112f4e !important; }
 
+.usa-sidenav a:hover {
+  background-color: transparent !important; }
+
 .lab__button {
   background-color: #0076d6 !important; }
 
@@ -29990,7 +29993,8 @@ body .progress-wrap::after {
       vertical-align: top; }
     .lab-hero--hcd-guide__guide_menu_link_title {
       font-size: 1rem !important;
-      margin-right: 0.5rem !important; }
+      margin-right: 0.5rem !important;
+      text-decoration: none; }
     .lab-hero--hcd-guide__guide_menu_title {
       margin-top: 0.4375rem; }
     .lab-hero--hcd-guide__guide_menu_link {

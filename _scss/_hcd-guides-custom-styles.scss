@@ -213,6 +213,10 @@ body .progress-wrap::after {
   color: color('blue-80v') !important;
 }
 
+.usa-sidenav a:hover {
+  background-color: transparent !important;
+}
+
 .lab__button {
   background-color: color('blue-50v') !important;
 }
@@ -1576,6 +1580,7 @@ body .progress-wrap::after {
     &__guide_menu_link_title {
       font-size: font-size('body', 'sm') !important;
       margin-right: units(1) !important;
+      text-decoration: none;
     }
 
     &__guide_menu_title {
