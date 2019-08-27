@@ -192,17 +192,14 @@ body .progress-wrap::after {
   }
 }
 
-.usa-sidenav a,
 .usa-prose__hcd-guide_a {
   color: color('blue-50v') !important;
 }
 
-.usa-sidenav a:hover, 
 .usa-prose__hcd-guide_a:hover {
   color: color('primary') !important;
 }
 
-.usa-sidenav a:active, 
 .usa-prose__hcd-guide_a:active {
   color: color('blue-80v') !important;
 }
@@ -211,20 +208,27 @@ body .progress-wrap::after {
   background-color: transparent !important;
 }
 
-.lab__button {
+button {
   background-color: color('blue-50v') !important;
   outline-offset: 0.25rem;
 }
 
-.lab__button:hover {
+button:hover {
   background-color: color('primary') !important;
 }
 
-.lab__button:active {
+button:active {
   background-color: color('blue-80v') !important;
 }
 
-.lab__button:not([disabled]):focus {
+.lab__button, 
+.lab__button:hover, 
+.lab__button:active, 
+.usa-accordion__button {
+  background-color: transparent !important;
+}
+
+button:not([disabled]):focus {
   outline-offset: 0.25rem;
 }
 
@@ -313,7 +317,11 @@ body .progress-wrap::after {
     font-family: font-family('sans');
     font-size: font-size('heading', 'lg');
     font-weight: font-weight('bold');
-    color: color('base');
+    color: color('gray-cool-50');
+  }
+
+  &_h4 {
+    margin-top: units(3);
   }
 
   ol {
@@ -346,7 +354,6 @@ body .progress-wrap::after {
       font-family: font-family('sans');
       font-size: font-size('heading', 'lg');
       font-weight: font-weight('normal');
-      color: color('base-darker');
     }
 
     p {
@@ -475,7 +482,7 @@ body .progress-wrap::after {
       font-size: font-size('body', 4);
       font-style: italic;
       line-height: line-height('body', 3);
-      color: color('base');
+      color: color('gray-cool-50');
     }
   }
 
@@ -485,7 +492,6 @@ body .progress-wrap::after {
     h3 {
       font-weight: $theme-font-weight-normal;
       font-size: font-size('heading', 'lg');
-      color: color('base-dark');
     }
   }
 
@@ -540,7 +546,7 @@ body .progress-wrap::after {
       display: block;
 
       button {
-        background-color: color('gold-20v');
+        background-color: color('gold-20v') !important;
         font-family: font-family('sans');
         font-weight: $theme-font-weight-normal;
         font-size: font-size('body', 5);
@@ -557,6 +563,7 @@ body .progress-wrap::after {
       }
       
       p {
+        padding-top: units(3);
         padding-bottom: units(3);
       }
     }
@@ -744,7 +751,7 @@ body .progress-wrap::after {
       font-size: font-size('body', 4);
       font-style: italic;
       line-height: line-height('body', 3);
-      color: color('base');
+      color: color('gray-cool-50');
     }
 
     &_images {
@@ -971,6 +978,7 @@ body .progress-wrap::after {
 
 .header_scroll_down {
   top: px-to-rem(22px);
+  z-index: 300;
 }
 
 .main_content_scroll_down {

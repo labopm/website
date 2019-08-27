@@ -29010,32 +29010,35 @@ body .progress-wrap::after {
       transition: all 0.2s ease-in-out;
       transform: translateX(22px); }
 
-.usa-sidenav a,
 .usa-prose__hcd-guide_a {
   color: #0076d6 !important; }
 
-.usa-sidenav a:hover,
 .usa-prose__hcd-guide_a:hover {
   color: #2378c3 !important; }
 
-.usa-sidenav a:active,
 .usa-prose__hcd-guide_a:active {
   color: #112f4e !important; }
 
 .usa-sidenav a:hover {
   background-color: transparent !important; }
 
-.lab__button {
+button {
   background-color: #0076d6 !important;
   outline-offset: 0.25rem; }
 
-.lab__button:hover {
+button:hover {
   background-color: #2378c3 !important; }
 
-.lab__button:active {
+button:active {
   background-color: #112f4e !important; }
 
-.lab__button:not([disabled]):focus {
+.lab__button,
+.lab__button:hover,
+.lab__button:active,
+.usa-accordion__button {
+  background-color: transparent !important; }
+
+button:not([disabled]):focus {
   outline-offset: 0.25rem; }
 
 .usa-prose__hcd-guide h1 {
@@ -29107,7 +29110,10 @@ body .progress-wrap::after {
   font-family: Public Sans Web, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   font-size: 1.375rem;
   font-weight: bold;
-  color: #a9aeb1; }
+  color: #71767a; }
+
+.usa-prose__hcd-guide_h4 {
+  margin-top: 1.5rem; }
 
 .usa-prose__hcd-guide ol li {
   color: #3d4551; }
@@ -29133,8 +29139,7 @@ body .progress-wrap::after {
   .usa-prose__hcd-guide .lab__base_columns h3 {
     font-family: Public Sans Web, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     font-size: 1.375rem;
-    font-weight: normal;
-    color: #3d4551; }
+    font-weight: normal; }
   .usa-prose__hcd-guide .lab__base_columns p {
     background-image: none; }
 
@@ -29232,14 +29237,13 @@ body .progress-wrap::after {
     font-size: 0.9375rem;
     font-style: italic;
     line-height: 1.35;
-    color: #a9aeb1; }
+    color: #71767a; }
 
 .usa-prose__hcd-guide .lab__figure_with_title {
   margin-top: 4rem; }
   .usa-prose__hcd-guide .lab__figure_with_title h3 {
     font-weight: 400;
-    font-size: 1.375rem;
-    color: #3d4551; }
+    font-size: 1.375rem; }
 
 .usa-prose__hcd-guide .lab-cta__quote {
   max-width: 78ex;
@@ -29280,7 +29284,7 @@ body .progress-wrap::after {
   .usa-prose__hcd-guide .usa-accordion__heading {
     display: block; }
     .usa-prose__hcd-guide .usa-accordion__heading button {
-      background-color: #ffbe2e;
+      background-color: #ffbe2e !important;
       font-family: Public Sans Web, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
       font-weight: 400;
       font-size: 1rem; }
@@ -29291,6 +29295,7 @@ body .progress-wrap::after {
     .usa-prose__hcd-guide .usa-accordion__content h4 {
       line-height: 1.2; }
     .usa-prose__hcd-guide .usa-accordion__content p {
+      padding-top: 1.5rem;
       padding-bottom: 1.5rem; }
   .usa-prose__hcd-guide .usa-accordion__reference {
     margin-top: 1.5rem; }
@@ -29430,7 +29435,7 @@ body .progress-wrap::after {
     font-size: 0.9375rem;
     font-style: italic;
     line-height: 1.35;
-    color: #a9aeb1; }
+    color: #71767a; }
   .usa-prose__hcd-guide__carousel_images {
     position: relative;
     z-index: 100; }
@@ -29594,7 +29599,8 @@ body .progress-wrap::after {
   top: 0; }
 
 .header_scroll_down {
-  top: 1.375rem; }
+  top: 1.375rem;
+  z-index: 300; }
 
 .main_content_scroll_down {
   position: relative;
