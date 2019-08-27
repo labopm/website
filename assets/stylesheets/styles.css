@@ -29603,8 +29603,8 @@ button:not([disabled]):focus {
   color: #3d4551; }
 
 .usa-prose__hcd-guide__highlight_copy_on {
-  background-color: #3d4551;
-  color: white; }
+  background-color: #fef0c8;
+  color: #3d4551; }
 
 .usa-prose__hcd-guide__carousel_image_visible {
   margin: 0 auto;
