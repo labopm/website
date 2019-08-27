@@ -192,23 +192,39 @@ body .progress-wrap::after {
   }
 }
 
-.usa-prose__hcd-guide_a {
-  color: color('blue-50v') !important;
+.main-content__hcd-guide {
+  .usa-prose__hcd-guide p a {
+    color: color('blue-50v');
+  }
+
+  .usa-prose__hcd-guide p a:hover {
+    color: color('blue-60v');
+  }
+
+  .usa-prose__hcd-guide p a:active {
+    color: color('blue-80v');
+  }
+
+  .usa-sidenav a:hover {
+    background-color: transparent !important;
+  }
+
+  .usa-layout__section_link {
+    background-color: color('blue-50v');
+    outline-offset: 0.25rem;
+  }
+
+  .usa-layout__section_link:hover {
+    background-color: color('blue-60v') !important;
+  }
+
+  .usa-layout__section_link:active {
+    background-color: color('blue-80v') !important;
+  }
 }
 
-.usa-prose__hcd-guide_a:hover {
-  color: color('primary') !important;
-}
 
-.usa-prose__hcd-guide_a:active {
-  color: color('blue-80v') !important;
-}
-
-.usa-sidenav a:hover {
-  background-color: transparent !important;
-}
-
-button {
+/*button {
   background-color: color('blue-50v') !important;
   outline-offset: 0.25rem;
 }
@@ -219,7 +235,7 @@ button:hover {
 
 button:active {
   background-color: color('blue-80v') !important;
-}
+}*/
 
 .lab__button, 
 .lab__button:hover, 
@@ -2016,29 +2032,27 @@ button:not([disabled]):focus {
 @media print {
   @page {
     size: landscape;
- margin: 1in 0 1in 1in;
-
-
-    /* size: letter landscape;
-    max-width: 11in;
-    max-height: 8.5in;
-    margin: 2cm; */
+    margin: 0.5in 1.5in;
+    @right-top {
+      content: counter(page)"| HCD Design Phase Concept Guide";
+    }
   }
 
- /*  @page:right {
-    content: "HCD Design Phase Concept Guide";
-  margin:0;
-  }
+/*  .usa-layout-docs__main_hcd-guide {
+    column-count: 2;
+    column-gap: 1rem;
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    column-count: 2;
+    column-gap: 0.5in;
+  }*/
 
-  @page:left {
-  margin: 1in;
-  }
-
-  @page:right{
+/*  @page:right{
     @top-right {
       content: counter(page);
     }
-  } */
+  }*/ 
 
 
   @page:last-child {
@@ -2092,7 +2106,7 @@ button:not([disabled]):focus {
       height: 671px;
       position: relative;
       top: 0; */
-      column-width: 410px;
+      /*column-width: 410px;*/
       column-count: 2;
       column-gap: 1rem;
       -moz-column-count: 2;
