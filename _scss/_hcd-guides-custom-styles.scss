@@ -19,23 +19,24 @@ $theme-font-family-serif: 'merriweather', serif;
   display: block;
 }
 
-.section {
-  position: relative;
-	width: 100%;
-	display: block;
-	overflow: hidden;
-	height: 100vh;
+:root {
+	--blue: #0076d6;
+	--white: #ffffff;
 }
 
-.center-wrap {
-    position: absolute;
+body{
+	overflow-x: hidden;
+	letter-spacing: 0.2px;
+	-webkit-transition: all 200ms linear;
+	transition: all 200ms linear; 
+}
+
+.main-content__hcd-guide {
+  // position: relative;
 	width: 100%;
 	display: block;
-	overflow: hidden;
-	left: 0;
-	top: 50%;
-	transform: translateY(-50%);
-	z-index: 2;
+	// overflow: hidden;
+	// height: 100vh;
 }
 
 @-webkit-keyframes border-transform{
@@ -62,7 +63,7 @@ $theme-font-family-serif: 'merriweather', serif;
 
 .progress-wrap {
 	position: fixed;
-	right: 50px;
+	right: 40px;
 	bottom: 50px;
 	height: 46px;
 	width: 46px;
@@ -77,13 +78,11 @@ $theme-font-family-serif: 'merriweather', serif;
 	-webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
-
 .progress-wrap.active-progress {
 	opacity: 1;
 	visibility: visible;
 	transform: translateY(0);
 }
-
 .progress-wrap::after {
 	position: absolute;
 	font-family: 'unicons';
@@ -102,7 +101,6 @@ $theme-font-family-serif: 'merriweather', serif;
 	-webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
-
 .progress-wrap::before {
 	position: absolute;
 	font-family: 'unicons';
@@ -124,15 +122,12 @@ $theme-font-family-serif: 'merriweather', serif;
 	-webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
-
 .progress-wrap:hover::before {
 	opacity: 1;
 }
-
 .progress-wrap svg path { 
 	fill: none; 
 }
-
 .progress-wrap svg.progress-circle path {
 	stroke: var(--blue);
 	stroke-width: 4;
@@ -140,14 +135,13 @@ $theme-font-family-serif: 'merriweather', serif;
 	-webkit-transition: all 200ms linear;
     transition: all 200ms linear;
 }
-
 body .progress-wrap {
 	box-shadow: inset  0 0 0 2px rgba(214,237,255,1);
 }
-
 body .progress-wrap::after {
 	color: var(--blue);
 }
+
 
 .switch-container{
   display: inline-block;
@@ -1442,19 +1436,19 @@ body .progress-wrap::after {
   .hero_scroll_up {
     height: 0;
     position: fixed;
-    top: px-to-rem(84px);
+    top: px-to-rem(83px);
   }
 
   .hero_mobile_visible_scroll_up {
     position: relative;
-    top: px-to-rem(-11px);
+    top: px-to-rem(-12px);
   }
 
   .hero_bar_scroll_up {
     width: 100%;
     display: block;
     position: relative;
-    top: px-to-rem(11px);
+    top: px-to-rem(10px);
   }
 
   .hero_bar_scroll_down {

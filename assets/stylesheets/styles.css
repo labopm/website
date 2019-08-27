@@ -28846,22 +28846,19 @@ i.e.
 .hcd-guide__print_wrapper {
   display: block; }
 
-.section {
-  position: relative;
-  width: 100%;
-  display: block;
-  overflow: hidden;
-  height: 100vh; }
+:root {
+  --blue: #0076d6;
+  --white: #ffffff; }
 
-.center-wrap {
-  position: absolute;
+body {
+  overflow-x: hidden;
+  letter-spacing: 0.2px;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear; }
+
+.main-content__hcd-guide {
   width: 100%;
-  display: block;
-  overflow: hidden;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2; }
+  display: block; }
 
 @-webkit-keyframes border-transform {
   0%, 100% {
@@ -28899,7 +28896,7 @@ i.e.
 ================================================== */
 .progress-wrap {
   position: fixed;
-  right: 50px;
+  right: 40px;
   bottom: 50px;
   height: 46px;
   width: 46px;
@@ -29917,15 +29914,15 @@ body .progress-wrap::after {
   .hero_scroll_up {
     height: 0;
     position: fixed;
-    top: 5.25rem; }
+    top: 5.1875rem; }
   .hero_mobile_visible_scroll_up {
     position: relative;
-    top: -0.6875rem; }
+    top: -0.75rem; }
   .hero_bar_scroll_up {
     width: 100%;
     display: block;
     position: relative;
-    top: 0.6875rem; }
+    top: 0.625rem; }
   .hero_bar_scroll_down {
     display: none; }
   .hero_bar_content_scroll_up {

@@ -1,33 +1,40 @@
+/* /* Please ❤ this if you like it! 
+
+(function($) { "use strict";
+		
+	$(document).ready(function(){"use strict";
+	
+		//Scroll back to top
+		
+		var progressPath = document.querySelector('.progress-wrap path');
+		var pathLength = progressPath.getTotalLength();
+		progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+		progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+		progressPath.style.strokeDashoffset = pathLength;
+		progressPath.getBoundingClientRect();
+		progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';		
+		var updateProgress = function () {
+			var scroll = $(window).scrollTop();
+			var height = $(document).height() - $(window).height();
+			var progress = pathLength - (scroll * pathLength / height);
+			progressPath.style.strokeDashoffset = progress;
+		}
+		updateProgress();
+		
+    jQuery('.progress-wrap').on('click', function(event) {
+			event.preventDefault();
+			jQuery('html, body').animate({scrollTop: 0}, duration);
+			return false;
+		})
+		
+		
+	});
+	
+})(jQuery);  */
+
 
 window.addEventListener("load", 
   function () {
-    //Scroll back to top
-		
-/*     var progressPath = document.getElementsByTagName('path')[0];
-    
-    var pathLength = progressPath.getTotalLength();
-    
-    progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
-    
-    progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
-    
-    progressPath.style.strokeDashoffset = pathLength;
-    
-    progressPath.getBoundingClientRect();
-    
-    progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
-    		
-		var updateProgress = function () {
-			var scroll = $(window).scrollTop();
-      var height = $(document).height() - $(window).height();
-      
-      var progress = pathLength - (scroll * pathLength / height);
-      
-			progressPath.style.strokeDashoffset = progress;
-    }
-    
-    updateProgress();
- */
     // String variables which will hold the CSS selectors which refer to all HTML content, the footer, 
     // and the side navigation, and the main block of content are initialized.
     var content_bottom_selector = "";
@@ -168,15 +175,15 @@ this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigatio
       scroll_value
     ];
     
-    stopSideNavigationScrolling(side_navigation_values);
+    // stopSideNavigationScrolling(side_navigation_values);
     var is_hero_large;
 
     var num_class_in_hero;
 
     // 'onScroll' Event which animates the header and side navigation as a visitor moves up and down 
     // the webpage.
-    window.addEventListener("scroll", 
-      function (event) {   
+    jQuery(window).on('scroll', 
+      function () {   
         // The vertical position within the webpage which a visitor has scrolled to is passed on.
         current_position = window.pageYOffset;
 
@@ -205,8 +212,18 @@ this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigatio
         }
 
         side_navigation_values[0] = current_position;
-    
-        stopSideNavigationScrolling(side_navigation_values);
+              stopSideNavigationScrolling(side_navigation_values);
+        
+
+        var offset = 100;
+        var duration = 550;
+
+        /* if (jQuery(this).scrollTop() > offset) {
+          jQuery('.progress-wrap').addClass('active-progress');
+        } else {
+          jQuery('.progress-wrap').removeClass('active-progress');
+        } */
+  
 
         previous_position = current_position;
       }
