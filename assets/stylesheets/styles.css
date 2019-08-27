@@ -29470,6 +29470,8 @@ button:not([disabled]):focus {
     .lab-hero--hcd-guide__sub-title a:first-of-type {
       margin-top: 0.45rem;
       margin-right: 1.5rem; }
+    .lab-hero--hcd-guide__sub-title a:hover {
+      color: #f7f9fa; }
   .lab-hero--hcd-guide .lab-hero--home__body {
     margin-left: auto ;
     margin-right: auto ;
@@ -29992,8 +29994,6 @@ button:not([disabled]):focus {
             display: inline-block;
             color: white;
             text-decoration: none; }
-          .lab-hero--hcd-guide__guide_menu_nav ul li a:hover {
-            color: #f7f9fa; }
           .lab-hero--hcd-guide__guide_menu_nav ul li a + a {
             float: right; }
         .lab-hero--hcd-guide__guide_menu_nav ul .lab-hero--hcd-guide__guide_menu-mobilenav-current {
