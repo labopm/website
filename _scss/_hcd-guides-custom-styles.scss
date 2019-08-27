@@ -812,12 +812,12 @@ body .progress-wrap::after {
       }
 
       &_img {
-        margin: 1.75rem units(2) 0 units(2);
+        margin: px-to-rem(20px) px-to-rem(5px) 0 units(2);
         vertical-align: top;
       }
 
       &_h4 {
-        margin-top: 1.75rem;
+        margin-top: px-to-rem(22px);
         font-family: $theme-font-family-serif;
         font-size: font-size('heading', 6);
         font-weight: font-weight('bold');
@@ -825,13 +825,13 @@ body .progress-wrap::after {
       }
 
       &_a {
-        margin: 1.75rem units(4) 0 0;
+        margin: px-to-rem(19px) units(4) 0 0;
         float: right;
       }
     }
 
     &_copy {
-      margin: units(2) units(6);
+      margin: units(6);
     }
   }
 }
