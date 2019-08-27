@@ -9,8 +9,6 @@ next-link-url: /hcd-guide/design/purpose-of-this-guide.htm
 next-link-title: Get started
 ---
 
-<div class="hcd-guide__print_wrapper hcd-guide__print_with_links hcd-guide__print_one_column">
-
 <h1>Welcome to the Design Phase</h1>
 <div class="usa-prose__hcd-guide__reading_print">
   <span class="usa-prose__hcd-guide__reading_time">4 min read</span>
@@ -49,18 +47,6 @@ next-link-title: Get started
   <a href="#design-phase" title="What to expect in the Design Phase" class="usa-prose__hcd-guide_a">What to expect in the Design Phase</a>
   <a href="#timeline" title="A note on timeline" class="usa-prose__hcd-guide_a">A note on timeline</a>
 </div>
-
-</div>
-<div class="hcd-guide__print_page_num">
-  <div class="hcd-guide__print_page_counter">1</div>
-  <hr>
-  <div class="hcd-guide__print_page_num_title">HCD Design Phase Concept Guide</div>
-</div>
-<div class="hcd-guide__print_footnotes">
-  <div class="hcd-guide__print_footnotes_link_num">[1] https://github.com/labopm/HCD-Guides</div>
-  <div class="hcd-guide__print_footnotes_link_num">[2] https://methods.18f.gov/make/</div>
-</div>
-<div class="hcd-guide__print_wrapper">
 
 <h2>What you should have done so far</h2>
 <p>
@@ -102,12 +88,6 @@ next-link-title: Get started
 </div>
 <div class="lab__clear_spacer"></div>
 
-</div>
-<div class="hcd-guide__print_page_num">
-  <div class="hcd-guide__print_page_counter">2</div>
-  <hr>
-  <div class="hcd-guide__print_page_num_title">HCD Design Phase Concept Guide</div>
-</div>
 <p>
   If you're not sure if you've completed all these points, or feel that you need more information or direction on them, please see the <a href="https://github.com/labopm/HCD-Guides" title="Discovery Phase" target="_blank" class="usa-prose__hcd-guide_a hcd-guide__print_not_visible">Human-Centered Design Discovery Phase Guides</a>.
 </p>
@@ -162,13 +142,6 @@ next-link-title: Get started
 </div>
 <div class="lab__clear_spacer"></div>
 
-</div>
-<div class="hcd-guide__print_page_num">
-  <div class="hcd-guide__print_page_counter">3</div>
-  <hr>
-  <div class="hcd-guide__print_page_num_title">HCD Design Phase Concept Guide</div>
-</div>
-<div class="hcd-guide__print_wrapper">
 <h2 id="timeline">A note on timeline</h2>
 <p>
   Each Design Phase differs depending on the nature of the product, service, or system, 
@@ -214,10 +187,3 @@ next-link-title: Get started
   to either take on a slightly larger, more strategic Opportunity space in order 
   to have more impact upon the Delivery of your product, service, or system.
 </p>
-
-</div>
-<div class="hcd-guide__print_page_num">
-  <div class="hcd-guide__print_page_counter">4</div>
-  <hr>
-  <div class="hcd-guide__print_page_num_title">HCD Design Phase Concept Guide</div>
-</div>
