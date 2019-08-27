@@ -15,7 +15,7 @@ next-link-title: Get started
 <div class="usa-prose__hcd-guide__reading_print">
   <span class="usa-prose__hcd-guide__reading_time">4 min read</span>
   <a href="javascript:window.print();" title="Print guide" class="usa-prose__hcd-guide__print_guide_img usa-prose__hcd-guide__print_desktop_visible"><img src="{{ site.baseurl }}/assets/img/lab/hcd-guide/design/print-guide.svg" width="22" height="29" alt="Print guide" /></a>
-  <a href="javascript:window.print();" title="Print guide" class="usa-prose__hcd-guide__print_guide usa-prose__hcd-guide__print_desktop_visible">Print page on desktop</a>
+  <a href="javascript:window.print();" title="Print guide" class="usa-prose__hcd-guide__print_guide usa-prose__hcd-guide__print_desktop_visible">Print page</a>
   <a href="#" title="Print guide" class="usa-prose__hcd-guide__print_guide_img usa-prose__hcd-guide__print_mobile_visible"><img src="{{ site.baseurl }}/assets/img/lab/hcd-guide/design/print-guide.svg" width="22" height="29" alt="Print guide" /></a>
   <a href="" title="Print guide" class="usa-prose__hcd-guide__print_guide usa-prose__hcd-guide__print_mobile_visible">PDF</a>
 </div>
@@ -108,8 +108,10 @@ next-link-title: Get started
   <hr>
   <div class="hcd-guide__print_page_num_title">HCD Design Phase Concept Guide</div>
 </div>
+<p>
+  If you're not sure if you've completed all these points, or feel that you need more information or direction on them, please see the <a href="https://github.com/labopm/HCD-Guides" title="Discovery Phase" target="_blank" class="hcd-guide__print_not_visible">Human-Centered Design Discovery Phase Guides</a>.
+</p>
 <div class="hcd-guide__print_wrapper">
-
 <h2 id="design-phase">What to expect in the Design Phase</h2>
 <p>
   To set you and your team up for success in the Design Phase, this Guide 
@@ -174,16 +176,12 @@ next-link-title: Get started
   and the scope of the project itself. If necessary, create a rough map of each 
   of these parameters to understand your timeline.
 </p>
-
-
-
 <p>
   Templates for this will be provided in the Design Phase Operations Guide, but to start, 
   you can also modify the 
-  <a href="https://github.com/labopm/HCD-Guides/blob/master/HCD_Ops_Guide_v12_spreads.pd" target="_blank" title="Project Frame-Reframe template" class="hcd-guide__print_not_visible">Project Frame-Reframe template</a> 
+  <a href="https://github.com/labopm/HCD-Guides/blob/master/HCD_Ops_Guide_v12_spreads.pdf" target="_blank" title="Project Frame-Reframe template" class="hcd-guide__print_not_visible">Project Frame-Reframe template</a> 
   from pages 16-17 of the Discovery Operations Guide for this purpose. Map onto that template the following parameters:
 </p>
-
 <div class="lab__bullet_points_columns lab__bullet_points_column_fullwidth">
   <p>
     What is the nature of your opportunity spaces? Are they big and conceptual? 
