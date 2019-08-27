@@ -190,7 +190,7 @@ this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigatio
         is_hero_large = isHeroLarge();
         num_class_in_hero = numClassInHero();
         is_mobile_menu_visible = isMobileMenuVisible();
-this.console.log("is_mobile_menu_visible = " + is_mobile_menu_visible);
+
         /* var offset = 50;
         var duration = 550;
 
@@ -665,7 +665,7 @@ function hideGuideMenu()  {
 
   main_content_contains_class_value = main_content_element.classList.contains("main_content_to_leave_up");
   header_top_value = window.getComputedStyle(header_element, null).getPropertyValue("top");
-console.log("main_content_contains_class_value = " + main_content_contains_class_value);
+
   current_position = window.pageYOffset;
 
   if (current_position === 0 && main_content_contains_class_value === true)  {
@@ -1237,9 +1237,9 @@ function expandSearchBar()  {
 
  main_content_contains_class_value = main_content_element.classList.contains("main_content_scroll_down");
  header_top_value = window.getComputedStyle(header_element, null).getPropertyValue("top");
-console.log("main_content_contains_class_value = " + main_content_contains_class_value);
+
  current_position = window.pageYOffset;
-console.log("header_top_value = " + header_top_value);
+
  if (main_content_contains_class_value === true && header_top_value === "48px")  {
   main_content_element.classList.remove("main_content_after_scroll");
   main_content_element.classList.add("main_content_to_leave_up");
