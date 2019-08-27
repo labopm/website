@@ -29301,6 +29301,10 @@ button:not([disabled]):focus {
     margin-top: 1.5rem; }
     .usa-prose__hcd-guide .usa-accordion__reference h4 {
       margin: 0.75rem 0 0.25rem 0; }
+  .usa-prose__hcd-guide .usa-accordion__reference:first-child {
+    margin-top: 1rem; }
+  .usa-prose__hcd-guide .usa-accordion__reference:last-child {
+    margin-bottom: 1.5rem; }
 
 .usa-prose__hcd-guide .lab__case_in_point_wrapper {
   width: 100%;

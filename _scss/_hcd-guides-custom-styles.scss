@@ -575,6 +575,14 @@ button:not([disabled]):focus {
         margin: 0.75rem 0 units(0.5) 0;
       }
     }
+
+    &__reference:first-child {
+      margin-top: units(2);
+    }
+
+    &__reference:last-child {
+      margin-bottom: units(3);
+    }
   }
 
   .lab__case_in_point {
