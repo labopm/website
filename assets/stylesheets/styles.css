@@ -29014,19 +29014,22 @@ body .progress-wrap::after {
       transform: translateX(22px); }
 
 a {
-  color: #0076d6; }
+  color: #0076d6 !important; }
 
 a:hover {
-  color: #2378c3; }
+  color: #2378c3 !important; }
 
 a:active {
-  color: #112f4e; }
+  color: #112f4e !important; }
+
+button {
+  background-color: #0076d6 !important; }
 
 button:hover {
-  background-color: #2378c3; }
+  background-color: #2378c3 !important; }
 
 button:active {
-  background-color: #112f4e; }
+  background-color: #112f4e !important; }
 
 button:not([disabled]):focus {
   outline-offset: 0.25rem; }
@@ -29366,9 +29369,47 @@ button:not([disabled]):focus {
     width: 100%;
     position: absolute;
     bottom: 2.1875rem; }
-  .usa-prose__hcd-guide__carousel #usa-prose__hcd-guide__carousel_nav_previous,
-  .usa-prose__hcd-guide__carousel #usa-prose__hcd-guide__carousel_nav_next {
-    position: relative; }
+  .usa-prose__hcd-guide__carousel .usa-prose__hcd-guide__carousel_nav_link_previous,
+  .usa-prose__hcd-guide__carousel .usa-prose__hcd-guide__carousel_nav_link_next {
+    display: inline-block;
+    border-radius: 50%; }
+  .usa-prose__hcd-guide__carousel .usa-prose__hcd-guide__carousel_nav_link_next {
+    float: right; }
+  .usa-prose__hcd-guide__carousel .usa-prose__hcd-guide__carousel_nav_link_previous:hover .usa-prose__hcd-guide__carousel_nav_arrow_previous,
+  .usa-prose__hcd-guide__carousel .usa-prose__hcd-guide__carousel_nav_link_next:hover .usa-prose__hcd-guide__carousel_nav_arrow_next {
+    background: #2378c3; }
+  .usa-prose__hcd-guide__carousel .usa-prose__hcd-guide__carousel_nav_arrow_previous,
+  .usa-prose__hcd-guide__carousel .usa-prose__hcd-guide__carousel_nav_arrow_next {
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    margin-right: 1rem;
+    border-radius: 50%;
+    background: #0076d6; }
+  .usa-prose__hcd-guide__carousel .usa-prose__hcd-guide__carousel_nav_arrow_previous:after {
+    content: '';
+    display: inline-block;
+    margin-top: 0.7rem;
+    margin-left: 0.75em;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-top: 0.2rem solid white;
+    border-right: 0.2rem solid white;
+    -moz-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg); }
+  .usa-prose__hcd-guide__carousel .usa-prose__hcd-guide__carousel_nav_arrow_next:after {
+    content: '';
+    display: inline-block;
+    margin-top: 0.7rem;
+    margin-left: 0.6rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-top: 0.2rem solid white;
+    border-right: 0.2rem solid white;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); }
   .usa-prose__hcd-guide__carousel #usa-prose__hcd-guide__carousel_nav_next {
     float: right; }
   .usa-prose__hcd-guide__carousel_captions {

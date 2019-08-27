@@ -199,23 +199,27 @@ body .progress-wrap::after {
 }
 
 a {
-  color: color('blue-50v');
+  color: color('blue-50v') !important;
 }
 
 a:hover {
-  color: color('primary');
+  color: color('primary') !important;
 }
 
 a:active {
-  color: color('blue-80v');
+  color: color('blue-80v') !important;
+}
+
+button {
+  background-color: color('blue-50v') !important;
 }
 
 button:hover {
-  background-color: color('primary');
+  background-color: color('primary') !important;
 }
 
 button:active {
-  background-color: color('blue-80v');
+  background-color: color('blue-80v') !important;
 }
 
 button:not([disabled]):focus {
@@ -656,11 +660,60 @@ button:not([disabled]):focus {
       bottom: px-to-rem(35px);
     }
 
-    #usa-prose__hcd-guide__carousel_nav_previous, 
-    #usa-prose__hcd-guide__carousel_nav_next {
-      position: relative;
+    .usa-prose__hcd-guide__carousel_nav_link_previous, 
+    .usa-prose__hcd-guide__carousel_nav_link_next {
+      display: inline-block;
+      border-radius: 50%;
     }
 
+    .usa-prose__hcd-guide__carousel_nav_link_next { 
+      float: right;
+    }
+    
+    .usa-prose__hcd-guide__carousel_nav_link_previous:hover .usa-prose__hcd-guide__carousel_nav_arrow_previous, 
+    .usa-prose__hcd-guide__carousel_nav_link_next:hover .usa-prose__hcd-guide__carousel_nav_arrow_next {
+      background: color('primary');
+    }
+
+    .usa-prose__hcd-guide__carousel_nav_arrow_previous, 
+    .usa-prose__hcd-guide__carousel_nav_arrow_next {
+      width: units(4);
+      height: units(4);
+      display: inline-block;
+      margin-right: 1rem;
+      border-radius: 50%;
+      background: color('blue-50v');
+    }
+
+    .usa-prose__hcd-guide__carousel_nav_arrow_previous:after {
+      content: '';
+      display: inline-block;
+      margin-top: 0.7rem;
+      margin-left: 0.75em;
+      width: 0.6rem;
+      height: 0.6rem;
+      border-top: 0.2rem solid color('white');
+      border-right: 0.2rem solid color('white');
+      -moz-transform: rotate(-135deg);
+      -webkit-transform: rotate(-135deg);
+      transform: rotate(-135deg);
+    }
+
+    .usa-prose__hcd-guide__carousel_nav_arrow_next:after {
+      content: '';
+      display: inline-block;
+      margin-top: 0.7rem;
+      margin-left: 0.6rem;
+      width: 0.6rem;
+      height: 0.6rem;
+      border-top: 0.2rem solid color('white');
+      border-right: 0.2rem solid color('white');
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    
     #usa-prose__hcd-guide__carousel_nav_previous {
       // left: 2rem;
     }
