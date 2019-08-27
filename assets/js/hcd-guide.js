@@ -337,7 +337,7 @@ this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigatio
         html_element.scrollTop(0);
       }
     ); */
-/* 
+
     var highlights_button_selector = "";
 
     highlights_button_selector = "switch";
@@ -352,25 +352,29 @@ this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigatio
           cycleHighlights();
         }
       );
-    }*/
+    }
+
+    var highlights_button_mobile_selector = "";
+
+    highlights_button_mobile_selector = "switch-mobile";
+
+    var highlights_button_mobile_element = {};
+
+    highlights_button_mobile_element = document.getElementById(highlights_button_mobile_selector);
+
+    if (highlights_button_mobile_element !== undefined) {
+      highlights_button_mobile_element.addEventListener('click', 
+        function () {
+          cycleHighlights();
+        }
+      );
+    }
   } 
 );
 
 
 
 function cycleHighlights()  {
-  var highlights_button_selector = "";
-
-  highlights_button_selector = "lab-hcd-guide-highlights-button";
-
-  var highlights_button_element = {};
-
-  highlights_button_element = document.getElementsByClassName(highlights_button_selector)[0];
-
-  var is_highlights_button_off = "";
-
-  is_highlights_button_off = highlights_button_element.classList.contains("lab-hero--hcd-guide__highlights_off");
-
   var highlighted_copy_selector = "";
 
   highlighted_copy_selector = "usa-prose__hcd-guide__highlight_copy";
@@ -379,19 +383,16 @@ function cycleHighlights()  {
 
   highlighted_copy_element = document.getElementsByClassName(highlighted_copy_selector)[0];
 
-  if (is_highlights_button_off === true)  {
-    highlights_button_element.classList.remove("lab-hero--hcd-guide__highlights_off");
-    highlights_button_element.classList.add("lab-hero--hcd-guide__highlights_on");
+  var are_highlights_on;
 
-    highlighted_copy_element.classList.remove("usa-prose__hcd-guide__highlight_copy_off");
-    highlighted_copy_element.classList.add("usa-prose__hcd-guide__highlight_copy_on");
-  } else {
-    highlights_button_element.classList.remove("lab-hero--hcd-guide__highlights_on");
-    highlights_button_element.classList.add("lab-hero--hcd-guide__highlights_off");
-    
+  are_highlights_on = highlighted_copy_element.classList.contains("usa-prose__hcd-guide__highlight_copy_on");
+
+  if (are_highlights_on === true)  {
     highlighted_copy_element.classList.remove("usa-prose__hcd-guide__highlight_copy_on");
     highlighted_copy_element.classList.add("usa-prose__hcd-guide__highlight_copy_off");
-
+  } else {
+    highlighted_copy_element.classList.remove("usa-prose__hcd-guide__highlight_copy_off");
+    highlighted_copy_element.classList.add("usa-prose__hcd-guide__highlight_copy_on");
   }
 }
 
@@ -515,9 +516,43 @@ function showGuideMenu()  {
     guide_menu_nav_element.classList.add("guide_menu_nav_visible");
   } 
 
+  var gray_banner_selector = "";
+  var header_selector = "";
+
+  // The CSS selectors which refer to the gray banner, header and main block of content 
+  // are passed on.
+  gray_banner_selector = "usa-banner__hcd-guide";
+  header_selector = "usa-header__hcd-guide";
+
+  // Objects which will hold HTML DOM objects for the gray banner, header, and 
+  // main block of content are initialized.
+  var gray_banner_element = {};
+  var header_element = {};
+
+  // HTML DOM objects which refer to the HTML elements the above variables refer 
+  // to are passed on.
+  gray_banner_element = document.getElementsByClassName(gray_banner_selector)[0];
+  header_element = document.getElementsByClassName(header_selector)[0];
+
   gray_banner_element.classList.add("gray_banner_mobile_visible_scroll_up");
   header_element.classList.add("header_mobile_visible_scroll_up");
-  hero_element.classList.add("hero_mobile_visible_scroll_up");
+
+  var current_position;
+
+  current_position = window.pageYOffset;
+
+  if (current_position > 0) {
+    var hero_bar_selector = "";
+
+    hero_bar_selector = "lab-hero--hcd-guide";
+
+    var hero_bar_element = {};
+
+    hero_bar_element = document.getElementsByClassName(hero_bar_selector)[0];
+
+    hero_bar_element.classList.add("hero_mobile_visible_scroll_up");
+
+  }
 
 } 
 

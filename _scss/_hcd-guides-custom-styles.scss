@@ -153,16 +153,17 @@ body .progress-wrap::after {
   display: inline-block;
   vertical-align: top;
   
-  #switch {
+  #switch, 
+  #switch-mobile {
     display: none;
   }
   
-  .switch-label{
+  .switch-label {
     position: relative;
     cursor: pointer;
     margin: 0;
         
-    .switch-rail{
+    .switch-rail {
       transition: all 0.2s ease-in-out;
       position: absolute;
       width: 50px;
@@ -171,7 +172,7 @@ body .progress-wrap::after {
       border-radius: 50px;
       overflow: hidden;
     
-      .switch-slider{
+      .switch-slider {
         transition: all 0.2s ease-in-out;
         position: absolute;
         top: 4px;
@@ -184,7 +185,8 @@ body .progress-wrap::after {
     }
   }
   
-  #switch:checked + .switch-label {
+  #switch:checked + .switch-label, 
+  #switch-mobile:checked + .switch-label {
     .switch-rail{
       transition: all 0.2s ease-in-out;
       background: #00a91c;
@@ -1074,7 +1076,7 @@ button:not([disabled]):focus {
   margin-top: units(8);
   margin-left: units(2);
            
-  &__desc {
+  &_desc {
     display: inline-block;
     margin: 0.19rem 0.31rem 0 0;
     vertical-align: top;
@@ -1509,10 +1511,11 @@ button:not([disabled]):focus {
 
     &__guide_menu_link_title {
       font-size: font-size('body', 'sm') !important;
+      margin-right: units(1) !important;
     }
 
     &__guide_menu_title {
-      margin-top: px-to-rem(6px);
+      margin-top: px-to-rem(7px);
     }
 
     &__guide_menu_link {
