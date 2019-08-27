@@ -1890,6 +1890,10 @@ body .progress-wrap::after {
     font-size: font-size('heading', 8);
   }
 
+  .main-content__hcd-guide {
+    overflow: hidden;
+  }
+
   .usa-layout__content_bottom {
     .usa-back_to_top {
       width: units(6);
@@ -1950,6 +1954,13 @@ body .progress-wrap::after {
       .lab-cta__attributed_to_wrapper {
         transform: translateY(-1.8rem);
       }
+    }
+
+    .lab__case_in_point_wrapper {
+      width: calc(100% + 4rem);
+      border-bottom: none;
+      border-right: none;
+      padding-right: 4rem;
     }
 
     .usa-prose__hcd-guide__carousel_caption {

@@ -30167,6 +30167,8 @@ body .progress-wrap::after {
     font-size: 1.75rem; }
   h3 {
     font-size: 1.25rem; }
+  .main-content__hcd-guide {
+    overflow: hidden; }
   .usa-layout__content_bottom .usa-back_to_top {
     width: 3rem;
     margin: 0 auto;
@@ -30208,6 +30210,11 @@ body .progress-wrap::after {
     word-break: break-all; }
   .usa-prose__hcd-guide .lab-cta__quote .lab-cta__attributed_to_wrapper {
     transform: translateY(-1.8rem); }
+  .usa-prose__hcd-guide .lab__case_in_point_wrapper {
+    width: calc(100% + 4rem);
+    border-bottom: none;
+    border-right: none;
+    padding-right: 4rem; }
   .usa-prose__hcd-guide .usa-prose__hcd-guide__carousel_caption {
     font-size: 0.875rem; }
   .usa-prose__hcd-guide__mobile_figure {
