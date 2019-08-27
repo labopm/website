@@ -192,15 +192,15 @@ body .progress-wrap::after {
   }
 }
 
-.usa-prose__hcd-guide_a {
+.usa-prose__hcd-guide a {
   color: color('blue-50v') !important;
 }
 
-.usa-prose__hcd-guide_a:hover {
+.usa-prose__hcd-guide a:hover {
   color: color('primary') !important;
 }
 
-.usa-prose__hcd-guide_a:active {
+.usa-prose__hcd-guide a:active {
   color: color('blue-80v') !important;
 }
 
@@ -1354,6 +1354,12 @@ button:not([disabled]):focus {
       color: color('white');
       text-decoration: none;
       line-height: units(2);
+      &:hover {
+        background-color: color('blue-60v');
+      }
+      &:active {
+        background-color: color('blue-80v');
+      }
     }
 
     .section_link_previous {
