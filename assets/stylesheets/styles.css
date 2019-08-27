@@ -29739,6 +29739,11 @@ button:not([disabled]):focus {
     }
   }
  */
+  .desktop\:grid-col-8 {
+    flex: 0 0 auto;
+    /* width: 66.66667%; */ }
+  .usa-prose__hcd-guide h1 {
+    break-before: column; }
   .grid-container__hcd-guide .grid-row.grid-gap > * {
     padding-left: 1.5rem; } }
 
@@ -30146,10 +30151,12 @@ button:not([disabled]):focus {
 
 @media print {
   @page {
-    size: letter landscape;
+    size: landscape;
+    margin: 1in;
+    /* size: letter landscape;
     max-width: 11in;
     max-height: 8.5in;
-    margin: 2cm; }
+    margin: 2cm; */ }
   @page :last-child {
     page-break-after: auto; }
   h1 {
@@ -30184,13 +30191,18 @@ button:not([disabled]):focus {
     float: left;
     vertical-align: top; }
   .hcd-guide__print_wrapper {
-    width: 845px;
-    height: 671px;
-    position: relative;
-    top: 0;
+    /*  width: 845px;
+      height: 671px;
+      position: relative;
+      top: 0; */
     column-width: 410px;
     column-count: 2;
-    column-gap: 1rem; }
+    column-gap: 1rem;
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    column-count: 2;
+    column-gap: 0.5in; }
     .hcd-guide__print_wrapper *:first-child {
       margin-top: 0 !important; }
   .hcd-guide__print_one_column {
