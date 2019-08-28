@@ -193,41 +193,71 @@ body .progress-wrap::after {
   }
 }
 
+@media screen and (max-width: 64rem) { 
+  .switch-container .switch-label .switch-rail {
+    background: white;
+  }
+  .switch-container .switch-label .switch-rail .switch-slider {
+    background: #8d9297;
+  }
+  #switch:checked + .switch-label, 
+  #switch-mobile:checked + .switch-label {
+    .switch-rail{
+      background: white !important;
+      .switch-slider{
+        background: #00a91c;
+      } 
+    }        
+  }
+}
+/*.main-content__hcd-guide a,
 .usa-prose__hcd-guide_a {
-  color: color('blue-50v') !important;
+  color: color('blue-50v');
 }
-
+.main-content__hcd-guide a:hover,
 .usa-prose__hcd-guide_a:hover {
-  color: color('primary') !important;
+  color: color('blue-60v');
 }
-
+.main-content__hcd-guide a:active,
 .usa-prose__hcd-guide_a:active {
-  color: color('blue-80v') !important;
+  color: color('blue-80v');
+}*/
+
+.usa-prose__hcd-guide a:not(.usa-layout__section_link) {
+  color: color('blue-50v');
+}
+.usa-sidenav a:hover,
+.usa-prose__hcd-guide a:not(.usa-layout__section_link):hover {
+  color: color('blue-60v');
+}
+.usa-sidenav a:active,
+.usa-prose__hcd-guide a:not(.usa-layout__section_link):active {
+  color: color('blue-80v');
 }
 
-.usa-sidenav a:hover {
+.usa-sidenav a {
   background-color: transparent !important;
 }
 
-button {
+/*button {
   background-color: color('blue-50v') !important;
   outline-offset: 0.25rem;
 }
 
 button:hover {
-  background-color: color('primary') !important;
+  background-color: color('blue-60v') !important;
 }
 
 button:active {
   background-color: color('blue-80v') !important;
-}
+}*/
 
-.lab__button, 
+/*.lab__button, 
 .lab__button:hover, 
 .lab__button:active, 
 .usa-accordion__button {
   background-color: transparent !important;
-}
+}*/
 
 button:not([disabled]):focus {
   outline-offset: 0.25rem;
@@ -275,19 +305,22 @@ button:not([disabled]):focus {
   }
 
   &__know_the_basics {
-    width: 15rem;
+    display: inline-block;
     padding-bottom: units(1);
     background-color: color('gold-5v');
 
     a {
-      margin: units(1) 0 units(1) units(3);
+      margin: units(1) units(3);
       display: block;
-      color: color('primary-dark')
+      color: color('primary-dark') !important;
+      &:hover{
+        color: color('blue-60v') !important;
+      }
     }
   }
 
   &__know_header {
-    padding: units(1) 0 units(1) units(3);
+    padding: units(1) units(3);
     background-color: $color-gold-20v;
   }
 
@@ -806,6 +839,7 @@ button:not([disabled]):focus {
 
   .lab__hcd-guide__description {
     width: px-to-rem(590px);
+    max-width: 90%;
     height: auto;
     display: none;
     position: fixed;
@@ -853,9 +887,13 @@ button:not([disabled]):focus {
   }
 }
 
+@media screen and (max-width: 64rem) {
+  .usa-prose__hcd-guide .lab__hcd-guide__description_copy {
+    margin: units(3);
+  }
+}
 
-
-.usa-accordion__reference_link {
+.usa-prose__hcd-guide a.usa-accordion__reference_link {
   padding-right: units(2);
   background-image: url('/assets/img/lab/hcd-guide/design/external-link-arrow.png');
   background-position: 100% 50%;
@@ -870,6 +908,8 @@ button:not([disabled]):focus {
   display: block;
   top: px-to-rem(81px);
   background-color: color('blue-50v');
+  -webkit-transition: all 100ms linear;
+  transition: all 100ms linear;
   
   &__body {
     min-width: px-to-rem(1005px);
@@ -1352,9 +1392,16 @@ button:not([disabled]):focus {
       background-position: calc(100% - 0.81rem) 50%;
       border-radius: 5px;
       font-weight: font-weight('bold');
-      color: color('white');
+      color: color('white') !important;
       text-decoration: none;
       line-height: units(2);
+      outline-offset: 0.25rem;
+      &:hover {
+        background-color: color('blue-60v') !important;
+      }
+      &:active {
+        background-color: color('blue-80v') !important;
+      }
     }
 
     .section_link_previous {
@@ -1607,7 +1654,7 @@ button:not([disabled]):focus {
     
     &__guide_menu_link,
     &__guide_menu_title {
-      width: 8rem;
+      width: 8.5rem;
       height: 1.6rem;
       margin-top: px-to-rem(7px);
       display: inline-block;
@@ -1627,10 +1674,11 @@ button:not([disabled]):focus {
     }
 
     &__guide_menu_link {
-      background-image: url('/assets/img/lab/hcd-guide/design/guide-menu-icon.png');
+      background-image: url('/assets/img/lab/hcd-guide/design/guide-menu.svg');
       background-repeat: no-repeat;
       background-position: 100% 0%;
       text-decoration: none;
+      height: 18px;
 
 
       /* span {
@@ -2017,30 +2065,20 @@ button:not([disabled]):focus {
 @media print {
   @page {
     size: landscape;
- margin: 1in 0 1in 1in;
-
-
-    /* size: letter landscape;
-    max-width: 11in;
-    max-height: 8.5in;
-    margin: 2cm; */
-  }
-
- /*  @page:right {
-    content: "HCD Design Phase Concept Guide";
-  margin:0;
-  }
-
-  @page:left {
-  margin: 1in;
-  }
-
-  @page:right{
-    @top-right {
-      content: counter(page);
+    margin: 0.5in 1.5in;
+    @right-top {
+      content: counter(page)"| HCD Design Phase Concept Guide";
     }
-  } */
-
+  }
+  .usa-layout-docs__main_hcd-guide {
+    column-count: 2;
+    column-gap: 1rem;
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    column-count: 2;
+    column-gap: 0.5in;
+  }
 
   @page:last-child {
     page-break-after: auto;
@@ -2093,7 +2131,7 @@ button:not([disabled]):focus {
       height: 671px;
       position: relative;
       top: 0; */
-      column-width: 410px;
+      /*column-width: 410px;*/
       column-count: 2;
       column-gap: 1rem;
       -moz-column-count: 2;
@@ -2149,12 +2187,26 @@ button:not([disabled]):focus {
       text-orientation: sideways;
     }
 
-    &_footnotes_link {
+    /*&_footnotes_link {
       display: inline;
+    }*/
+    &_footnotes_link{
+      counter-increment: footnotes;
+      text-decoration: none;
+      color: inherit;
+      cursor: default;
+      outline: none;
+      &:after {
+        content: '[' counter(footnotes) ']';
+        vertical-align: super;
+        font-size: 0.5em; 
+        margin-left: 2px; 
+        text-decoration: underline; 
+        cursor: pointer; 
+      }
     }
-
     &_footnotes {
-      width: 845px;
+      /*width: 845px;*/
       height: 50px;
       padding-top: 0.1cm;
       display: block;
@@ -2276,7 +2328,7 @@ button:not([disabled]):focus {
 
   .hcd-guide__print_not_visible {
     text-decoration: none;
-    color: color('black'); 
+    color: inherit !important;
   }
 
   .usa-accordion__reference_link {
