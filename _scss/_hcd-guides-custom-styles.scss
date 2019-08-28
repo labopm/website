@@ -1037,10 +1037,10 @@ button:not([disabled]):focus {
   padding-bottom: px-to-rem(146px) !important;
 }
 
-.hero_scroll_up {
+/*.hero_scroll_up {
   height: px-to-rem(64px);
   padding: units(2) 0;
-}
+}*/
 
 .hero_scroll_down {
   height: 1rem;
@@ -1056,7 +1056,7 @@ button:not([disabled]):focus {
   width: 100%;
   display: block;
   position: relative;
-  top: px-to-rem(-17px);
+  /*top: px-to-rem(-17px);*/
 }
 
 .hero_bar_content_scroll_down {
@@ -1501,7 +1501,7 @@ button:not([disabled]):focus {
   }
 
   .hero_scroll_up {
-    height: px-to-rem(36px);
+    /*height: px-to-rem(36px);*/
     position: fixed;
     top: px-to-rem(96px);
   }
@@ -1515,14 +1515,14 @@ button:not([disabled]):focus {
 
   
 
-  .hero_bar_scroll_up {
+ /* .hero_bar_scroll_up {
     width: 100%;
     display: block;
     position: relative;
     // top: px-to-rem(12px);
     top: 0;
 
-  }
+  }*/
 
   .hero_bar_scroll_down {
     display: none;
@@ -1947,7 +1947,7 @@ button:not([disabled]):focus {
   }
 
   .hero_scroll_up {
-    top: px-to-rem(58px);
+    top: 4.375rem;
   }
 
   .main_content_scroll_down {
@@ -2004,7 +2004,7 @@ button:not([disabled]):focus {
 
     .usa-layout__section_link {
       width: 10.5rem;
-      height: px-to-rem(44px);
+      /*height: px-to-rem(44px);*/
       padding: 0 units(3) 0 0;
       display: table-cell;
       float: none;

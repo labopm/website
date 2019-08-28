@@ -27012,10 +27012,10 @@ button:not([disabled]):focus {
   top: 9.125rem;
   padding-bottom: 9.125rem !important; }
 
-.hero_scroll_up {
-  height: 4rem;
-  padding: 1rem 0; }
-
+/*.hero_scroll_up {
+  height: px-to-rem(64px);
+  padding: units(2) 0;
+}*/
 .hero_scroll_down {
   height: 1rem;
   padding: 0; }
@@ -27028,7 +27028,7 @@ button:not([disabled]):focus {
   width: 100%;
   display: block;
   position: relative;
-  top: -1.0625rem; }
+  /*top: px-to-rem(-17px);*/ }
 
 .hero_bar_content_scroll_down {
   display: none !important; }
@@ -27349,7 +27349,7 @@ button:not([disabled]):focus {
     top: 0; }
 
   .hero_scroll_up {
-    height: 2.25rem;
+    /*height: px-to-rem(36px);*/
     position: fixed;
     top: 6rem; }
 
@@ -27358,12 +27358,14 @@ button:not([disabled]):focus {
     position: relative;
     top: 0; }
 
-  .hero_bar_scroll_up {
+ /* .hero_bar_scroll_up {
     width: 100%;
     display: block;
     position: relative;
-    top: 0; }
+    // top: px-to-rem(12px);
+    top: 0;
 
+  }*/
   .hero_bar_scroll_down {
     display: none; }
 
@@ -27478,7 +27480,7 @@ button:not([disabled]):focus {
       .lab-hero--hcd-guide__guide_menu_link {
         display: inline-block; }
     .lab-hero--hcd-guide__guide_menu_link, .lab-hero--hcd-guide__guide_menu_title {
-      width: 8rem;
+      width: 8.5rem;
       height: 1.6rem;
       margin-top: 0.4375rem;
       display: inline-block;
@@ -27638,7 +27640,7 @@ button:not([disabled]):focus {
     top: 1.375rem; }
 
   .hero_scroll_up {
-    top: 3.625rem; }
+    top: 4.375rem; }
 
   .main_content_scroll_down {
     top: 8.125rem !important;
@@ -27675,7 +27677,7 @@ button:not([disabled]):focus {
     margin-top: 1.5rem; }
   .usa-layout__content_bottom .usa-layout__section_link {
     width: 10.5rem;
-    height: 2.75rem;
+    /*height: px-to-rem(44px);*/
     padding: 0 1.5rem 0 0;
     display: table-cell;
     float: none;
