@@ -1,6 +1,6 @@
+/* 
 
-
-/* Please ❤ this if you like it! */
+ Please ❤ this if you like it! 
 
 (function($) { "use strict";
 		
@@ -35,7 +35,7 @@
 		
 	});
 	
-})(jQuery);  
+})(jQuery);  */ 
 
 
 window.addEventListener("load", 
@@ -212,11 +212,7 @@ this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigatio
         var offset = 100;
         var duration = 550;
 
-        if (jQuery(this).scrollTop() > offset) {
-          jQuery('.progress-wrap').addClass('active-progress');
-        } else {
-          jQuery('.progress-wrap').removeClass('active-progress');
-        }
+        
 
         /* if (jQuery(this).scrollTop() > offset) {
           jQuery('.progress-wrap').addClass('active-progress');

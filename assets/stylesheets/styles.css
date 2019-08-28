@@ -28905,7 +28905,6 @@ body {
   cursor: pointer;
   display: block;
   border-radius: 50px;
-  background-color: white;
   box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.2);
   z-index: 10000;
   opacity: 0;
@@ -28922,7 +28921,7 @@ body {
 .progress-wrap::after {
   position: absolute;
   font-family: 'wingdings 3';
-  content: 'h';
+  content: 'g';
   text-align: center;
   line-height: 46px;
   font-size: 24px;
@@ -28939,8 +28938,8 @@ body {
 
 .progress-wrap::before {
   position: absolute;
-  font-family: 'wingdings 3';
-  content: 'h';
+  font-family: 'wingdings';
+  content: 'g';
   text-align: center;
   line-height: 46px;
   font-size: 24px;
@@ -30256,14 +30255,6 @@ button:not([disabled]):focus {
     word-break: break-all; }
   .usa-prose__hcd-guide .lab-cta__quote .lab-cta__attributed_to_wrapper {
     transform: translateY(-1.8rem); }
-  .usa-prose__hcd-guide .lab__hcd-guide__description {
-    width: 100%;
-    top: auto;
-    left: 0;
-    bottom: 0;
-    transform: none; }
-    .usa-prose__hcd-guide .lab__hcd-guide__description .lab__hcd-guide__description_copy {
-      margin: 1rem; }
   .usa-prose__hcd-guide .lab__case_in_point_wrapper {
     width: calc(100% + 4rem);
     border-bottom: none;
