@@ -19,9 +19,7 @@ next-link-title: Get started
 </div>
 
 <p>
-  Your <a href="https://github.com/labopm/HCD-Guides" title="Discovery Phase" target="_blank" class="usa-prose__hcd-guide_a hcd-guide__print_not_visible">Discovery Phase</a> 
-  <sup class="hcd-guide__print_footnotes_link">1</sup>
-  is complete or is wrapping up, and you and your team are ready to move into the Design phase. 
+  Your <a href="https://github.com/labopm/HCD-Guides" title="Discovery Phase" target="_blank" class="usa-prose__hcd-guide_a hcd-guide__print_not_visible ">Discovery Phase</a> is complete or is wrapping up, and you and your team are ready to move into the Design phase. 
   In this phase, the team will build on the research completed in the Discovery phase in 
   order to create action in the form of a designed or evolved product, service, or 
   system from what you learned. 
@@ -30,8 +28,8 @@ next-link-title: Get started
   Use this Concept Guide to help you understand the Why behind the design process. 
   You&rsquo;ll be able to find the How in the upcoming HCD Design Phase Operations Guide. 
   For guidance on How in the meantime, see the 
-  <a href="https://methods.18f.gov/make/" title="Making Design Methods" target="_blank" class="usa-prose__hcd-guide_a hcd-guide__print_not_visible">Making Design Methods</a>
-  <sup class="hcd-guide__print_footnotes_link">2</sup> 
+  <a href="https://methods.18f.gov/make/" title="Making Design Methods" target="_blank" class="usa-prose__hcd-guide_a hcd-guide__print_footnotes_link">Making Design Methods</a>
+  <!-- <sup class="hcd-guide__print_footnotes_link">2</sup>  -->
   developed by our friends over at 18F.
 </p>
 <div class="usa-prose__hcd-guide__know_the_basics">
@@ -91,7 +89,6 @@ next-link-title: Get started
 <p>
   If you're not sure if you've completed all these points, or feel that you need more information or direction on them, please see the <a href="https://github.com/labopm/HCD-Guides" title="Discovery Phase" target="_blank" class="usa-prose__hcd-guide_a hcd-guide__print_not_visible">Human-Centered Design Discovery Phase Guides</a>.
 </p>
-<div class="hcd-guide__print_wrapper">
 <h2 id="design-phase">What to expect in the Design Phase</h2>
 <p>
   To set you and your team up for success in the Design Phase, this Guide 
