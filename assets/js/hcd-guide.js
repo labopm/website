@@ -1,4 +1,6 @@
-/* /* Please ❤ this if you like it! 
+
+
+/* Please ❤ this if you like it! */
 
 (function($) { "use strict";
 		
@@ -20,8 +22,11 @@
 			progressPath.style.strokeDashoffset = progress;
 		}
 		updateProgress();
-		
-    jQuery('.progress-wrap').on('click', function(event) {
+		$(window).scroll(updateProgress);	
+		var offset = 50;
+		var duration = 550;
+					
+		jQuery('.progress-wrap').on('click', function(event) {
 			event.preventDefault();
 			jQuery('html, body').animate({scrollTop: 0}, duration);
 			return false;
@@ -30,7 +35,7 @@
 		
 	});
 	
-})(jQuery);  */
+})(jQuery);  
 
 
 window.addEventListener("load", 
@@ -190,18 +195,7 @@ this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigatio
         is_hero_large = isHeroLarge();
         num_class_in_hero = numClassInHero();
         is_mobile_menu_visible = isMobileMenuVisible();
-
-        /* var offset = 50;
-        var duration = 550;
-
-        var progress_wrap_element = document.getElementsByClassName("progress-wrap")[0];
         
-        if (current_footer_top_value > offset) {
-          progress_wrap_element.classList.add('active-progress');
-        } else {
-          progress_wrap_element.classList.remove('active-progress');
-        }
-         */
         // IF/ELSE statement which folds the blue 'search' bar if the visitor is scrolling down.
         // Otherwise, the blue bar is made visible. Also, this statement stops the side navigation 
         // from scrolling if the visitor has reached the bottom of the webpage.
@@ -217,6 +211,12 @@ this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigatio
 
         var offset = 100;
         var duration = 550;
+
+        if (jQuery(this).scrollTop() > offset) {
+          jQuery('.progress-wrap').addClass('active-progress');
+        } else {
+          jQuery('.progress-wrap').removeClass('active-progress');
+        }
 
         /* if (jQuery(this).scrollTop() > offset) {
           jQuery('.progress-wrap').addClass('active-progress');
@@ -1325,30 +1325,24 @@ function cycleGallery(cycle_direction, carousel_id_value)  {
 
   image_to_make_visible = 0;
 
-console.log("image_which_is_visible = " + image_which_is_visible);
-console.log("num_of_images_in_set = " + num_of_images_in_set);
   if (cycle_direction === "previous") {
     if (image_which_is_visible === 1) {
-      image_to_make_visible = num_of_images_in_set - 1;      
+      image_to_make_visible = num_of_images_in_set;      
     } else {
       image_to_make_visible = image_which_is_visible - 1;
     }
   } else {
-    if (image_which_is_visible === num_of_images_in_set - 1) {
+    if (image_which_is_visible === num_of_images_in_set) {
       image_to_make_visible = 1;      
     } else {
       image_to_make_visible = image_which_is_visible + 1;
     }
-  }/* 
-
-  if (image_to_make_visible === 1 && cycle_direction === "next")  {
-    carousel_caption_elements[num_of_images_in_set].classList.remove(carousel_caption_visible_selector);
-  } */
+  }
 
   carousel_image_new_visible_selector = carousel_image_new_visible_selector + image_to_make_visible.toString();
   carousel_caption_new_visible_selector = carousel_caption_new_visible_selector + image_to_make_visible.toString();
   carousel_dot_new_visible_selector = carousel_dot_new_visible_selector + image_to_make_visible.toString();
-  console.log("carousel_dot_new_visible_selector = " + carousel_dot_new_visible_selector);
+
   var carousel_image_new_visible_element = {};
   var carousel_caption_new_visible_element = {};
   var carousel_dot_new_visible_element = {};
