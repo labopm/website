@@ -190,7 +190,7 @@ this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigatio
         is_hero_large = isHeroLarge();
         num_class_in_hero = numClassInHero();
         is_mobile_menu_visible = isMobileMenuVisible();
-
+this.console.log("is_mobile_menu_visible = " + is_mobile_menu_visible);
         /* var offset = 50;
         var duration = 550;
 
@@ -665,7 +665,7 @@ function hideGuideMenu()  {
 
   main_content_contains_class_value = main_content_element.classList.contains("main_content_to_leave_up");
   header_top_value = window.getComputedStyle(header_element, null).getPropertyValue("top");
-
+console.log("main_content_contains_class_value = " + main_content_contains_class_value);
   current_position = window.pageYOffset;
 
   if (current_position === 0 && main_content_contains_class_value === true)  {
@@ -918,7 +918,7 @@ function stopSideNavigationScrolling(side_navigation_values)  {
   var window_width;
 
   window_width = window.innerWidth;
-console.log("current_position = " + current_position);
+
   if (current_position < scroll_value && window_width >= 1024) {
     side_navigation_element.classList.remove("side_navigation_scroll_up");
     side_navigation_element.classList.add("side_navigation_scroll_down");
@@ -1237,9 +1237,9 @@ function expandSearchBar()  {
 
  main_content_contains_class_value = main_content_element.classList.contains("main_content_scroll_down");
  header_top_value = window.getComputedStyle(header_element, null).getPropertyValue("top");
-
+console.log("main_content_contains_class_value = " + main_content_contains_class_value);
  current_position = window.pageYOffset;
-
+console.log("header_top_value = " + header_top_value);
  if (main_content_contains_class_value === true && header_top_value === "48px")  {
   main_content_element.classList.remove("main_content_after_scroll");
   main_content_element.classList.add("main_content_to_leave_up");
@@ -1326,18 +1326,22 @@ function cycleGallery(cycle_direction, carousel_id_value)  {
   image_to_make_visible = 0;
 
   if (cycle_direction === "previous") {
-    if (image_which_is_visible === 1) {
-      image_to_make_visible = num_of_images_in_set;      
+    if (image_which_is_visible !== 0) {
+      image_to_make_visible = num_of_images_in_set - 1;
     } else {
-      image_to_make_visible = image_which_is_visible - 1;
+      image_to_make_visible = num_carousel_images;
     }
   } else {
-    if (image_which_is_visible === num_of_images_in_set) {
-      image_to_make_visible = 1;      
-    } else {
+    if (image_which_is_visible !== num_of_images_in_set) {
       image_to_make_visible = image_which_is_visible + 1;
+    } else {
+      image_to_make_visible = 1;
     }
-  }
+  }/* 
+
+  if (image_to_make_visible === 1 && cycle_direction === "next")  {
+    carousel_caption_elements[num_of_images_in_set].classList.remove(carousel_caption_visible_selector);
+  } */
 
   carousel_image_new_visible_selector = carousel_image_new_visible_selector + image_to_make_visible.toString();
   carousel_caption_new_visible_selector = carousel_caption_new_visible_selector + image_to_make_visible.toString();
