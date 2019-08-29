@@ -1,5 +1,5 @@
 
-
+/* 
 /* Please ❤ this if you like it! */
 
 (function($) { "use strict";
@@ -41,7 +41,7 @@
 		
 	});
 	
-})(jQuery); 
+})(jQuery);  
  
 
 window.addEventListener("load", 
@@ -916,7 +916,8 @@ function stopSideNavigationScrolling(side_navigation_values)  {
   var side_navigation_position_value = "";
 
   side_navigation_position_value = window.getComputedStyle(side_navigation_element, null).getPropertyValue("position");
-  
+console.log("scroll_value = " + scroll_value);
+console.log("current_position = " + current_position);
   var window_width;
 
   window_width = window.innerWidth;
@@ -926,7 +927,7 @@ function stopSideNavigationScrolling(side_navigation_values)  {
     side_navigation_element.classList.add("side_navigation_scroll_down");
     side_navigation_element.style.top = side_navigation_top_value;
   } else if (current_position >= scroll_value && 
-             side_navigation_position_value === "sticky" && 
+             side_navigation_position_value === "fixed" && 
              scroll_value > 0 && 
              window_width >= 768)  {
     side_navigation_element.classList.remove("side_navigation_scroll_down");

@@ -1131,7 +1131,7 @@ button:not([disabled]):focus {
 }
 
 .side_navigation_scroll_down {
-  position: sticky !important;
+  position: fixed !important;
   top: px-to-rem(146px);
 }
 
@@ -1198,7 +1198,7 @@ button:not([disabled]):focus {
 #usa-layout-docs__sticky {
   width: 100%;
   padding: units(4) 0;
-  position: sticky;
+  position: relative;
 }
 
 .usa-layout-docs__background {
