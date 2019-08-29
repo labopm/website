@@ -14,18 +14,16 @@
         {% if page.section == 'hcd-guide' %}
           {% assign sidenavigation = site.data.navigation['hcd-guide'] %}
         <aside class="usa-layout-docs__sidenav desktop:grid-col-4">
-          {% include hcd-guide-sidenav.html links=sidenavigation %}
+          <div class="usa-layout-docs__sticky">
+            {% include hcd-guide-sidenav.html links=sidenavigation %}
+          </div>
         </aside>
         {% endif %}
-        {% if people_page %}
-        <div class="usa-layout-docs__main mobile-lg:grid-col-8 usa-prose">
-          {% include person-header.html %}
+        <div class="usa-layout-docs__main desktop:grid-col-8 usa-prose">
+          {% if people_page %}
+            {% include person-header.html %}
+          {% endif %}
           {{ content }}
-          <p><a href="../../about/team/">Meet more of our team</a></p>
-          {% else %}
-          <div class="usa-layout-docs__main desktop:grid-col-8 usa-prose">
-            {{ content }}
-            {% endif %}
         </div>
         {% assign registration_id = page.registration-id %}
         {% if registration_id %}
@@ -33,36 +31,15 @@
           {% include registration.html id=registration_id next-offering=page.next-offering next-offering-location=page.next-offering-location %}
         </aside>
         {% endif %}
+
         {% if people_page %}
-        <aside class="usa-layout-docs__sidenav grid-col-12 mobile-lg:grid-col-4">
-          <div class="grid row"><div class="grid-col-8 mobile-lg:grid-col-12" style="margin-left:auto;margin-right:auto">
-            {% include person-sidebar.html image_name=page.image_name %}
-          </div></div>
+        <aside class="usa-layout-docs__sidenav desktop:grid-col-4">
+          {% include person-sidebar.html image_name=page.image_name %}
         </aside>
-        {% endif %}
-        {% if page.title == 'Partner with us' %}
-          {% include contact-cta.html %}
         {% endif %}
       </div>
     </div>
-    {% if page.highlight and page.section == 'what-we-do' %}
-      <div class="lab-content-highlight-warm">
-        <div class="lab-content-highlight-warm__body">
-          {% capture highlight_include %}{% include {{ page.highlight }} %}{% endcapture %}
-          {{ highlight_include | markdownify }}
-        </div>
-      </div>
-    {% endif %}
-    {% if page.highlight and page.section == 'about' %}
-      <div class="lab-content-highlight-cool">
-        <div class="lab-content-highlight-cool__body">
-          {% capture highlight_include %}{% include {{ page.highlight }} %}{% endcapture %}
-          {{ highlight_include | markdownify }}
-        </div>
-      </div>
-    {% endif %}
   </main>
-
   {% include _footer.html %}
 
   <script src="{{ site.baseurl }}/assets/js/uswds.min.js"></script>

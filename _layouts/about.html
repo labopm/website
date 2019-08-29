@@ -21,18 +21,15 @@
         </div>
       </div>
     </div>
-
-    {% if page.highlight %}
-    <div class="lab-content-highlight-cool">
-      <div class="lab-content-highlight-cool__body">
-        {% capture highlight_include %}{% include {{ page.highlight }} %}{% endcapture %}
-        {{ highlight_include | markdownify }}
-      </div>
-    </div>
-    {% endif %}
-
   </main>
-
+  {% if page.highlight %}
+  <div class="lab-content-highlight">
+    <div class="lab-content-highlight__body">
+      {% capture highlight_include %}{% include {{ page.highlight }} %}{% endcapture %}
+      {{ highlight_include | markdownify }}
+    </div>
+  </div>
+  {% endif %}
   {% include _footer.html %}
 
   <script src="{{ site.baseurl }}/assets/js/uswds.min.js"></script>
