@@ -2106,6 +2106,8 @@ button:not([disabled]):focus {
     margin: 0.5in 1.5in;
     @right-top {
       content: counter(page)"| HCD Design Phase Concept Guide";
+      position: fixed;
+      display: block;
     }
   }
   .usa-layout-docs__main_hcd-guide {
@@ -2311,17 +2313,19 @@ button:not([disabled]):focus {
 
     .lab__hcd-guide {
       &__description {
-        width: 425px;
+        /*width: 425px;*/
         display: block;
         position: relative;
+        border: 1px dashed color('base');
   
         &_header {
-          height: 1.6cm;
-          background-color: color('white');
+          height: 0;
+          /*background-color: color('white');*/
         }
   
         &_header_img {
-          margin: 1.75rem units(2) 0 units(2) !important;
+          margin: -12px !important;
+          background: white;
         }
   
         &_header_a {
@@ -2329,14 +2333,27 @@ button:not([disabled]):focus {
         }
   
         &_copy {
-          margin: 0 1cm 0 1.6cm;
-          page-break-inside: auto;
+          margin: 1rem;
+          font-size: font-size('body', 4);
+          line-height: line-height('body', 3);
+        }
+        &_header_h4 {
+          display: none;
         }
       }
     }
 
-    .lab__case_in_point {
-      &_wrapper {
+  .lab__case_in_point {
+      &_copy {
+        padding-right: 0;
+        /*h2 {
+          margin-top: 0;
+        }
+        p {
+          page-break-inside: auto;
+        }*/
+      }
+     /* &_wrapper {
         border: none;
       }
       
@@ -2351,17 +2368,7 @@ button:not([disabled]):focus {
 
       &_wrapper {
         margin: 1cm 0 0.5cm 0;
-      }
-
-      &_copy {
-        h2 {
-          margin-top: 0;
-        }
-
-        p {
-          page-break-inside: auto;
-        }
-      }
+      }*/
     }
   } 
 
