@@ -193,7 +193,7 @@ body .progress-wrap::after {
   }
 }
 
-@media screen and (max-width: 64rem) { 
+@media screen and (max-width: 48rem) { 
   .switch-container .switch-label .switch-rail {
     background: white;
   }
@@ -945,7 +945,7 @@ button:not([disabled]):focus {
   }
 }
 
-@media screen and (max-width: 64rem) {
+@media screen and (max-width: 48rem) {
   .usa-prose__hcd-guide .lab__hcd-guide__description_copy {
     margin: units(3);
   }
@@ -1361,7 +1361,7 @@ button:not([disabled]):focus {
   }
 }
 
-@media screen and (max-width: 64.99rem)  {
+@media screen and (max-width: 48.99rem)  {
   .lab-hero--hcd-guide {
     top: 4.4rem;
 
@@ -1418,7 +1418,7 @@ button:not([disabled]):focus {
 
   .lab-hero {
     &--hcd-guide__body {
-      max-width: 64rem;
+      max-width: 48rem;
       margin-left: auto;
       margin-right: auto;
       padding: units(2) units(6) units(2) units(4);
@@ -1463,7 +1463,7 @@ button:not([disabled]):focus {
 
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 769px) {
   .lab-hero--hcd-guide {
     &__desktop_visible {
       display: inline-block;
@@ -1493,7 +1493,7 @@ button:not([disabled]):focus {
   }
 }
 
-@media screen and (max-width: 64rem)  {
+@media screen and (max-width: 48rem)  {
   .usa-banner__hcd-guide, 
   .usa-header__hcd-guide, 
   .lab-hero--hcd-guide {
@@ -1983,7 +1983,7 @@ button:not([disabled]):focus {
 }
 
 
-@media screen and (min-width: 25.9375rem) and (max-width: 64rem)  {
+@media screen and (min-width: 25.9375rem) and (max-width: 48rem)  {
   .header_scroll_up {
     top: px-to-rem(22px);
   }
