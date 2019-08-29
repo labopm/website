@@ -4,6 +4,13 @@ _site
 /node_modules
 .DS_Store
 .vscode
+/assets/stylesheets/styles.css
+/assets/stylesheets/styles.css.map
+tasks.json
+Gemfile
+Gemfile.lock
+_config.yml
+_config-dev.yml
 
 
 # ignore gulp-generated vendor files

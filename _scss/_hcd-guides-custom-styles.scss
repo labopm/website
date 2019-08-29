@@ -225,7 +225,8 @@ button:active {
 .lab__button, 
 .lab__button:hover, 
 .lab__button:active, 
-.usa-accordion__button {
+.usa-accordion__button, 
+.usa-nav__primary button:hover {
   background-color: transparent !important;
 }
 
