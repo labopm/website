@@ -1326,10 +1326,10 @@ function cycleGallery(cycle_direction, carousel_id_value)  {
   image_to_make_visible = 0;
 
   if (cycle_direction === "previous") {
-    if (image_which_is_visible !== 0) {
-      image_to_make_visible = num_of_images_in_set - 1;
+    if (image_which_is_visible === 1) {
+      image_to_make_visible = num_of_images_in_set;
     } else {
-      image_to_make_visible = num_carousel_images;
+      image_to_make_visible = image_which_is_visible - 1;
     }
   } else {
     if (image_which_is_visible !== num_of_images_in_set) {
