@@ -28856,9 +28856,11 @@ body {
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear; }
 
-.main-content__hcd-guide {
+.grid-container__hcd-guide {
+  position: relative;
   width: 100%;
-  display: block; }
+  display: block;
+  overflow: hidden; }
 
 @-webkit-keyframes border-transform {
   0%, 100% {
@@ -28918,8 +28920,8 @@ body {
 
 .progress-wrap::after {
   position: absolute;
-  font-family: 'unicons';
-  content: '\e84b';
+  font-family: "wingdings 3";
+  content: 'h';
   text-align: center;
   line-height: 46px;
   font-size: 24px;
@@ -28936,8 +28938,8 @@ body {
 
 .progress-wrap::before {
   position: absolute;
-  font-family: 'unicons';
-  content: '\e84b';
+  font-family: "wingdings 3";
+  content: 'h';
   text-align: center;
   line-height: 46px;
   font-size: 24px;

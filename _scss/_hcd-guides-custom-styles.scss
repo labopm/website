@@ -1,7 +1,7 @@
 
 
 $theme-font-family-serif: 'merriweather', serif;
-
+$theme-font-family-top-button: 'wingdings 3';
 
 
 
@@ -32,11 +32,11 @@ body{
   transition: all 200ms linear; 
 }
 
-.main-content__hcd-guide {
-  // position: relative;
+.grid-container__hcd-guide {
+  position: relative;
   width: 100%;
   display: block;
-  // overflow: hidden;
+  overflow: hidden;
   // height: 100vh;
 }
 
@@ -86,8 +86,8 @@ body{
 }
 .progress-wrap::after {
   position: absolute;
-  font-family: 'unicons';
-  content: '\e84b';
+  font-family: $theme-font-family-top-button;
+  content: 'h';
   text-align: center;
   line-height: 46px;
   font-size: 24px;
@@ -104,8 +104,8 @@ body{
 }
 .progress-wrap::before {
   position: absolute;
-  font-family: 'unicons';
-  content: '\e84b';
+  font-family: $theme-font-family-top-button;
+  content: 'h';
   text-align: center;
   line-height: 46px;
   font-size: 24px;

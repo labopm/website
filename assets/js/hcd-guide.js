@@ -1,4 +1,6 @@
-/* /* Please ❤ this if you like it! 
+
+
+/* Please ❤ this if you like it! */
 
 (function($) { "use strict";
 		
@@ -20,8 +22,17 @@
 			progressPath.style.strokeDashoffset = progress;
 		}
 		updateProgress();
-		
-    jQuery('.progress-wrap').on('click', function(event) {
+		// $(window).scroll(updateProgress);	
+		var offset = 50;
+		var duration = 550;
+		jQuery(window).on('scroll', function() {
+			if (jQuery(this).scrollTop() > offset) {
+				jQuery('.progress-wrap').addClass('active-progress');
+			} else {
+				jQuery('.progress-wrap').removeClass('active-progress');
+			}
+		});				
+		jQuery('.progress-wrap').on('click', function(event) {
 			event.preventDefault();
 			jQuery('html, body').animate({scrollTop: 0}, duration);
 			return false;
@@ -30,8 +41,8 @@
 		
 	});
 	
-})(jQuery);  */
-
+})(jQuery); 
+ 
 
 window.addEventListener("load", 
   function () {
@@ -78,6 +89,7 @@ window.addEventListener("load",
     // A String which will hold the CSS selector for the side navigation is initialized.
     var side_navigation_selector = "";
 
+// console.log("scroll_value = " + scroll_value);
     // The CSS selector referring to the side navigation is passed on.
     side_navigation_selector = "usa-layout-docs__sticky";
 
@@ -175,7 +187,7 @@ this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigatio
       scroll_value
     ];
     
-    // stopSideNavigationScrolling(side_navigation_values);
+    stopSideNavigationScrolling(side_navigation_values);
     var is_hero_large;
 
     var num_class_in_hero;
@@ -190,18 +202,8 @@ this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigatio
         is_hero_large = isHeroLarge();
         num_class_in_hero = numClassInHero();
         is_mobile_menu_visible = isMobileMenuVisible();
-this.console.log("is_mobile_menu_visible = " + is_mobile_menu_visible);
-        /* var offset = 50;
-        var duration = 550;
 
-        var progress_wrap_element = document.getElementsByClassName("progress-wrap")[0];
         
-        if (current_footer_top_value > offset) {
-          progress_wrap_element.classList.add('active-progress');
-        } else {
-          progress_wrap_element.classList.remove('active-progress');
-        }
-         */
         // IF/ELSE statement which folds the blue 'search' bar if the visitor is scrolling down.
         // Otherwise, the blue bar is made visible. Also, this statement stops the side navigation 
         // from scrolling if the visitor has reached the bottom of the webpage.
@@ -665,7 +667,7 @@ function hideGuideMenu()  {
 
   main_content_contains_class_value = main_content_element.classList.contains("main_content_to_leave_up");
   header_top_value = window.getComputedStyle(header_element, null).getPropertyValue("top");
-console.log("main_content_contains_class_value = " + main_content_contains_class_value);
+
   current_position = window.pageYOffset;
 
   if (current_position === 0 && main_content_contains_class_value === true)  {
@@ -1237,9 +1239,9 @@ function expandSearchBar()  {
 
  main_content_contains_class_value = main_content_element.classList.contains("main_content_scroll_down");
  header_top_value = window.getComputedStyle(header_element, null).getPropertyValue("top");
-console.log("main_content_contains_class_value = " + main_content_contains_class_value);
+
  current_position = window.pageYOffset;
-console.log("header_top_value = " + header_top_value);
+
  if (main_content_contains_class_value === true && header_top_value === "48px")  {
   main_content_element.classList.remove("main_content_after_scroll");
   main_content_element.classList.add("main_content_to_leave_up");
