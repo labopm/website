@@ -28856,7 +28856,7 @@ body {
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear; }
 
-.grid-container__hcd-guide {
+.main-content__hcd-guide {
   position: relative;
   width: 100%;
   display: block;
