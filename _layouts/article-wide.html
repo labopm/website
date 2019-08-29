@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"{%if page.section == 'hcd-guide' %}class="usa-layout__hcd-guide_to_top"{% endif %}>
+<html lang="en">
 {% include _head.html %}
 
 <body>
@@ -7,95 +7,31 @@
   {% include _banner.html %}
   {% include _header.html %}
   {% include _hero.html name=page.section %}
-  <main id="main-content" role="main" class="usa-layout-docs usa-section lab-content{%if page.section == 'hcd-guide' %} main-content__hcd-guide{% endif %}">
-  {% if page.section == 'hcd-guide' %}
-    <div class="grid-container{% if page.section == 'hcd-guide' %} grid-container__hcd-guide{% endif %}">
-      <div class="grid-row grid-gap">
-        {% assign sidenavigation = site.data.navigation['hcd-guide'] %}
-        <aside class="usa-layout-docs__sidenav desktop:grid-col-4">
-          <div id="usa-layout-docs__sticky">
-          {% include hcd-guide-sidenav.html links=sidenavigation %}
-          </div>
-          <div class="usa-layout-docs__background">
-            &nbsp;
-          </div>
-        </aside>
-        <div class="usa-layout-docs__main_hcd-guide desktop:grid-col-8 usa-prose__hcd-guide">
-          {{ content }}
-          <div class="usa-layout__content_bottom">
-              <!-- <a href="#top" title="To top" class="usa-prose__hcd-guide_a usa-back_to_top">To Top</a>
-              <hr>
-            <div class="section">			
-              <div class="center-wrap">			
-                <a href="#top" title="To top" class="usa-back_to_top">To Top</a>
-               </div>  
-               <div class="section">	
-            </div>				
-            <div class="section">
-            </div>			
-            <div class="section">
-            </div>	
-                      -->    
-            <div class="progress-wrap">
-              <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
-              </svg>
-            </div>
-            <hr>
-            <div class="usa-layout__link_wrapper">
-            {% if page.previous-link-url %}
-              {% assign previous_link_url = page.previous-link-url %}
-              {% assign previous_link_title = page.previous-link-title %}
-              {% assign link_class = 'usa-layout__section_link section_link_previous' %}
-              <a href="{{ previous_link_url }}" title="{{ previous_link_title }}" class="{{ link_class }}">{{ previous_link_title }}</a>
-            {% endif %}
-            {% if page.next-link-url %}
-              {% assign next_link_url = page.next-link-url %}
-              {% assign next_link_title = page.next-link-title %}
-              
-              {% if page.previous-link-title == 'none' %}
-                {% assign link_class = 'usa-layout__section_link section_link_one_next' %}
-              {% else %}
-                {% assign link_class = 'usa-layout__section_link' %}
-              {% endif %}
-              <a href="{{ next_link_url }}" title="{{ next_link_title }}" class="{{ link_class }}">{{ next_link_title }}</a>
-            {% endif %}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  {% else %}
+  <main id="main-content" role="main" class="usa-layout-docs usa-section lab-content">
     <div class="grid-container">
       {{ content }}
     </div>
     {% if page.highlight and page.section == 'what-we-do' %}
-    <div class="lab-content-highlight-warm">
-      <div class="lab-content-highlight-warm__body">
-        {% capture highlight_include %}{% include {{ page.highlight }} %}{% endcapture %}
-        {{ highlight_include | markdownify }}
+      <div class="lab-content-highlight-warm">
+        <div class="lab-content-highlight-warm__body">
+          {% capture highlight_include %}{% include {{ page.highlight }} %}{% endcapture %}
+          {{ highlight_include | markdownify }}
+        </div>
       </div>
-    </div>
     {% endif %}
     {% if page.highlight and page.section == 'about' %}
-    <div class="lab-content-highlight-cool">
-      <div class="lab-content-highlight-cool__body">
-      {% capture highlight_include %}{% include {{ page.highlight }} %}{% endcapture %}
-      {{ highlight_include | markdownify }}
+      <div class="lab-content-highlight-cool">
+        <div class="lab-content-highlight-cool__body">
+          {% capture highlight_include %}{% include {{ page.highlight }} %}{% endcapture %}
+          {{ highlight_include | markdownify }}
+        </div>
       </div>
-    </div>
     {% endif %}
-  {% endif %}
   </main>
   {% include _footer.html %}
 
   <script src="{{ site.baseurl }}/assets/js/uswds.min.js"></script>
   <script src="{{ site.baseurl }}/assets/js/shims/svg4everybody.js"></script>
-  {% if page.section == 'hcd-guide' %}
-  <script src="{{ site.baseurl }}/assets/js/jquery-3.4.1.min.js"></script>
-  <script src="{{ site.baseurl }}/assets/js/hcd-guide.js"></script>
-  {% endif %}
-
   <script>
     svg4everybody();
   </script>
