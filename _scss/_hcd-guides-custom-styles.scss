@@ -5,6 +5,7 @@ $theme-font-family-top-button: 'wingdings 3';
 
 
 
+
 // ***************** CONTENT ***************** //
 
 
@@ -21,27 +22,23 @@ $theme-font-family-top-button: 'wingdings 3';
 }
 
 :root {
-  --blue: #color('blue-50v');
-  --white: color('white');
+  --blue: #0076d6;
+  --white: #ffff;
 }
 
-body{
+body {
   overflow-x: hidden;
   letter-spacing: 0.2px;
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear; 
 }
 
-.main-content__hcd-guide{
+.main-content__hcd-guide {
   position: relative;
   width: 100%;
   display: block;
   overflow: hidden;
   // height: 100vh;
-
-  &_print {
-    margin: 0 auto;
-  }
 }
 
 @-webkit-keyframes border-transform{
@@ -197,7 +194,7 @@ body .progress-wrap::after {
   }
 }
 
-@media screen and (max-width: 48rem) { 
+@media screen and (max-width: 64rem) { 
   .switch-container .switch-label .switch-rail {
     background: white;
   }
@@ -949,7 +946,7 @@ button:not([disabled]):focus {
   }
 }
 
-@media screen and (max-width: 48rem) {
+@media screen and (max-width: 64rem) {
   .usa-prose__hcd-guide .lab__hcd-guide__description_copy {
     margin: units(3);
   }
@@ -1467,7 +1464,7 @@ button:not([disabled]):focus {
 
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 64em) {
   .lab-hero--hcd-guide {
     &__desktop_visible {
       display: inline-block;
@@ -1497,7 +1494,7 @@ button:not([disabled]):focus {
   }
 }
 
-@media screen and (max-width: 48rem)  {
+@media screen and (max-width: 64em)  {
   .usa-banner__hcd-guide, 
   .usa-header__hcd-guide, 
   .lab-hero--hcd-guide {
@@ -1987,7 +1984,7 @@ button:not([disabled]):focus {
 }
 
 
-@media screen and (min-width: 25.9375rem) and (max-width: 48rem)  {
+@media screen and (min-width: 25.9375em) and (max-width: 64rem)  {
   .header_scroll_up {
     top: px-to-rem(22px);
   }
@@ -2105,6 +2102,7 @@ button:not([disabled]):focus {
 }
 
 .main-content__hcd-guide_print {
+  margin: 0 auto;
   padding-top: 0;
   padding-bottom: 0;
 

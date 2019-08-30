@@ -217,9 +217,6 @@ this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigatio
               stopSideNavigationScrolling(side_navigation_values);
         
 
-        var offset = 100;
-        var duration = 550;
-
         /* if (jQuery(this).scrollTop() > offset) {
           jQuery('.progress-wrap').addClass('active-progress');
         } else {
@@ -318,7 +315,7 @@ this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigatio
 
           window_width = window.innerWidth;
 
-          if (window_width > 414 && window_width < 768) {
+          if (window_width > 414 && window_width < 1024) {
             showTabletMainMenu();
           }
         }
@@ -340,7 +337,7 @@ this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigatio
 
           window_width = window.innerWidth;
 
-          if (window_width > 414 && window_width < 768) {
+          if (window_width > 414 && window_width < 1024) {
             closeTabletMainMenu();
           }
         }
@@ -916,20 +913,19 @@ function stopSideNavigationScrolling(side_navigation_values)  {
   var side_navigation_position_value = "";
 
   side_navigation_position_value = window.getComputedStyle(side_navigation_element, null).getPropertyValue("position");
-console.log("scroll_value = " + scroll_value);
-console.log("current_position = " + current_position);
+
   var window_width;
 
   window_width = window.innerWidth;
 
-  if (current_position < scroll_value && window_width >= 768) {
+  if (current_position < scroll_value && window_width >= 1024) {
     side_navigation_element.classList.remove("side_navigation_scroll_up");
     side_navigation_element.classList.add("side_navigation_scroll_down");
     side_navigation_element.style.top = side_navigation_top_value;
   } else if (current_position >= scroll_value && 
              side_navigation_position_value === "fixed" && 
              scroll_value > 0 && 
-             window_width >= 768)  {
+             window_width >= 1024)  {
     side_navigation_element.classList.remove("side_navigation_scroll_down");
     side_navigation_element.classList.add("side_navigation_scroll_up");
 
@@ -1048,7 +1044,7 @@ function shrinkSearchBar()  {
   // IF/ELSE statement which sets the gray banner and header to the top of the webpage 
   // and sets the blue bar to the top of the browser window if the browser is a 
   // mobile browser. Otherwise, only the blue bar is set to the top of the browser window.
-  if (window_width <= 768)  {
+  if (window_width <= 1024)  {
     gray_banner_element.classList.remove("gray_banner_scroll_up");
     gray_banner_element.classList.add("gray_banner_scroll_down");
 
@@ -1201,7 +1197,7 @@ function expandSearchBar()  {
   // The width of the browser window is passed on.
   window_width = window.innerWidth;
 
-  if (window_width <= 768)  {
+  if (window_width <= 1024)  {
     gray_banner_element.classList.remove("gray_banner_scroll_down");
     gray_banner_element.classList.add("gray_banner_scroll_up");
 
