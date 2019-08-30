@@ -2,11 +2,11 @@
 <html lang="en">
 {% include _head.html %}
 
-<body>
-  <main id="main-content" role="main" class="usa-layout-docs usa-section lab-content{%if page.section == 'hcd-guide' %} main-content__hcd-guide{% endif %}">
+<body onload="window.print();">
+  <main id="main-content" role="main" class="usa-layout-docs usa-section lab-content{%if page.section == 'hcd-guide' %} main-content__hcd-guide_print{% endif %}">
     <div class="grid-container{% if page.section == 'hcd-guide' %} grid-container__hcd-guide{% endif %}">
       <div class="grid-row grid-gap">
-        <div class="usa-layout-docs__main_hcd-guide desktop:grid-col-8 usa-prose__hcd-guide">
+        <div class="usa-layout-docs__main_hcd-guide usa-prose__hcd-guide">
           {{ content }}
         </div>
       </div>

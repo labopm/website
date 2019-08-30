@@ -21,8 +21,8 @@ $theme-font-family-top-button: 'wingdings 3';
 }
 
 :root {
-  --blue: #0076d6;
-  --white: #ffffff;
+  --blue: #color('blue-50v');
+  --white: color('white');
 }
 
 body{
@@ -38,6 +38,10 @@ body{
   display: block;
   overflow: hidden;
   // height: 100vh;
+
+  &_print {
+    margin: 0 auto;
+  }
 }
 
 @-webkit-keyframes border-transform{
@@ -1463,7 +1467,7 @@ button:not([disabled]):focus {
 
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .lab-hero--hcd-guide {
     &__desktop_visible {
       display: inline-block;
@@ -2097,6 +2101,25 @@ button:not([disabled]):focus {
     &__mobile_figure {
       display: block !important;
     }
+  }
+}
+
+.main-content__hcd-guide_print {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  .grid-container__hcd-guide {
+    max-width: 44rem;
+  }
+
+  .grid-row.grid-gap {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .usa-layout-docs__main_hcd-guide {
+    margin-top: 0;
+    padding-bottom: 0;
   }
 }
 

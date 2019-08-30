@@ -7,6 +7,7 @@ title: Design Phase
 previous-link-title: none
 next-link-url: /hcd-guide/design/purpose-of-this-guide.htm
 next-link-title: Get started
+new-site: true
 ---
 
 <h1>Welcome to the Design Phase</h1>
