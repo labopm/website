@@ -1873,13 +1873,31 @@ button:not([disabled]):focus {
           font-weight: font-weight('bold');
         }
 
+        .lab-hero--hcd-guide__guide_menu_more_links_not_visible {
+          display: none;
+        }
+/* 
+        .lab-hero--hcd-guide_menu_more_links_visible {
+          display: inline-block;
+        }
+ */
         li:first-of-type {
           border-bottom: none;
         }
 
         .usa-sidenav__sublist {
+          display: none;
+          
           li:first-of-type {
             border-bottom: 0.0625rem solid white;
+          }
+
+          li:last-of-type {
+            border-bottom: none;
+          }
+
+          &_visible {
+            display: block;
           }
         }
   
@@ -2042,13 +2060,8 @@ button:not([disabled]):focus {
 }
 
 
-<<<<<<< HEAD
-@media screen and (min-width: 25.9375em) and (max-width: 64rem) {
-  .header_scroll_up {
-=======
 @media screen and (min-width: 25.9375em) and (max-width: 64rem)  {
   /*.header_scroll_up {
->>>>>>> 47cdf0a88e6ecd541fcae89066f6ea1bada385fa
     top: px-to-rem(22px);
   }
 
