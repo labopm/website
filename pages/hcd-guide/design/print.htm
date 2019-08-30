@@ -1,0 +1,30 @@
+---
+permalink: /hcd-guide/design/print.htm
+title: Print
+layout: full-guide
+excerpt: none
+---
+
+{% assign pages = site.pages %}
+{{ pages.content }}
+<!--   
+  {% assign hcd_content_links = site.data.navigation.hcd-guide %}
+  {% if hcd_content_links %}
+  
+    {% for pages in hcd_content_links %}
+     {% assign secondary_links = site.data.navigation[_section.name] %} 
+      {% if pages %}
+        <div>{{ pages.href }}</div>
+        {% assign content_links = pages.subnav %}
+        {% for page in content_links %}
+          {% if page.sub-subnav %}
+            <div>{{ page.href }}</div>
+            {% assign sub_pages = page.sub-subnav %}
+            {% for sub_page in sub_pages %}
+              <div>{{ sub_page.href }}</div>
+            {% endfor %}
+          {% endif %}  
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  {% endif %} -->
