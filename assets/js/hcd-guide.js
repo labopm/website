@@ -185,15 +185,21 @@ window.addEventListener("load",
         is_hero_large = isHeroLarge();
         num_class_in_hero = numClassInHero();
         is_mobile_menu_visible = isMobileMenuVisible();
+        hero_bar_height = getHeightOfHero();
 
         
         // IF/ELSE statement which folds the blue 'search' bar if the visitor is scrolling down.
         // Otherwise, the blue bar is made visible. Also, this statement stops the side navigation 
         // from scrolling if the visitor has reached the bottom of the webpage.
-        if (current_position > previous_position && (is_hero_large === true && num_class_in_hero === 2) && is_mobile_menu_visible === false) {
+        if (current_position > previous_position) {
           shrinkSearchBar();
-        } else if (current_position < previous_position && is_hero_large === false) {
-          expandSearchBar();
+          
+        } else if (current_position < (previous_position - 15)) {
+          setTimeout( 
+            function () {
+              expandSearchBar();
+            }, 25
+          );
         }
 
         side_navigation_values[0] = current_position;
@@ -290,6 +296,23 @@ window.addEventListener("load",
 
 
 
+
+
+function getHeightOfHero()  {
+  var hero_bar_selector = "";
+
+  hero_bar_selector = "lab-hero--hcd-guide";
+
+  var hero_bar_element = {};
+
+  hero_bar_element = document.getElementsByClassName(hero_bar_selector)[0];
+
+  var hero_bar_height = "";
+
+  hero_bar_height = window.getComputedStyle(hero_bar_element, null).getPropertyValue("height");
+
+  return hero_bar_height;
+}
 function cycleHighlights()  {
   var highlighted_copy_selector = "";
 
@@ -452,7 +475,7 @@ function showGuideMenu()  {
 
     guide_menu_nav_element.classList.remove("guide_menu_nav_not_visible");
     guide_menu_nav_element.classList.add("guide_menu_nav_visible");
-    // guide_menu_nav_element.classList.add("guide_menu_open");
+    guide_menu_nav_element.classList.add("guide_menu_open");
 
   } 
 
@@ -487,7 +510,7 @@ function showGuideMenu()  {
   gray_banner_element.classList.add("gray_banner_mobile_visible_scroll_up");
   header_element.classList.add("header_mobile_visible_scroll_up");
   hero_bar_element.classList.add("hero_mobile_visible_scroll_up");
-  // body_element.classList.add("body_overflow_hidden");
+  body_element.classList.add("body_overflow_hidden");
 } 
 
 
@@ -525,6 +548,8 @@ function hideGuideMenu()  {
   var header_selector = "";
   var hero_bar_selector = "";
   var body_selector = "";
+  var guide_menu_nav_selector = "";
+  var main_content_selector = "";
 
   // The CSS selectors which refer to the gray banner, header and main block of content 
   // are passed on.
@@ -532,6 +557,8 @@ function hideGuideMenu()  {
   header_selector = "usa-header__hcd-guide";
   hero_bar_selector = "lab-hero--hcd-guide";
   body_selector = "body";
+  guide_menu_nav_selector = "lab-hero--hcd-guide__guide_menu_content";
+  main_content_selector = "main-content__hcd-guide";
 
   // Objects which will hold HTML DOM objects for the gray banner, header, and 
   // main block of content are initialized.
@@ -539,6 +566,8 @@ function hideGuideMenu()  {
   var header_element = {};
   var hero_bar_element = {};
   var body_element = {};
+  var guide_menu_nav_element = {};
+  var main_content_element = {};
 
   // HTML DOM objects which refer to the HTML elements the above variables refer 
   // to are passed on.
@@ -546,15 +575,9 @@ function hideGuideMenu()  {
   header_element = document.getElementsByClassName(header_selector)[0];
   hero_bar_element = document.getElementsByClassName(hero_bar_selector)[0];
   body_element = document.getElementsByTagName(body_selector)[0];
-
-  var main_content_selector = "";
-
-  main_content_selector = "main-content__hcd-guide";
-
-  var main_content_element = {};
-
+  guide_menu_nav_element = document.getElementsByClassName(guide_menu_nav_selector)[0];
   main_content_element = document.getElementsByClassName(main_content_selector)[0];
-  
+
   var main_content_contains_class_value;
 
   main_content_contains_class_value = main_content_element.classList.contains("main_content_to_leave_up");
@@ -572,7 +595,8 @@ function hideGuideMenu()  {
   gray_banner_element.classList.remove("gray_banner_mobile_visible_scroll_up");
   header_element.classList.remove("header_mobile_visible_scroll_up");
   hero_bar_element.classList.remove("hero_mobile_visible_scroll_up");
-  body_element.classList.remove("body_overflow_hidden");
+  body_element.classList.remove("body_overflow_hidden");  
+  guide_menu_element.classList.remove("guide_menu_open");  
 }
 
 

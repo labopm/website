@@ -30096,12 +30096,14 @@ button:not([disabled]):focus {
   .body_overflow_hidden {
     overflow: hidden; }
   .guide_menu_open {
+    padding: 1rem;
     position: fixed;
     overflow-y: scroll;
-    top: 0;
+    top: 5.5625rem;
     right: 0;
     bottom: 0;
-    left: 0; }
+    left: 0;
+    background-color: #0076d6; }
   .usa-banner {
     background-color: #f0f0f0; }
   .usa-layout-docs__main {
