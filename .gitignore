@@ -4,8 +4,6 @@ _site
 /node_modules
 .DS_Store
 .vscode
-assets/stylesheets/styles.css
-assets/stylesheets/styles.css.map
 tasks.json
 Gemfile
 Gemfile.lock
