@@ -456,16 +456,16 @@ function showMobileMenu(guide_sub_menu_id_value)  {
     guide_other_sub_menu_lists_elements[i].classList.remove("usa-sidenav__sublist_visible");
   }
 
-  var guide_menu_sub_list_visible_selector = "usa-sidenav__sublist_visible";
+  guide_menu_sub_list_element.classList.add(guide_other_sub_menu_lists_selector);
 
-  guide_menu_sub_list_element.classList.add(guide_menu_sub_list_visible_selector);
+  var guide_other_view_more_links_selector = "lab-hero--hcd-guide_menu_more_links_not_visible";
   
   guide_other_view_more_links_elements = document.getElementsByClassName(guide_other_view_more_links_selector);
 
   var guide_menu_view_more_links_not_visible_selector = "lab-hero--hcd-guide_menu_more_links_not_visible";
 
   for (i = 0; i < guide_other_view_more_links_elements.length; i++) {
-    guide_other_view_more_links_elements.classList.remove(guide_menu_view_more_links_not_visible_selector);
+    guide_other_view_more_links_elements[i].classList.remove(guide_menu_view_more_links_not_visible_selector);
   }
 
   var guide_view_this_link_selector = "";
@@ -473,12 +473,12 @@ function showMobileMenu(guide_sub_menu_id_value)  {
   guide_view_this_link_selector = "lab-hero--hcd-guide__guide_menu_view_more_" + guide_sub_menu_id_value;
 
   var guide_view_this_link_element = {};
-
-  guide_view_this_link_element = documents.getElementById(guide_view_this_link_selector);
-
-  guide_view_this_link_not_visible = "lab-hero--hcd-guide_menu_more_links_not_visible";
+console.log("guide_view_this_link_selector = " + guide_view_this_link_selector);
+  guide_view_this_link_element = document.getElementById(guide_view_this_link_selector);
 
   var guide_view_this_link_not_visible = "";
+
+  guide_view_this_link_not_visible = "lab-hero--hcd-guide_menu_more_links_not_visible";
 
   guide_view_this_link_element.classList.add(guide_view_this_link_not_visible);
 } 
