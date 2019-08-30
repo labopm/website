@@ -1,6 +1,8 @@
 {% for link in include.links %}
   {% assign _link-current = false %}
-
+  {% if list_num_list_item %}
+    {% assign num_list_item = list_num_list_item %}
+  {% endif %}
   {% if link.href == page.url or link.href == page.permalink %}
     {% assign _link-current = true %}
   {% endif %}
@@ -31,10 +33,11 @@
   {% endif %}
 
 <li{%if _link-current == true and _link-sub-section == true %} class="usa-sidenav__contains_submenu"{% endif %} {%if _link-within_section == true and _link-sub-section == true %} class="usa-sidenav__contains_submenu"{% endif %}>
-  <a href="{{ site.baseurl }}{{ link.href }}" title="{{ link.text }}" {% if _link-current %} class="lab-hero--hcd-guide__guide_menu-mobilenav-current" {% endif %}>{{ link.text }} {{ link.class }}</a>{%if _link-sub-section == true and _link-current == true %}<a href="javascript:showMobileMenu('{{ link.sub-section-name }}');" title="View more topics in {{ link.text }}"" class="lab-hero--hcd-guide__guide_menu_view_more lab-hero--hcd-guide_menu_more_links_not_visible" id="lab-hero--hcd-guide__guide_menu_view_more_{{ link.sub-section-name }}"><img src="{{ site.baseurl }}/assets/img/lab/hcd-guide/design/guide-menu-view-more-mobile.png" width="13" height="13" title="View more topics in {{ link.text }}" /></a>{% elsif _link-sub-section == true and _link-within_section == false %}<a href="javascript:showMobileMenu('{{ link.sub-section-name }}');" title="View more topics in {{ link.text }}"" class="lab-hero--hcd-guide__guide_menu_view_more" id="lab-hero--hcd-guide__guide_menu_view_more_{{ link.sub-section-name }}"><img src="{{ site.baseurl }}/assets/img/lab/hcd-guide/design/guide-menu-view-more-mobile.png" width="13" height="13" title="View more topics in {{ link.text }}" /></a>{% endif %}
+  <a href="{% if link.first and _link-sub-section == true %}javascript:showMobileMenu('{{ link.sub-section-name }}');{% endif %}{% if num_list_item != 0 %}{{ site.baseurl }} {{ link.href }}{% endif %}">{{ link.text }}</a>{% if link.sub-section == true %}{% if _link-within_section == true %}<a href="javascript:showMobileMenu('{{ link.sub-section-name }}');" title="View more topics in {{ link.text }}"" class="lab-hero--hcd-guide__guide_menu_view_more lab-hero--hcd-guide_menu_more_links_not_visible" id="lab-hero--hcd-guide__guide_menu_view_more_{{ link.sub-section-name }}"></a>{% else %}<a href="javascript:showMobileMenu('{{ link.sub-section-name }}');" title="View more topics in {{ link.text }}"" class="lab-hero--hcd-guide__guide_menu_view_more" id="lab-hero--hcd-guide__guide_menu_view_more_{{ link.sub-section-name }}">&nbsp;</a>{% endif %}{% endif %}
   {% if _link-sub-section == true %}
     <ul class="usa-sidenav__sublist {% if _link-within_section == true or _link-current == true %}usa-sidenav__sublist_visible{% endif %}" id="usa-sidenav__sublist-{{link.sub-section-name }}">
-      {% include subnav-mobile.html links=_sub-sub-section %}
+      <li><a href="{{ site.baseurl }} {{ link.href }}" title="{{ link.text }}" {% if _link-current %} class="lab-hero--hcd-guide__guide_menu-mobilenav-current" {% endif %}>Overview</a></li>
+      {% include subnav-mobile.html links=_sub-sub-section link_num_list_item=num_list_item %}
     </ul>
   {% endif %}
 </li>

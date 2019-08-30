@@ -29302,7 +29302,7 @@ button:not([disabled]):focus {
       .usa-prose__hcd-guide .usa-accordion__heading button {
         background-color: #ffbe2e !important;
         font-family: Public Sans Web, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
-        font-weight: 400;
+        font-weight: bold;
         font-size: 1rem; }
     .usa-prose__hcd-guide .usa-accordion__content {
       background-color: #fef0c8; }
@@ -29879,7 +29879,7 @@ button:not([disabled]):focus {
     background-position: 0px 0px; }
   .main_content_scroll_down {
     top: 8.125rem;
-    padding-bottom: 8.125rem !important; }
+    padding-bottom: 2rem !important; }
   #usa-layout-docs__sticky .lab-hcd-guide-nav {
     position: relative; }
   .usa-layout-docs__background {
@@ -29990,6 +29990,10 @@ button:not([disabled]):focus {
     display: none; } }
 
 @media screen and (max-width: 64em) and (orientation: portrait) {
+  /*  .switch-container {
+    position: relative;
+    bottom: 5rem;
+  } */
   .usa-banner__hcd-guide,
   .usa-header__hcd-guide,
   .lab-hero--hcd-guide {
@@ -30089,6 +30093,15 @@ button:not([disabled]):focus {
     float: right !important; }
   .search_field_visible {
     display: inline-block !important; }
+  .body_overflow_hidden {
+    overflow: hidden; }
+  .guide_menu_open {
+    position: fixed;
+    overflow-y: scroll;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
   .usa-banner {
     background-color: #f0f0f0; }
   .usa-layout-docs__main {
@@ -30203,8 +30216,13 @@ button:not([disabled]):focus {
             float: right; }
         .lab-hero--hcd-guide__guide_menu_nav ul .lab-hero--hcd-guide__guide_menu-mobilenav-current {
           font-weight: bold; }
+        .lab-hero--hcd-guide__guide_menu_nav ul .lab-hero--hcd-guide__guide_menu_view_more {
+          width: 0.8125rem;
+          height: 0.8125rem;
+          background-image: url("/assets/img/lab/hcd-guide/design/guide-menu-view-more-mobile.png");
+          background-repeat: no-repeat; }
         .lab-hero--hcd-guide__guide_menu_nav ul .lab-hero--hcd-guide_menu_more_links_not_visible {
-          display: none; }
+          background-image: url("/assets/img/lab/hcd-guide/design/guide-menu-view-less-mobile.png"); }
         .lab-hero--hcd-guide__guide_menu_nav ul li:first-of-type {
           border-bottom: none; }
         .lab-hero--hcd-guide__guide_menu_nav ul .usa-sidenav__sublist {

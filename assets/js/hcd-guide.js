@@ -190,7 +190,7 @@ window.addEventListener("load",
         // IF/ELSE statement which folds the blue 'search' bar if the visitor is scrolling down.
         // Otherwise, the blue bar is made visible. Also, this statement stops the side navigation 
         // from scrolling if the visitor has reached the bottom of the webpage.
-        if (current_position > previous_position && (is_hero_large === true || num_class_in_hero === 2) && is_mobile_menu_visible === false) {
+        if (current_position > previous_position && (is_hero_large === true && num_class_in_hero === 2) && is_mobile_menu_visible === false) {
           shrinkSearchBar();
         } else if (current_position < previous_position && is_hero_large === false) {
           expandSearchBar();
@@ -231,64 +231,6 @@ window.addEventListener("load",
         hideGuideMenu();
       }
     );
-
-   /*  var guide_menu_mobile_menu_selector = "";
-    
-    guide_menu_mobile_menu_selector = "lab-hero--hcd-guide__guide_menu_view_more";
-
-    var guide_menu_mobile_menu_element = {};
-    
-    guide_menu_mobile_menu_element = document.getElementsByClassName(guide_menu_mobile_menu_selector)[0];
-
-    if (guide_menu_mobile_menu_element !== undefined) {
-      guide_menu_mobile_menu_element.addEventListener('click', 
-        function () {
-          showMobileMenu();
-        }
-      );
-    } */
-/* 
-    var guide_sub_menu_selector = "";
-
-    guide_sub_menu_selector = "usa-sidenav__sublist";
-
-    var guide_sub_menu_elements = {};
-
-    guide_sub_menu_elements = document.getElementsByClassName(guide_sub_menu_elements);
-
-    if (guide_sub_menu_elements !== undefined)  {
-      var i;
-
-      for (i = 0; i < guide_sub_menu_elements.length; i++)  {
-        guide_sub_menu_elements[i].addEventListener("click", 
-          function () {
-            showGuideSubMenu(guide_sub_menu_elements[i].getA);
-          }
-        );
-      }
-    } */
-
-    /* var main_menu_selector = "";
-
-    main_menu_selector = "usa-menu-btn";
-
-    var main_menu_element = {};
-
-    main_menu_element = document.getElementsByClassName(main_menu_selector)[0];
-
-    if (main_menu_element !== undefined) {
-      main_menu_element.addEventListener('click', 
-        function () {
-          var window_width;
-
-          window_width = window.innerWidth;
-
-          if (window_width > 414 && window_width < 1024) {
-            showTabletMainMenu();
-          }
-        }
-      );
-    } */
 
     var main_menu_close_selector = "";
 
@@ -473,7 +415,7 @@ function showMobileMenu(guide_sub_menu_id_value)  {
   guide_view_this_link_selector = "lab-hero--hcd-guide__guide_menu_view_more_" + guide_sub_menu_id_value;
 
   var guide_view_this_link_element = {};
-console.log("guide_view_this_link_selector = " + guide_view_this_link_selector);
+
   guide_view_this_link_element = document.getElementById(guide_view_this_link_selector);
 
   var guide_view_this_link_not_visible = "";
@@ -483,10 +425,6 @@ console.log("guide_view_this_link_selector = " + guide_view_this_link_selector);
   guide_view_this_link_element.classList.add(guide_view_this_link_not_visible);
 } 
 
-
-function showGuideSubMenu() {
-
-}
 function showGuideMenu()  {
   var guide_menu_selector = "";
 
@@ -514,35 +452,42 @@ function showGuideMenu()  {
 
     guide_menu_nav_element.classList.remove("guide_menu_nav_not_visible");
     guide_menu_nav_element.classList.add("guide_menu_nav_visible");
+    // guide_menu_nav_element.classList.add("guide_menu_open");
+
   } 
 
   var gray_banner_selector = "";
   var header_selector = "";
   var hero_bar_selector = "";
+  var body_selector = "";
 
   // The CSS selectors which refer to the gray banner, header and main block of content 
   // are passed on.
   gray_banner_selector = "usa-banner__hcd-guide";
   header_selector = "usa-header__hcd-guide";
   hero_bar_selector = "lab-hero--hcd-guide";
+  body_selector = "body";
 
   // Objects which will hold HTML DOM objects for the gray banner, header, and 
   // main block of content are initialized.
   var gray_banner_element = {};
   var header_element = {};
   var hero_bar_element = {};
+  var body_element = {};
 
   // HTML DOM objects which refer to the HTML elements the above variables refer 
   // to are passed on.
   gray_banner_element = document.getElementsByClassName(gray_banner_selector)[0];
   header_element = document.getElementsByClassName(header_selector)[0];
   hero_bar_element = document.getElementsByClassName(hero_bar_selector)[0];
+  body_element = document.getElementsByTagName(body_selector)[0];
 
   gray_banner_element.classList.remove("gray_banner_scroll_up");
   header_element.classList.remove("header_scroll_up");
   gray_banner_element.classList.add("gray_banner_mobile_visible_scroll_up");
   header_element.classList.add("header_mobile_visible_scroll_up");
   hero_bar_element.classList.add("hero_mobile_visible_scroll_up");
+  // body_element.classList.add("body_overflow_hidden");
 } 
 
 
@@ -579,24 +524,28 @@ function hideGuideMenu()  {
   var gray_banner_selector = "";
   var header_selector = "";
   var hero_bar_selector = "";
+  var body_selector = "";
 
   // The CSS selectors which refer to the gray banner, header and main block of content 
   // are passed on.
   gray_banner_selector = "usa-banner__hcd-guide";
   header_selector = "usa-header__hcd-guide";
   hero_bar_selector = "lab-hero--hcd-guide";
+  body_selector = "body";
 
   // Objects which will hold HTML DOM objects for the gray banner, header, and 
   // main block of content are initialized.
   var gray_banner_element = {};
   var header_element = {};
   var hero_bar_element = {};
+  var body_element = {};
 
   // HTML DOM objects which refer to the HTML elements the above variables refer 
   // to are passed on.
   gray_banner_element = document.getElementsByClassName(gray_banner_selector)[0];
   header_element = document.getElementsByClassName(header_selector)[0];
   hero_bar_element = document.getElementsByClassName(hero_bar_selector)[0];
+  body_element = document.getElementsByTagName(body_selector)[0];
 
   var main_content_selector = "";
 
@@ -607,8 +556,6 @@ function hideGuideMenu()  {
   main_content_element = document.getElementsByClassName(main_content_selector)[0];
   
   var main_content_contains_class_value;
-  var header_top_value;
-
 
   main_content_contains_class_value = main_content_element.classList.contains("main_content_to_leave_up");
   header_top_value = window.getComputedStyle(header_element, null).getPropertyValue("top");
@@ -625,6 +572,7 @@ function hideGuideMenu()  {
   gray_banner_element.classList.remove("gray_banner_mobile_visible_scroll_up");
   header_element.classList.remove("header_mobile_visible_scroll_up");
   hero_bar_element.classList.remove("hero_mobile_visible_scroll_up");
+  body_element.classList.remove("body_overflow_hidden");
 }
 
 
