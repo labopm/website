@@ -29941,7 +29941,7 @@ button:not([disabled]):focus {
   .usa-prose__hcd-guide__print_mobile_visible {
     display: none; } }
 
-@media screen and (max-width: 64em) {
+@media screen and (max-width: 64em) and (orientation: portrait) {
   .usa-banner__hcd-guide,
   .usa-header__hcd-guide,
   .lab-hero--hcd-guide {

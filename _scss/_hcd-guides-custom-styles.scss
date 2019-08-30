@@ -1494,7 +1494,7 @@ button:not([disabled]):focus {
   }
 }
 
-@media screen and (max-width: 64em)  {
+@media screen and (max-width: 64em) and (orientation: portrait)  {
   .usa-banner__hcd-guide, 
   .usa-header__hcd-guide, 
   .lab-hero--hcd-guide {
@@ -1984,7 +1984,7 @@ button:not([disabled]):focus {
 }
 
 
-@media screen and (min-width: 25.9375em) and (max-width: 64rem)  {
+@media screen and (min-width: 25.9375em) and (max-width: 64rem) {
   .header_scroll_up {
     top: px-to-rem(22px);
   }
