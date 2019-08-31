@@ -96,13 +96,14 @@ i.e.
 
 // ***************** HERO ***************** //
 .lab-hero {
+  transition: height .2s ease;
+  height: 4rem;
   &__body {
     @include grid-container;
-    padding: units(6) units(2) units(4);
+    padding: 0 units(2) 0;
     background-repeat: no-repeat;
 
     @include at-media('tablet') {
-      padding: units(8) units(2) units(4);
       background-position: 480px 50%;
     }
 
@@ -111,7 +112,6 @@ i.e.
     }
 
     @include at-media('desktop') {
-      padding: units(15) units(4) units(4);
     }
   }
 
