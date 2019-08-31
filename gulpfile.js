@@ -65,6 +65,7 @@ function css() {
     )
     .pipe(postcss(processors))
     .pipe(sourcemaps.write("."))
+    .pipe(gulp.dest("assets/stylesheets"))
     .pipe(gulp.dest("_site/assets/stylesheets"))
     .pipe(
       notify({
