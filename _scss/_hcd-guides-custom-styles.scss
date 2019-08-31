@@ -169,7 +169,7 @@ body .progress-wrap::after {
       position: absolute;
       width: 50px;
       height: 28px;
-      background: #8d9297;
+      background: white;
       border-radius: 50px;
       overflow: hidden;
     
@@ -181,7 +181,7 @@ body .progress-wrap::after {
         width: 20px;
         height: 20px;
         border-radius: 50%;
-        background: #fff;
+        background: #8d9297;
       }
     }
   }
@@ -199,12 +199,12 @@ body .progress-wrap::after {
   }
 }
 
-@media screen and (max-width: 64rem) { 
+@media screen and (max-width: 64rem) and (orientation: landscape) { 
   .switch-container .switch-label .switch-rail {
-    background: white;
+    background: #8d9297;
   }
   .switch-container .switch-label .switch-rail .switch-slider {
-    background: #8d9297;
+    background: white;
   }
   #switch:checked + .switch-label, 
   #switch-mobile:checked + .switch-label {

@@ -28995,7 +28995,7 @@ body .progress-wrap::after {
       position: absolute;
       width: 50px;
       height: 28px;
-      background: #8d9297;
+      background: white;
       border-radius: 50px;
       overflow: hidden; }
       .switch-container .switch-label .switch-rail .switch-slider {
@@ -29006,7 +29006,7 @@ body .progress-wrap::after {
         width: 20px;
         height: 20px;
         border-radius: 50%;
-        background: #fff; }
+        background: #8d9297; }
   .switch-container #switch:checked + .switch-label .switch-rail,
   .switch-container #switch-mobile:checked + .switch-label .switch-rail {
     transition: all 0.2s ease-in-out;
@@ -29016,11 +29016,11 @@ body .progress-wrap::after {
       transition: all 0.2s ease-in-out;
       transform: translateX(22px); }
 
-@media screen and (max-width: 64rem) {
+@media screen and (max-width: 64rem) and (orientation: landscape) {
   .switch-container .switch-label .switch-rail {
-    background: white; }
-  .switch-container .switch-label .switch-rail .switch-slider {
     background: #8d9297; }
+  .switch-container .switch-label .switch-rail .switch-slider {
+    background: white; }
   #switch:checked + .switch-label .switch-rail,
   #switch-mobile:checked + .switch-label .switch-rail {
     background: white !important; }
