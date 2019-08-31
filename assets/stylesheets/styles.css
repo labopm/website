@@ -29026,7 +29026,9 @@ body .progress-wrap::after {
     background: white !important; }
     #switch:checked + .switch-label .switch-rail .switch-slider,
     #switch-mobile:checked + .switch-label .switch-rail .switch-slider {
-      background: #00a91c; } }
+      background: #00a91c; }
+  .usa-prose__hcd-guide h1 {
+    width: 34.125rem; } }
 
 /*.main-content__hcd-guide a,
 .usa-prose__hcd-guide_a {
@@ -29994,6 +29996,8 @@ button:not([disabled]):focus {
     position: relative;
     bottom: 5rem;
   } */
+  .usa-prose__hcd-guide h1 {
+    width: 34.125rem; }
   .usa-banner__hcd-guide,
   .usa-header__hcd-guide,
   .lab-hero--hcd-guide {

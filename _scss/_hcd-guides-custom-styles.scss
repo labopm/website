@@ -215,6 +215,13 @@ body .progress-wrap::after {
       } 
     }        
   }
+
+  .usa-prose__hcd-guide {
+    h1 {
+      width: 34.125rem;
+    }
+  }
+
 }
 /*.main-content__hcd-guide a,
 .usa-prose__hcd-guide_a {
@@ -1555,6 +1562,12 @@ button:not([disabled]):focus {
     bottom: 5rem;
   } */
   
+  .usa-prose__hcd-guide {
+    h1 {
+      width: 34.125rem;
+    }
+  }
+
   .usa-banner__hcd-guide, 
   .usa-header__hcd-guide, 
   .lab-hero--hcd-guide {
