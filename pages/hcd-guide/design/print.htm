@@ -1,0 +1,36 @@
+---
+permalink: /hcd-guide/design/print.htm
+section: hcd-guide
+title: Print
+layout: full-guide
+excerpt: none
+---
+<p class="noprint">If this page does not prompt you to print, <a href="javascript:window.print();">click here.</a></p>
+{% assign hcd_guide_data = site.data.navigation['hcd-guide'] %}
+{% assign hcd_guide_page_data = site.pages %}
+
+{% assign hcd_guide_hrefs = hcd_guide_data %}
+{% for hrefs in hcd_guide_hrefs %} 
+  {% if hrefs %}
+    {% assign page_hrefs = hrefs.subnav %}
+    {% for page_href in page_hrefs %}
+      {% assign current_href = page_href.href %}
+      {% for page in hcd_guide_page_data %}
+        {% if page.section == 'hcd-guide' and page.new-site == true and page.permalink == current_href %}  
+          {{ page.content }}
+          {% if page_href.sub-subnav %}
+            {% assign sub_pages_href = page_href.sub-subnav %}
+            {% for sub_page_href in sub_pages_href %}
+              {% assign current_sub_page_href = sub_page_href.href %}
+              {% for sub_page in hcd_guide_page_data %}
+                {% if sub_page.section == 'hcd-guide' and sub_page.new-site == true and sub_page.permalink == current_sub_page_href and sub_page.permalink != current_href %}  
+                  {{ sub_page.content }}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    {% endfor %}    
+  {% endif %}
+{% endfor %}

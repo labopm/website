@@ -7,19 +7,20 @@ title: Design Phase
 previous-link-title: none
 next-link-url: /hcd-guide/design/purpose-of-this-guide.htm
 next-link-title: Get started
+new-site: true
 ---
 
 <h1>Welcome to the Design Phase</h1>
 <div class="usa-prose__hcd-guide__reading_print">
   <span class="usa-prose__hcd-guide__reading_time">4 min read</span>
-  <a href="javascript:window.print();" title="Print guide" class="usa-prose__hcd-guide_a usa-prose__hcd-guide__print_guide_img usa-prose__hcd-guide__print_desktop_visible"><img src="{{ site.baseurl }}/assets/img/lab/hcd-guide/design/print-guide.svg" width="22" height="29" alt="Print guide" /></a>
-  <a href="javascript:window.print();" title="Print guide" class="usa-prose__hcd-guide_a usa-prose__hcd-guide__print_guide usa-prose__hcd-guide__print_desktop_visible">Print page</a>
-  <a href="#" title="Print guide" class="usa-prose__hcd-guide_a usa-prose__hcd-guide__print_guide_img usa-prose__hcd-guide__print_mobile_visible"><img src="{{ site.baseurl }}/assets/img/lab/hcd-guide/design/print-guide.svg" width="22" height="29" alt="Print guide" /></a>
-  <a href="#" title="PDF" class="usa-prose__hcd-guide_a usa-prose__hcd-guide__print_guide usa-prose__hcd-guide__print_mobile_visible">PDF</a>
+  <a href="javascript:window.print();" title="Print guide" target="_blank" class="usa-prose__hcd-guide_a usa-prose__hcd-guide__print_guide_img usa-prose__hcd-guide__print_desktop_visible"><img src="/assets/img/lab/hcd-guide/design/print-guide.svg" width="22" height="29" alt="Print guide" /></a>
+  <a href="javascript:window.print();" title="Print guide" target="_blank" class="usa-prose__hcd-guide_a usa-prose__hcd-guide__print_guide usa-prose__hcd-guide__print_desktop_visible">Print page</a>
+  <a href="javascript:window.print();" title="Print guide" target="_blank" class="usa-prose__hcd-guide_a usa-prose__hcd-guide__print_guide_img usa-prose__hcd-guide__print_mobile_visible"><img src="/assets/img/lab/hcd-guide/design/print-guide.svg" width="22" height="29" alt="Print guide" /></a>
+  <a href="javascript:window.print();" title="PDF" target="_blank" class="usa-prose__hcd-guide_a usa-prose__hcd-guide__print_guide usa-prose__hcd-guide__print_mobile_visible">PDF</a>
 </div>
 
 <p>
-  Your <a href="https://github.com/labopm/HCD-Guides" title="Discovery Phase" target="_blank" class="usa-prose__hcd-guide_a hcd-guide__print_not_visible ">Discovery Phase</a> is complete or is wrapping up, and you and your team are ready to move into the Design phase. 
+  Your <a href="https://github.com/labopm/HCD-Guides" title="Discovery Phase" target="_blank" class="usa-prose__hcd-guide_a ">Discovery Phase</a> is complete or is wrapping up, and you and your team are ready to move into the Design phase. 
   In this phase, the team will build on the research completed in the Discovery phase in 
   order to create action in the form of a designed or evolved product, service, or 
   system from what you learned. 
@@ -29,7 +30,6 @@ next-link-title: Get started
   You&rsquo;ll be able to find the How in the upcoming HCD Design Phase Operations Guide. 
   For guidance on How in the meantime, see the 
   <a href="https://methods.18f.gov/make/" title="Making Design Methods" target="_blank" class="usa-prose__hcd-guide_a hcd-guide__print_footnotes_link">Making Design Methods</a>
-  <!-- <sup class="hcd-guide__print_footnotes_link">2</sup>  -->
   developed by our friends over at 18F.
 </p>
 <div class="usa-prose__hcd-guide__know_the_basics">
@@ -87,7 +87,7 @@ next-link-title: Get started
 <div class="lab__clear_spacer"></div>
 
 <p>
-  If you're not sure if you've completed all these points, or feel that you need more information or direction on them, please see the <a href="https://github.com/labopm/HCD-Guides" title="Discovery Phase" target="_blank" class="usa-prose__hcd-guide_a hcd-guide__print_not_visible">Human-Centered Design Discovery Phase Guides</a>.
+  If you're not sure if you've completed all these points, or feel that you need more information or direction on them, please see the <a href="https://github.com/labopm/HCD-Guides" title="Discovery Phase" target="_blank" class="usa-prose__hcd-guide_a">Human-Centered Design Discovery Phase Guides</a>.
 </p>
 <h2 id="design-phase">What to expect in the Design Phase</h2>
 <p>
@@ -101,22 +101,22 @@ next-link-title: Get started
   <p>
     Continuing to practice human-centeredness through the learning 
     and application of high-level 
-    <a href="{{ site.baseurl }}/hcd-guide/design/design-phase-principles.htm" title="design principles" class="usa-prose__hcd-guide_a">design principles.</a>
+    <a href="/hcd-guide/design/design-phase-principles.htm" title="design principles" class="usa-prose__hcd-guide_a">design principles.</a>
   </p>
   <p>
-    Creating <a href="{{ site.baseurl }}/hcd-guide/design/designed-things.htm" title="lots of ideas" class="usa-prose__hcd-guide_a">lots of ideas.</a> 
+    Creating <a href="/hcd-guide/design/designed-things.htm" title="lots of ideas" class="usa-prose__hcd-guide_a">lots of ideas.</a> 
     for product, service, or system solutions.
   </p>
   <p>
     Analyzing whether those ideas could be expressed best as 
-    <a href="{{ site.baseurl }}/hcd-guide/design/products.htm" title="products" class="usa-prose__hcd-guide_a">products,</a>  
-    <a href="{{ site.baseurl }}/hcd-guide/design/services.htm" title="services" class="usa-prose__hcd-guide_a">services,</a> 
+    <a href="/hcd-guide/design/products.htm" title="products" class="usa-prose__hcd-guide_a">products,</a>  
+    <a href="/hcd-guide/design/services.htm" title="services" class="usa-prose__hcd-guide_a">services,</a> 
     or 
-    <a href="{{ site.baseurl }}/hcd-guide/design/systems.htm" title="systems" class="usa-prose__hcd-guide_a">systems.</a>
+    <a href="/hcd-guide/design/systems.htm" title="systems" class="usa-prose__hcd-guide_a">systems.</a>
   </p>
   <p>
     Creating 
-    <a href="{{ site.baseurl }}/hcd-guide/design/iteration.htm" title="multiple iterations of your idea for the above" class="usa-prose__hcd-guide_a">multiple iterations of your idea for the above.</a>
+    <a href="/hcd-guide/design/iteration.htm" title="multiple iterations of your idea for the above" class="usa-prose__hcd-guide_a">multiple iterations of your idea for the above.</a>
   </p>  
 </div>
 
@@ -125,15 +125,15 @@ next-link-title: Get started
 <div class="lab__bullet_points_columns lab__bullet_points_column_right">
   <p>
     Understanding and communicating how your product, service, or system might need to 
-    <a href="{{ site.baseurl }}/hcd-guide/design/design-for-change.htm" title="change in the future" class="usa-prose__hcd-guide_a">change in the future.</a>
+    <a href="/hcd-guide/design/design-for-change.htm" title="change in the future" class="usa-prose__hcd-guide_a">change in the future.</a>
     
   </p>
   <p>
     Creating and administering the prototype testing with participants and 
-    <a href="{{ site.baseurl }}/hcd-guide/design/feedback.htm" title="receiving feedback" class="usa-prose__hcd-guide_a">receiving feedback.</a>    
+    <a href="/hcd-guide/design/feedback.htm" title="receiving feedback" class="usa-prose__hcd-guide_a">receiving feedback.</a>    
   </p>
   <p>
-    <a href="{{ site.baseurl }}/hcd-guide/design/design-and-implementation.htm" title="Working with implementation teams" class="usa-prose__hcd-guide_a">Working with implementation teams</a> 
+    <a href="/hcd-guide/design/design-and-implementation.htm" title="Working with implementation teams" class="usa-prose__hcd-guide_a">Working with implementation teams</a> 
     to set your participants up for a beneficial and positive Delivery experience.
   </p>
 </div>
@@ -149,7 +149,7 @@ next-link-title: Get started
 <p>
   Templates for this will be provided in the Design Phase Operations Guide, but to start, 
   you can also modify the 
-  <a href="https://github.com/labopm/HCD-Guides/blob/master/HCD_Ops_Guide_v12_spreads.pdf" target="_blank" title="Project Frame-Reframe template" class="usa-prose__hcd-guide_a hcd-guide__print_not_visible">Project Frame-Reframe template</a> 
+  <a href="https://github.com/labopm/HCD-Guides/blob/master/HCD_Ops_Guide_v12_spreads.pdf" target="_blank" title="Project Frame-Reframe template" class="usa-prose__hcd-guide_a">Project Frame-Reframe template</a> 
   from pages 16-17 of the Discovery Operations Guide for this purpose. Map onto that template the following parameters:
 </p>
 <div class="lab__bullet_points_columns lab__bullet_points_column_fullwidth">
@@ -169,8 +169,6 @@ next-link-title: Get started
   </p>
 </div>
 
-
-
 <p>
   If the majority of these answers falls on the upper half of the Project Frame-Reframe template, 
   create a generous timeline for your Design phase. You&rsquo;ll need time to break down your 
@@ -184,3 +182,9 @@ next-link-title: Get started
   to either take on a slightly larger, more strategic Opportunity space in order 
   to have more impact upon the Delivery of your product, service, or system.
 </p>
+
+<div class="hcd-guide__print_footnotes">
+  <ol>
+    <li>https://methods.18f.gov/make/</li>
+  </ol>
+</div>

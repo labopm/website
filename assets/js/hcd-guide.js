@@ -1,5 +1,3 @@
-/* /* Please ❤ this if you like it! 
-
 (function($) { "use strict";
 		
 	$(document).ready(function(){"use strict";
@@ -20,8 +18,17 @@
 			progressPath.style.strokeDashoffset = progress;
 		}
 		updateProgress();
-		
-    jQuery('.progress-wrap').on('click', function(event) {
+		$(window).scroll(updateProgress);	
+		var offset = 50;
+		var duration = 550;
+		jQuery(window).on('scroll', function() {
+			if (jQuery(this).scrollTop() > offset) {
+				jQuery('.progress-wrap').addClass('active-progress');
+			} else {
+				jQuery('.progress-wrap').removeClass('active-progress');
+			}
+		});				
+		jQuery('.progress-wrap').on('click', function(event) {
 			event.preventDefault();
 			jQuery('html, body').animate({scrollTop: 0}, duration);
 			return false;
@@ -30,8 +37,8 @@
 		
 	});
 	
-})(jQuery);  */
-
+})(jQuery);  
+ 
 
 window.addEventListener("load", 
   function () {
@@ -136,18 +143,6 @@ window.addEventListener("load",
     // The value of the footer's 'top' is passed on.
     current_footer_top_value = parseInt(footer_element.getBoundingClientRect().top);
 
-/* 
-    // A variable which will hold a number which serves as a threshold, which when reached as a 
-    // visitor scrolls up and down the page, will either prevent the side navigation from scrolling, 
-    // or allow it to scroll again is initialized.
-    var stop_side_navigation_scrolling_value;
-
-    // The threshold which when reached by a visitor scrolling down a webpage is calcluated by taking the CSS 
-    // value, 'top', of the footer and subtracting the height of the footer and the amount of 'padding' 
-    // at the bottom of the main block of content is passed on.
-    stop_side_navigation_scrolling_value = current_footer_top_value +(footer_height_value + main_content_padding_bottom_value);
-this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigation_scrolling_value);
- */
     // A variable is initialized which will hold a number which sets the threshold when when reached triggers the IF/ELSE 
     // statement to stop the side navigation from scrolling.
     var side_navigation_threshold_value;
@@ -175,7 +170,7 @@ this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigatio
       scroll_value
     ];
     
-    // stopSideNavigationScrolling(side_navigation_values);
+    stopSideNavigationScrolling(side_navigation_values);
     var is_hero_large;
 
     var num_class_in_hero;
@@ -190,59 +185,31 @@ this.console.log("stop_side_navigation_scrolling_value = " + stop_side_navigatio
         is_hero_large = isHeroLarge();
         num_class_in_hero = numClassInHero();
         is_mobile_menu_visible = isMobileMenuVisible();
-this.console.log("is_mobile_menu_visible = " + is_mobile_menu_visible);
-        /* var offset = 50;
-        var duration = 550;
+        hero_bar_height = getHeightOfHero();
 
-        var progress_wrap_element = document.getElementsByClassName("progress-wrap")[0];
         
-        if (current_footer_top_value > offset) {
-          progress_wrap_element.classList.add('active-progress');
-        } else {
-          progress_wrap_element.classList.remove('active-progress');
-        }
-         */
         // IF/ELSE statement which folds the blue 'search' bar if the visitor is scrolling down.
         // Otherwise, the blue bar is made visible. Also, this statement stops the side navigation 
         // from scrolling if the visitor has reached the bottom of the webpage.
-        if (current_position > previous_position && (is_hero_large === true || num_class_in_hero === 2) && is_mobile_menu_visible === false) {
+        if (current_position > previous_position) {
           shrinkSearchBar();
-        } else if (current_position < previous_position && is_hero_large === false) {
-          expandSearchBar();
+          
+        } else if (current_position < (previous_position - 15)) {
+          setTimeout( 
+            function () {
+              expandSearchBar();
+            }, 25
+          );
         }
 
         side_navigation_values[0] = current_position;
-              stopSideNavigationScrolling(side_navigation_values);
         
-
-        var offset = 100;
-        var duration = 550;
-
-        /* if (jQuery(this).scrollTop() > offset) {
-          jQuery('.progress-wrap').addClass('active-progress');
-        } else {
-          jQuery('.progress-wrap').removeClass('active-progress');
-        } */
-  
+        stopSideNavigationScrolling(side_navigation_values);
 
         previous_position = current_position;
       }
     );
-/* 
-    var search_mobile_link_selector = "";
 
-    search_mobile_link_selector = "lab-hero--hcd-guide__guide_menu_search_link";
-
-    var search_mobile_link_element = {};
-
-    search_mobile_link_element = document.getElementsByClassName(search_mobile_link_selector)[0];
-
-    search_mobile_link_element.addEventListener('click', 
-      function () {
-        showMobileSearchForm();
-      }
-    );
- */
     var guide_menu_link_selector = "";
     
     guide_menu_link_selector = "lab-hero--hcd-guide__guide_menu_link";
@@ -257,20 +224,6 @@ this.console.log("is_mobile_menu_visible = " + is_mobile_menu_visible);
       }
     );
 
-    /* var guide_menu_link_title_selector = "";
-    
-    guide_menu_link_title_selector = "lab-hero--hcd-guide__guide_menu_link_title";
-
-    guide_menu_link_title_element = {};
-
-    guide_menu_link_title_element = document.getElementsByClassName(guide_menu_link_title_selector)[0];
-
-    guide_menu_link_title_element.addEventListener('click', 
-      function () {
-        showGuideMenu();
-      }
-    ); */
-
     var guide_menu_close_link_selector = {}; 
     
     guide_menu_close_link_selector = "lab-hero--hcd-guide__guide_menu__close_link";
@@ -284,44 +237,6 @@ this.console.log("is_mobile_menu_visible = " + is_mobile_menu_visible);
         hideGuideMenu();
       }
     );
-
-    var guide_menu_mobile_menu_selector = "";
-    
-    guide_menu_mobile_menu_selector = "lab-hero--hcd-guide__guide_menu_view_more";
-
-    var guide_menu_mobile_menu_element = {};
-    
-    guide_menu_mobile_menu_element = document.getElementsByClassName(guide_menu_mobile_menu_selector)[0];
-
-    if (guide_menu_mobile_menu_element !== undefined) {
-      guide_menu_mobile_menu_element.addEventListener('click', 
-        function () {
-          showMobileMenu();
-        }
-      );
-    }
-
-    var main_menu_selector = "";
-
-    main_menu_selector = "usa-menu-btn";
-
-    var main_menu_element = {};
-
-    main_menu_element = document.getElementsByClassName(main_menu_selector)[0];
-
-    if (main_menu_element !== undefined) {
-      main_menu_element.addEventListener('click', 
-        function () {
-          var window_width;
-
-          window_width = window.innerWidth;
-
-          if (window_width > 414 && window_width < 1024) {
-            showTabletMainMenu();
-          }
-        }
-      );
-    }
 
     var main_menu_close_selector = "";
 
@@ -344,16 +259,6 @@ this.console.log("is_mobile_menu_visible = " + is_mobile_menu_visible);
         }
       );
     }
-
-    /* var progress_wrap_element = document.getElementsByClassName("progress-wrap")[0];
-
-    progress_wrap_element.addEventListener('click', 
-      function () {
-        var html_element = document.getElementsByTagName('html')[0];
-
-        html_element.scrollTop(0);
-      }
-    ); */
 
     var highlights_button_selector = "";
 
@@ -391,6 +296,23 @@ this.console.log("is_mobile_menu_visible = " + is_mobile_menu_visible);
 
 
 
+
+
+function getHeightOfHero()  {
+  var hero_bar_selector = "";
+
+  hero_bar_selector = "lab-hero--hcd-guide";
+
+  var hero_bar_element = {};
+
+  hero_bar_element = document.getElementsByClassName(hero_bar_selector)[0];
+
+  var hero_bar_height = "";
+
+  hero_bar_height = window.getComputedStyle(hero_bar_element, null).getPropertyValue("height");
+
+  return hero_bar_height;
+}
 function cycleHighlights()  {
   var highlighted_copy_selector = "";
 
@@ -474,35 +396,57 @@ function showTabletMainMenu()  {
 
 
 
-function showMobileMenu()  {
-  var guide_menu_mobile_menu_selector = "";
+function showMobileMenu(guide_sub_menu_id_value)  {
+  var guide_sub_menu_list_selector = "";
 
-  guide_menu_mobile_menu_selector = "lab-hero--hcd-guide__guide_menu_view_more";
+  guide_sub_menu_list_selector = "usa-sidenav__sublist-" + guide_sub_menu_id_value;
   
-  var guide_menu_mobile_menu_element = {};
+  var guide_menu_sub_list_element = {};
 
-  guide_menu_mobile_menu_element = document.getElementsByClassName(guide_menu_mobile_menu_selector)[0];
+  guide_menu_sub_list_element = document.getElementById(guide_sub_menu_list_selector);
 
-  var guide_menu_mobile_menu_display_value;
+  
+  
+  var guide_other_sub_menu_lists_selector = "";
 
-  guide_menu_mobile_menu_display_value = window.getComputedStyle(guide_menu_mobile_menu_element).getPropertyValue("display");
+  guide_other_sub_menu_lists_selector = "usa-sidenav__sublist_visible";
 
-  if (guide_menu_mobile_menu_display_value === "none")  {
-    guide_menu_element.style.display = "block";
+  var guide_other_sub_menu_lists_elements = {};
 
-    var guide_menu_mobile_menu_subnav_selector = "";
+  guide_other_sub_menu_lists_elements = document.getElementsByClassName(guide_other_sub_menu_lists_selector);
 
-    guide_menu_mobile_menu_subnav_selector = "lab-hero--hcd-guide__guide_menu-mobilenav__sublist";
+  var i;
 
-    var guide_menu_mobile_menu_subnav_element = {};
+  for (i = 0; i < guide_other_sub_menu_lists_elements.length; i++) {
+    guide_other_sub_menu_lists_elements[i].classList.remove("usa-sidenav__sublist_visible");
+  }
 
-    guide_menu_mobile_menu_subnav_element = document.getElementsByClassName(guide_menu_mobile_menu_subnav_selector)[0];
+  guide_menu_sub_list_element.classList.add(guide_other_sub_menu_lists_selector);
 
-    guide_menu_mobile_menu_subnav_element.style.display = "block";
-  } 
+  var guide_other_view_more_links_selector = "lab-hero--hcd-guide_menu_more_links_not_visible";
+  
+  guide_other_view_more_links_elements = document.getElementsByClassName(guide_other_view_more_links_selector);
+
+  var guide_menu_view_more_links_not_visible_selector = "lab-hero--hcd-guide_menu_more_links_not_visible";
+
+  for (i = 0; i < guide_other_view_more_links_elements.length; i++) {
+    guide_other_view_more_links_elements[i].classList.remove(guide_menu_view_more_links_not_visible_selector);
+  }
+
+  var guide_view_this_link_selector = "";
+  
+  guide_view_this_link_selector = "lab-hero--hcd-guide__guide_menu_view_more_" + guide_sub_menu_id_value;
+
+  var guide_view_this_link_element = {};
+
+  guide_view_this_link_element = document.getElementById(guide_view_this_link_selector);
+
+  var guide_view_this_link_not_visible = "";
+
+  guide_view_this_link_not_visible = "lab-hero--hcd-guide_menu_more_links_not_visible";
+
+  guide_view_this_link_element.classList.add(guide_view_this_link_not_visible);
 } 
-
-
 
 function showGuideMenu()  {
   var guide_menu_selector = "";
@@ -531,44 +475,42 @@ function showGuideMenu()  {
 
     guide_menu_nav_element.classList.remove("guide_menu_nav_not_visible");
     guide_menu_nav_element.classList.add("guide_menu_nav_visible");
+    guide_menu_nav_element.classList.add("guide_menu_open");
+
   } 
 
   var gray_banner_selector = "";
   var header_selector = "";
   var hero_bar_selector = "";
+  var body_selector = "";
 
   // The CSS selectors which refer to the gray banner, header and main block of content 
   // are passed on.
   gray_banner_selector = "usa-banner__hcd-guide";
   header_selector = "usa-header__hcd-guide";
   hero_bar_selector = "lab-hero--hcd-guide";
+  body_selector = "body";
 
   // Objects which will hold HTML DOM objects for the gray banner, header, and 
   // main block of content are initialized.
   var gray_banner_element = {};
   var header_element = {};
   var hero_bar_element = {};
+  var body_element = {};
 
   // HTML DOM objects which refer to the HTML elements the above variables refer 
   // to are passed on.
   gray_banner_element = document.getElementsByClassName(gray_banner_selector)[0];
   header_element = document.getElementsByClassName(header_selector)[0];
   hero_bar_element = document.getElementsByClassName(hero_bar_selector)[0];
+  body_element = document.getElementsByTagName(body_selector)[0];
 
   gray_banner_element.classList.remove("gray_banner_scroll_up");
   header_element.classList.remove("header_scroll_up");
   gray_banner_element.classList.add("gray_banner_mobile_visible_scroll_up");
   header_element.classList.add("header_mobile_visible_scroll_up");
-    
-    
-
-    
-
-   
-
-    hero_bar_element.classList.add("hero_mobile_visible_scroll_up");
- /*  } */
-
+  hero_bar_element.classList.add("hero_mobile_visible_scroll_up");
+  body_element.classList.add("body_overflow_hidden");
 } 
 
 
@@ -602,70 +544,45 @@ function hideGuideMenu()  {
     guide_menu_nav_element.classList.add("guide_menu_nav_not_visible");
   }
 
-   /* else if (current_position === 0 && main_content_contains_class_value === true)  {
-    main_content_element.classList.remove("main_content_scroll_down");
-  } */
-  /* if (current_position === 0) {
-     else if (main_content_contains_class_value === true)  {
-      var current_position;    }
-  } else {
-    main_content_element.classList.add("main_content_scroll_down");
-  } */
-
-  
-/*
-  var is_guide_menu_link_visible = isGuideMenuLinkVisible();
- 
-  if (is_guide_menu_link_visible === false) {
-    var guide_menu_link_title_selector = "";
-
-    guide_menu_link_title_selector = "lab-hero--hcd-guide__guide_menu_link_title";
-
-    var guide_menu_link_title_element = {};
-    
-    guide_menu_link_title_element = document.getElementsByClassName(guide_menu_link_title_selector)[0];
-
-    guide_menu_link_title_element.classList.remove("guide_menu_link_title_not_visible");
-    guide_menu_link_title_element.classList.add("guide_menu_link_title_visible");
-  } */
-
   var gray_banner_selector = "";
   var header_selector = "";
   var hero_bar_selector = "";
+  var body_selector = "";
+  var guide_menu_nav_selector = "";
+  var main_content_selector = "";
 
   // The CSS selectors which refer to the gray banner, header and main block of content 
   // are passed on.
   gray_banner_selector = "usa-banner__hcd-guide";
   header_selector = "usa-header__hcd-guide";
   hero_bar_selector = "lab-hero--hcd-guide";
+  body_selector = "body";
+  guide_menu_nav_selector = "lab-hero--hcd-guide__guide_menu_content";
+  main_content_selector = "main-content__hcd-guide";
 
   // Objects which will hold HTML DOM objects for the gray banner, header, and 
   // main block of content are initialized.
   var gray_banner_element = {};
   var header_element = {};
   var hero_bar_element = {};
+  var body_element = {};
+  var guide_menu_nav_element = {};
+  var main_content_element = {};
 
   // HTML DOM objects which refer to the HTML elements the above variables refer 
   // to are passed on.
   gray_banner_element = document.getElementsByClassName(gray_banner_selector)[0];
   header_element = document.getElementsByClassName(header_selector)[0];
   hero_bar_element = document.getElementsByClassName(hero_bar_selector)[0];
-
-  var main_content_selector = "";
-
-  main_content_selector = "main-content__hcd-guide";
-
-  var main_content_element = {};
-
+  body_element = document.getElementsByTagName(body_selector)[0];
+  guide_menu_nav_element = document.getElementsByClassName(guide_menu_nav_selector)[0];
   main_content_element = document.getElementsByClassName(main_content_selector)[0];
-  
-  var main_content_contains_class_value;
-  var header_top_value;
 
+  var main_content_contains_class_value;
 
   main_content_contains_class_value = main_content_element.classList.contains("main_content_to_leave_up");
   header_top_value = window.getComputedStyle(header_element, null).getPropertyValue("top");
-console.log("main_content_contains_class_value = " + main_content_contains_class_value);
+
   current_position = window.pageYOffset;
 
   if (current_position === 0 && main_content_contains_class_value === true)  {
@@ -678,6 +595,8 @@ console.log("main_content_contains_class_value = " + main_content_contains_class
   gray_banner_element.classList.remove("gray_banner_mobile_visible_scroll_up");
   header_element.classList.remove("header_mobile_visible_scroll_up");
   hero_bar_element.classList.remove("hero_mobile_visible_scroll_up");
+  body_element.classList.remove("body_overflow_hidden");  
+  guide_menu_element.classList.remove("guide_menu_open");  
 }
 
 
@@ -728,8 +647,6 @@ function showDescription(description_name)  {
       closeDescription(description_name);
     }
   );
-
-  // description_element.style.top = button_location;
 }
 
 
@@ -765,51 +682,7 @@ function closeDescription(description_name) {
 }
 
 
-/* 
-function showMobileSearchForm() {
-  var search_mobile_link_selector = "";
 
-  search_mobile_link_selector = "lab-hero--hcd-guide__guide_menu_search_link";
-
-  var search_mobile_link_element = {};
-  
-  search_mobile_link_element = document.getElementsByClassName(search_mobile_link_selector)[0];
-  
-  var search_mobile_form_selector = "";
-
-  search_mobile_form_selector = "lab-hero--hcd-guide__guide_menu_search";
-
-  var search_mobile_form_element = {};
-  
-  search_mobile_form_element = document.getElementsByClassName(search_mobile_form_selector)[0];
-  
-  var guide_menu_selector = "";
-
-  var guide_menu_link_title_selector = "";
-
-  guide_menu_link_title_selector = "lab-hero--hcd-guide__guide_menu_link_title";
-
-  var guide_menu_link_title_element = {};
-
-  guide_menu_link_title_element = document.getElementsByClassName(guide_menu_link_title_selector)[0];
-
-  var search_mobile_field_selector = "";
-
-  search_mobile_field_selector = "lab-hero--hcd-guide__guide_menu_search_field";
-
-  var search_mobile_field_element = {};
-  
-  search_mobile_field_element = document.getElementsByClassName(search_mobile_field_selector)[0];
-
-
-  search_mobile_link_element.classList.add("search_mobile_link_hide");
-  search_mobile_form_element.classList.add("search_form_visible");
-  search_mobile_field_element.classList.add("search_field_visible");
-
-  guide_menu_link_title_element.classList.add("guide_menu_link_title_not_visible");
-}
-
-*/ 
 function isGuideMenuLinkVisible() {
   var guide_menu_content_selector = "";
 
@@ -914,7 +787,7 @@ function stopSideNavigationScrolling(side_navigation_values)  {
   var side_navigation_position_value = "";
 
   side_navigation_position_value = window.getComputedStyle(side_navigation_element, null).getPropertyValue("position");
-  
+
   var window_width;
 
   window_width = window.innerWidth;
@@ -924,7 +797,7 @@ function stopSideNavigationScrolling(side_navigation_values)  {
     side_navigation_element.classList.add("side_navigation_scroll_down");
     side_navigation_element.style.top = side_navigation_top_value;
   } else if (current_position >= scroll_value && 
-             side_navigation_position_value === "sticky" && 
+             side_navigation_position_value === "fixed" && 
              scroll_value > 0 && 
              window_width >= 1024)  {
     side_navigation_element.classList.remove("side_navigation_scroll_down");
@@ -975,25 +848,6 @@ function shrinkSearchBar()  {
   print_links_element.classList.remove("hero_bar_content_scroll_up");
   print_links_element.classList.add("hero_bar_content_scroll_down");
   
-  /* // A String is initialized which will contain the selector which refers to the 
-  // blue bar which appears as a visitor scrolls down.
-  var search_field_selector = "";
-
-  // The CSS selector which refers to the HTML element containing the blue bar 
-  // is passed on.
-  search_field_selector = "lab-hero--hcd-guide__search_form";
-
-    // An Object variable which will hold the HTML DOM object which refers to the 
-  // blue bar which appears as a visitor scrolls down is initialized.
-  var search_field_element = {};
-
-  // The HTML DOM object which refers to the blue bar is passed on.
-  search_field_element = document.getElementsByClassName(search_field_selector)[0];
-
-  // The blue bar is made visible.
-  search_field_element.classList.remove("hero_bar_content_scroll_up");
-  search_field_element.classList.add("hero_bar_content_scroll_down");
- */
   var hero_selector = "";
 
   hero_selector = "lab-hero--hcd-guide";
@@ -1004,13 +858,6 @@ function shrinkSearchBar()  {
 
   hero_element.classList.remove("hero_scroll_up");
   hero_element.classList.add("hero_scroll_down");
-
- /*  // A String which will hold the value of the CSS property, 'position', for the blue bar
-  // is initialized.
-  var blue_bar_position_value;
-
-  // The value of the CSS property, 'position', is passed on.
-  blue_bar_position_value = window.getComputedStyle(search_bar_content_element, null).getPropertyValue("position"); */
 
   // A Number which will hold the width of the browser window is initialized.
   var window_width;
@@ -1057,40 +904,11 @@ function shrinkSearchBar()  {
   }
 
   main_content_element.classList.add("main_content_scroll_down");
-
-  /* // IF statement which adds a CSS value which will affix the blue bar of the search bar 
-  // to the top of the browser window.
-  if (blue_bar_position_value === "fixed")  {
-    
-  } */
 }
 
 
 
 function expandSearchBar()  {
-  /* // A String is initialized which will contain the selector which refers to the 
-  // blue bar which appears as a visitor scrolls down.
-  var blue_bar_selector;
-
-  // The CSS selector which refers to the HTML element containing the blue bar 
-  // is passed on.
-  blue_bar_selector = "lab-hero__nav_bar_visible";
-
-  // An Object which refers to the HTML DOM element which contains the blue bar 
-  // is initialized.
-  blue_bar_element = {};
-
-  // The HTML DOM element the variable above refers to is passed on.
-  blue_bar_element = document.getElementsByClassName(blue_bar_selector)[0];
-  
-  // The opacity of the content held within the search bar is set to zero, making 
-  // that content not visible.
-  blue_bar_element.classList.remove("search_bar_visible");
-  blue_bar_element.classList.add("search_bar_not_visible");
-
-   // The CSS class, '.search_bar_scroll_down', is removed.
-  blue_bar_element.classList.remove("search_bar_scroll_down");
- */
   // A String which will hold the CSS selector which refers to the links and input field 
   // held within the 'Search' bar is initialized.
   var hero_bar_selector = "";
@@ -1140,25 +958,6 @@ function expandSearchBar()  {
   header_element = document.getElementsByClassName(header_selector)[0];
   main_content_element = document.getElementsByClassName(main_content_selector)[0];
 
-  
-/*   // A String which will hold the value of the CSS property, 'position', of the blue bar is initialized.
-  var search_bar_position_left_value;
-
-  // The value of the CSS property, 'position', of the blue bar is passed on.
-  search_bar_position_left_value = window.getComputedStyle(blue_bar_element, null).getPropertyValue("position"); */
-  
-    // is initialized.
-    /* var main_content_position_top_value;
-
-    // The value of the CSS property 'top' for the main block of content is passed on.
-    main_content_position_top_value = window.getComputedStyle(main_content_element, null).getPropertyValue("top");
-
-    // IF statement which adjusts the position of the main block of content if it has not been previously 
-    // adjusted.
-    if (main_content_position_top_value === "0px")  {
-      main_content_element.classList.add("main_content_scroll_up");
-    } */
-
   var hero_selector = "";
 
   hero_selector = "lab-hero--hcd-guide";
@@ -1166,14 +965,11 @@ function expandSearchBar()  {
   hero_element = {};
 
   hero_element = document.getElementsByClassName(hero_selector)[0];
-/*   
-  search_bar_content_element.classList.remove("search_bar_scroll_down");
-  search_bar_content_element.classList.add("search_bar_scroll_up");
- */  
+
   hero_element.classList.remove("hero_scroll_down");
   hero_element.classList.add("hero_scroll_up");
 
-     // A String is initialized which will contain the selector which refers to the 
+  // A String is initialized which will contain the selector which refers to the 
   // blue bar which appears as a visitor scrolls down.
   var print_links_selector = "";
 
@@ -1206,40 +1002,15 @@ function expandSearchBar()  {
     header_element.classList.add("header_scroll_up");
   }
 
-
-  /* // A String is initialized which will contain the selector which refers to the 
-  // blue bar which appears as a visitor scrolls down.
-  var search_field_selector = "";
-
-  // The CSS selector which refers to the HTML element containing the blue bar 
-  // is passed on.
-  search_field_selector = "lab-hero--hcd-guide__search_form";
-
-    // An Object variable which will hold the HTML DOM object which refers to the 
-  // blue bar which appears as a visitor scrolls down is initialized.
-  var search_field_element = {};
-
-  // The HTML DOM object which refers to the blue bar is passed on.
-  search_field_element = document.getElementsByClassName(search_field_selector)[0];
-
-  // The blue bar is made visible.
-  search_field_element.classList.remove("hero_bar_content_scroll_down");
-  search_field_element.classList.add("hero_bar_content_scroll_up");
-
-  
- 
-  */
-
-
  var main_content_contains_class_value;
  var header_top_value;
 
 
  main_content_contains_class_value = main_content_element.classList.contains("main_content_scroll_down");
  header_top_value = window.getComputedStyle(header_element, null).getPropertyValue("top");
-console.log("main_content_contains_class_value = " + main_content_contains_class_value);
+
  current_position = window.pageYOffset;
-console.log("header_top_value = " + header_top_value);
+
  if (main_content_contains_class_value === true && header_top_value === "48px")  {
   main_content_element.classList.remove("main_content_after_scroll");
   main_content_element.classList.add("main_content_to_leave_up");
@@ -1326,10 +1097,10 @@ function cycleGallery(cycle_direction, carousel_id_value)  {
   image_to_make_visible = 0;
 
   if (cycle_direction === "previous") {
-    if (image_which_is_visible !== 0) {
-      image_to_make_visible = num_of_images_in_set - 1;
+    if (image_which_is_visible === 1) {
+      image_to_make_visible = num_of_images_in_set;
     } else {
-      image_to_make_visible = num_carousel_images;
+      image_to_make_visible = image_which_is_visible - 1;
     }
   } else {
     if (image_which_is_visible !== num_of_images_in_set) {
@@ -1337,11 +1108,7 @@ function cycleGallery(cycle_direction, carousel_id_value)  {
     } else {
       image_to_make_visible = 1;
     }
-  }/* 
-
-  if (image_to_make_visible === 1 && cycle_direction === "next")  {
-    carousel_caption_elements[num_of_images_in_set].classList.remove(carousel_caption_visible_selector);
-  } */
+  }
 
   carousel_image_new_visible_selector = carousel_image_new_visible_selector + image_to_make_visible.toString();
   carousel_caption_new_visible_selector = carousel_caption_new_visible_selector + image_to_make_visible.toString();
