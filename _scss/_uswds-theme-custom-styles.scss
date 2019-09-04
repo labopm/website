@@ -67,6 +67,8 @@ i.e.
 .lab-caption {
   @include u-font-size('body', '2xs');
   font-style: italic;
+  line-height: 1.25rem;
+  color: color($theme-color-base-dark);
 }
 
 // Components
@@ -559,7 +561,7 @@ i.e.
   }
 
   &__item--lab-office::before {
-    color: color($theme-color-lab-brand-orange);
+    color: color($theme-color-lab-coral);
   }
 
   &__item--where-we-worked::before {
@@ -567,16 +569,16 @@ i.e.
   }
 
   &__item--where-we-taught::before {
-    color: color($theme-color-lab-coral);
-  }
-
-  &__item--where-we-learned::before {
     color: color($theme-color-lab-brand-teal);
   }
 
-  &__item--where-we-collaborated::before {
-    color: color($theme-color-lab-indigo);
-  }
+  // &__item--where-we-learned::before {
+  //   color: color($theme-color-lab-brand-teal);
+  // }
+  //
+  // &__item--where-we-collaborated::before {
+  //   color: color($theme-color-lab-indigo);
+  // }
 }
 
 .lab-locations-map-lg {
