@@ -15,7 +15,7 @@ The Lab is a team of designers with diverse backgrounds that helps our partners 
 We develop and offer design education classes informed by our experience practicing human-centered design in the federal space to help federal employees respond to and manage the complex challenges they face. To learn more about our educational offerings, visit the [Take a class](../take-a-class/) page.  
 
 ### We combine forces.
-We partner with federal agencies and other organizations to take on complex public sector challenges. Working with us can unleash new perspectives and fresh approaches to help solve pressing challenges. Learn more on the [Partner with us](partner/) page.
+We partner with federal agencies and other organizations to take on complex public sector challenges. Working with us can unleash new perspectives and fresh approaches to help solve pressing challenges. Learn more on the [Partner with us](partner/) page and see examples of our partnership work on the [Featured work](featured-work/) page.
 
 <!-- ### We share our resources. -->
 
