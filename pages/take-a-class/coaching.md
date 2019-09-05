@@ -15,5 +15,5 @@ title: Coaching
   <li>Building an innovation practice.</li>
 </ul>
 <p>
-  If you are interested in coaching, please <a href="{{ site.baseurl }}/contact/">complete our contact form</a> and include any relevant details that might help us prepare in advance of a conversation with you.
+  If you are interested in coaching, please <a href="mailto:lab@opm.gov">email us at lab@opm.gov</a> and include any relevant details that might help us prepare in advance of a conversation with you.
 </p>
