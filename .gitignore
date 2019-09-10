@@ -3,7 +3,16 @@ _site
 .jekyll-metadata
 /node_modules
 .DS_Store
+.vscode
+tasks.json
+Gemfile
+Gemfile.lock
+_config.yml
+_config-dev.yml
+assets/stylesheets/styles.css
+assets/stylesheets/styles.css.map
 
 
 # ignore gulp-generated vendor files
 scss/lib
+assets/stylesheets
