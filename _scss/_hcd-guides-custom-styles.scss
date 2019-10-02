@@ -1,5 +1,3 @@
-
-
 $theme-font-family-serif: 'merriweather', serif;
 $theme-font-family-top-button: 'wingdings 3';
 
@@ -2210,42 +2208,61 @@ button:not([disabled]):focus {
 }
 
 @media print {
+
   @page {
     size: landscape;
-    margin: 0.75in 0;
-/*    counter-increment: page;
-    counter-reset: page 1; */
+    margin: 0.75in 1in;
   }
+
   body {
-    counter-reset: footnotes;
-  }
-  main#main-content {
-    margin: 0 1.5in;
     top: 0;
     padding: 0;
-    column-gap: 0.5in;
+    -webkit-column-gap: 0;
+    -moz-column-gap: 0;
+    column-gap: 0;
     -moz-column-count: 2;
     -webkit-column-count: 2;
     column-count: 2;
+    counter-reset: footnotes;
   }
+
+  .grid-row {
+    display: unset;
+  }
+
   a:not(.hcd-guide__print_footnotes_link) {
     text-decoration: none;
     color: inherit !important;
   }
+
   h1 {
     font-size: font-size('heading', 'xl') !important;
-    page-break-before: always;
+    &:not(:first-of-type) {
+      -webkit-column-break-before: always;
+      -moz-column-break-before: always;
+      break-before: always;
+      page-break-before: always;
+    }
   }
 
   h2 {
     font-size: font-size('heading', 'lg') !important;
   }
+
   h2, h3 {
+    -webkit-column-break-before: avoid;
+    -moz-column-break-before: avoid;
+    break-before: avoid;
     page-break-after: avoid;
   }
+
   table, img {
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    break-inside: avoid;
     page-break-inside: avoid;
   }
+
   .noprint,
   .usa-banner__hcd-guide,
   .usa-overlay,
@@ -2264,10 +2281,8 @@ button:not([disabled]):focus {
     display: none;
   }
 
-  .main-content__hcd-guide,
-  .grid-container__hcd-guide {
-    max-width: 100%;
-    padding: 0;
+  .usa-prose__hcd-guide .lab__base_columns {
+    float: none;
   }
 
   .usa-prose__hcd-guide .lab-cta__quote {
@@ -2278,38 +2293,12 @@ button:not([disabled]):focus {
     }
   }
   .hcd-guide__print {
-
-    &_page_num  {
-      position: fixed;
-      top: 0.5in;
-      right: 0;
-      display: block;
-      vertical-align: top;
-      hr {
-        border: 1px solid;
-      }
-    }
-    /*&_page_counter:after {
-      content: counter(page);
-    }*/
-
-    &_page_num:after {
-      clear: both;
-    }
-
-    &_page_num_title {
-      margin-top: 0.75rem;
-      padding-right: 1rem;
-      line-height: line-height('body', 1);
-      writing-mode: vertical-rl;
-      text-orientation: sideways;
-    }
-
     &_footnotes_link{
       counter-increment: footnotes;
       cursor: default;
       outline: none;
       text-decoration: none;
+      -webkit-box-shadow: 0 1px 0;
       box-shadow: 0 1px 0;
       &:after {
         content: counter(footnotes);
@@ -2320,10 +2309,11 @@ button:not([disabled]):focus {
         cursor: pointer;
       }
     }
+
     &_footnotes {
       height: 50px;
       padding-top: 0.1cm;
-      display: block;
+      display: table;
       clear: both;
       border-top: 1px solid;
       ol {
@@ -2384,6 +2374,10 @@ button:not([disabled]):focus {
       width: 100%;
     }
 
+    p {
+      line-height: line-height('body', 3);
+    }
+
     .lab__hcd-guide {
       &__description {
         display: block;
@@ -2391,6 +2385,8 @@ button:not([disabled]):focus {
         border: 1px dashed color('base');
         box-decoration-break: clone;
         -webkit-box-decoration-break: clone;
+        -webkit-column-break-inside: avoid;
+        -moz-column-break-inside: avoid;
         break-inside: avoid;
         margin: 2rem 0rem;
 
@@ -2414,18 +2410,25 @@ button:not([disabled]):focus {
             line-height: line-height('body', 3);
           }
         }
-       /* &_header_h4 {
-          display: none;
-        }*/
       }
     }
 
-  .lab__case_in_point {
+    .lab__case_in_point {
+      &_wrapper {
+        padding-top: 2rem;
+      }
       &_copy {
         padding-right: 0;
+        p:last-of-type{ 
+          margin-bottom:0.5rem;
+        }
       }
-    }
+      &_title {
+        top: -2px;
+      }
+    } 
   }
+
   .usa-accordion__reference_link {
     padding-right: 1.25rem;
   }
@@ -2434,16 +2437,12 @@ button:not([disabled]):focus {
     .lab__split_columns {
       margin-top: units(3);
       margin-bottom: 0;
-
-      /*.lab__split_columns_img_wrapper {
-        display: none;
-      }*/
-
       .lab__split_columns_copy {
         max-width: 100%;
         margin: 0;
       }
     }
+
     .lab__base_columns {
       margin: 0;
     }
