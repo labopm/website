@@ -1914,9 +1914,9 @@ button:not([disabled]):focus {
   body {
     top: 0;
     padding: 0;
-    -webkit-column-gap: 0;
-    -moz-column-gap: 0;
-    column-gap: 0;
+    -webkit-column-gap: 0.25in;
+    -moz-column-gap: 0.25in;
+    column-gap: 0.25in;
     -moz-column-count: 2;
     -webkit-column-count: 2;
     column-count: 2;
@@ -1928,12 +1928,23 @@ button:not([disabled]):focus {
     padding: 0;
   }
 
+  .grid-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .grid-row {
     display: unset;
     &.grid-gap {
       margin-left: 0;
       margin-right: 0;
     }
+  }
+
+  .grid-row.grid-gap > * {
+    max-width: 68ex;
+    margin-left: auto; 
+    margin-right: auto; 
   }
 
   a:not(.hcd-guide__print_footnotes_link) {
@@ -1943,6 +1954,7 @@ button:not([disabled]):focus {
 
   h1 {
     font-size: font-size('heading', 'xl') !important;
+    margin-top: 0 !important;
     &:not(:first-of-type) {
       -webkit-column-break-before: always;
       -moz-column-break-before: always;
