@@ -4,7 +4,7 @@ section: take-a-class
 permalink: class/immersive-design-studio/
 title: Immersive Design Studio
 locations: Washington, DC
-length: 3 days
+length: Varies
 session: multi
 registration-id: 306
 ---
