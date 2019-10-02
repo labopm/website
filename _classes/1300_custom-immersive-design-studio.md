@@ -3,7 +3,7 @@ layout: article
 section: take-a-class
 permalink: class/custom/immersive-design-studio/
 title: Immersive Design Studio
-length: A series of sessions spread over several months
+length: Varies
 session: custom
 ---
 
