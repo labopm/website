@@ -165,7 +165,7 @@ body .progress-wrap::after {
       position: absolute;
       width: 50px;
       height: 28px;
-      background: white;
+      background: #8d9297;
       border-radius: 50px;
       overflow: hidden;
 
@@ -177,7 +177,7 @@ body .progress-wrap::after {
         width: 20px;
         height: 20px;
         border-radius: 50%;
-        background: #8d9297;
+        background: white;
       }
     }
   }
@@ -195,12 +195,15 @@ body .progress-wrap::after {
   }
 }
 
-@media screen and (max-width: 64rem) and (orientation: landscape) {
-  .switch-container .switch-label .switch-rail {
-    background: #8d9297;
+@media screen and (max-width: 64rem), screen and (max-width: 64rem) and (orientation: landscape) {
+  .switch-container {
+    margin-top: units(1);
+    .switch-label .switch-rail {
+      background: white;
+    }
   }
   .switch-container .switch-label .switch-rail .switch-slider {
-    background: white;
+    background: #8d9297;
   }
   #switch:checked + .switch-label,
   #switch-mobile:checked + .switch-label {
@@ -1949,14 +1952,14 @@ button:not([disabled]):focus {
       margin-top: units(5);
 
       .lab-hero--hcd-guide__guide_menu_highlights_desc {
-        display: inline-block;
+        /*display: inline-block;
         margin: 0.19rem 0.31rem 0 0;
-        vertical-align: top;
+        vertical-align: top;*/
         @include u-font-size('body', 'xs');
         color: color('white');
       }
 
-      .lab-hero--hcd-guide__highlights_button {
+    /*  .lab-hero--hcd-guide__highlights_button {
         width: 58px;
         height: 28px;
         display: inline-block;
@@ -1964,7 +1967,7 @@ button:not([disabled]):focus {
         border-radius: px-to-rem(15px);
         background-color: color('base-lightest');
         background-image: url('/assets/img/lab/hcd-guide/design/highlights-off.svg');
-      }
+      }*/
     }
 
     &__guide_menu_misc_links {
