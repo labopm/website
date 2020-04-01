@@ -8,6 +8,8 @@
 ========================================
 */
 
+$baseurl: '{{ site.baseurl }}';
+
 // -------------------------------------
 // Import individual theme settings
 
@@ -35,4 +37,4 @@
 // Import theme custom styles
 
 @import '_uswds-theme-custom-styles';
-@import '_hcd-guides-custom-styles'
+@import '_hcd-guides-custom-styles';
