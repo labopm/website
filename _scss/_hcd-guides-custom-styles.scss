@@ -379,7 +379,7 @@ button:not([disabled]):focus {
 
     p {
       padding-top: units(1);
-      background-image: url($baseurl+'/assets/img/lab/hcd-guide/design/p-bullet_point.png');
+      background-image: url('../img/lab/hcd-guide/design/p-bullet_point.png');
       background-repeat: no-repeat;
     }
   }
@@ -468,7 +468,7 @@ button:not([disabled]):focus {
     .usa-back_to_top {
       padding-left: units(3);
       display: block;
-      background-image: url('/assets/img/lab/hcd-guide/design/to-top.png');
+      background-image: url('..../img/lab/hcd-guide/design/to-top.png');
       background-repeat: no-repeat;
       font-size: font-size('base', 'sm');
     }
@@ -742,7 +742,7 @@ button:not([disabled]):focus {
         height: 14px;
         margin: 0 units(1);
         display: inline-block;
-        background-image: url('/assets/img/lab/hcd-guide/design/carousel-dot-not-visible.png');
+        background-image: url('../img/lab/hcd-guide/design/carousel-dot-not-visible.png');
       }
     }
 
@@ -759,7 +759,7 @@ button:not([disabled]):focus {
     width: px-to-rem(24px);
     height: px-to-rem(28px);
     background-color: color('white');
-    background-image: url('/assets/img/lab/hcd-guide/design/case-in-point-info.png');
+    background-image: url('../img/lab/hcd-guide/design/case-in-point-info.png');
     background-position: 50% 50%;
     background-size: 90%;
     background-repeat: no-repeat;
@@ -872,7 +872,7 @@ button:not([disabled]):focus {
 
 .usa-prose__hcd-guide a.usa-accordion__reference_link {
   padding-right: units(2.5);
-  background-image: url('/assets/img/lab/hcd-guide/design/external-link-arrow.png');
+  background-image: url('../img/lab/hcd-guide/design/external-link-arrow.png');
   background-position: 100% 50%;
   background-repeat: no-repeat;
   color: color('blue-70v');
@@ -1095,7 +1095,7 @@ button:not([disabled]):focus {
 }
 
 .usa-prose__hcd-guide__carousel_dot_visible {
-  background-image: url('/assets/img/lab/hcd-guide/design/carousel-dot-visible.png') !important;
+  background-image: url('../img/lab/hcd-guide/design/carousel-dot-visible.png') !important;
 }
 
 /****************** SIDENAV ******************/
@@ -1261,7 +1261,7 @@ button:not([disabled]):focus {
     display: table-cell;
     float: none;
     background-color: color('white');
-    background-image: url('/assets/img/lab/hcd-guide/design/section-link-next-mobile.png');
+    background-image: url('../img/lab/hcd-guide/design/section-link-next-mobile.png');
     background-repeat: no-repeat;
     background-position: 100% 50%;
     border-radius: 0;
@@ -1274,7 +1274,7 @@ button:not([disabled]):focus {
   }
 
   .section_link_previous {
-    background-image: url('/assets/img/lab/hcd-guide/design/section-link-previous-mobile.png');
+    background-image: url('../img/lab/hcd-guide/design/section-link-previous-mobile.png');
     background-position: 0% 50%;
     padding: 0 0 0 units(3);
     text-align: left;
@@ -1318,7 +1318,7 @@ button:not([disabled]):focus {
       padding: units(2) units(4) units(2) units(2);
       float: right;
       background-color: color('blue-50v');
-      background-image: url('/assets/img/lab/hcd-guide/design/section-link-next.png');
+      background-image: url('../img/lab/hcd-guide/design/section-link-next.png');
       background-repeat: no-repeat;
       background-position: calc(100% - 0.81rem) 50%;
       border-radius: 5px;
@@ -1338,7 +1338,7 @@ button:not([disabled]):focus {
     .section_link_previous {
       padding: units(2) units(2) units(2) units(4);
       float: left;
-      background-image: url('/assets/img/lab/hcd-guide/design/section-link-previous.png');
+      background-image: url('../img/lab/hcd-guide/design/section-link-previous.png');
       background-position: 0.75rem 50%;
     }
   }
@@ -1590,7 +1590,7 @@ button:not([disabled]):focus {
     }
 
     &__guide_menu_link {
-      background-image: url(baseurl+'/assets/img/lab/hcd-guide/design/guide-menu.svg');
+      background-image: url('../img/lab/hcd-guide/design/guide-menu.svg');
       background-repeat: no-repeat;
       background-position: 100% 0%;
       text-decoration: none;
@@ -1661,12 +1661,12 @@ button:not([disabled]):focus {
         .lab-hero--hcd-guide__guide_menu_view_more {
           width: px-to-rem(13px);
           height: px-to-rem(13px);
-          background-image: url('/assets/img/lab/hcd-guide/design/guide-menu-view-more-mobile.png');
+          background-image: url('../img/lab/hcd-guide/design/guide-menu-view-more-mobile.png');
           background-repeat: no-repeat;
         }
 
         .lab-hero--hcd-guide_menu_more_links_not_visible {
-          background-image: url('/assets/img/lab/hcd-guide/design/guide-menu-view-less-mobile.png');
+          background-image: url('../img/lab/hcd-guide/design/guide-menu-view-less-mobile.png');
         }
 
         li:first-of-type {

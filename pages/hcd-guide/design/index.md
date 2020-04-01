@@ -13,9 +13,9 @@ new-site: true
 <h1>Welcome to the Design Phase</h1>
 <div class="usa-prose__hcd-guide__reading_print">
   <span class="usa-prose__hcd-guide__reading_time">4 min read</span>
-  <a href="javascript:window.print();" title="Print guide" class="usa-prose__hcd-guide_a usa-prose__hcd-guide__print_guide_img usa-prose__hcd-guide__print_desktop_visible"><img src="/assets/img/lab/hcd-guide/design/print-guide.svg" width="22" height="29" alt="Print guide" /></a>
+  <a href="javascript:window.print();" title="Print guide" class="usa-prose__hcd-guide_a usa-prose__hcd-guide__print_guide_img usa-prose__hcd-guide__print_desktop_visible"><img src="{{ site.baseurl }}/assets/img/lab/hcd-guide/design/print-guide.svg" width="22" height="29" alt="Print guide" /></a>
   <a href="javascript:window.print();" title="Print guide" class="usa-prose__hcd-guide_a usa-prose__hcd-guide__print_guide usa-prose__hcd-guide__print_desktop_visible">Print page</a>
-  <a href="javascript:window.print();" title="Print guide" class="usa-prose__hcd-guide_a usa-prose__hcd-guide__print_guide_img usa-prose__hcd-guide__print_mobile_visible"><img src="/assets/img/lab/hcd-guide/design/print-guide.svg" width="22" height="29" alt="Print guide" /></a>
+  <a href="javascript:window.print();" title="Print guide" class="usa-prose__hcd-guide_a usa-prose__hcd-guide__print_guide_img usa-prose__hcd-guide__print_mobile_visible"><img src="{{ site.baseurl }}/assets/img/lab/hcd-guide/design/print-guide.svg" width="22" height="29" alt="Print guide" /></a>
   <a href="javascript:window.print();" title="PDF" class="usa-prose__hcd-guide_a usa-prose__hcd-guide__print_guide usa-prose__hcd-guide__print_mobile_visible">PDF</a>
 </div>
 
@@ -119,8 +119,6 @@ new-site: true
     <a href="/hcd-guide/design/iteration.htm" title="multiple iterations of your idea for the above" class="usa-prose__hcd-guide_a">multiple iterations of your idea for the above.</a>
   </p>  
 </div>
-
-
 
 <div class="lab__bullet_points_columns lab__bullet_points_column_right">
   <p>
