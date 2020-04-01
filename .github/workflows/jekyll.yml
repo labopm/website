@@ -2,9 +2,9 @@ name: Jekyll site CI
 
 on:
   push:
-    branches: [gh-pages]
+    branches: [Resources, reorganize]
   pull_request:
-    branches: [gh-pages]
+    branches: [Resources, reorganize]
 
 jobs:
   build:
@@ -25,8 +25,9 @@ jobs:
       - run: npm install -g gulp-cli
       - run: npm install
       - run: npm run build
+      - run: jekyll build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          publish_dir: ./_site
