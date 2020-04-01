@@ -10,5 +10,5 @@ Gemfile.lock
 _config.yml
 _config-dev.yml
 
-
 # ignore gulp-generated vendor files
+assets/stylesheets/
