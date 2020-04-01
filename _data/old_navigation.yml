@@ -1,7 +1,19 @@
 primary:
+  - text: What we do
+    href: /what-we-do/
+    name: what-we-do
+  - text: Take a class
+    href: /take-a-class/
+    name: take-a-class
+  - text: About the Lab
+    href: /about/
+    name: about
   - text: HCD Guide Series
     href: /hcd-guide/
     name: hcd-guide
+  - text: Contact us
+    href: /contact/
+    name: contact
 
 what-we-do:
   - text: Overview
