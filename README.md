@@ -10,12 +10,12 @@ People photos should be added in the [people image directory](https://github.com
 
 Please provide us a headshot that does its best to satisfy the following criteria.
 
-* Shot from the waist up or closer, i.e. not originally a full-body photo that’s been cropped
-* Shot in front of a solid or otherwise uncluttered background
-* Lit by natural sunlight, either outdoors or near a window (or in a studio if you are fancy)
-* If shot outdoors, not under the full midday sun which creates harsh highlights and shadows
-* Exposed correctly: the photo shouldn't have any areas that are 100% white (blown out) or 100% black (under-exposed)
-* Avoid sunglasses, headphones, hats. Just you!
+- Shot from the waist up or closer, i.e. not originally a full-body photo that’s been cropped
+- Shot in front of a solid or otherwise uncluttered background
+- Lit by natural sunlight, either outdoors or near a window (or in a studio if you are fancy)
+- If shot outdoors, not under the full midday sun which creates harsh highlights and shadows
+- Exposed correctly: the photo shouldn't have any areas that are 100% white (blown out) or 100% black (under-exposed)
+- Avoid sunglasses, headphones, hats. Just you!
 
 ### Naming your image
 
@@ -39,7 +39,7 @@ When you are done you need to add that same image filename to the front-matter o
 image_name: sean-baker.jpg
 ```
 
-Person pages are in the [_people directory](https://github.com/labopm/website/tree/master/_people)
+Person pages are in the [\_people directory](https://github.com/labopm/website/tree/master/_people)
 
 <hr/>
 
@@ -78,7 +78,6 @@ Now that you have verified that you have Ruby and Node installed, run the follow
 
 ```shell
 $ bundle install
-$ npm install -g gulp
 $ npm install -g gulp-cli
 $ npm install
 $ npm run build
