@@ -2,9 +2,9 @@ name: Jekyll site CI
 
 on:
   push:
-    branches: [Resources, reorganize]
+    branches: [Resources, fix-broken-links]
   pull_request:
-    branches: [Resources, reorganize]
+    branches: [Resources, fix-broken-links]
 
 jobs:
   build:

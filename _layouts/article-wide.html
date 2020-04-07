@@ -45,7 +45,7 @@
               {% else %}
                 {% assign link_class = 'usa-layout__section_link' %}
               {% endif %}
-              <a href="{{ next_link_url }}" title="{{ next_link_title }}" class="{{ link_class }}">{{ next_link_title }}</a>
+              <a href="{{ site.baseurl }}{{ next_link_url }}" title="{{ next_link_title }}" class="{{ link_class }}">{{ next_link_title }}</a>
             {% endif %}
             </div>
           </div>
