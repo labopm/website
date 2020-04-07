@@ -1,1 +1,1 @@
-Sitemap: https://the-lab-at-opm.github.io/website/website/sitemap.xml
+Sitemap: /website/sitemap.xml
