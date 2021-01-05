@@ -29,7 +29,7 @@
   "homepage": "https://github.com/labopm/website#readme",
   "devDependencies": {
     "autoprefixer": "^9.6.0",
-    "axios": ">=0.19.0",
+    "axios": ">=0.21.1",
     "browser-sync": "^2.26.7",
     "chalk": "^2.0.1",
     "css-mqpacker": "^7.0.0",
